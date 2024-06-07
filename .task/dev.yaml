@@ -4,8 +4,8 @@ tasks:
   start:
     desc: Start the different validators
     cmds:
-      - docker compose up -d
-      -
+      - docker compose up --detach --wait --wait-timeout 60
+
   stop:
     desc: Stop the different validators
     cmds:

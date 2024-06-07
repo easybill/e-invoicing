@@ -3,8 +3,16 @@ services:
     image: 'easybill/zugferd-validator202309:v0.0.62'
     ports:
       - '8080:8080'
+    healthcheck:
+      test: curl --fail http://localhost:8080/health || exit 0
+      interval: 10s
+      retries: 6
 
   peppol-validator:
     image: 'bolzerdev/peppol-bis-billing-validator:latest'
     ports:
       - '8081:8080'
+    healthcheck:
+      test: curl --fail http://localhost:8081/health || exit 0
+      interval: 10s
+      retries: 6

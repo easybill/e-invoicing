@@ -35,7 +35,7 @@ jobs:
 
             -   name: Start docker validators
                 run: |
-                    
+                    docker compose up --detach --wait --wait-timeout 30
 
             -   name: Run tests
                 run: |
