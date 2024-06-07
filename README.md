@@ -1,5 +1,5 @@
 # e-invoicing
-[![Generic badge](https://img.shields.io/badge/Version-0.5.0-important.svg)]()
+[![Generic badge](https://img.shields.io/badge/Version-0.1.0-important.svg)]()
 [![Generic badge](https://img.shields.io/badge/License-MIT-blue.svg)]()
 
 ## Introduction
@@ -17,13 +17,13 @@ composer require easybill/e-invoicing
 ```
 
 ### Example creating ZUGFeRD/factur-x XML
+The document factory offers handy shortcut functions to assemble a document for every supported specification
+with the correct basic structure. $document is now ready to be filled with data related to your business case.
 
 ```PHP
 use Easybill\eInvoicing\DocumentFactory;
 use Easybill\eInvoicing\Specs\ZUGFeRD\Enums\ZUGFeRDProfileType;
 
-// The document factory offers handy shortcut functions to assemble a document for every supported specification
-// with the correct basic structure. $document is now ready to be filled with data related to your business case.
 $document = DocumentFactory::createZUGFeRDInvoice(ZUGFeRDProfileType::EN16931);
 $document->exchangedDocument->id = '471102';
 $document->exchangedDocument->issueDateTime = DateTime::create(102, '20200305');
@@ -32,6 +32,12 @@ $xml = ZUGFeRDTransformer::create()->transform($invoice)
 
 
 ```
+
+### Example reading a known XML file format
+
+If you only want to support a subset of the offered specifications (as an example ZUGFeRD/factur-x) you may use the
+builder and reader from the corresponding namespace.
+
 
 ### Example reading an unknown XML file
 
@@ -56,12 +62,12 @@ $readerResult->isError()
 // Invoking the getDocument method on an error will result in a LogicException
 $document = $readerResult->getDocument(); 
 
-if($document instanceof XRechnungCiiInvoice){
-    
+if ($document instanceof XRechnungCiiInvoice) {
+    // do something with the XRechnungCiiInvoice
 }
-
-
 ```
+
+You can refer to the tests in this repository for examples.
 
 ## Considerations
 
