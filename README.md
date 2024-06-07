@@ -21,8 +21,8 @@ The document factory offers handy shortcut functions to assemble a document for 
 with the correct basic structure. $document is now ready to be filled with data related to your business case.
 
 ```PHP
-use Easybill\eInvoicing\DocumentFactory;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Enums\ZUGFeRDProfileType;
+use easybill\eInvoicing\DocumentFactory;
+use easybill\eInvoicing\Specs\ZUGFeRD\Enums\ZUGFeRDProfileType;
 
 $document = DocumentFactory::createZUGFeRDInvoice(ZUGFeRDProfileType::EN16931);
 $document->exchangedDocument->id = '471102';
@@ -37,8 +37,8 @@ If you only want to support a subset of the offered specifications (as an exampl
 builder and reader from the corresponding namespace.
 
 ```PHP
-use Easybill\eInvoicing\Specs\ZUGFeRD\Reader;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Transformer;
+use easybill\eInvoicing\Specs\ZUGFeRD\Reader;
+use easybill\eInvoicing\Specs\ZUGFeRD\Transformer;
 
 $xml = file_get_contents($exampleXmlFile);
 
@@ -55,8 +55,8 @@ There might be the case that you receive some XML which may or may not be suppor
 way to just parse that XML and see if is deserializable to one of the supported formats.
 
 ```PHP
-use Easybill\eInvoicing\DocumentXmlReader;
-use Easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
+use easybill\eInvoicing\DocumentXmlReader;
+use easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
 
 $xml = file_get_contents($exampleXmlFile);
 
