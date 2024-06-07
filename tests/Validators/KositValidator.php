@@ -18,8 +18,8 @@ final class KositValidator
                 'Content-Type' => 'application/xml',
             ],
             RequestOptions::BODY => $xml,
-            RequestOptions::TIMEOUT => 3,
-            RequestOptions::CONNECT_TIMEOUT => 3,
+            RequestOptions::TIMEOUT => 10,
+            RequestOptions::CONNECT_TIMEOUT => 10,
             RequestOptions::HTTP_ERRORS => false,
         ]);
 
