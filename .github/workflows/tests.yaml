@@ -39,4 +39,4 @@ jobs:
 
             -   name: Run tests
                 run: |
-                    php /vendor/bin/pest
+                    ./vendor/bin/pest
