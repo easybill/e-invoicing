@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\XRechnung\CII\Models;
+namespace easybill\eInvoicing\Specs\XRechnung\CII\Models;
 
 use JMS\Serializer\Annotation as JMS;
 
@@ -37,7 +37,7 @@ final class TradeAllowanceCharge
     public ?string $reason = null;
 
     /** @var TradeTax[] */
-    #[JMS\Type('array<Easybill\eInvoicing\Specs\XRechnung\CII\Models\TradeTax>')]
+    #[JMS\Type('array<easybill\eInvoicing\Specs\XRechnung\CII\Models\TradeTax>')]
     #[JMS\XmlList(entry: 'CategoryTradeTax', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $tradeTax = [];
 

@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\Peppol\Documents;
+namespace easybill\eInvoicing\Specs\Peppol\Documents;
 
-use Easybill\eInvoicing\Specs\Peppol\Models\AccountingParty;
-use Easybill\eInvoicing\Specs\Peppol\Models\AllowanceCharge;
-use Easybill\eInvoicing\Specs\Peppol\Models\BillingReference;
-use Easybill\eInvoicing\Specs\Peppol\Models\Delivery;
-use Easybill\eInvoicing\Specs\Peppol\Models\DocumentReference;
-use Easybill\eInvoicing\Specs\Peppol\Models\LegalMonetaryTotal;
-use Easybill\eInvoicing\Specs\Peppol\Models\Note;
-use Easybill\eInvoicing\Specs\Peppol\Models\OrderReference;
-use Easybill\eInvoicing\Specs\Peppol\Models\Party;
-use Easybill\eInvoicing\Specs\Peppol\Models\PaymentMeans;
-use Easybill\eInvoicing\Specs\Peppol\Models\PaymentTerms;
-use Easybill\eInvoicing\Specs\Peppol\Models\Period;
-use Easybill\eInvoicing\Specs\Peppol\Models\TaxTotal;
+use easybill\eInvoicing\Specs\Peppol\Models\AccountingParty;
+use easybill\eInvoicing\Specs\Peppol\Models\AllowanceCharge;
+use easybill\eInvoicing\Specs\Peppol\Models\BillingReference;
+use easybill\eInvoicing\Specs\Peppol\Models\Delivery;
+use easybill\eInvoicing\Specs\Peppol\Models\DocumentReference;
+use easybill\eInvoicing\Specs\Peppol\Models\LegalMonetaryTotal;
+use easybill\eInvoicing\Specs\Peppol\Models\Note;
+use easybill\eInvoicing\Specs\Peppol\Models\OrderReference;
+use easybill\eInvoicing\Specs\Peppol\Models\Party;
+use easybill\eInvoicing\Specs\Peppol\Models\PaymentMeans;
+use easybill\eInvoicing\Specs\Peppol\Models\PaymentTerms;
+use easybill\eInvoicing\Specs\Peppol\Models\Period;
+use easybill\eInvoicing\Specs\Peppol\Models\TaxTotal;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlElement;
@@ -45,7 +45,7 @@ abstract class PeppolBISAbstractDocument
     public ?string $issueDate = null;
 
     /** @var Note[] */
-    #[Type('array<Easybill\eInvoicing\Specs\Peppol\Models\Note>')]
+    #[Type('array<easybill\eInvoicing\Specs\Peppol\Models\Note>')]
     #[SerializedName('Note')]
     #[XmlList(entry: 'Note', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     public array $note = [];
@@ -111,7 +111,7 @@ abstract class PeppolBISAbstractDocument
     public ?Delivery $delivery = null;
 
     /** @var PaymentMeans[] */
-    #[Type('array<Easybill\eInvoicing\Specs\Peppol\Models\PaymentMeans>')]
+    #[Type('array<easybill\eInvoicing\Specs\Peppol\Models\PaymentMeans>')]
     #[SerializedName('PaymentMeans')]
     #[XmlList(entry: 'PaymentMeans', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $paymentMeans = [];
@@ -122,13 +122,13 @@ abstract class PeppolBISAbstractDocument
     public ?PaymentTerms $paymentTerms = null;
 
     /** @var AllowanceCharge[] */
-    #[Type('array<Easybill\eInvoicing\Specs\Peppol\Models\AllowanceCharge>')]
+    #[Type('array<easybill\eInvoicing\Specs\Peppol\Models\AllowanceCharge>')]
     #[SerializedName('AllowanceCharge')]
     #[XmlList(entry: 'AllowanceCharge', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $allowanceCharge = [];
 
     /** @var TaxTotal[] */
-    #[Type('array<Easybill\eInvoicing\Specs\Peppol\Models\TaxTotal>')]
+    #[Type('array<easybill\eInvoicing\Specs\Peppol\Models\TaxTotal>')]
     #[SerializedName('TaxTotal')]
     #[XmlList(entry: 'TaxTotal', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $taxTotal = [];

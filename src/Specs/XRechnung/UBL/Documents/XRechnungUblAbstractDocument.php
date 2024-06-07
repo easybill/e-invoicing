@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\XRechnung\UBL\Documents;
+namespace easybill\eInvoicing\Specs\XRechnung\UBL\Documents;
 
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\AccountingParty;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\AllowanceCharge;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\BillingReference;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\Delivery;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\DocumentReference;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\LegalMonetaryTotal;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\Note;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\OrderReference;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\Party;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\PaymentMeans;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\PaymentTerms;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\Period;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\TaxTotal;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\AccountingParty;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\AllowanceCharge;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\BillingReference;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\Delivery;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\DocumentReference;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\LegalMonetaryTotal;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\Note;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\OrderReference;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\Party;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\PaymentMeans;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\PaymentTerms;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\Period;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\TaxTotal;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlElement;
@@ -45,7 +45,7 @@ abstract class XRechnungUblAbstractDocument
     public ?string $issueDate = null;
 
     /** @var Note[] */
-    #[Type('array<Easybill\eInvoicing\Specs\XRechnung\UBL\Models\Note>')]
+    #[Type('array<easybill\eInvoicing\Specs\XRechnung\UBL\Models\Note>')]
     #[SerializedName('Note')]
     #[XmlList(entry: 'Note', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     public array $note = [];
@@ -106,7 +106,7 @@ abstract class XRechnungUblAbstractDocument
     public ?Delivery $delivery = null;
 
     /** @var PaymentMeans[] */
-    #[Type('array<Easybill\eInvoicing\Specs\XRechnung\UBL\Models\PaymentMeans>')]
+    #[Type('array<easybill\eInvoicing\Specs\XRechnung\UBL\Models\PaymentMeans>')]
     #[SerializedName('PaymentMeans')]
     #[XmlList(entry: 'PaymentMeans', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $paymentMeans = [];
@@ -122,7 +122,7 @@ abstract class XRechnungUblAbstractDocument
     public ?AllowanceCharge $allowanceCharge = null;
 
     /** @var TaxTotal[] */
-    #[Type('array<Easybill\eInvoicing\Specs\XRechnung\UBL\Models\TaxTotal>')]
+    #[Type('array<easybill\eInvoicing\Specs\XRechnung\UBL\Models\TaxTotal>')]
     #[SerializedName('TaxTotal')]
     #[XmlList(entry: 'TaxTotal', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $taxTotal = [];

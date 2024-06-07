@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Factories;
+namespace easybill\eInvoicing\Factories;
 
-use Easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
-use Easybill\eInvoicing\Specs\XRechnung\CII\Models\DocumentContextParameter;
-use Easybill\eInvoicing\Specs\XRechnung\CII\Models\ExchangedDocument;
-use Easybill\eInvoicing\Specs\XRechnung\CII\Models\ExchangedDocumentContext;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Documents\XRechnungUblCredit;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Documents\XRechnungUblInvoice;
+use easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
+use easybill\eInvoicing\Specs\XRechnung\CII\Models\DocumentContextParameter;
+use easybill\eInvoicing\Specs\XRechnung\CII\Models\ExchangedDocument;
+use easybill\eInvoicing\Specs\XRechnung\CII\Models\ExchangedDocumentContext;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Documents\XRechnungUblCredit;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Documents\XRechnungUblInvoice;
 
 final class XRechnungDocumentFactory
 {

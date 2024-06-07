@@ -2,40 +2,40 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicingTests\Integration\XRechnung3\UBL;
+namespace easybill\eInvoicingTests\Integration\XRechnung3\UBL;
 
-use Easybill\eInvoicing\DocumentFactory;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\AccountingParty;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\Address;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\Amount;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\CommodityClassification;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\Contact;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\Country;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\Id;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\Identification;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\InvoiceLine;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\Item;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\ItemClassificationCode;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\LegalMonetaryTotal;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\Note;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\OrderLineReference;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\Party;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\PartyLegalEntity;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\PartyName;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\PartyTaxScheme;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\PayeeFinancialAccount;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\PaymentMeans;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\PaymentMeansCode;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\PaymentTerms;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\Period;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\Price;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\Quantity;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\SellersItemIdentification;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\TaxCategory;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\TaxScheme;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\TaxSubtotal;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\TaxTotal;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Transformer;
+use easybill\eInvoicing\DocumentFactory;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\AccountingParty;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\Address;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\Amount;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\CommodityClassification;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\Contact;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\Country;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\Id;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\Identification;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\InvoiceLine;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\Item;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\ItemClassificationCode;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\LegalMonetaryTotal;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\Note;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\OrderLineReference;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\Party;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\PartyLegalEntity;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\PartyName;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\PartyTaxScheme;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\PayeeFinancialAccount;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\PaymentMeans;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\PaymentMeansCode;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\PaymentTerms;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\Period;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\Price;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\Quantity;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\SellersItemIdentification;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\TaxCategory;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\TaxScheme;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\TaxSubtotal;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\TaxTotal;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Transformer;
 
 test(
     'Allows building a valid XRechnung 3.0 document with a simple structure',

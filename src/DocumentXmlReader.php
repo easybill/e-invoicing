@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing;
+namespace easybill\eInvoicing;
 
-use Easybill\eInvoicing\Specs\Dtos\ReaderResult;
-use Easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISCredit;
-use Easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISInvoice;
-use Easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Documents\XRechnungUblCredit;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Documents\XRechnungUblInvoice;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Documents\ZUGFeRDInvoice;
-use Easybill\eInvoicingTests\Validators\Traits\ReformatXmlTrait;
+use easybill\eInvoicing\Dtos\ReaderResult;
+use easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISCredit;
+use easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISInvoice;
+use easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Documents\XRechnungUblCredit;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Documents\XRechnungUblInvoice;
+use easybill\eInvoicing\Specs\ZUGFeRD\Documents\ZUGFeRDInvoice;
+use easybill\eInvoicingTests\Validators\Traits\ReformatXmlTrait;
 use JMS\Serializer\SerializerBuilder;
 use JMS\Serializer\SerializerInterface;
 
@@ -84,7 +84,7 @@ final class DocumentXmlReader
         if ($this->isZUGFeRD($document)) {
             $document = $this->serializer->deserialize($xml, ZUGFeRDInvoice::class, 'xml');
 
-            if (!$document instanceof XRechnungCiiInvoice) {
+            if (!$document instanceof ZUGFeRDInvoice) {
                 throw new \RuntimeException('could not deserialize ZUGFeRDInvoice');
             }
 
@@ -130,7 +130,7 @@ final class DocumentXmlReader
             if ($this->isUBLInvoice($document)) {
                 $document = $this->serializer->deserialize($xml, PeppolBISInvoice::class, 'xml');
 
-                if (!$document instanceof XRechnungUblInvoice) {
+                if (!$document instanceof PeppolBISInvoice) {
                     throw new \RuntimeException('could not deserialize PeppolBISInvoice');
                 }
 

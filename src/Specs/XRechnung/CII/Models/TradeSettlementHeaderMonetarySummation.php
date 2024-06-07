@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\XRechnung\CII\Models;
+namespace easybill\eInvoicing\Specs\XRechnung\CII\Models;
 
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\XmlList;
@@ -27,14 +27,14 @@ final class TradeSettlementHeaderMonetarySummation
     /**
      * @var Amount[]
      */
-    #[JMS\Type('array<Easybill\eInvoicing\Specs\XRechnung\CII\Models\Amount>')]
+    #[JMS\Type('array<easybill\eInvoicing\Specs\XRechnung\CII\Models\Amount>')]
     #[XmlList(entry: 'TaxBasisTotalAmount', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $taxBasisTotalAmount = [];
 
     /**
      * @var Amount[]
      */
-    #[JMS\Type('array<Easybill\eInvoicing\Specs\XRechnung\CII\Models\Amount>')]
+    #[JMS\Type('array<easybill\eInvoicing\Specs\XRechnung\CII\Models\Amount>')]
     #[XmlList(entry: 'TaxTotalAmount', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $taxTotalAmount = [];
 
@@ -46,7 +46,7 @@ final class TradeSettlementHeaderMonetarySummation
     /**
      * @var Amount[]
      */
-    #[JMS\Type('array<Easybill\eInvoicing\Specs\XRechnung\CII\Models\Amount>')]
+    #[JMS\Type('array<easybill\eInvoicing\Specs\XRechnung\CII\Models\Amount>')]
     #[XmlList(entry: 'GrandTotalAmount', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $grandTotalAmount = [];
 

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicingTests\Integration\XRechnung3\UBL;
+namespace easybill\eInvoicingTests\Integration\XRechnung3\UBL;
 
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Documents\XRechnungUblInvoice;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Reader;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Transformer;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Documents\XRechnungUblInvoice;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Reader;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Transformer;
 
 test(
     'Reader parses the provided xml example accordingly and the resulting xml is identical to the provided',

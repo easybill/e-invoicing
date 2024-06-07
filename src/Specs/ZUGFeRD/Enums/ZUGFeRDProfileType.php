@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\ZUGFeRD\Enums;
+namespace easybill\eInvoicing\Specs\ZUGFeRD\Enums;
 
 enum ZUGFeRDProfileType: string
 {

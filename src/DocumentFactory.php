@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing;
+namespace easybill\eInvoicing;
 
-use Easybill\eInvoicing\Factories\PeppolDocumentFactory;
-use Easybill\eInvoicing\Factories\XRechnungDocumentFactory;
-use Easybill\eInvoicing\Factories\ZUGFeRDDocumentFactory;
-use Easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISCredit;
-use Easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISInvoice;
-use Easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Documents\XRechnungUblCredit;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Documents\XRechnungUblInvoice;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Documents\ZUGFeRDInvoice;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Enums\ZUGFeRDProfileType;
+use easybill\eInvoicing\Factories\PeppolDocumentFactory;
+use easybill\eInvoicing\Factories\XRechnungDocumentFactory;
+use easybill\eInvoicing\Factories\ZUGFeRDDocumentFactory;
+use easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISCredit;
+use easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISInvoice;
+use easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Documents\XRechnungUblCredit;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Documents\XRechnungUblInvoice;
+use easybill\eInvoicing\Specs\ZUGFeRD\Documents\ZUGFeRDInvoice;
+use easybill\eInvoicing\Specs\ZUGFeRD\Enums\ZUGFeRDProfileType;
 
 final class DocumentFactory
 {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\Peppol\Documents;
+namespace easybill\eInvoicing\Specs\Peppol\Documents;
 
-use Easybill\eInvoicing\Specs\Peppol\Models\DocumentReference;
-use Easybill\eInvoicing\Specs\Peppol\Models\InvoiceLine;
+use easybill\eInvoicing\Specs\Peppol\Models\DocumentReference;
+use easybill\eInvoicing\Specs\Peppol\Models\InvoiceLine;
 use JMS\Serializer\Annotation\AccessorOrder;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -73,7 +73,7 @@ final class PeppolBISInvoice  extends PeppolBISAbstractDocument
     public ?DocumentReference $contractDocumentReference = null;
 
     /** @var DocumentReference[] */
-    #[Type('array<Easybill\eInvoicing\Specs\Peppol\Models\DocumentReference>')]
+    #[Type('array<easybill\eInvoicing\Specs\Peppol\Models\DocumentReference>')]
     #[SerializedName('AdditionalDocumentReference')]
     #[XmlList(entry: 'AdditionalDocumentReference', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $additionalDocumentReference = [];
@@ -84,7 +84,7 @@ final class PeppolBISInvoice  extends PeppolBISAbstractDocument
     public ?DocumentReference $projectReference = null;
 
     /** @var InvoiceLine[] */
-    #[Type('array<Easybill\eInvoicing\Specs\Peppol\Models\InvoiceLine>')]
+    #[Type('array<easybill\eInvoicing\Specs\Peppol\Models\InvoiceLine>')]
     #[SerializedName('InvoiceLine')]
     #[XmlList(entry: 'InvoiceLine', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $invoiceLine = [];

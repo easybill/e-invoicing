@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicingTests\Integration\ZUGFeRD;
+namespace easybill\eInvoicingTests\Integration\ZUGFeRD;
 
-use Easybill\eInvoicing\Specs\ZUGFeRD\Reader;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Transformer;
+use easybill\eInvoicing\Specs\ZUGFeRD\Reader;
+use easybill\eInvoicing\Specs\ZUGFeRD\Transformer;
 
 test(
     'building and reading different xml formats',

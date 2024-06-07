@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\ZUGFeRD\Models;
+namespace easybill\eInvoicing\Specs\ZUGFeRD\Models;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -14,14 +14,14 @@ final class LineTradeSettlement
     /**
      * @var TradeTax[]
      */
-    #[Type('array<Easybill\eInvoicing\Specs\ZUGFeRD\Models\TradeTax>')]
+    #[Type('array<easybill\eInvoicing\Specs\ZUGFeRD\Models\TradeTax>')]
     #[XmlList(entry: 'ApplicableTradeTax', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $tradeTax = [];
 
     /**
      * @var TradeAllowanceCharge[]
      */
-    #[Type('array<Easybill\eInvoicing\Specs\ZUGFeRD\Models\TradeAllowanceCharge>')]
+    #[Type('array<easybill\eInvoicing\Specs\ZUGFeRD\Models\TradeAllowanceCharge>')]
     #[XmlList(entry: 'SpecifiedTradeAllowanceCharge', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $specifiedTradeAllowanceCharge = [];
 
@@ -38,7 +38,7 @@ final class LineTradeSettlement
     /**
      * @var TradeAccountingAccount[]
      */
-    #[Type('array<Easybill\eInvoicing\Specs\ZUGFeRD\Models\TradeAccountingAccount>')]
+    #[Type('array<easybill\eInvoicing\Specs\ZUGFeRD\Models\TradeAccountingAccount>')]
     #[XmlList(entry: 'ReceivableSpecifiedTradeAccountingAccount', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $tradeAccountingAccount = [];
 }

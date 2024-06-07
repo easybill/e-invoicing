@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\Peppol\Documents;
+namespace easybill\eInvoicing\Specs\Peppol\Documents;
 
-use Easybill\eInvoicing\Specs\Peppol\Models\CreditNoteLine;
+use easybill\eInvoicing\Specs\Peppol\Models\CreditNoteLine;
 use JMS\Serializer\Annotation\AccessorOrder;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -52,7 +52,7 @@ final class PeppolBISCredit extends PeppolBISAbstractDocument
     public ?int $creditNoteTypeCode = null;
 
     /** @var CreditNoteLine[] */
-    #[Type('array<Easybill\eInvoicing\Specs\Peppol\Models\CreditNoteLine>')]
+    #[Type('array<easybill\eInvoicing\Specs\Peppol\Models\CreditNoteLine>')]
     #[SerializedName('CreditNoteLine')]
     #[XmlList(entry: 'CreditNoteLine', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $creditNoteLine = [];

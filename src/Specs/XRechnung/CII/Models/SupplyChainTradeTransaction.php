@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\XRechnung\CII\Models;
+namespace easybill\eInvoicing\Specs\XRechnung\CII\Models;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -14,7 +14,7 @@ final class SupplyChainTradeTransaction
     /**
      * @var SupplyChainTradeLineItem[]
      */
-    #[Type('array<Easybill\eInvoicing\Specs\XRechnung\CII\Models\SupplyChainTradeLineItem>')]
+    #[Type('array<easybill\eInvoicing\Specs\XRechnung\CII\Models\SupplyChainTradeLineItem>')]
     #[XmlList(entry: 'IncludedSupplyChainTradeLineItem', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $lineItems = [];
 

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\Dtos;
+namespace easybill\eInvoicing\Dtos;
 
-use Easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISAbstractDocument;
-use Easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Documents\XRechnungUblAbstractDocument;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Documents\ZUGFeRDInvoice;
+use easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISAbstractDocument;
+use easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Documents\XRechnungUblAbstractDocument;
+use easybill\eInvoicing\Specs\ZUGFeRD\Documents\ZUGFeRDInvoice;
 
 final class ReaderResult
 {
@@ -41,6 +41,7 @@ final class ReaderResult
         return null === $this->throwable;
     }
 
+    /** @throws \LogicException */
     public function getError(): \Throwable
     {
         if (null === $this->throwable || null !== $this->document) {
@@ -50,6 +51,7 @@ final class ReaderResult
         return $this->throwable;
     }
 
+    /** @throws \LogicException */
     public function getDocument(): PeppolBISAbstractDocument|XRechnungCiiInvoice|XRechnungUblAbstractDocument|ZUGFeRDInvoice
     {
         if (null !== $this->throwable || null === $this->document) {

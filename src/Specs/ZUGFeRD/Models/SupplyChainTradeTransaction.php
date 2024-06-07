@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\ZUGFeRD\Models;
+namespace easybill\eInvoicing\Specs\ZUGFeRD\Models;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -14,7 +14,7 @@ final class SupplyChainTradeTransaction
     /**
      * @var SupplyChainTradeLineItem[]
      */
-    #[Type('array<Easybill\eInvoicing\Specs\ZUGFeRD\Models\SupplyChainTradeLineItem>')]
+    #[Type('array<easybill\eInvoicing\Specs\ZUGFeRD\Models\SupplyChainTradeLineItem>')]
     #[XmlList(entry: 'IncludedSupplyChainTradeLineItem', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $lineItems = [];
 

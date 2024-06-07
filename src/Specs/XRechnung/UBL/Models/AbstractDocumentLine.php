@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\XRechnung\UBL\Models;
+namespace easybill\eInvoicing\Specs\XRechnung\UBL\Models;
 
 use JMS\Serializer\Annotation as Serializer;
 use JMS\Serializer\Annotation\SerializedName;
@@ -39,13 +39,13 @@ abstract class AbstractDocumentLine
     public ?OrderLineReference $orderLineReference = null;
 
     /** @var AllowanceCharge[] */
-    #[Type('array<Easybill\eInvoicing\Specs\XRechnung\UBL\Models\AllowanceCharge>')]
+    #[Type('array<easybill\eInvoicing\Specs\XRechnung\UBL\Models\AllowanceCharge>')]
     #[SerializedName('AllowanceCharge')]
     #[XmlList(entry: 'AllowanceCharge', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $allowanceCharge = [];
 
     /** @var Item[] */
-    #[Type('array<Easybill\eInvoicing\Specs\XRechnung\UBL\Models\Item>')]
+    #[Type('array<easybill\eInvoicing\Specs\XRechnung\UBL\Models\Item>')]
     #[SerializedName('Item')]
     #[XmlList(entry: 'Item', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $item = [];

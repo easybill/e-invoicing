@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicingTests\Integration;
+namespace easybill\eInvoicingTests\Integration;
 
-use Easybill\eInvoicing\DocumentXmlReader;
-use Easybill\eInvoicing\Specs\Dtos\ReaderResult;
-use Easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISCredit;
-use Easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISInvoice;
-use Easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Documents\XRechnungUblInvoice;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Documents\ZUGFeRDInvoice;
+use easybill\eInvoicing\DocumentXmlReader;
+use easybill\eInvoicing\Dtos\ReaderResult;
+use easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISCredit;
+use easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISInvoice;
+use easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Documents\XRechnungUblInvoice;
+use easybill\eInvoicing\Specs\ZUGFeRD\Documents\ZUGFeRDInvoice;
 
 test(
     'test if the reader can process the provided xml',

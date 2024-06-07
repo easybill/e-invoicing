@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\XRechnung\CII\Models;
+namespace easybill\eInvoicing\Specs\XRechnung\CII\Models;
 
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\Type;
@@ -26,7 +26,7 @@ final class TradePrice
     public ?TradeAllowanceCharge $appliedTradeAllowanceCharge = null;
 
     /** @var TradeAllowanceCharge[] */
-    #[Type('array<Easybill\eInvoicing\Specs\XRechnung\CII\Models\TradeAllowanceCharge>')]
+    #[Type('array<easybill\eInvoicing\Specs\XRechnung\CII\Models\TradeAllowanceCharge>')]
     #[XmlList(entry: 'AppliedTradeAllowanceCharge', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public ?array $appliedTradeAllowanceCharges = null;
 

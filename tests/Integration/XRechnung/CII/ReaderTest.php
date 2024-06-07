@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicingTests\Integration\XRechnung3\CII;
+namespace easybill\eInvoicingTests\Integration\XRechnung3\CII;
 
-use Easybill\eInvoicing\Specs\XRechnung\CII\Reader;
-use Easybill\eInvoicing\Specs\XRechnung\CII\Transformer;
+use easybill\eInvoicing\Specs\XRechnung\CII\Reader;
+use easybill\eInvoicing\Specs\XRechnung\CII\Transformer;
 
 test(
     'Reader parses the provided xml example accordingly and the resulting xml is identical to the provided',

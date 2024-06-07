@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicingTests\Validators;
+namespace easybill\eInvoicingTests\Validators;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\RequestOptions;
@@ -18,8 +18,8 @@ final class PeppolValidator
                 'Content-Type' => 'application/xml',
             ],
             RequestOptions::BODY => $xml,
-            RequestOptions::TIMEOUT => 3,
-            RequestOptions::CONNECT_TIMEOUT => 3,
+            RequestOptions::TIMEOUT => 10,
+            RequestOptions::CONNECT_TIMEOUT => 10,
             RequestOptions::HTTP_ERRORS => false,
         ]);
 

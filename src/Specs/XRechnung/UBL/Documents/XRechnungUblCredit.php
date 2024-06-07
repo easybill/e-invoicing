@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\XRechnung\UBL\Documents;
+namespace easybill\eInvoicing\Specs\XRechnung\UBL\Documents;
 
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\CreditNoteLine;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\CreditNoteLine;
 use JMS\Serializer\Annotation\AccessorOrder;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -56,7 +56,7 @@ final class XRechnungUblCredit extends XRechnungUblAbstractDocument
     public ?string $taxCurrencyCode = null;
 
     /** @var CreditNoteLine[] */
-    #[Type('array<Easybill\eInvoicing\Specs\XRechnung\UBL\Models\CreditNoteLine>')]
+    #[Type('array<easybill\eInvoicing\Specs\XRechnung\UBL\Models\CreditNoteLine>')]
     #[SerializedName('CreditNoteLine')]
     #[XmlList(entry: 'CreditNoteLine', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $creditNoteLine = [];

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicingTests\Validators\Traits;
+namespace easybill\eInvoicingTests\Validators\Traits;
 
-use Easybill\eInvoicingTests\Validators\KositValidator;
-use Easybill\eInvoicingTests\Validators\PeppolValidator;
+use easybill\eInvoicingTests\Validators\KositValidator;
+use easybill\eInvoicingTests\Validators\PeppolValidator;
 
 trait ValidatorTrait
 {

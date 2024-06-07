@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\XRechnung\CII\Models;
+namespace easybill\eInvoicing\Specs\XRechnung\CII\Models;
 
 use JMS\Serializer\Annotation\AccessorOrder;
 use JMS\Serializer\Annotation\SerializedName;
@@ -19,7 +19,7 @@ final class TradeParty
     public ?Id $id = null;
 
     /** @var Id[] */
-    #[Type('array<Easybill\eInvoicing\Specs\XRechnung\CII\Models\Id>')]
+    #[Type('array<easybill\eInvoicing\Specs\XRechnung\CII\Models\Id>')]
     #[XmlList(entry: 'GlobalID', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $globalID = [];
 
@@ -39,7 +39,7 @@ final class TradeParty
     public ?TradeAddress $postalTradeAddress = null;
 
     /** @var TaxRegistration[] */
-    #[Type('array<Easybill\eInvoicing\Specs\XRechnung\CII\Models\TaxRegistration>')]
+    #[Type('array<easybill\eInvoicing\Specs\XRechnung\CII\Models\TaxRegistration>')]
     #[XmlList(entry: 'SpecifiedTaxRegistration', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $taxRegistrations = [];
 

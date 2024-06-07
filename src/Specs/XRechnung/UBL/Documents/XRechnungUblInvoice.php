@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\XRechnung\UBL\Documents;
+namespace easybill\eInvoicing\Specs\XRechnung\UBL\Documents;
 
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\DocumentReference;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Models\InvoiceLine;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\DocumentReference;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Models\InvoiceLine;
 use JMS\Serializer\Annotation\AccessorOrder;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -81,7 +81,7 @@ final class XRechnungUblInvoice extends XRechnungUblAbstractDocument
     public ?DocumentReference $projectReference = null;
 
     /** @var InvoiceLine[] */
-    #[Type('array<Easybill\eInvoicing\Specs\XRechnung\UBL\Models\InvoiceLine>')]
+    #[Type('array<easybill\eInvoicing\Specs\XRechnung\UBL\Models\InvoiceLine>')]
     #[SerializedName('InvoiceLine')]
     #[XmlList(entry: 'InvoiceLine', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $invoiceLine = [];

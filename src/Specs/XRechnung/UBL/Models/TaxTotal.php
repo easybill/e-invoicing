@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\XRechnung\UBL\Models;
+namespace easybill\eInvoicing\Specs\XRechnung\UBL\Models;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -17,7 +17,7 @@ final class TaxTotal
     public ?Amount $taxAmount = null;
 
     /** @var TaxSubtotal[] */
-    #[Type('array<Easybill\eInvoicing\Specs\XRechnung\UBL\Models\TaxSubtotal>')]
+    #[Type('array<easybill\eInvoicing\Specs\XRechnung\UBL\Models\TaxSubtotal>')]
     #[SerializedName('TaxSubtotal')]
     #[XmlList(entry: 'TaxSubtotal', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $taxSubtotal = [];

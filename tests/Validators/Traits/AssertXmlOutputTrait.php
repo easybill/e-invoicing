@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicingTests\Validators\Traits;
+namespace easybill\eInvoicingTests\Validators\Traits;
 
-use Easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
-use Easybill\eInvoicing\Specs\XRechnung\CII\Transformer as XRechnungTransformer;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Documents\ZUGFeRDInvoice;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Transformer as ZUGFeRDTransformer;
-use Easybill\eInvoicingTests\Validators\SchemaValidator;
+use easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
+use easybill\eInvoicing\Specs\XRechnung\CII\Transformer as XRechnungTransformer;
+use easybill\eInvoicing\Specs\ZUGFeRD\Documents\ZUGFeRDInvoice;
+use easybill\eInvoicing\Specs\ZUGFeRD\Transformer as ZUGFeRDTransformer;
+use easybill\eInvoicingTests\Validators\SchemaValidator;
 
 trait AssertXmlOutputTrait
 {
