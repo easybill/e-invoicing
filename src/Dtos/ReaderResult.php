@@ -41,6 +41,7 @@ final class ReaderResult
         return null === $this->throwable;
     }
 
+    /** @throws \LogicException */
     public function getError(): \Throwable
     {
         if (null === $this->throwable || null !== $this->document) {
@@ -50,6 +51,7 @@ final class ReaderResult
         return $this->throwable;
     }
 
+    /** @throws \LogicException */
     public function getDocument(): PeppolBISAbstractDocument|XRechnungCiiInvoice|XRechnungUblAbstractDocument|ZUGFeRDInvoice
     {
         if (null !== $this->throwable || null === $this->document) {

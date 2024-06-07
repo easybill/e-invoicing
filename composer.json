@@ -1,6 +1,7 @@
 {
     "name": "easybill/e-invoicing",
-    "description": "A package to read and create the formats: factur-x, PEPPOL, XRechnung (CII/UBL)",
+    "version": "0.1.0",
+    "description": "A package to read and create the formats: factur-x, Peppol BIS Billing, XRechnung (CII/UBL)",
     "type": "library",
     "license": "MIT",
     "keywords": [
