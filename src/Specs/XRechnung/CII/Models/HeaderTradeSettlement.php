@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\XRechnung\CII\Models;
+namespace easybill\eInvoicing\Specs\XRechnung\CII\Models;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -34,14 +34,14 @@ final class HeaderTradeSettlement
     /**
      * @var TradeSettlementPaymentMeans[]
      */
-    #[Type('array<Easybill\eInvoicing\Specs\XRechnung\CII\Models\TradeSettlementPaymentMeans>')]
+    #[Type('array<easybill\eInvoicing\Specs\XRechnung\CII\Models\TradeSettlementPaymentMeans>')]
     #[XmlList(entry: 'SpecifiedTradeSettlementPaymentMeans', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $specifiedTradeSettlementPaymentMeans = [];
 
     /**
      * @var TradeTax[]
      */
-    #[Type('array<Easybill\eInvoicing\Specs\XRechnung\CII\Models\TradeTax>')]
+    #[Type('array<easybill\eInvoicing\Specs\XRechnung\CII\Models\TradeTax>')]
     #[XmlList(entry: 'ApplicableTradeTax', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $tradeTaxes = [];
 
@@ -53,21 +53,21 @@ final class HeaderTradeSettlement
     /**
      * @var TradeAllowanceCharge[]
      */
-    #[Type('array<Easybill\eInvoicing\Specs\XRechnung\CII\Models\TradeAllowanceCharge>')]
+    #[Type('array<easybill\eInvoicing\Specs\XRechnung\CII\Models\TradeAllowanceCharge>')]
     #[XmlList(entry: 'SpecifiedTradeAllowanceCharge', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $specifiedTradeAllowanceCharge = [];
 
     /**
      * @var LogisticsServiceCharge[]
      */
-    #[Type('array<Easybill\eInvoicing\Specs\XRechnung\CII\Models\LogisticsServiceCharge>')]
+    #[Type('array<easybill\eInvoicing\Specs\XRechnung\CII\Models\LogisticsServiceCharge>')]
     #[XmlList(entry: 'SpecifiedLogisticsServiceCharge', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $specifiedLogisticsServiceCharge = [];
 
     /**
      * @var TradePaymentTerms[]
      */
-    #[Type('array<Easybill\eInvoicing\Specs\XRechnung\CII\Models\TradePaymentTerms>')]
+    #[Type('array<easybill\eInvoicing\Specs\XRechnung\CII\Models\TradePaymentTerms>')]
     #[XmlList(entry: 'SpecifiedTradePaymentTerms', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $specifiedTradePaymentTerms = [];
 

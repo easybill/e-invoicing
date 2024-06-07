@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Factories;
+namespace easybill\eInvoicing\Factories;
 
-use Easybill\eInvoicing\Specs\ZUGFeRD\Documents\ZUGFeRDInvoice;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Enums\ZUGFeRDProfileType;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\DocumentContextParameter;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\ExchangedDocument;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\ExchangedDocumentContext;
+use easybill\eInvoicing\Specs\ZUGFeRD\Documents\ZUGFeRDInvoice;
+use easybill\eInvoicing\Specs\ZUGFeRD\Enums\ZUGFeRDProfileType;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\DocumentContextParameter;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\ExchangedDocument;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\ExchangedDocumentContext;
 
 final class ZUGFeRDDocumentFactory
 {

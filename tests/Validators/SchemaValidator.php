@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicingTests\Validators;
+namespace easybill\eInvoicingTests\Validators;
 
 final class SchemaValidator
 {

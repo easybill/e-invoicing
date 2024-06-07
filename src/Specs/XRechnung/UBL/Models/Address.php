@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\XRechnung\UBL\Models;
+namespace easybill\eInvoicing\Specs\XRechnung\UBL\Models;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -32,7 +32,7 @@ final class Address
     public ?string $postalZone = null;
 
     /** @var AddressLine[] */
-    #[Type('array<Easybill\eInvoicing\Specs\XRechnung\UBL\Models\AddressLine>')]
+    #[Type('array<easybill\eInvoicing\Specs\XRechnung\UBL\Models\AddressLine>')]
     #[SerializedName('AddressLine')]
     #[XmlList(entry: 'AddressLine', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $addressLines = [];

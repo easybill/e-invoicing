@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\XRechnung\CII\Documents;
+namespace easybill\eInvoicing\Specs\XRechnung\CII\Documents;
 
-use Easybill\eInvoicing\Specs\XRechnung\CII\Models\ExchangedDocument;
-use Easybill\eInvoicing\Specs\XRechnung\CII\Models\ExchangedDocumentContext;
-use Easybill\eInvoicing\Specs\XRechnung\CII\Models\SupplyChainTradeTransaction;
+use easybill\eInvoicing\Specs\XRechnung\CII\Models\ExchangedDocument;
+use easybill\eInvoicing\Specs\XRechnung\CII\Models\ExchangedDocumentContext;
+use easybill\eInvoicing\Specs\XRechnung\CII\Models\SupplyChainTradeTransaction;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlElement;

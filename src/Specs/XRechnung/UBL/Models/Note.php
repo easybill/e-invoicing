@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\XRechnung\UBL\Models;
+namespace easybill\eInvoicing\Specs\XRechnung\UBL\Models;
 
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlValue;

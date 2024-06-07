@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\Peppol;
+namespace easybill\eInvoicing\Specs\Peppol;
 
-use Easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISAbstractDocument;
+use easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISAbstractDocument;
 use JMS\Serializer\SerializerBuilder;
 use JMS\Serializer\SerializerInterface;
 

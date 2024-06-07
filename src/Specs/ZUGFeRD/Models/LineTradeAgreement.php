@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\ZUGFeRD\Models;
+namespace easybill\eInvoicing\Specs\ZUGFeRD\Models;
 
 use JMS\Serializer\Annotation\AccessorOrder;
 use JMS\Serializer\Annotation\SerializedName;

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\XRechnung\CII;
+namespace easybill\eInvoicing\Specs\XRechnung\CII;
 
-use Easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
+use easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
 use JMS\Serializer\SerializerBuilder;
 use JMS\Serializer\SerializerInterface;
 

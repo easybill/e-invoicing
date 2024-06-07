@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\ZUGFeRD\Models;
+namespace easybill\eInvoicing\Specs\ZUGFeRD\Models;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -42,7 +42,7 @@ final class ExchangedDocument
     /**
      * @var Note[]
      */
-    #[Type('array<Easybill\eInvoicing\Specs\ZUGFeRD\Models\Note>')]
+    #[Type('array<easybill\eInvoicing\Specs\ZUGFeRD\Models\Note>')]
     #[XmlList(entry: 'IncludedNote', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $notes = [];
 }

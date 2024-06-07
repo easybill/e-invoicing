@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicingTests\Integration\Peppol;
+namespace easybill\eInvoicingTests\Integration\Peppol;
 
-use Easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISCredit;
-use Easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISInvoice;
-use Easybill\eInvoicing\Specs\Peppol\Reader;
-use Easybill\eInvoicing\Specs\Peppol\Transformer;
+use easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISCredit;
+use easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISInvoice;
+use easybill\eInvoicing\Specs\Peppol\Reader;
+use easybill\eInvoicing\Specs\Peppol\Transformer;
 
 test(
     'Reader parses the provided xml example accordingly and the resulting xml is identical to the provided',

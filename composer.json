@@ -19,12 +19,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Easybill\\eInvoicing\\": "src/"
+            "easybill\\eInvoicing\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Easybill\\eInvoicingTests\\": "tests/"
+            "easybill\\eInvoicingTests\\": "tests/"
         }
     },
     "authors": [

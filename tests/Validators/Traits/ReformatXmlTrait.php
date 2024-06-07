@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicingTests\Validators\Traits;
+namespace easybill\eInvoicingTests\Validators\Traits;
 
 trait ReformatXmlTrait
 {

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Dtos;
+namespace easybill\eInvoicing\Dtos;
 
-use Easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISAbstractDocument;
-use Easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
-use Easybill\eInvoicing\Specs\XRechnung\UBL\Documents\XRechnungUblAbstractDocument;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Documents\ZUGFeRDInvoice;
+use easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISAbstractDocument;
+use easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
+use easybill\eInvoicing\Specs\XRechnung\UBL\Documents\XRechnungUblAbstractDocument;
+use easybill\eInvoicing\Specs\ZUGFeRD\Documents\ZUGFeRDInvoice;
 
 final class ReaderResult
 {

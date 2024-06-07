@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\ZUGFeRD\Documents;
+namespace easybill\eInvoicing\Specs\ZUGFeRD\Documents;
 
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\ExchangedDocument;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\ExchangedDocumentContext;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\SupplyChainTradeTransaction;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\ExchangedDocument;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\ExchangedDocumentContext;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\SupplyChainTradeTransaction;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlElement;

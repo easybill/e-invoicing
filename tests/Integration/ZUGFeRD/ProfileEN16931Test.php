@@ -2,36 +2,36 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicingTests\Integration\ZUGFeRD;
+namespace easybill\eInvoicingTests\Integration\ZUGFeRD;
 
-use Easybill\eInvoicing\DocumentFactory;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Enums\ZUGFeRDProfileType;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\Amount;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\DateTime;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\DocumentLineDocument;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\HeaderTradeAgreement;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\HeaderTradeDelivery;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\HeaderTradeSettlement;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\Id;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\LineTradeAgreement;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\LineTradeDelivery;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\LineTradeSettlement;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\Note;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\Quantity;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\SupplyChainEvent;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\SupplyChainTradeLineItem;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\SupplyChainTradeTransaction;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\TaxRegistration;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\TradeAddress;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\TradeParty;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\TradePaymentTerms;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\TradePrice;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\TradeProduct;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\TradeSettlementHeaderMonetarySummation;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\TradeSettlementLineMonetarySummation;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Models\TradeTax;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Transformer;
-use Easybill\eInvoicingTests\Validators\SchemaValidator;
+use easybill\eInvoicing\DocumentFactory;
+use easybill\eInvoicing\Specs\ZUGFeRD\Enums\ZUGFeRDProfileType;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\Amount;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\DateTime;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\DocumentLineDocument;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\HeaderTradeAgreement;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\HeaderTradeDelivery;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\HeaderTradeSettlement;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\Id;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\LineTradeAgreement;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\LineTradeDelivery;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\LineTradeSettlement;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\Note;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\Quantity;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\SupplyChainEvent;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\SupplyChainTradeLineItem;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\SupplyChainTradeTransaction;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\TaxRegistration;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\TradeAddress;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\TradeParty;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\TradePaymentTerms;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\TradePrice;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\TradeProduct;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\TradeSettlementHeaderMonetarySummation;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\TradeSettlementLineMonetarySummation;
+use easybill\eInvoicing\Specs\ZUGFeRD\Models\TradeTax;
+use easybill\eInvoicing\Specs\ZUGFeRD\Transformer;
+use easybill\eInvoicingTests\Validators\SchemaValidator;
 
 test(
     'building ZUGFeRD CII document for EN16931_Einfach.xml',

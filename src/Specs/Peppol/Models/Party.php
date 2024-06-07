@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\Peppol\Models;
+namespace easybill\eInvoicing\Specs\Peppol\Models;
 
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -32,7 +32,7 @@ final class Party
     public ?Address $postalAddress = null;
 
     /** @var PartyTaxScheme[] */
-    #[Type('array<Easybill\eInvoicing\Specs\Peppol\Models\PartyTaxScheme>')]
+    #[Type('array<easybill\eInvoicing\Specs\Peppol\Models\PartyTaxScheme>')]
     #[SerializedName('PartyTaxScheme')]
     #[XmlList(entry: 'PartyTaxScheme', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $partyTaxScheme = [];

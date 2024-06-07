@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\ZUGFeRD\Models;
+namespace easybill\eInvoicing\Specs\ZUGFeRD\Models;
 
 use JMS\Serializer\Annotation\AccessorOrder;
 use JMS\Serializer\Annotation\SerializedName;
@@ -26,7 +26,7 @@ final class LogisticsServiceCharge
     /**
      * @var TradeTax[]
      */
-    #[Type('array<Easybill\eInvoicing\Specs\ZUGFeRD\Models\TradeTax>')]
+    #[Type('array<easybill\eInvoicing\Specs\ZUGFeRD\Models\TradeTax>')]
     #[XmlList(entry: 'AppliedTradeTax', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $tradeTaxes = [];
 }

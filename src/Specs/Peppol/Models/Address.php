@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\Peppol\Models;
+namespace easybill\eInvoicing\Specs\Peppol\Models;
 
 use JMS\Serializer\Annotation\AccessorOrder;
 use JMS\Serializer\Annotation\SerializedName;
@@ -42,7 +42,7 @@ final class Address
     public ?string $postalZone = null;
 
     /** @var AddressLine[] */
-    #[Type('array<Easybill\eInvoicing\Specs\Peppol\Models\AddressLine>')]
+    #[Type('array<easybill\eInvoicing\Specs\Peppol\Models\AddressLine>')]
     #[SerializedName('AddressLine')]
     #[XmlList(entry: 'AddressLine', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $addressLines = [];

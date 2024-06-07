@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicingTests\Integration;
+namespace easybill\eInvoicingTests\Integration;
 
-use Easybill\eInvoicing\DocumentFactory;
-use Easybill\eInvoicing\Specs\ZUGFeRD\Enums\ZUGFeRDProfileType;
+use easybill\eInvoicing\DocumentFactory;
+use easybill\eInvoicing\Specs\ZUGFeRD\Enums\ZUGFeRDProfileType;
 
 test('check if the ZUGFeRD document is constructed as expected', function () {
     $document = DocumentFactory::createZUGFeRDInvoice(ZUGFeRDProfileType::BASIC);

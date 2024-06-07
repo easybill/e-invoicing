@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Factories;
+namespace easybill\eInvoicing\Factories;
 
-use Easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISCredit;
-use Easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISInvoice;
+use easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISCredit;
+use easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISInvoice;
 
 final class PeppolDocumentFactory
 {

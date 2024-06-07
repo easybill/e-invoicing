@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicingTests;
+namespace easybill\eInvoicingTests;
 
-use Easybill\eInvoicingTests\Validators\Traits\AssertXmlOutputTrait;
-use Easybill\eInvoicingTests\Validators\Traits\ReformatXmlTrait;
-use Easybill\eInvoicingTests\Validators\Traits\RemoveXmlMutatesTrait;
-use Easybill\eInvoicingTests\Validators\Traits\ValidatorTrait;
+use easybill\eInvoicingTests\Validators\Traits\AssertXmlOutputTrait;
+use easybill\eInvoicingTests\Validators\Traits\ReformatXmlTrait;
+use easybill\eInvoicingTests\Validators\Traits\RemoveXmlMutatesTrait;
+use easybill\eInvoicingTests\Validators\Traits\ValidatorTrait;
 use PHPUnit\Framework\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase

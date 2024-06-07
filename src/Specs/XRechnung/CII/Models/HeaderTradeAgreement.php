@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\XRechnung\CII\Models;
+namespace easybill\eInvoicing\Specs\XRechnung\CII\Models;
 
 use JMS\Serializer\Annotation\AccessorOrder;
 use JMS\Serializer\Annotation\SerializedName;
@@ -59,7 +59,7 @@ final class HeaderTradeAgreement
     public ?ReferencedDocument $contractReferencedDocument = null;
 
     /** @var ReferencedDocument[] */
-    #[Type('array<Easybill\eInvoicing\Specs\XRechnung\CII\Models\ReferencedDocument>')]
+    #[Type('array<easybill\eInvoicing\Specs\XRechnung\CII\Models\ReferencedDocument>')]
     #[XmlList(entry: 'AdditionalReferencedDocument', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $additionalReferencedDocuments = [];
 
