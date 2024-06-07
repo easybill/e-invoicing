@@ -1,0 +1,58 @@
+{
+    "name": "easybill/e-invoicing",
+    "description": "A package to read and create the formats: factur-x, PEPPOL, XRechnung (CII/UBL)",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "XRechnung",
+        "PEPPOL",
+        "factur-x",
+        "ZUGFeRD",
+        "EN16931",
+        "e-invoicing",
+        "einvoice",
+        "invoicing",
+        "UBL",
+        "CII",
+        "XML"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Easybill\\eInvoicing\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Easybill\\eInvoicingTests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jan Nöhles",
+            "email": "jan.noehles@easybill.de"
+        },
+        {
+            "name": "Patrick Romowicz",
+            "email": "patrick.romowicz@easybill.de"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.2",
+        "ext-dom": "*",
+        "jms/serializer": "^3.30",
+        "ext-libxml": "*"
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.34",
+        "phpstan/phpstan": "^1.10",
+        "friendsofphp/php-cs-fixer": "^3.51",
+        "guzzlehttp/guzzle": "^7.8"
+    },
+    "config": {
+        "platform-check": false,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}

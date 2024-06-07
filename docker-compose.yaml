@@ -1,0 +1,10 @@
+services:
+  kosit-validator:
+    image: 'easybill/zugferd-validator202309:v0.0.62'
+    ports:
+      - '8080:8080'
+
+  peppol-validator:
+    image: 'bolzerdev/peppol-bis-billing-validator:latest'
+    ports:
+      - '8081:8080'
