@@ -16,7 +16,7 @@ and ZUGFeRD / factur-x. The library offers the possibility to generate EN16931 c
 composer require easybill/e-invoicing
 ```
 
-### Example creating ZUGFeRD/factur-x XML
+### Example: Creating ZUGFeRD/factur-x XML
 The document factory offers handy shortcut functions to assemble a document for every supported specification
 with the correct basic structure. $document is now ready to be filled with data related to your business case.
 
@@ -29,24 +29,34 @@ $document->exchangedDocument->id = '471102';
 $document->exchangedDocument->issueDateTime = DateTime::create(102, '20200305');
 // etc...
 $xml = ZUGFeRDTransformer::create()->transform($invoice)
-
-
 ```
 
-### Example reading a known XML file format
+### Example: Reading a known XML file format
 
 If you only want to support a subset of the offered specifications (as an example ZUGFeRD/factur-x) you may use the
 builder and reader from the corresponding namespace.
 
+```PHP
+use Easybill\eInvoicing\Specs\ZUGFeRD\Reader;
+use Easybill\eInvoicing\Specs\ZUGFeRD\Transformer;
 
-### Example reading an unknown XML file
+$xml = file_get_contents($exampleXmlFile);
+
+$document = Reader::create()->transform($xml);
+
+$document->exchangedDocument->name = 'Example Value'
+  
+$xml = Transformer::create()->transform($document);
+```
+
+### Example: Reading an unknown XML file
 
 There might be the case that you receive some XML which may or may not be supported by this library. `e-invoicing` offers a handy
-way to just parse that XML and see if is marshable to one of the supported formats.
+way to just parse that XML and see if is deserializable to one of the supported formats.
 
 ```PHP
 use Easybill\eInvoicing\DocumentXmlReader;
-use \Easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
+use Easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
 
 $xml = file_get_contents($exampleXmlFile);
 
@@ -67,11 +77,13 @@ if ($document instanceof XRechnungCiiInvoice) {
 }
 ```
 
-You can refer to the tests in this repository for examples.
+You can refer to the [tests](https://github.com/easybill/e-invoicing/tree/main/tests/Integration) in this repository for examples of using this library.
 
 ## Considerations
 
 ### Limitations
 
+
 ### Validation
 
+## Issues and contribution
