@@ -82,8 +82,10 @@ You can refer to the [tests](https://github.com/easybill/e-invoicing/tree/main/t
 ## Considerations
 
 ### Limitations
-
-
-### Validation
+This library does not offer any way to validate the structured data against the rules of the specifications. 
+Please take a look at the folder [Validators](https://github.com/easybill/e-invoicing/tree/main/tests/Validators) in the tests folder. There you will find ways to validate the documents against the specification
+rulesets. ZUGFeRD offers XSD-Schema-Files which you may use directly in your PHP code. For XRechnung and Peppol will take a look at the [docker-compose.yaml](https://github.com/easybill/e-invoicing/blob/main/docker-compose.yaml).
+There you will find microservices which offer a validation API. 
 
 ## Issues and contribution
+Feel free to create Pull-Requests or Issue if you have trouble with this library or any related resource. 
