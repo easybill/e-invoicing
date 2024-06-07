@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Easybill\eInvoicingTests\Integration;
 
 use Easybill\eInvoicing\DocumentXmlReader;
-use Easybill\eInvoicing\Specs\Dtos\ReaderResult;
+use Easybill\eInvoicing\Dtos\ReaderResult;
 use Easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISCredit;
 use Easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISInvoice;
 use Easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;

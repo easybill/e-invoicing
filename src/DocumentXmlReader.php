@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Easybill\eInvoicing;
 
-use Easybill\eInvoicing\Specs\Dtos\ReaderResult;
+use Easybill\eInvoicing\Dtos\ReaderResult;
 use Easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISCredit;
 use Easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISInvoice;
 use Easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
@@ -84,7 +84,7 @@ final class DocumentXmlReader
         if ($this->isZUGFeRD($document)) {
             $document = $this->serializer->deserialize($xml, ZUGFeRDInvoice::class, 'xml');
 
-            if (!$document instanceof XRechnungCiiInvoice) {
+            if (!$document instanceof ZUGFeRDInvoice) {
                 throw new \RuntimeException('could not deserialize ZUGFeRDInvoice');
             }
 
@@ -130,7 +130,7 @@ final class DocumentXmlReader
             if ($this->isUBLInvoice($document)) {
                 $document = $this->serializer->deserialize($xml, PeppolBISInvoice::class, 'xml');
 
-                if (!$document instanceof XRechnungUblInvoice) {
+                if (!$document instanceof PeppolBISInvoice) {
                     throw new \RuntimeException('could not deserialize PeppolBISInvoice');
                 }
 

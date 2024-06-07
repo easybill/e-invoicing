@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Easybill\eInvoicing\Specs\Dtos;
+namespace Easybill\eInvoicing\Dtos;
 
 use Easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISAbstractDocument;
 use Easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
