@@ -17,8 +17,6 @@ use JMS\Serializer\SerializerInterface;
 
 final class DocumentXmlReader
 {
-    use ReformatXmlTrait;
-
     public function __construct(private SerializerInterface $serializer) {}
 
     public function read(string $xml): ReaderResult
