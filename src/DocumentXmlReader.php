@@ -11,7 +11,6 @@ use easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
 use easybill\eInvoicing\Specs\XRechnung\UBL\Documents\XRechnungUblCredit;
 use easybill\eInvoicing\Specs\XRechnung\UBL\Documents\XRechnungUblInvoice;
 use easybill\eInvoicing\Specs\ZUGFeRD\Documents\ZUGFeRDInvoice;
-use easybill\eInvoicingTests\Validators\Traits\ReformatXmlTrait;
 use JMS\Serializer\SerializerBuilder;
 use JMS\Serializer\SerializerInterface;
 
