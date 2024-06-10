@@ -228,7 +228,7 @@ final class DocumentXmlReader
             return false;
         }
 
-        return str_contains($result, 'kosit:standard:xrechnung_2.1');
+        return str_contains($result, 'xeinkauf.de:kosit:xrechnung_3.0');
     }
 
     private function isPeppol(\DOMDocument $document): bool
