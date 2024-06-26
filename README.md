@@ -3,64 +3,68 @@
 [![Generic badge](https://img.shields.io/badge/License-MIT-blue.svg)]()
 
 ## Introduction
-`e-invoicing` is a library to generate and read data of the specifications Peppol BIS Billing, XRechnung (UBL & CII)
-and ZUGFeRD / factur-x. The library offers the possibility to generate EN16931 conform e-invoices.
-
-### Current supported specification
-- Peppol BIS Billing - Version 3.0.15
-- XRechnung - Version 3.0.1
-- ZUGFeRD / Factur-x - Version 2.2.0 / Version 1.0.06
+`e-invoicing` is a library to generate and read data of specifications which comply with the EN16931.
 
 ## Usage
 ```bash
 composer require easybill/e-invoicing
 ```
 
-### Example: Creating ZUGFeRD/factur-x XML
+### Example: EN16931 Cross Industry Invoice
 The document factory offers handy shortcut functions to assemble a document for every supported specification
 with the correct basic structure. $document is now ready to be filled with data related to your business case.
 
 ```PHP
-use easybill\eInvoicing\DocumentFactory;
-use easybill\eInvoicing\Specs\ZUGFeRD\Enums\ZUGFeRDProfileType;
+use easybill\eInvoicing\CII\Documents\CrossIndustryInvoice;
+use easybill\eInvoicing\CII\Models\DocumentContextParameter;
+use easybill\eInvoicing\CII\Models\ExchangedDocument;
+use easybill\eInvoicing\CII\Models\ExchangedDocumentContext;
+use easybill\eInvoicing\CII\Models\DateTime;
+use easybill\eInvoicing\Transformer;
 
-$document = DocumentFactory::createZUGFeRDInvoice(ZUGFeRDProfileType::EN16931);
+$document = new CrossIndustryInvoice();
+$document->exchangedDocument = new ExchangedDocument();
+$document->exchangedDocumentContext = new ExchangedDocumentContext();
+$document->exchangedDocumentContext->documentContextParameter = new DocumentContextParameter();
+$document->exchangedDocumentContext->documentContextParameter->id = 'urn:cen.eu:en16931:2017';
 $document->exchangedDocument->id = '471102';
 $document->exchangedDocument->issueDateTime = DateTime::create(102, '20200305');
 // etc...
-$xml = ZUGFeRDTransformer::create()->transform($invoice)
+$xml = Transformer::create()->transformToXml($document)
 ```
 
-### Example: Reading a known XML file format
-
-If you only want to support a subset of the offered specifications (as an example ZUGFeRD/factur-x) you may use the
-builder and reader from the corresponding namespace.
+### Example: EN16931 Universal Business Language Invoice
+The document factory offers handy shortcut functions to assemble a document for every supported specification
+with the correct basic structure. $document is now ready to be filled with data related to your business case.
 
 ```PHP
-use easybill\eInvoicing\Specs\ZUGFeRD\Reader;
-use easybill\eInvoicing\Specs\ZUGFeRD\Transformer;
+use easybill\eInvoicing\Transformer;
+use easybill\eInvoicing\UBL\Documents\UblInvoice;
 
-$xml = file_get_contents($exampleXmlFile);
-
-$document = Reader::create()->transform($xml);
-
-$document->exchangedDocument->name = 'Example Value'
-  
-$xml = Transformer::create()->transform($document);
+$document = new UblInvoice();
+$document->customizationId = 'urn:cen.eu:en16931:2017#compliant#urn:xeinkauf.de:kosit:xrechnung_3.0';
+$document->profileId = 'urn:fdc:peppol.eu:2017:poacc:billing:01:1.0';
+$document->id = '123456XX';
+$document->issueDate = '2016-04-04';
+$document->invoiceTypeCode = 380;
+$document->documentCurrencyCode = 'EUR';
+$document->buyerReference = '04011000-12345-03';
+// etc...
+$xml = Transformer::create()->transformToXml($document)
 ```
 
 ### Example: Reading an unknown XML file
 
 There might be the case that you receive some XML which may or may not be supported by this library. `e-invoicing` offers a handy
-way to just parse that XML and see if is deserializable to one of the supported formats.
+way to just parse that XML and see if is deserializable to UBL or CII.
 
 ```PHP
-use easybill\eInvoicing\DocumentXmlReader;
-use easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
+use easybill\eInvoicing\Reader;
+use easybill\eInvoicing\CII\Documents\CrossIndustryInvoice;
 
 $xml = file_get_contents($exampleXmlFile);
 
-$readerResult = DocumentXmlReader::create()->read($xml);
+$readerResult = Reader::create()->read($xml);
 
 // If the format is supported and valid in its structure the following check will be true
 $readerResult->isSuccess()
@@ -72,8 +76,8 @@ $readerResult->isError()
 // Invoking the getDocument method on an error will result in a LogicException
 $document = $readerResult->getDocument(); 
 
-if ($document instanceof XRechnungCiiInvoice) {
-    // do something with the XRechnungCiiInvoice
+if ($document instanceof CrossIndustryInvoice) {
+    // do something with the CrossIndustryInvoice
 }
 ```
 
@@ -82,10 +86,10 @@ You can refer to the [tests](https://github.com/easybill/e-invoicing/tree/main/t
 ## Considerations
 
 ### Limitations
-This library does not offer any way to validate the structured data against the rules of the specifications. 
-Please take a look at the folder [Validators](https://github.com/easybill/e-invoicing/tree/main/tests/Validators) in the tests folder. There you will find ways to validate the documents against the specification
-rulesets. ZUGFeRD offers XSD-Schema-Files which you may use directly in your PHP code. For XRechnung and Peppol will take a look at the [docker-compose.yaml](https://github.com/easybill/e-invoicing/blob/main/docker-compose.yaml).
-There you will find microservices which offer a validation API. 
+This library does not offer any way to validate the structured data against the rules of EN16931 or any of the CIUS. 
+Please take a look at the folder [Validators](https://github.com/easybill/e-invoicing/tree/main/tests/Validators) in the tests folder. There you will find ways to validate the documents against the CIUS specification
+rulesets. ZUGFeRD/factur-x offers XSD-Schema-Files which you may use directly in your PHP code. KOSiT offers a dedicated validator to validate your EN16931
+document against the XRechnung CIUS specification.
 
 ## Issues and contribution
 Feel free to create Pull-Requests or Issue if you have trouble with this library or any related resource. 
