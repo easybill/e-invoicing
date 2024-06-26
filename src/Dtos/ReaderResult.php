@@ -4,16 +4,14 @@ declare(strict_types=1);
 
 namespace easybill\eInvoicing\Dtos;
 
-use easybill\eInvoicing\Specs\Peppol\Documents\PeppolBISAbstractDocument;
-use easybill\eInvoicing\Specs\XRechnung\CII\Documents\XRechnungCiiInvoice;
-use easybill\eInvoicing\Specs\XRechnung\UBL\Documents\XRechnungUblAbstractDocument;
-use easybill\eInvoicing\Specs\ZUGFeRD\Documents\ZUGFeRDInvoice;
+use easybill\eInvoicing\CII\Documents\CrossIndustryInvoice;
+use easybill\eInvoicing\UBL\Documents\UblAbstractDocument;
 
 final class ReaderResult
 {
     private function __construct(
         public ?\Throwable $throwable = null,
-        public null|PeppolBISAbstractDocument|XRechnungCiiInvoice|XRechnungUblAbstractDocument|ZUGFeRDInvoice $document = null,
+        public null|CrossIndustryInvoice|UblAbstractDocument $document = null,
     ) {}
 
     public static function error(\Throwable $throwable): self
@@ -23,7 +21,7 @@ final class ReaderResult
         );
     }
 
-    public static function success(PeppolBISAbstractDocument|XRechnungCiiInvoice|XRechnungUblAbstractDocument|ZUGFeRDInvoice $document): self
+    public static function success(CrossIndustryInvoice|UblAbstractDocument $document): self
     {
         return new self(
             throwable: null,
@@ -52,7 +50,7 @@ final class ReaderResult
     }
 
     /** @throws \LogicException */
-    public function getDocument(): PeppolBISAbstractDocument|XRechnungCiiInvoice|XRechnungUblAbstractDocument|ZUGFeRDInvoice
+    public function getDocument(): CrossIndustryInvoice|UblAbstractDocument
     {
         if (null !== $this->throwable || null === $this->document) {
             throw new \LogicException('the result is not successful. Therefore, a document is not available');
