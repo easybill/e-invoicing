@@ -35,4 +35,4 @@ $countries = parseCSVFile($csvFilePath);
 
 $enumCode = generateEnum($countries);
 
-file_put_contents(__DIR__ . '/../../src/Enums/CountryCodeEnum.php', "<?php\n\n" . $enumCode);
+file_put_contents(__DIR__ . '/../../src/Enums/CountryCode.php', "<?php\n\n" . $enumCode);

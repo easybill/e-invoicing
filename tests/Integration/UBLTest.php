@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace easybill\eInvoicingTests\Integration\XRechnung3\UBL;
 
+use easybill\eInvoicing\Enums\CountryCode;
 use easybill\eInvoicing\Transformer;
 use easybill\eInvoicing\UBL\Documents\UblInvoice;
 use easybill\eInvoicing\UBL\Models\AccountingParty;
@@ -71,7 +72,7 @@ test(
         $supplierParty->postalAddress->cityName = '[Seller city]';
         $supplierParty->postalAddress->postalZone = '12345';
         $supplierParty->postalAddress->country = new Country();
-        $supplierParty->postalAddress->country->identificationCode = 'DE';
+        $supplierParty->postalAddress->country->identificationCode = CountryCode::DE;
 
         $partyTaxScheme = new PartyTaxScheme();
         $partyTaxScheme->companyId = 'DE 123456789';
@@ -105,7 +106,7 @@ test(
         $customerParty->postalAddress->cityName = '[Buyer city]';
         $customerParty->postalAddress->postalZone = '12345';
         $customerParty->postalAddress->country = new Country();
-        $customerParty->postalAddress->country->identificationCode = 'DE';
+        $customerParty->postalAddress->country->identificationCode = CountryCode::DE;
         $customerParty->partyLegalEntity = new PartyLegalEntity();
         $customerParty->partyLegalEntity->registrationName = '[Buyer name]';
 

@@ -32,6 +32,7 @@ use easybill\eInvoicing\CII\Models\TradeProduct;
 use easybill\eInvoicing\CII\Models\TradeSettlementHeaderMonetarySummation;
 use easybill\eInvoicing\CII\Models\TradeSettlementLineMonetarySummation;
 use easybill\eInvoicing\CII\Models\TradeTax;
+use easybill\eInvoicing\Enums\CountryCode;
 use easybill\eInvoicing\Transformer;
 use easybill\eInvoicingTests\Validators\SchemaValidator;
 
@@ -112,7 +113,7 @@ test(
         $sellerTradeParty->postalTradeAddress->postcode = '80333';
         $sellerTradeParty->postalTradeAddress->lineOne = 'Lieferantenstraße 20';
         $sellerTradeParty->postalTradeAddress->city = 'München';
-        $sellerTradeParty->postalTradeAddress->countryCode = 'DE';
+        $sellerTradeParty->postalTradeAddress->countryCode = CountryCode::DE;
         $sellerTradeParty->taxRegistrations[] = TaxRegistration::create('201/113/40209', 'FC');
         $sellerTradeParty->taxRegistrations[] = TaxRegistration::create('DE123456789', 'VA');
 
@@ -123,7 +124,7 @@ test(
         $buyerTradeParty->postalTradeAddress->postcode = '69876';
         $buyerTradeParty->postalTradeAddress->lineOne = 'Kundenstraße 15';
         $buyerTradeParty->postalTradeAddress->city = 'Frankfurt';
-        $buyerTradeParty->postalTradeAddress->countryCode = 'DE';
+        $buyerTradeParty->postalTradeAddress->countryCode = CountryCode::DE;
 
         $invoice->supplyChainTradeTransaction->applicableHeaderTradeDelivery = new HeaderTradeDelivery();
         $invoice->supplyChainTradeTransaction->applicableHeaderTradeDelivery->chainEvent = $supplyChainEvent = new SupplyChainEvent();

@@ -6,7 +6,6 @@ namespace easybill\eInvoicing;
 
 use easybill\eInvoicing\CII\Documents\CrossIndustryInvoice;
 use easybill\eInvoicing\UBL\Documents\UblAbstractDocument;
-use JMS\Serializer\SerializerBuilder;
 use JMS\Serializer\SerializerInterface;
 
 final readonly class Transformer
@@ -22,10 +21,6 @@ final readonly class Transformer
 
     public static function create(): self
     {
-        $serializer = SerializerBuilder::create()
-            ->setDebug(true)
-            ->build()
-        ;
-        return new self($serializer);
+        return new self(ConfiguredSerializer::create());
     }
 }

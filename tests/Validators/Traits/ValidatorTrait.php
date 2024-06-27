@@ -17,13 +17,4 @@ trait ValidatorTrait
 
         self::assertNull($errors, $errors ?? '');
     }
-
-    public function validateWithPeppolValidator(string $xml): void
-    {
-        $validator = new PeppolValidator();
-
-        $errors = $validator->validate($xml);
-
-        self::assertNull($errors, $errors ?? '');
-    }
 }

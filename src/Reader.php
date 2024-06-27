@@ -50,11 +50,7 @@ final readonly class Reader
 
     public static function create(): Reader
     {
-        $serializer = SerializerBuilder::create()
-            ->setDebug(true)
-            ->build()
-        ;
-        return new self($serializer);
+        return new self(ConfiguredSerializer::create());
     }
 
     private function tryDeserializingCIIDocument(\DOMDocument $document): ReaderResult

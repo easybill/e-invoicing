@@ -1,8 +1,10 @@
 <?php
 
+namespace easybill\eInvoicing\Enums;
+
 enum CountryCode: string
 {
-    // ﻿Andorra
+    // Andorra
     case AD = 'AD';
 
     // United Arab Emirates (the)
@@ -754,5 +756,4 @@ enum CountryCode: string
 
     // United Kingdom (Northern Ireland)
     case XI = 'XI';
-
 }
