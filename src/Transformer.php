@@ -11,7 +11,7 @@ use JMS\Serializer\SerializerInterface;
 final readonly class Transformer
 {
     private function __construct(
-        private SerializerInterface $serializer,
+        private ConfiguredSerializer $serializer,
     ) {}
 
     public function transformToXml(CrossIndustryInvoice|UblAbstractDocument $document): string

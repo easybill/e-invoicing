@@ -13,7 +13,7 @@ use JMS\Serializer\SerializerInterface;
 
 final readonly class Reader
 {
-    public function __construct(private SerializerInterface $serializer) {}
+    public function __construct(private ConfiguredSerializer $serializer) {}
 
     public function read(string $xml): ReaderResult
     {
