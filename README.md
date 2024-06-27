@@ -4,6 +4,7 @@
 
 ## Introduction
 `e-invoicing` is a library to generate and read data of specifications which comply with the EN16931.
+It is possible to generate CIUS like XRechnung, Peppol BIS Billing and ZUGFeRD / factur-x.
 
 ## Usage
 ```bash
@@ -11,8 +12,7 @@ composer require easybill/e-invoicing
 ```
 
 ### Example: EN16931 Cross Industry Invoice
-The document factory offers handy shortcut functions to assemble a document for every supported specification
-with the correct basic structure. $document is now ready to be filled with data related to your business case.
+In this example we generate a normal EN16931 as Cross Industry Invoice.
 
 ```PHP
 use easybill\eInvoicing\CII\Documents\CrossIndustryInvoice;
@@ -34,8 +34,7 @@ $xml = Transformer::create()->transformToXml($document)
 ```
 
 ### Example: EN16931 Universal Business Language Invoice
-The document factory offers handy shortcut functions to assemble a document for every supported specification
-with the correct basic structure. $document is now ready to be filled with data related to your business case.
+In this example we generate a CIUS (XRechnung 3.0) as UBL document
 
 ```PHP
 use easybill\eInvoicing\Transformer;
