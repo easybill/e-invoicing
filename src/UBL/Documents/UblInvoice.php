@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace easybill\eInvoicing\UBL\Documents;
 
+use easybill\eInvoicing\Enums\DocumentType;
 use easybill\eInvoicing\UBL\Models\DocumentReference;
 use easybill\eInvoicing\UBL\Models\InvoiceLine;
 use JMS\Serializer\Annotation\AccessorOrder;
@@ -55,10 +56,10 @@ final class UblInvoice extends UblAbstractDocument
     #[SerializedName('DueDate')]
     public ?string $dueDate = null;
 
-    #[Type('int')]
+    #[Type(DocumentType::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('InvoiceTypeCode')]
-    public ?int $invoiceTypeCode = null;
+    public ?DocumentType $invoiceTypeCode = null;
 
     #[Type('string')]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]

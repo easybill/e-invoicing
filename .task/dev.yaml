@@ -25,3 +25,11 @@ tasks:
     desc: Fixes the PHP files with PHP-CS-Fixer
     cmds:
       - ./vendor/bin/php-cs-fixer fix
+
+  generators:
+    desc: Runs the code generators (Enums etc.)
+    cmds:
+      - php ./tools/Generators/CountryCodeEnumGenerator.php
+      - php ./tools/Generators/CurrencyCodeEnumGenerator.php
+      - php ./tools/Generators/DocumentTypeEnumGenerator.php
+      - ./vendor/bin/php-cs-fixer fix

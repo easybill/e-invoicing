@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace easybill\eInvoicing\CII\Models;
 
+use easybill\eInvoicing\Enums\DocumentType;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlElement;
@@ -21,10 +22,10 @@ final class ExchangedDocument
     #[SerializedName('Name')]
     public ?string $name = null;
 
-    #[Type('string')]
+    #[Type(DocumentType::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('TypeCode')]
-    public string $typeCode;
+    public DocumentType $typeCode;
 
     #[Type(DateTime::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]

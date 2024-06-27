@@ -6,6 +6,7 @@ namespace easybill\eInvoicingTests\Integration\XRechnung3\UBL;
 
 use easybill\eInvoicing\Enums\CountryCode;
 use easybill\eInvoicing\Enums\CurrencyCode;
+use easybill\eInvoicing\Enums\DocumentType;
 use easybill\eInvoicing\Transformer;
 use easybill\eInvoicing\UBL\Documents\UblInvoice;
 use easybill\eInvoicing\UBL\Models\AccountingParty;
@@ -53,7 +54,7 @@ test(
         $invoice->profileId = 'urn:fdc:peppol.eu:2017:poacc:billing:01:1.0';
         $invoice->id = '123456XX';
         $invoice->issueDate = '2016-04-04';
-        $invoice->invoiceTypeCode = 380;
+        $invoice->invoiceTypeCode = DocumentType::COMMERCIAL_INVOICE;
         $invoice->documentCurrencyCode = CurrencyCode::EUR;
         $invoice->buyerReference = '04011000-12345-03';
 

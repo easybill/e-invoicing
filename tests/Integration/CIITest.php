@@ -34,6 +34,7 @@ use easybill\eInvoicing\CII\Models\TradeSettlementLineMonetarySummation;
 use easybill\eInvoicing\CII\Models\TradeTax;
 use easybill\eInvoicing\Enums\CountryCode;
 use easybill\eInvoicing\Enums\CurrencyCode;
+use easybill\eInvoicing\Enums\DocumentType;
 use easybill\eInvoicing\Transformer;
 use easybill\eInvoicingTests\Validators\SchemaValidator;
 
@@ -46,7 +47,7 @@ test(
         $invoice->exchangedDocumentContext->documentContextParameter = new DocumentContextParameter();
         $invoice->exchangedDocumentContext->documentContextParameter->id = 'urn:cen.eu:en16931:2017';
         $invoice->exchangedDocument->id = '471102';
-        $invoice->exchangedDocument->typeCode = '380';
+        $invoice->exchangedDocument->typeCode = DocumentType::COMMERCIAL_INVOICE;
         $invoice->exchangedDocument->issueDateTime = DateTime::create(102, '20180305');
 
         $invoice->exchangedDocument->notes[] = Note::create('Rechnung gemäß Bestellung vom 01.03.2018.');
