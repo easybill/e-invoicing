@@ -8,7 +8,7 @@ use easybill\eInvoicing\Enums\DocumentType;
 
 final class DocumentTypeEnumHandler extends AbstractBackedEnumHandler
 {
-    /** @return class-string */
+    /** @return class-string<\BackedEnum> */
     public static function getEnumClass(): string
     {
         return DocumentType::class;

@@ -8,7 +8,7 @@ use easybill\eInvoicing\Enums\CurrencyCode;
 
 final class CurrencyCodeEnumHandler extends AbstractBackedEnumHandler
 {
-    /** @return class-string */
+    /** @return class-string<\BackedEnum> */
     public static function getEnumClass(): string
     {
         return CurrencyCode::class;

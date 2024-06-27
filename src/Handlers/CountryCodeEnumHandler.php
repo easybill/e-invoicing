@@ -8,7 +8,7 @@ use easybill\eInvoicing\Enums\CountryCode;
 
 final class CountryCodeEnumHandler extends AbstractBackedEnumHandler
 {
-    /** @return class-string */
+    /** @return class-string<\BackedEnum> */
     public static function getEnumClass(): string
     {
         return CountryCode::class;

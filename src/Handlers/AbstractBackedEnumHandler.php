@@ -11,7 +11,7 @@ use JMS\Serializer\XmlSerializationVisitor;
 
 abstract class AbstractBackedEnumHandler implements SubscribingHandlerInterface
 {
-    /** @return class-string */
+    /** @return class-string<\BackedEnum> */
     public static function getEnumClass(): string
     {
         throw new \RuntimeException('not yet implemented');
