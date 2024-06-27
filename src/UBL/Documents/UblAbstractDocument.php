@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace easybill\eInvoicing\UBL\Documents;
 
+use easybill\eInvoicing\Enums\CurrencyCode;
 use easybill\eInvoicing\UBL\Models\AccountingParty;
 use easybill\eInvoicing\UBL\Models\AllowanceCharge;
 use easybill\eInvoicing\UBL\Models\BillingReference;
@@ -50,10 +51,10 @@ abstract class UblAbstractDocument
     #[XmlList(entry: 'Note', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     public array $note = [];
 
-    #[Type('string')]
+    #[Type(CurrencyCode::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('DocumentCurrencyCode')]
-    public ?string $documentCurrencyCode = null;
+    public ?CurrencyCode $documentCurrencyCode = null;
 
     #[Type('string')]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace easybill\eInvoicingTests\Integration\XRechnung3\UBL;
 
 use easybill\eInvoicing\Enums\CountryCode;
+use easybill\eInvoicing\Enums\CurrencyCode;
 use easybill\eInvoicing\Transformer;
 use easybill\eInvoicing\UBL\Documents\UblInvoice;
 use easybill\eInvoicing\UBL\Models\AccountingParty;
@@ -53,7 +54,7 @@ test(
         $invoice->id = '123456XX';
         $invoice->issueDate = '2016-04-04';
         $invoice->invoiceTypeCode = 380;
-        $invoice->documentCurrencyCode = 'EUR';
+        $invoice->documentCurrencyCode = CurrencyCode::EUR;
         $invoice->buyerReference = '04011000-12345-03';
 
         // Notes
@@ -129,15 +130,15 @@ test(
         // Tax Total
         $taxTotal = new TaxTotal();
         $taxTotal->taxAmount = new Amount();
-        $taxTotal->taxAmount->currencyID = 'EUR';
+        $taxTotal->taxAmount->currencyID = CurrencyCode::EUR;
         $taxTotal->taxAmount->value = '22.04';
 
         $taxSubtotal = new TaxSubtotal();
         $taxSubtotal->taxableAmount = new Amount();
-        $taxSubtotal->taxableAmount->currencyID = 'EUR';
+        $taxSubtotal->taxableAmount->currencyID = CurrencyCode::EUR;
         $taxSubtotal->taxableAmount->value = '314.86';
         $taxSubtotal->taxAmount = new Amount();
-        $taxSubtotal->taxAmount->currencyID = 'EUR';
+        $taxSubtotal->taxAmount->currencyID = CurrencyCode::EUR;
         $taxSubtotal->taxAmount->value = '22.04';
         $taxSubtotal->taxCategory = new TaxCategory();
         $taxSubtotal->taxCategory->id = new Id();
@@ -152,16 +153,16 @@ test(
         // LegalMonetaryTotal
         $invoice->legalMonetaryTotal = new LegalMonetaryTotal();
         $invoice->legalMonetaryTotal->lineExtensionAmount = new Amount();
-        $invoice->legalMonetaryTotal->lineExtensionAmount->currencyID = 'EUR';
+        $invoice->legalMonetaryTotal->lineExtensionAmount->currencyID = CurrencyCode::EUR;
         $invoice->legalMonetaryTotal->lineExtensionAmount->value = '314.86';
         $invoice->legalMonetaryTotal->taxExclusiveAmount = new Amount();
-        $invoice->legalMonetaryTotal->taxExclusiveAmount->currencyID = 'EUR';
+        $invoice->legalMonetaryTotal->taxExclusiveAmount->currencyID = CurrencyCode::EUR;
         $invoice->legalMonetaryTotal->taxExclusiveAmount->value = '314.86';
         $invoice->legalMonetaryTotal->taxInclusiveAmount = new Amount();
-        $invoice->legalMonetaryTotal->taxInclusiveAmount->currencyID = 'EUR';
+        $invoice->legalMonetaryTotal->taxInclusiveAmount->currencyID = CurrencyCode::EUR;
         $invoice->legalMonetaryTotal->taxInclusiveAmount->value = '336.9';
         $invoice->legalMonetaryTotal->payableAmount = new Amount();
-        $invoice->legalMonetaryTotal->payableAmount->currencyID = 'EUR';
+        $invoice->legalMonetaryTotal->payableAmount->currencyID = CurrencyCode::EUR;
         $invoice->legalMonetaryTotal->payableAmount->value = '336.9';
 
         // Invoice Lines
@@ -176,7 +177,7 @@ test(
         $invoiceLine1->invoicedQuantity->unitCode = 'XPP';
         $invoiceLine1->invoicedQuantity->value = '1';
         $invoiceLine1->lineExtensionAmount = new Amount();
-        $invoiceLine1->lineExtensionAmount->currencyID = 'EUR';
+        $invoiceLine1->lineExtensionAmount->currencyID = CurrencyCode::EUR;
         $invoiceLine1->lineExtensionAmount->value = '288.79';
         $invoiceLine1->invoicePeriod = new Period();
         $invoiceLine1->invoicePeriod->startDate = '2016-01-01';
@@ -205,7 +206,7 @@ test(
 
         $invoiceLine1->price = new Price();
         $invoiceLine1->price->priceAmount = new Amount();
-        $invoiceLine1->price->priceAmount->currencyID = 'EUR';
+        $invoiceLine1->price->priceAmount->currencyID = CurrencyCode::EUR;
         $invoiceLine1->price->priceAmount->value = '288.79';
 
         // Invoice Line 2
@@ -216,7 +217,7 @@ test(
         $invoiceLine2->invoicedQuantity->unitCode = 'XPP';
         $invoiceLine2->invoicedQuantity->value = '1';
         $invoiceLine2->lineExtensionAmount = new Amount();
-        $invoiceLine2->lineExtensionAmount->currencyID = 'EUR';
+        $invoiceLine2->lineExtensionAmount->currencyID = CurrencyCode::EUR;
         $invoiceLine2->lineExtensionAmount->value = '26.07';
 
         // Item 2
@@ -230,7 +231,7 @@ test(
         $item2->classifiedTaxCategory->taxScheme->id = 'VAT';
         $invoiceLine2->price = new Price();
         $invoiceLine2->price->priceAmount = new Amount();
-        $invoiceLine2->price->priceAmount->currencyID = 'EUR';
+        $invoiceLine2->price->priceAmount->currencyID = CurrencyCode::EUR;
         $invoiceLine2->price->priceAmount->value = '26.07';
 
         $xml = Transformer::create()->transformToXml($invoice);

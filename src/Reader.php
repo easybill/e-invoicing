@@ -8,8 +8,6 @@ use easybill\eInvoicing\CII\Documents\CrossIndustryInvoice;
 use easybill\eInvoicing\Dtos\ReaderResult;
 use easybill\eInvoicing\UBL\Documents\UblCredit;
 use easybill\eInvoicing\UBL\Documents\UblInvoice;
-use JMS\Serializer\SerializerBuilder;
-use JMS\Serializer\SerializerInterface;
 
 final readonly class Reader
 {

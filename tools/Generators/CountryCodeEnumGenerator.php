@@ -20,7 +20,13 @@ function parseCSVFile(string $filename): array
 /** @param array<string, string> $countries */
 function generateEnum(array $countries): string
 {
-    $enumCode = "enum CountryCode: string\n{\n";
+    $lines = [
+        'declare(strict_types=1);',
+        'namespace easybill\eInvoicing\Enums;',
+        "enum CountryCode: string\n{\n",
+    ];
+
+    $enumCode = implode("\n\n", $lines);
     foreach ($countries as $name => $code) {
         $enumCode .= '    // ' . $name . "\n";
         $enumCode .= '    case ' . $code . " = '" . $code . "';\n\n";

@@ -6,7 +6,6 @@ namespace easybill\eInvoicing;
 
 use easybill\eInvoicing\CII\Documents\CrossIndustryInvoice;
 use easybill\eInvoicing\UBL\Documents\UblAbstractDocument;
-use JMS\Serializer\SerializerInterface;
 
 final readonly class Transformer
 {

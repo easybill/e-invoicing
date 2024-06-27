@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace easybill\eInvoicing\Enums;
 
 enum CountryCode: string

@@ -33,6 +33,7 @@ use easybill\eInvoicing\CII\Models\TradeSettlementHeaderMonetarySummation;
 use easybill\eInvoicing\CII\Models\TradeSettlementLineMonetarySummation;
 use easybill\eInvoicing\CII\Models\TradeTax;
 use easybill\eInvoicing\Enums\CountryCode;
+use easybill\eInvoicing\Enums\CurrencyCode;
 use easybill\eInvoicing\Transformer;
 use easybill\eInvoicingTests\Validators\SchemaValidator;
 
@@ -131,7 +132,7 @@ test(
         $supplyChainEvent->date = DateTime::create(102, '20180305');
 
         $invoice->supplyChainTradeTransaction->applicableHeaderTradeSettlement = new HeaderTradeSettlement();
-        $invoice->supplyChainTradeTransaction->applicableHeaderTradeSettlement->currency = 'EUR';
+        $invoice->supplyChainTradeTransaction->applicableHeaderTradeSettlement->currency = CurrencyCode::EUR;
 
         $invoice->supplyChainTradeTransaction->applicableHeaderTradeSettlement->tradeTaxes[] = $headerTax1 = new TradeTax();
         $headerTax1->typeCode = 'VAT';
@@ -155,7 +156,7 @@ test(
         $summation->chargeTotalAmount = Amount::create('0.00');
         $summation->allowanceTotalAmount = Amount::create('0.00');
         $summation->taxBasisTotalAmount[] = Amount::create('473.00');
-        $summation->taxTotalAmount[] = Amount::create('56.87', 'EUR');
+        $summation->taxTotalAmount[] = Amount::create('56.87', CurrencyCode::EUR);
         $summation->grandTotalAmount[] = Amount::create('529.87');
         $summation->totalPrepaidAmount = Amount::create('0.00');
         $summation->duePayableAmount = Amount::create('529.87');
