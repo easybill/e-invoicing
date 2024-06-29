@@ -26,15 +26,21 @@ final class Item
     #[SerializedName('SellersItemIdentification')]
     public ?SellersItemIdentification $sellersItemIdentification = null;
 
+    #[Type(StandardItemIdentification::class)]
+    #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
+    #[SerializedName('StandardItemIdentification')]
+    public ?StandardItemIdentification $standardItemIdentification = null;
+
     #[Type(Country::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     #[SerializedName('OriginCountry')]
     public ?Country $originCountry = null;
 
-    #[Type(CommodityClassification::class)]
-    #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
+    /** @var CommodityClassification[] */
+    #[Type('array<easybill\eInvoicing\UBL\Models\CommodityClassification>')]
     #[SerializedName('CommodityClassification')]
-    public ?CommodityClassification $commodityClassification = null;
+    #[XmlList(entry: 'CommodityClassification', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
+    public ?array $commodityClassifications = [];
 
     #[Type(TaxCategory::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
@@ -45,5 +51,5 @@ final class Item
     #[Type('array<easybill\eInvoicing\UBL\Models\ItemProperty>')]
     #[SerializedName('AdditionalItemProperty')]
     #[XmlList(entry: 'AdditionalItemProperty', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
-    public array $allowanceCharge = [];
+    public array $additionalItemProperties = [];
 }

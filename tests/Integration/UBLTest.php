@@ -13,6 +13,7 @@ use easybill\eInvoicing\UBL\Documents\UblAbstractDocument;
 use easybill\eInvoicing\UBL\Documents\UblInvoice;
 use easybill\eInvoicing\UBL\Models\AccountingParty;
 use easybill\eInvoicing\UBL\Models\Address;
+use easybill\eInvoicing\UBL\Models\AllowanceCharge;
 use easybill\eInvoicing\UBL\Models\Amount;
 use easybill\eInvoicing\UBL\Models\CommodityClassification;
 use easybill\eInvoicing\UBL\Models\Contact;
@@ -146,7 +147,7 @@ test(
         $taxSubtotal->taxCategory = new TaxCategory();
         $taxSubtotal->taxCategory->id = new Id();
         $taxSubtotal->taxCategory->id->value = 'S';
-        $taxSubtotal->taxCategory->percent = 7;
+        $taxSubtotal->taxCategory->percent = '7';
         $taxSubtotal->taxCategory->taxScheme = new TaxScheme();
         $taxSubtotal->taxCategory->taxScheme->id = 'VAT';
 
@@ -203,7 +204,7 @@ test(
         $item1->classifiedTaxCategory = new TaxCategory();
         $item1->classifiedTaxCategory->id = new Id();
         $item1->classifiedTaxCategory->id->value = 'S';
-        $item1->classifiedTaxCategory->percent = 7;
+        $item1->classifiedTaxCategory->percent = '7';
         $item1->classifiedTaxCategory->taxScheme = new TaxScheme();
         $item1->classifiedTaxCategory->taxScheme->id = 'VAT';
 
@@ -229,7 +230,7 @@ test(
         $item2->classifiedTaxCategory = new TaxCategory();
         $item2->classifiedTaxCategory->id = new Id();
         $item2->classifiedTaxCategory->id->value = 'S';
-        $item2->classifiedTaxCategory->percent = 7;
+        $item2->classifiedTaxCategory->percent = '7';
         $item2->classifiedTaxCategory->taxScheme = new TaxScheme();
         $item2->classifiedTaxCategory->taxScheme->id = 'VAT';
         $invoiceLine2->price = new Price();
@@ -253,6 +254,8 @@ test(
         $xml = file_get_contents($pathToXmlExample);
 
         expect($xml)->not->toBeFalse();
+
+        $xml = $this->fixUblRootNode($xml);
 
         $reader = Reader::create()->read($xml);
 

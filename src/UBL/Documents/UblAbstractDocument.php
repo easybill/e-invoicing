@@ -88,6 +88,16 @@ abstract class UblAbstractDocument
 
     #[Type(DocumentReference::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
+    #[SerializedName('DespatchDocumentReference')]
+    public ?DocumentReference $despatchDocumentReference = null;
+
+    #[Type(DocumentReference::class)]
+    #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
+    #[SerializedName('ReceiptDocumentReference')]
+    public ?DocumentReference $receiptDocumentReference = null;
+
+    #[Type(DocumentReference::class)]
+    #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     #[SerializedName('OriginatorDocumentReference')]
     public ?DocumentReference $originatorDocumentReference = null;
 
@@ -127,10 +137,11 @@ abstract class UblAbstractDocument
     #[SerializedName('PaymentTerms')]
     public ?PaymentTerms $paymentTerms = null;
 
-    #[Type(AllowanceCharge::class)]
-    #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
+    /** @var AllowanceCharge[] */
+    #[Type('array<easybill\eInvoicing\UBL\Models\AllowanceCharge>')]
     #[SerializedName('AllowanceCharge')]
-    public ?AllowanceCharge $allowanceCharge = null;
+    #[XmlList(entry: 'AllowanceCharge', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
+    public ?array $allowanceCharge = [];
 
     /** @var TaxTotal[] */
     #[Type('array<easybill\eInvoicing\UBL\Models\TaxTotal>')]
