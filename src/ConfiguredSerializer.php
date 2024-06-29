@@ -7,6 +7,7 @@ namespace easybill\eInvoicing;
 use easybill\eInvoicing\Handlers\CountryCodeEnumHandler;
 use easybill\eInvoicing\Handlers\CurrencyCodeEnumHandler;
 use easybill\eInvoicing\Handlers\DocumentTypeEnumHandler;
+use easybill\eInvoicing\Handlers\ReferenceQualifierEnumHandler;
 use JMS\Serializer\DeserializationContext;
 use JMS\Serializer\Handler\HandlerRegistryInterface;
 use JMS\Serializer\SerializationContext;
@@ -27,6 +28,7 @@ final readonly class ConfiguredSerializer implements SerializerInterface
                 $registry->registerSubscribingHandler(new CountryCodeEnumHandler());
                 $registry->registerSubscribingHandler(new CurrencyCodeEnumHandler());
                 $registry->registerSubscribingHandler(new DocumentTypeEnumHandler());
+                $registry->registerSubscribingHandler(new ReferenceQualifierEnumHandler());
             })
             ->build()
         ;
