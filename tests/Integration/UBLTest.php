@@ -13,7 +13,6 @@ use easybill\eInvoicing\UBL\Documents\UblAbstractDocument;
 use easybill\eInvoicing\UBL\Documents\UblInvoice;
 use easybill\eInvoicing\UBL\Models\AccountingParty;
 use easybill\eInvoicing\UBL\Models\Address;
-use easybill\eInvoicing\UBL\Models\AllowanceCharge;
 use easybill\eInvoicing\UBL\Models\Amount;
 use easybill\eInvoicing\UBL\Models\CommodityClassification;
 use easybill\eInvoicing\UBL\Models\Contact;

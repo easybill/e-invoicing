@@ -22,6 +22,11 @@ final class TaxCategory
 
     #[Type('string')]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
+    #[SerializedName('TaxExemptionReasonCode')]
+    public ?string $taxExemptionReasonCode = null;
+
+    #[Type('string')]
+    #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('TaxExemptionReason')]
     public ?string $taxExemptionReason = null;
 

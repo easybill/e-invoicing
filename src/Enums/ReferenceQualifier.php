@@ -2456,5 +2456,4 @@ enum ReferenceQualifier: string
 
     // Mutually defined reference number
     case ZZZ = 'ZZZ';
-
 }

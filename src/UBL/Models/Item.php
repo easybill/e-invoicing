@@ -21,10 +21,15 @@ final class Item
     #[SerializedName('Name')]
     public ?string $name = null;
 
-    #[Type(SellersItemIdentification::class)]
+    #[Type(Identification::class)]
+    #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
+    #[SerializedName('BuyersItemIdentification')]
+    public ?Identification $buyersItemIdentification = null;
+
+    #[Type(Identification::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     #[SerializedName('SellersItemIdentification')]
-    public ?SellersItemIdentification $sellersItemIdentification = null;
+    public ?Identification $sellersItemIdentification = null;
 
     #[Type(StandardItemIdentification::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]

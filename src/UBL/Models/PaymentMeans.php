@@ -15,10 +15,20 @@ final class PaymentMeans
     #[SerializedName('PaymentMeansCode')]
     public ?PaymentMeansCode $paymentMeansCode = null;
 
+    #[Type('string')]
+    #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
+    #[SerializedName('InstructionNote')]
+    public ?string $instructionNote = null;
+
     #[Type(Id::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('PaymentID')]
     public ?Id $paymentId = null;
+
+    #[Type(PaymentMandate::class)]
+    #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
+    #[SerializedName('PaymentMandate')]
+    public ?PaymentMandate $payment = null;
 
     #[Type(PayeeFinancialAccount::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]

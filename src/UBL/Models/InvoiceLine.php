@@ -17,6 +17,7 @@ use JMS\Serializer\Annotation\XmlElement;
     'accountingCost',
     'invoicePeriod',
     'orderLineReference',
+    'documentReference',
     'allowanceCharge',
     'item',
     'price',
