@@ -35,6 +35,7 @@ use easybill\eInvoicing\CII\Models\TradeTax;
 use easybill\eInvoicing\Enums\CountryCode;
 use easybill\eInvoicing\Enums\CurrencyCode;
 use easybill\eInvoicing\Enums\DocumentType;
+use easybill\eInvoicing\Reader;
 use easybill\eInvoicing\Transformer;
 use easybill\eInvoicingTests\Validators\SchemaValidator;
 
@@ -176,3 +177,43 @@ test(
         $this->validateWithKositValidator($xml);
     }
 );
+
+test(
+    'That reading the CII examples and transforming to the object representation and back to xml is identical to the source',
+    function (string $pathToXmlExample) {
+        $xml = file_get_contents($pathToXmlExample);
+
+        expect($xml)->not->toBeFalse();
+
+        $reader = Reader::create()->read($xml);
+
+        expect($reader->isSuccess())->toBeTrue();
+        expect($reader->getDocument())->toBeInstanceOf(CrossIndustryInvoice::class);
+
+        $document = $reader->getDocument();
+
+        assert($document instanceof CrossIndustryInvoice);
+
+        $xmlFromObject = Transformer::create()->transformToXml($document);
+
+        $this->assertSame($this->reformatXml($xml), $this->reformatXml($xmlFromObject));
+    }
+)->with([
+    __DIR__ . '/Examples/CII/CII_business_example_01.xml',
+    __DIR__ . '/Examples/CII/CII_business_example_02.xml',
+    __DIR__ . '/Examples/CII/CII_business_example_Z.xml',
+    __DIR__ . '/Examples/CII/CII_example1.xml',
+    __DIR__ . '/Examples/CII/CII_example2.xml',
+    __DIR__ . '/Examples/CII/CII_example3.xml',
+    __DIR__ . '/Examples/CII/CII_example4.xml',
+    __DIR__ . '/Examples/CII/CII_example5.xml',
+    __DIR__ . '/Examples/CII/CII_example6.xml',
+    __DIR__ . '/Examples/CII/CII_example7.xml',
+    __DIR__ . '/Examples/CII/CII_example8.xml',
+    __DIR__ . '/Examples/CII/CII_example9.xml',
+    __DIR__ . '/Examples/CII/EN16931_AbweichenderZahlungsempf.xml',
+    __DIR__ . '/Examples/CII/EN16931_Einfach.xml',
+    __DIR__ . '/Examples/CII/EN16931_Gutschrift.xml',
+    __DIR__ . '/Examples/CII/EN16931_Innergemeinschaftliche_Lieferungen.xml',
+    __DIR__ . '/Examples/CII/XRechnung-O.xml',
+]);
