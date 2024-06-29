@@ -29,6 +29,8 @@ use JMS\Serializer\Annotation\XmlRoot;
     'note',
     'taxPointDate',
     'documentCurrencyCode',
+    'taxCurrencyCode',
+    'accountingCost',
     'buyerReference',
     'invoicePeriod',
     'billingReference',
@@ -71,10 +73,11 @@ final class UblInvoice extends UblAbstractDocument
     #[SerializedName('ContractDocumentReference')]
     public ?DocumentReference $contractDocumentReference = null;
 
-    #[Type(DocumentReference::class)]
-    #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
+    /** @var DocumentReference[] */
+    #[Type('array<easybill\eInvoicing\UBL\Models\DocumentReference>')]
     #[SerializedName('AdditionalDocumentReference')]
-    public ?DocumentReference $additionalDocumentReference = null;
+    #[XmlList(entry: 'AdditionalDocumentReference', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
+    public array $additionalDocumentReference = [];
 
     #[Type(DocumentReference::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]

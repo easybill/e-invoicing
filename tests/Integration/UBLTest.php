@@ -7,7 +7,9 @@ namespace easybill\eInvoicingTests\Integration\XRechnung3\UBL;
 use easybill\eInvoicing\Enums\CountryCode;
 use easybill\eInvoicing\Enums\CurrencyCode;
 use easybill\eInvoicing\Enums\DocumentType;
+use easybill\eInvoicing\Reader;
 use easybill\eInvoicing\Transformer;
+use easybill\eInvoicing\UBL\Documents\UblAbstractDocument;
 use easybill\eInvoicing\UBL\Documents\UblInvoice;
 use easybill\eInvoicing\UBL\Models\AccountingParty;
 use easybill\eInvoicing\UBL\Models\Address;
@@ -243,4 +245,55 @@ test(
     }
 )->with([
     __DIR__ . '/Examples/UBL/01.01a-INVOICE_ubl.xml',
+]);
+
+test(
+    'That reading the ubl examples and transforming to the object representation and back to xml is identical to the source',
+    function (string $pathToXmlExample) {
+        $xml = file_get_contents($pathToXmlExample);
+
+        expect($xml)->not->toBeFalse();
+
+        $reader = Reader::create()->read($xml);
+
+        expect($reader->isSuccess())->toBeTrue();
+        expect($reader->getDocument())->toBeInstanceOf(UblAbstractDocument::class);
+
+        $document = $reader->getDocument();
+
+        assert($document instanceof UblAbstractDocument);
+
+        $xmlFromObject = Transformer::create()->transformToXml($document);
+
+        $this->assertSame($this->reformatXml($xml), $this->reformatXml($xmlFromObject));
+    }
+)->with([
+    __DIR__ . '/Examples/UBL/01.01a-INVOICE_ubl.xml',
+    __DIR__ . '/Examples/UBL/Allowance-example.xml',
+    __DIR__ . '/Examples/UBL/base-creditnote-correction.xml',
+    __DIR__ . '/Examples/UBL/base-example.xml',
+    __DIR__ . '/Examples/UBL/base-negative-inv-correction.xml',
+    __DIR__ . '/Examples/UBL/BIS3_Invoice_negativ.XML',
+    __DIR__ . '/Examples/UBL/BIS3_Invoice_positive.XML',
+    __DIR__ . '/Examples/UBL/guide-example1.xml',
+    __DIR__ . '/Examples/UBL/guide-example2.xml',
+    __DIR__ . '/Examples/UBL/guide-example3.xml',
+    __DIR__ . '/Examples/UBL/issue116.xml',
+    __DIR__ . '/Examples/UBL/sales-order-example.xml',
+    __DIR__ . '/Examples/UBL/sample-discount-price.xml',
+    __DIR__ . '/Examples/UBL/ubl-tc434-creditnote1.xml',
+    __DIR__ . '/Examples/UBL/ubl-tc434-example1.xml',
+    __DIR__ . '/Examples/UBL/ubl-tc434-example2.xml',
+    __DIR__ . '/Examples/UBL/ubl-tc434-example3.xml',
+    __DIR__ . '/Examples/UBL/ubl-tc434-example4.xml',
+    __DIR__ . '/Examples/UBL/ubl-tc434-example5.xml',
+    __DIR__ . '/Examples/UBL/ubl-tc434-example6.xml',
+    __DIR__ . '/Examples/UBL/ubl-tc434-example7.xml',
+    __DIR__ . '/Examples/UBL/ubl-tc434-example8.xml',
+    __DIR__ . '/Examples/UBL/ubl-tc434-example9.xml',
+    __DIR__ . '/Examples/UBL/ubl-tc434-example10.xml',
+    __DIR__ . '/Examples/UBL/vat-category-E.xml',
+    __DIR__ . '/Examples/UBL/vat-category-O.xml',
+    __DIR__ . '/Examples/UBL/Vat-category-S.xml',
+    __DIR__ . '/Examples/UBL/vat-category-Z.xml',
 ]);

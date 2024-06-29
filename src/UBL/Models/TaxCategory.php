@@ -15,10 +15,10 @@ final class TaxCategory
     #[SerializedName('ID')]
     public ?Id $id = null;
 
-    #[Type('int')]
+    #[Type('string')]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('Percent')]
-    public ?int $percent = null;
+    public ?string $percent = null;
 
     #[Type('string')]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]

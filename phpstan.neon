@@ -1,4 +1,6 @@
 parameters:
     level: 9
+    excludePaths:
+        - tests/*
     paths:
-        - 'src'
+        - src

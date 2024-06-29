@@ -28,6 +28,7 @@ use JMS\Serializer\Annotation\XmlRoot;
     'note',
     'documentCurrencyCode',
     'taxCurrencyCode',
+    'accountingCost',
     'buyerReference',
     'invoicePeriod',
     'billingReference',

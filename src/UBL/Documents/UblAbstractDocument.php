@@ -56,6 +56,16 @@ abstract class UblAbstractDocument
     #[SerializedName('DocumentCurrencyCode')]
     public ?CurrencyCode $documentCurrencyCode = null;
 
+    #[Type(CurrencyCode::class)]
+    #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
+    #[SerializedName('TaxCurrencyCode')]
+    public ?CurrencyCode $taxCurrencyCode = null;
+
+    #[Type('string')]
+    #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
+    #[SerializedName('AccountingCost')]
+    public ?string $accountingCost = null;
+
     #[Type('string')]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('BuyerReference')]

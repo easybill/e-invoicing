@@ -25,8 +25,12 @@ abstract class AbstractDocumentLine
     #[Type(Amount::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('LineExtensionAmount')]
-    #[Serializer\Groups()]
     public ?Amount $lineExtensionAmount = null;
+
+    #[Type('string')]
+    #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
+    #[SerializedName('AccountingCost')]
+    public ?string $accountingCost = null;
 
     #[Type(Period::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
