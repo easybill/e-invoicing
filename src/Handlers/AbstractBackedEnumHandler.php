@@ -45,7 +45,7 @@ abstract class AbstractBackedEnumHandler implements SubscribingHandlerInterface
         return $visitor->visitSimpleString($enum->value, $type);
     }
 
-    public function deserializeEnum(XmlDeserializationVisitor $visitor, \SimpleXMLElement $data): ?\BackedEnum
+    public function deserializeEnum(XmlDeserializationVisitor $visitor, \SimpleXMLElement $data): \BackedEnum
     {
         $class = static::getEnumClass();
 
@@ -54,8 +54,8 @@ abstract class AbstractBackedEnumHandler implements SubscribingHandlerInterface
         $rBackingType = $rEnum->getBackingType();
 
         return match ((string)$rBackingType) {
-            'string' => $class::tryFrom((string)$data),
-            'int' => $class::tryFrom((int)$data),
+            'string' => $class::from((string)$data),
+            'int' => $class::from((int)$data),
             default => throw new \BadMethodCallException('Unknown backing type'),
         };
     }

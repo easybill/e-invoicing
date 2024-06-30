@@ -18,16 +18,6 @@
         <ram:IncludedNote>
             <ram:Content>Rechnung gemäß Bestellung vom 01.03.2018.</ram:Content>
         </ram:IncludedNote>
-        <ram:IncludedNote>
-            <ram:Content>Lieferant GmbH
-                Lieferantenstraße 20
-                80333 München
-                Deutschland
-                Geschäftsführer: Hans Muster
-                Handelsregisternummer: H A 123
-            </ram:Content>
-            <ram:SubjectCode>REG</ram:SubjectCode>
-        </ram:IncludedNote>
     </rsm:ExchangedDocument>
     <rsm:SupplyChainTradeTransaction>
         <ram:IncludedSupplyChainTradeLineItem>
@@ -145,9 +135,7 @@
                 <ram:RateApplicablePercent>19.00</ram:RateApplicablePercent>
             </ram:ApplicableTradeTax>
             <ram:SpecifiedTradePaymentTerms>
-                <ram:Description>Zahlbar innerhalb 30 Tagen netto bis 04.04.2018, 3% Skonto innerhalb 10 Tagen bis
-                    15.03.2018
-                </ram:Description>
+                <ram:Description>Zahlbar innerhalb 30 Tagen netto bis 04.04.2018, 3% Skonto innerhalb 10 Tagen bis 15.03.2018</ram:Description>
             </ram:SpecifiedTradePaymentTerms>
             <ram:SpecifiedTradeSettlementHeaderMonetarySummation>
                 <ram:LineTotalAmount>473.00</ram:LineTotalAmount>

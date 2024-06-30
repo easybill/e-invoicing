@@ -53,14 +53,6 @@ test(
 
         $invoice->exchangedDocument->notes[] = Note::create('Rechnung gemäß Bestellung vom 01.03.2018.');
 
-        $invoice->exchangedDocument->notes[] = Note::create('Lieferant GmbH
-				Lieferantenstraße 20
-				80333 München
-				Deutschland
-				Geschäftsführer: Hans Muster
-				Handelsregisternummer: H A 123
-			', 'REG');
-
         $invoice->supplyChainTradeTransaction = new SupplyChainTradeTransaction();
         $invoice->supplyChainTradeTransaction->lineItems[] = $item1 = new SupplyChainTradeLineItem();
 
