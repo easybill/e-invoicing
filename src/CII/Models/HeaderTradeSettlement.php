@@ -24,8 +24,13 @@ final class HeaderTradeSettlement
 
     #[Type(CurrencyCode::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
+    #[SerializedName('TaxCurrencyCode')]
+    public ?CurrencyCode $taxCurrency = null;
+
+    #[Type(CurrencyCode::class)]
+    #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('InvoiceCurrencyCode')]
-    public CurrencyCode $currency;
+    public CurrencyCode $invoiceCurrency;
 
     #[Type(TradeParty::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
@@ -81,4 +86,9 @@ final class HeaderTradeSettlement
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('InvoiceReferencedDocument')]
     public ?ReferencedDocument $invoiceReferencedDocument = null;
+
+    /** @var TradeAccountingAccount[] */
+    #[Type('array<easybill\eInvoicing\CII\Models\TradeAccountingAccount>')]
+    #[XmlList(entry: 'ReceivableSpecifiedTradeAccountingAccount', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
+    public array $tradeAccountingAccount = [];
 }

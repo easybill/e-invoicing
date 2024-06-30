@@ -7,7 +7,7 @@ namespace easybill\eInvoicing\CII\Models;
 use JMS\Serializer\Annotation\AccessorOrder;
 use JMS\Serializer\Annotation as JMS;
 
-#[AccessorOrder(order: 'custom', custom: ['calculatedAmount', 'typeCode', 'exemptionReason'])]
+#[AccessorOrder(order: 'custom', custom: ['calculatedAmount', 'typeCode', 'exemptionReason', 'basisAmount', 'categoryCode', 'exemptionReasonCode', 'taxPointDate', 'dueDateTypeCode', 'rateApplicablePercent'])]
 final class TradeTax
 {
     #[JMS\Type(Amount::class)]

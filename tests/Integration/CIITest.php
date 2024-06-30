@@ -134,7 +134,7 @@ test(
         $supplyChainEvent->date = DateTime::create(102, '20180305');
 
         $invoice->supplyChainTradeTransaction->applicableHeaderTradeSettlement = new HeaderTradeSettlement();
-        $invoice->supplyChainTradeTransaction->applicableHeaderTradeSettlement->currency = CurrencyCode::EUR;
+        $invoice->supplyChainTradeTransaction->applicableHeaderTradeSettlement->invoiceCurrency = CurrencyCode::EUR;
 
         $invoice->supplyChainTradeTransaction->applicableHeaderTradeSettlement->tradeTaxes[] = $headerTax1 = new TradeTax();
         $headerTax1->typeCode = 'VAT';

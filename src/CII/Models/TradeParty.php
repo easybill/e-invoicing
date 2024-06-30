@@ -10,7 +10,7 @@ use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlElement;
 use JMS\Serializer\Annotation\XmlList;
 
-#[AccessorOrder(order: 'custom', custom: ['id', 'globalID', 'name', 'definedTradeContact', 'postalTradeAddress', 'uriUniversalCommunication', 'taxRegistrations'])]
+#[AccessorOrder(order: 'custom', custom: ['id', 'globalID', 'name', 'description', 'specifiedLegalOrganization', 'definedTradeContact', 'postalTradeAddress', 'uriUniversalCommunication', 'taxRegistrations'])]
 final class TradeParty
 {
     #[Type(Id::class)]
@@ -27,6 +27,11 @@ final class TradeParty
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('Name')]
     public string $name;
+
+    #[Type('string')]
+    #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
+    #[SerializedName('Description')]
+    public ?string $description = null;
 
     #[Type(TradeContact::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
@@ -52,11 +57,6 @@ final class TradeParty
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('RoleCode')]
     public ?string $roleCode = null;
-
-    #[Type('string')]
-    #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
-    #[SerializedName('Description')]
-    public ?string $description = null;
 
     #[Type(LegalOrganization::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
