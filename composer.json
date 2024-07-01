@@ -42,8 +42,7 @@
         "php": "^8.2",
         "ext-dom": "*",
         "jms/serializer": "^3.30",
-        "ext-libxml": "*",
-        "ext-simplexml": "*"
+        "ext-libxml": "*"
     },
     "require-dev": {
         "pestphp/pest": "^2.34",
