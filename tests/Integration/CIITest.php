@@ -35,6 +35,7 @@ use easybill\eInvoicing\CII\Models\TradeTax;
 use easybill\eInvoicing\Enums\CountryCode;
 use easybill\eInvoicing\Enums\CurrencyCode;
 use easybill\eInvoicing\Enums\DocumentType;
+use easybill\eInvoicing\Enums\UnitCode;
 use easybill\eInvoicing\Reader;
 use easybill\eInvoicing\Transformer;
 use easybill\eInvoicingTests\Validators\SchemaValidator;
@@ -67,7 +68,7 @@ test(
         $item1->tradeAgreement->netPrice = TradePrice::create('9.9000');
 
         $item1->delivery = new LineTradeDelivery();
-        $item1->delivery->billedQuantity = Quantity::create('20.0000', 'H87');
+        $item1->delivery->billedQuantity = Quantity::create('20.0000', UnitCode::H87);
 
         $item1->specifiedLineTradeSettlement = new LineTradeSettlement();
         $item1->specifiedLineTradeSettlement->tradeTax[] = $item1tax = new TradeTax();
@@ -89,7 +90,7 @@ test(
         $item2->tradeAgreement->netPrice = TradePrice::create('5.5000');
 
         $item2->delivery = new LineTradeDelivery();
-        $item2->delivery->billedQuantity = Quantity::create('50.0000', 'H87');
+        $item2->delivery->billedQuantity = Quantity::create('50.0000', UnitCode::H87);
 
         $item2->specifiedLineTradeSettlement = new LineTradeSettlement();
         $item2->specifiedLineTradeSettlement->tradeTax[] = $item2tax = new TradeTax();

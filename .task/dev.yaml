@@ -33,4 +33,5 @@ tasks:
       - php ./tools/Generators/CurrencyCodeEnumGenerator.php
       - php ./tools/Generators/DocumentTypeEnumGenerator.php
       - php ./tools/Generators/ReferenceQualifierEnumGenerator.php
+      - php ./tools/Generators/UnitCodeEnumGenerator.php
       - ./vendor/bin/php-cs-fixer fix

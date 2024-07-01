@@ -7,6 +7,7 @@ namespace easybill\eInvoicingTests\Integration\XRechnung3\UBL;
 use easybill\eInvoicing\Enums\CountryCode;
 use easybill\eInvoicing\Enums\CurrencyCode;
 use easybill\eInvoicing\Enums\DocumentType;
+use easybill\eInvoicing\Enums\UnitCode;
 use easybill\eInvoicing\Reader;
 use easybill\eInvoicing\Transformer;
 use easybill\eInvoicing\UBL\Documents\UblAbstractDocument;
@@ -176,7 +177,7 @@ test(
         $invoiceLine1->id->value = 'Zeitschrift [...]';
         $invoiceLine1->note = 'Die letzte Lieferung im Rahmen des abgerechneten Abonnements erfolgt in 12/2016 Lieferung erfolgt / erfolgte direkt vom Verlag';
         $invoiceLine1->invoicedQuantity = new Quantity();
-        $invoiceLine1->invoicedQuantity->unitCode = 'XPP';
+        $invoiceLine1->invoicedQuantity->unitCode = UnitCode::XPP;
         $invoiceLine1->invoicedQuantity->value = '1';
         $invoiceLine1->lineExtensionAmount = new Amount();
         $invoiceLine1->lineExtensionAmount->currencyID = CurrencyCode::EUR;
@@ -216,7 +217,7 @@ test(
         $invoiceLine2->id = new Id();
         $invoiceLine2->id->value = 'Porto + Versandkosten';
         $invoiceLine2->invoicedQuantity = new Quantity();
-        $invoiceLine2->invoicedQuantity->unitCode = 'XPP';
+        $invoiceLine2->invoicedQuantity->unitCode = UnitCode::XPP;
         $invoiceLine2->invoicedQuantity->value = '1';
         $invoiceLine2->lineExtensionAmount = new Amount();
         $invoiceLine2->lineExtensionAmount->currencyID = CurrencyCode::EUR;
