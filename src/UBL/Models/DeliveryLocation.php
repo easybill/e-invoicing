@@ -10,10 +10,10 @@ use JMS\Serializer\Annotation\XmlElement;
 
 final class DeliveryLocation
 {
-    #[Type('string')]
+    #[Type(Id::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('ID')]
-    public ?string $id = null;
+    public ?Id $id = null;
 
     #[Type(Address::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]

@@ -14,4 +14,9 @@ final class Attachment
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('EmbeddedDocumentBinaryObject')]
     public ?EmbeddedDocumentBinaryObject $embeddedDocumentBinaryObject = null;
+
+    #[Type(ExternalReference::class)]
+    #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
+    #[SerializedName('ExternalReference')]
+    public ?ExternalReference $externalReference = null;
 }

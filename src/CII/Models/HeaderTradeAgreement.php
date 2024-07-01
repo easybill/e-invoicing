@@ -16,6 +16,7 @@ use JMS\Serializer\Annotation\XmlList;
     'buyerTradeParty',
     'sellerTaxRepresentativeTradeParty',
     'buyerTaxRepresentativeTradeParty',
+    'sellerOrderReferencedDocument',
     'buyerOrderReferencedDocument',
     'contractReferencedDocument',
     'additionalReferencedDocuments',
@@ -47,6 +48,11 @@ final class HeaderTradeAgreement
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('BuyerTaxRepresentativeTradeParty')]
     public ?TradeParty $buyerTaxRepresentativeTradeParty = null;
+
+    #[Type(ReferencedDocument::class)]
+    #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
+    #[SerializedName('SellerOrderReferencedDocument')]
+    public ?ReferencedDocument $sellerOrderReferencedDocument = null;
 
     #[Type(ReferencedDocument::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
