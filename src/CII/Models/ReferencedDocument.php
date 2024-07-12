@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace easybill\eInvoicing\CII\Models;
 
+use easybill\eInvoicing\Enums\DocumentType;
+use easybill\eInvoicing\Enums\ReferenceQualifier;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlElement;
@@ -20,10 +22,10 @@ final class ReferencedDocument
     #[SerializedName('URIID')]
     public ?Id $uriid = null;
 
-    #[Type('string')]
+    #[Type(DocumentType::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('TypeCode')]
-    public ?string $typeCode = null;
+    public ?DocumentType $typeCode = null;
 
     #[Type('string')]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
@@ -44,6 +46,11 @@ final class ReferencedDocument
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('LineID')]
     public ?string $lineId = null;
+
+    #[Type(ReferenceQualifier::class)]
+    #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
+    #[SerializedName('ReferenceTypeCode')]
+    public ?ReferenceQualifier $referenceTypeCode = null;
 
     public static function create(string $issuerAssignedID): self
     {

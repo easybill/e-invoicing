@@ -19,4 +19,9 @@ final class Period
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('EndDate')]
     public ?string $endDate = null;
+
+    #[Type('string')]
+    #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
+    #[SerializedName('DescriptionCode')]
+    public ?string $descriptionCode = null;
 }

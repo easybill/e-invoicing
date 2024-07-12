@@ -8,12 +8,10 @@ use easybill\eInvoicing\CII\Documents\CrossIndustryInvoice;
 use easybill\eInvoicing\Dtos\ReaderResult;
 use easybill\eInvoicing\UBL\Documents\UblCredit;
 use easybill\eInvoicing\UBL\Documents\UblInvoice;
-use JMS\Serializer\SerializerBuilder;
-use JMS\Serializer\SerializerInterface;
 
 final readonly class Reader
 {
-    public function __construct(private SerializerInterface $serializer) {}
+    public function __construct(private ConfiguredSerializer $serializer) {}
 
     public function read(string $xml): ReaderResult
     {
@@ -50,11 +48,7 @@ final readonly class Reader
 
     public static function create(): Reader
     {
-        $serializer = SerializerBuilder::create()
-            ->setDebug(true)
-            ->build()
-        ;
-        return new self($serializer);
+        return new self(ConfiguredSerializer::create());
     }
 
     private function tryDeserializingCIIDocument(\DOMDocument $document): ReaderResult

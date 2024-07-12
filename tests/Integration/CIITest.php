@@ -32,6 +32,11 @@ use easybill\eInvoicing\CII\Models\TradeProduct;
 use easybill\eInvoicing\CII\Models\TradeSettlementHeaderMonetarySummation;
 use easybill\eInvoicing\CII\Models\TradeSettlementLineMonetarySummation;
 use easybill\eInvoicing\CII\Models\TradeTax;
+use easybill\eInvoicing\Enums\CountryCode;
+use easybill\eInvoicing\Enums\CurrencyCode;
+use easybill\eInvoicing\Enums\DocumentType;
+use easybill\eInvoicing\Enums\UnitCode;
+use easybill\eInvoicing\Reader;
 use easybill\eInvoicing\Transformer;
 use easybill\eInvoicingTests\Validators\SchemaValidator;
 
@@ -44,18 +49,10 @@ test(
         $invoice->exchangedDocumentContext->documentContextParameter = new DocumentContextParameter();
         $invoice->exchangedDocumentContext->documentContextParameter->id = 'urn:cen.eu:en16931:2017';
         $invoice->exchangedDocument->id = '471102';
-        $invoice->exchangedDocument->typeCode = '380';
+        $invoice->exchangedDocument->typeCode = DocumentType::COMMERCIAL_INVOICE;
         $invoice->exchangedDocument->issueDateTime = DateTime::create(102, '20180305');
 
         $invoice->exchangedDocument->notes[] = Note::create('Rechnung gemäß Bestellung vom 01.03.2018.');
-
-        $invoice->exchangedDocument->notes[] = Note::create('Lieferant GmbH
-				Lieferantenstraße 20
-				80333 München
-				Deutschland
-				Geschäftsführer: Hans Muster
-				Handelsregisternummer: H A 123
-			', 'REG');
 
         $invoice->supplyChainTradeTransaction = new SupplyChainTradeTransaction();
         $invoice->supplyChainTradeTransaction->lineItems[] = $item1 = new SupplyChainTradeLineItem();
@@ -71,7 +68,7 @@ test(
         $item1->tradeAgreement->netPrice = TradePrice::create('9.9000');
 
         $item1->delivery = new LineTradeDelivery();
-        $item1->delivery->billedQuantity = Quantity::create('20.0000', 'H87');
+        $item1->delivery->billedQuantity = Quantity::create('20.0000', UnitCode::H87);
 
         $item1->specifiedLineTradeSettlement = new LineTradeSettlement();
         $item1->specifiedLineTradeSettlement->tradeTax[] = $item1tax = new TradeTax();
@@ -93,7 +90,7 @@ test(
         $item2->tradeAgreement->netPrice = TradePrice::create('5.5000');
 
         $item2->delivery = new LineTradeDelivery();
-        $item2->delivery->billedQuantity = Quantity::create('50.0000', 'H87');
+        $item2->delivery->billedQuantity = Quantity::create('50.0000', UnitCode::H87);
 
         $item2->specifiedLineTradeSettlement = new LineTradeSettlement();
         $item2->specifiedLineTradeSettlement->tradeTax[] = $item2tax = new TradeTax();
@@ -112,7 +109,7 @@ test(
         $sellerTradeParty->postalTradeAddress->postcode = '80333';
         $sellerTradeParty->postalTradeAddress->lineOne = 'Lieferantenstraße 20';
         $sellerTradeParty->postalTradeAddress->city = 'München';
-        $sellerTradeParty->postalTradeAddress->countryCode = 'DE';
+        $sellerTradeParty->postalTradeAddress->countryCode = CountryCode::DE;
         $sellerTradeParty->taxRegistrations[] = TaxRegistration::create('201/113/40209', 'FC');
         $sellerTradeParty->taxRegistrations[] = TaxRegistration::create('DE123456789', 'VA');
 
@@ -123,14 +120,14 @@ test(
         $buyerTradeParty->postalTradeAddress->postcode = '69876';
         $buyerTradeParty->postalTradeAddress->lineOne = 'Kundenstraße 15';
         $buyerTradeParty->postalTradeAddress->city = 'Frankfurt';
-        $buyerTradeParty->postalTradeAddress->countryCode = 'DE';
+        $buyerTradeParty->postalTradeAddress->countryCode = CountryCode::DE;
 
         $invoice->supplyChainTradeTransaction->applicableHeaderTradeDelivery = new HeaderTradeDelivery();
         $invoice->supplyChainTradeTransaction->applicableHeaderTradeDelivery->chainEvent = $supplyChainEvent = new SupplyChainEvent();
         $supplyChainEvent->date = DateTime::create(102, '20180305');
 
         $invoice->supplyChainTradeTransaction->applicableHeaderTradeSettlement = new HeaderTradeSettlement();
-        $invoice->supplyChainTradeTransaction->applicableHeaderTradeSettlement->currency = 'EUR';
+        $invoice->supplyChainTradeTransaction->applicableHeaderTradeSettlement->invoiceCurrency = CurrencyCode::EUR;
 
         $invoice->supplyChainTradeTransaction->applicableHeaderTradeSettlement->tradeTaxes[] = $headerTax1 = new TradeTax();
         $headerTax1->typeCode = 'VAT';
@@ -154,7 +151,7 @@ test(
         $summation->chargeTotalAmount = Amount::create('0.00');
         $summation->allowanceTotalAmount = Amount::create('0.00');
         $summation->taxBasisTotalAmount[] = Amount::create('473.00');
-        $summation->taxTotalAmount[] = Amount::create('56.87', 'EUR');
+        $summation->taxTotalAmount[] = Amount::create('56.87', CurrencyCode::EUR);
         $summation->grandTotalAmount[] = Amount::create('529.87');
         $summation->totalPrepaidAmount = Amount::create('0.00');
         $summation->duePayableAmount = Amount::create('529.87');
@@ -173,3 +170,43 @@ test(
         $this->validateWithKositValidator($xml);
     }
 );
+
+test(
+    'That reading the CII examples and transforming to the object representation and back to xml is identical to the source',
+    function (string $pathToXmlExample) {
+        $xml = file_get_contents($pathToXmlExample);
+
+        expect($xml)->not->toBeFalse();
+
+        $reader = Reader::create()->read($xml);
+
+        expect($reader->isSuccess())->toBeTrue();
+        expect($reader->getDocument())->toBeInstanceOf(CrossIndustryInvoice::class);
+
+        $document = $reader->getDocument();
+
+        assert($document instanceof CrossIndustryInvoice);
+
+        $xmlFromObject = Transformer::create()->transformToXml($document);
+
+        $this->assertSame($this->reformatXml($xml), $this->reformatXml($xmlFromObject));
+    }
+)->with([
+    __DIR__ . '/Examples/CII/CII_business_example_01.xml',
+    __DIR__ . '/Examples/CII/CII_business_example_02.xml',
+    __DIR__ . '/Examples/CII/CII_business_example_Z.xml',
+    __DIR__ . '/Examples/CII/CII_example1.xml',
+    __DIR__ . '/Examples/CII/CII_example2.xml',
+    __DIR__ . '/Examples/CII/CII_example3.xml',
+    __DIR__ . '/Examples/CII/CII_example4.xml',
+    __DIR__ . '/Examples/CII/CII_example5.xml',
+    __DIR__ . '/Examples/CII/CII_example6.xml',
+    __DIR__ . '/Examples/CII/CII_example7.xml',
+    __DIR__ . '/Examples/CII/CII_example8.xml',
+    __DIR__ . '/Examples/CII/CII_example9.xml',
+    __DIR__ . '/Examples/CII/EN16931_AbweichenderZahlungsempf.xml',
+    __DIR__ . '/Examples/CII/EN16931_Einfach.xml',
+    __DIR__ . '/Examples/CII/EN16931_Gutschrift.xml',
+    __DIR__ . '/Examples/CII/EN16931_Innergemeinschaftliche_Lieferungen.xml',
+    __DIR__ . '/Examples/CII/XRechnung-O.xml',
+]);

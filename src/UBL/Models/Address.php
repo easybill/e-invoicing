@@ -31,16 +31,16 @@ final class Address
     #[SerializedName('PostalZone')]
     public ?string $postalZone = null;
 
+    #[Type('string')]
+    #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
+    #[SerializedName('CountrySubentity')]
+    public ?string $countrySubentity = null;
+
     /** @var AddressLine[] */
     #[Type('array<easybill\eInvoicing\UBL\Models\AddressLine>')]
     #[SerializedName('AddressLine')]
     #[XmlList(entry: 'AddressLine', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $addressLines = [];
-
-    #[Type('string')]
-    #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
-    #[SerializedName('CountrySubentity')]
-    public ?string $countrySubentity = null;
 
     #[Type(Country::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]

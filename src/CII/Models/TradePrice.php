@@ -20,15 +20,10 @@ final class TradePrice
     #[JMS\SerializedName('BasisQuantity')]
     public ?Quantity $basisQuantity = null;
 
-    #[Type(TradeAllowanceCharge::class)]
-    #[JMS\XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
-    #[JMS\SerializedName('AppliedTradeAllowanceCharge')]
-    public ?TradeAllowanceCharge $appliedTradeAllowanceCharge = null;
-
     /** @var TradeAllowanceCharge[] */
     #[Type('array<easybill\eInvoicing\CII\Models\TradeAllowanceCharge>')]
     #[XmlList(entry: 'AppliedTradeAllowanceCharge', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
-    public ?array $appliedTradeAllowanceCharges = null;
+    public ?array $appliedTradeAllowanceCharge = null;
 
     /** @param array<TradeAllowanceCharge>|null $tradeAllowanceCharge */
     public static function create(string $amount, Quantity $quantity = null, array $tradeAllowanceCharge = null): self
@@ -36,7 +31,7 @@ final class TradePrice
         $self = new self();
         $self->chargeAmount = Amount::create($amount);
         $self->basisQuantity = $quantity;
-        $self->appliedTradeAllowanceCharges = $tradeAllowanceCharge;
+        $self->appliedTradeAllowanceCharge = $tradeAllowanceCharge;
         return $self;
     }
 }

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace easybill\eInvoicing\CII\Models;
 
+use easybill\eInvoicing\Enums\CurrencyCode;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlAttribute;
@@ -15,12 +16,12 @@ final class Amount
     #[XmlValue(cdata: false)]
     public string $value;
 
-    #[Type('string')]
+    #[Type(CurrencyCode::class)]
     #[XmlAttribute]
     #[SerializedName('currencyID')]
-    public ?string $currency = null;
+    public ?CurrencyCode $currency = null;
 
-    public static function create(string $amount, ?string $currency = null): self
+    public static function create(string $amount, ?CurrencyCode $currency = null): self
     {
         $self = new self();
         $self->value = $amount;
