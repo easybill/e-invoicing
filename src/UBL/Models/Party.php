@@ -11,10 +11,10 @@ use JMS\Serializer\Annotation\XmlList;
 
 final class Party
 {
-    #[Type(Id::class)]
+    #[Type(EndpointId::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('EndpointID')]
-    public ?Id $endpointId = null;
+    public ?EndpointId $endpointId = null;
 
     #[Type(Identification::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]

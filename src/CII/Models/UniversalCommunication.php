@@ -15,8 +15,8 @@ final class UniversalCommunication
     #[SerializedName('CompleteNumber')]
     public ?string $completeNumber = null;
 
-    #[Type(Id::class)]
+    #[Type(UriID::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('URIID')]
-    public ?Id $uriid = null;
+    public ?UriID $uriid = null;
 }

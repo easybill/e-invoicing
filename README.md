@@ -39,14 +39,16 @@ In this example we generate a CIUS (XRechnung 3.0) as UBL document
 ```PHP
 use easybill\eInvoicing\Transformer;
 use easybill\eInvoicing\UBL\Documents\UblInvoice;
+use easybill\eInvoicing\Enums\CurrencyCode;
+use easybill\eInvoicing\Enums\DocumentType;
 
 $document = new UblInvoice();
 $document->customizationId = 'urn:cen.eu:en16931:2017#compliant#urn:xeinkauf.de:kosit:xrechnung_3.0';
 $document->profileId = 'urn:fdc:peppol.eu:2017:poacc:billing:01:1.0';
 $document->id = '123456XX';
 $document->issueDate = '2016-04-04';
-$document->invoiceTypeCode = 380;
-$document->documentCurrencyCode = 'EUR';
+$document->invoiceTypeCode = DocumentType::COMMERCIAL_INVOICE;
+$document->documentCurrencyCode = CurrencyCode::EUR;
 $document->buyerReference = '04011000-12345-03';
 // etc...
 $xml = Transformer::create()->transformToXml($document)

@@ -8,8 +8,9 @@ use JMS\Serializer\Annotation\AccessorOrder;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlElement;
+use JMS\Serializer\Annotation\XmlList;
 
-#[AccessorOrder(order: 'custom', custom: ['globalID', 'sellerAssignedID', 'buyerAssignedID', 'name', 'description', 'tradeCountry'])]
+#[AccessorOrder(order: 'custom', custom: ['globalID', 'sellerAssignedID', 'buyerAssignedID', 'name', 'description', 'applicableProductCharacteristic', 'designatedProductClassification', 'originTradeCountry'])]
 final class TradeProduct
 {
     #[Type(Id::class)]
@@ -40,5 +41,15 @@ final class TradeProduct
     #[Type(TradeCountry::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('OriginTradeCountry')]
-    public ?TradeCountry $tradeCountry = null;
+    public ?TradeCountry $originTradeCountry = null;
+
+    /** @var ProductCharacteristic[] */
+    #[Type('array<easybill\eInvoicing\CII\Models\ProductCharacteristic>')]
+    #[XmlList(entry: 'ApplicableProductCharacteristic', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
+    public ?array $applicableProductCharacteristic = [];
+
+    #[Type(ProductClassification::class)]
+    #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
+    #[SerializedName('DesignatedProductClassification')]
+    public ?ProductClassification $designatedProductClassification = null;
 }

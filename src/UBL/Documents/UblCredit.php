@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace easybill\eInvoicing\UBL\Documents;
 
+use easybill\eInvoicing\Enums\CurrencyCode;
+use easybill\eInvoicing\Enums\DocumentType;
 use easybill\eInvoicing\UBL\Models\CreditNoteLine;
 use JMS\Serializer\Annotation\AccessorOrder;
 use JMS\Serializer\Annotation\SerializedName;
@@ -26,10 +28,13 @@ use JMS\Serializer\Annotation\XmlRoot;
     'note',
     'documentCurrencyCode',
     'taxCurrencyCode',
+    'accountingCost',
     'buyerReference',
     'invoicePeriod',
-    'billingReference',
     'orderReference',
+    'billingReference',
+    'despatchDocumentReference',
+    'receiptDocumentReference',
     'originatorDocumentReference',
     'accountingSupplierParty',
     'accountingCustomerParty',
@@ -45,15 +50,15 @@ use JMS\Serializer\Annotation\XmlRoot;
 ])]
 final class UblCredit extends UblAbstractDocument
 {
-    #[Type('int')]
+    #[Type(DocumentType::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('CreditNoteTypeCode')]
-    public ?int $creditNoteTypeCode = null;
+    public ?DocumentType $creditNoteTypeCode = null;
 
-    #[Type('string')]
+    #[Type(CurrencyCode::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('TaxCurrencyCode')]
-    public ?string $taxCurrencyCode = null;
+    public ?CurrencyCode $taxCurrencyCode = null;
 
     /** @var CreditNoteLine[] */
     #[Type('array<easybill\eInvoicing\UBL\Models\CreditNoteLine>')]

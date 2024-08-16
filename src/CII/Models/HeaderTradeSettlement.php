@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace easybill\eInvoicing\CII\Models;
 
+use easybill\eInvoicing\Enums\CurrencyCode;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlElement;
@@ -21,10 +22,15 @@ final class HeaderTradeSettlement
     #[SerializedName('PaymentReference')]
     public ?string $paymentReference = null;
 
-    #[Type('string')]
+    #[Type(CurrencyCode::class)]
+    #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
+    #[SerializedName('TaxCurrencyCode')]
+    public ?CurrencyCode $taxCurrency = null;
+
+    #[Type(CurrencyCode::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('InvoiceCurrencyCode')]
-    public string $currency;
+    public CurrencyCode $invoiceCurrency;
 
     #[Type(TradeParty::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
@@ -80,4 +86,9 @@ final class HeaderTradeSettlement
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('InvoiceReferencedDocument')]
     public ?ReferencedDocument $invoiceReferencedDocument = null;
+
+    /** @var TradeAccountingAccount[] */
+    #[Type('array<easybill\eInvoicing\CII\Models\TradeAccountingAccount>')]
+    #[XmlList(entry: 'ReceivableSpecifiedTradeAccountingAccount', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
+    public array $tradeAccountingAccount = [];
 }

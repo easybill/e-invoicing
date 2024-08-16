@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace easybill\eInvoicing\UBL\Models;
 
-use JMS\Serializer\Annotation as Serializer;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlElement;
@@ -25,8 +24,12 @@ abstract class AbstractDocumentLine
     #[Type(Amount::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('LineExtensionAmount')]
-    #[Serializer\Groups()]
     public ?Amount $lineExtensionAmount = null;
+
+    #[Type('string')]
+    #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
+    #[SerializedName('AccountingCost')]
+    public ?string $accountingCost = null;
 
     #[Type(Period::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
@@ -54,4 +57,9 @@ abstract class AbstractDocumentLine
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     #[SerializedName('Price')]
     public ?Price $price = null;
+
+    #[Type(DocumentReference::class)]
+    #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
+    #[SerializedName('DocumentReference')]
+    public ?DocumentReference $documentReference = null;
 }
