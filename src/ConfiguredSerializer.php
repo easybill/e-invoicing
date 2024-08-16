@@ -7,6 +7,7 @@ namespace easybill\eInvoicing;
 use easybill\eInvoicing\Handlers\CountryCodeEnumHandler;
 use easybill\eInvoicing\Handlers\CurrencyCodeEnumHandler;
 use easybill\eInvoicing\Handlers\DocumentTypeEnumHandler;
+use easybill\eInvoicing\Handlers\ElectronicAddressSchemeIdentifierEnumHandler;
 use easybill\eInvoicing\Handlers\MimeTypeEnumHandler;
 use easybill\eInvoicing\Handlers\ReferenceQualifierEnumHandler;
 use easybill\eInvoicing\Handlers\UnitCodeEnumHandler;
@@ -33,6 +34,7 @@ final readonly class ConfiguredSerializer implements SerializerInterface
                 $registry->registerSubscribingHandler(new ReferenceQualifierEnumHandler());
                 $registry->registerSubscribingHandler(new UnitCodeEnumHandler());
                 $registry->registerSubscribingHandler(new MimeTypeEnumHandler());
+                $registry->registerSubscribingHandler(new ElectronicAddressSchemeIdentifierEnumHandler());
             })
             ->build()
         ;

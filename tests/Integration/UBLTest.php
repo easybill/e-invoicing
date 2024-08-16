@@ -7,6 +7,7 @@ namespace easybill\eInvoicingTests\Integration\XRechnung3\UBL;
 use easybill\eInvoicing\Enums\CountryCode;
 use easybill\eInvoicing\Enums\CurrencyCode;
 use easybill\eInvoicing\Enums\DocumentType;
+use easybill\eInvoicing\Enums\ElectronicAddressSchemeIdentifier;
 use easybill\eInvoicing\Enums\UnitCode;
 use easybill\eInvoicing\Reader;
 use easybill\eInvoicing\Transformer;
@@ -18,6 +19,7 @@ use easybill\eInvoicing\UBL\Models\Amount;
 use easybill\eInvoicing\UBL\Models\CommodityClassification;
 use easybill\eInvoicing\UBL\Models\Contact;
 use easybill\eInvoicing\UBL\Models\Country;
+use easybill\eInvoicing\UBL\Models\EndpointId;
 use easybill\eInvoicing\UBL\Models\Id;
 use easybill\eInvoicing\UBL\Models\Identification;
 use easybill\eInvoicing\UBL\Models\InvoiceLine;
@@ -66,8 +68,8 @@ test(
 
         // Supplier
         $supplierParty = new Party();
-        $supplierParty->endpointId = new Id();
-        $supplierParty->endpointId->schemeID = 'EM';
+        $supplierParty->endpointId = new EndpointId();
+        $supplierParty->endpointId->schemeID = ElectronicAddressSchemeIdentifier::ELECTRONIC_MAIL;
         $supplierParty->endpointId->value = 'seller@email.de';
         $supplierParty->partyName = new PartyName();
         $supplierParty->partyName->name = '[Seller trading name]';
@@ -99,8 +101,8 @@ test(
 
         // Customer
         $customerParty = new Party();
-        $customerParty->endpointId = new Id();
-        $customerParty->endpointId->schemeID = 'EM';
+        $customerParty->endpointId = new EndpointId();
+        $customerParty->endpointId->schemeID = ElectronicAddressSchemeIdentifier::ELECTRONIC_MAIL;
         $customerParty->endpointId->value = 'buyer@info.de';
         $customerParty->partyIdentification = new Identification();
         $customerParty->partyIdentification->id = new Id();
