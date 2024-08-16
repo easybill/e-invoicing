@@ -23,7 +23,7 @@ function generateEnum(array $values): string
     $lines = [
         'declare(strict_types=1);',
         'namespace easybill\eInvoicing\Enums;',
-        "enum ElectronicAddressSchemeIdentifier: string\n{\n",
+        "enum ElectronicAddressScheme: string\n{\n",
     ];
 
     $enumCode = implode("\n\n", $lines);
@@ -58,4 +58,4 @@ $countries = parseCSVFile($csvFilePath);
 
 $enumCode = generateEnum($countries);
 
-file_put_contents(__DIR__ . '/../../src/Enums/ElectronicAddressSchemeIdentifier.php', "<?php\n\n" . $enumCode);
+file_put_contents(__DIR__ . '/../../src/Enums/ElectronicAddressScheme.php', "<?php\n\n" . $enumCode);

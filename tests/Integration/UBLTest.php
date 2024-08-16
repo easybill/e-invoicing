@@ -7,7 +7,7 @@ namespace easybill\eInvoicingTests\Integration\XRechnung3\UBL;
 use easybill\eInvoicing\Enums\CountryCode;
 use easybill\eInvoicing\Enums\CurrencyCode;
 use easybill\eInvoicing\Enums\DocumentType;
-use easybill\eInvoicing\Enums\ElectronicAddressSchemeIdentifier;
+use easybill\eInvoicing\Enums\ElectronicAddressScheme;
 use easybill\eInvoicing\Enums\UnitCode;
 use easybill\eInvoicing\Reader;
 use easybill\eInvoicing\Transformer;
@@ -69,7 +69,7 @@ test(
         // Supplier
         $supplierParty = new Party();
         $supplierParty->endpointId = new EndpointId();
-        $supplierParty->endpointId->schemeID = ElectronicAddressSchemeIdentifier::ELECTRONIC_MAIL;
+        $supplierParty->endpointId->schemeID = ElectronicAddressScheme::ELECTRONIC_MAIL;
         $supplierParty->endpointId->value = 'seller@email.de';
         $supplierParty->partyName = new PartyName();
         $supplierParty->partyName->name = '[Seller trading name]';
@@ -102,7 +102,7 @@ test(
         // Customer
         $customerParty = new Party();
         $customerParty->endpointId = new EndpointId();
-        $customerParty->endpointId->schemeID = ElectronicAddressSchemeIdentifier::ELECTRONIC_MAIL;
+        $customerParty->endpointId->schemeID = ElectronicAddressScheme::ELECTRONIC_MAIL;
         $customerParty->endpointId->value = 'buyer@info.de';
         $customerParty->partyIdentification = new Identification();
         $customerParty->partyIdentification->id = new Id();

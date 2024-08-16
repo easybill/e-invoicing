@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace easybill\eInvoicing\Enums;
 
-enum ElectronicAddressSchemeIdentifier: string
+enum ElectronicAddressScheme: string
 {
     case SYSTEM_INFORMATION_ET_REPERTOIRE_DES_ENTREPRISE_ET_DES_ETABL = '0002';
     case ORGANISATIONSNUMMER = '0007';
