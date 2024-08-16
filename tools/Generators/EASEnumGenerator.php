@@ -33,11 +33,6 @@ function generateEnum(array $values): string
         $case = strtoupper((string)$case);
         $case = rtrim($case, '_');
 
-        // Ensure the case name starts with a letter
-        if (!ctype_alpha((string)$code)) {
-            $case = 'ICD_' . $case;
-        }
-
         // Truncate case name if it's too long
         if (strlen($case) > 64) {
             $case = substr($case, 0, 64);
