@@ -1,4 +1,5 @@
-﻿71;Request for payment;Invoice
+﻿50;Validated price tender;Additional document
+71;Request for payment;Invoice
 80;Debit note related to goods or services;Invoice
 81;Credit note related to goods or services;Credit Note
 82;Metered services invoice;Invoice
@@ -41,4 +42,5 @@
 633;Port charges documents;Invoice
 751;Invoice information for accounting purposes;Invoice
 780;Freight invoice;Invoice
+916;Related document;Additional document
 935;Customs invoice;Invoice
