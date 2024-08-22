@@ -7,6 +7,11 @@ namespace easybill\eInvoicing\Enums;
 enum DocumentType: int
 {
     /**
+     * Applicable for Additional document.
+     */
+    case VALIDATED_PRICE_TENDER = 50;
+
+    /**
      * Applicable for Invoice.
      */
     case REQUEST_FOR_PAYMENT = 71;
@@ -220,6 +225,11 @@ enum DocumentType: int
      * Applicable for Invoice.
      */
     case FREIGHT_INVOICE = 780;
+
+    /**
+     * Applicable for Additional document.
+     */
+    case RELATED_DOCUMENT = 916;
 
     /**
      * Applicable for Invoice.
