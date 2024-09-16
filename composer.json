@@ -1,6 +1,6 @@
 {
     "name": "easybill/e-invoicing",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "description": "A package to read and create the formats: factur-x, Peppol BIS Billing, XRechnung (CII/UBL)",
     "type": "library",
     "license": "MIT",
@@ -45,10 +45,10 @@
         "ext-libxml": "*"
     },
     "require-dev": {
-        "pestphp/pest": "^2.34",
-        "phpstan/phpstan": "^1.10",
-        "friendsofphp/php-cs-fixer": "^3.51",
-        "guzzlehttp/guzzle": "^7.8"
+        "pestphp/pest": "^2.35",
+        "phpstan/phpstan": "^1.12",
+        "friendsofphp/php-cs-fixer": "^3.64",
+        "guzzlehttp/guzzle": "^7.9"
     },
     "config": {
         "platform-check": false,

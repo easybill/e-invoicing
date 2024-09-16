@@ -26,6 +26,11 @@ tasks:
     cmds:
       - ./vendor/bin/php-cs-fixer fix
 
+  fixcs_debug:
+    desc: Fixes the PHP files and shows which rules were applied
+    cmds:
+      - ./vendor/bin/php-cs-fixer fix -vvv
+
   generators:
     desc: Runs the code generators (Enums etc.)
     cmds:

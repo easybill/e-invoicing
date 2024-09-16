@@ -26,7 +26,7 @@ final readonly class Reader
                 throw new \InvalidArgumentException('Provided xml is null and therefore it cannot be read');
             }
 
-            $doc->loadXML($xml);
+            $doc->loadXML($xml, LIBXML_NOERROR | LIBXML_NOWARNING);
 
             $this->assertIsContainsSupportedSyntax($doc);
 
