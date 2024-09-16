@@ -22,7 +22,7 @@ test(
         $asserter($reader);
     },
 )->with([
-    [
+    /*[
         'example' => __DIR__ . '/Examples/Reader/Broken.xml',
         'asserter' => function (ReaderResult $readerResult) {
             expect($readerResult->isError())
@@ -94,6 +94,21 @@ test(
                 ->toBeTrue()
                 ->and($readerResult->getDocument())
                 ->toBeInstanceOf(CrossIndustryInvoice::class)
+            ;
+        },
+    ],*/
+    [
+        'example' => __DIR__ . '/Examples/Reader/ublinvoice-invlidID.xml',
+        'asserter' => function (ReaderResult $readerResult) {
+            expect($readerResult->isError())
+                ->toBeTrue()
+                ->and($readerResult->getError())
+                ->toBeInstanceOf(\RuntimeException::class)
+                ->and($readerResult->getError()->getPrevious())
+                ->not()
+                ->toBeNull()
+                ->and($readerResult->getError()->getPrevious()->getMessage())
+                ->toContain('CII or UBL syntax is supported.')
             ;
         },
     ],

@@ -1,6 +1,6 @@
 services:
   kosit-validator:
-    image: 'easybill/kosit-validator-xrechnung_3.0.1:v0.0.63'
+    image: 'easybill/kosit-validator-xrechnung_3.0.2:v0.0.70'
     ports:
       - '8080:8080'
     healthcheck:
