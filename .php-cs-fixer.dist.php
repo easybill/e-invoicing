@@ -1,9 +1,12 @@
 <?php
 
+use PhpCsFixer\Runner\Parallel\ParallelConfigFactory;
+
 $finder = (new PhpCsFixer\Finder())
     ->in([__DIR__ . '/src', __DIR__ . '/tests']);
 
 return (new PhpCsFixer\Config())
+    ->setParallelConfig(ParallelConfigFactory::detect())
     ->setRiskyAllowed(true)
     ->setRules([
         '@PSR2' => true,
@@ -28,5 +31,6 @@ return (new PhpCsFixer\Config())
         'declare_strict_types' => true,
         'final_class' => true,
         'no_unused_imports' => true,
+        'nullable_type_declaration_for_default_null_value' => false,
     ])
     ->setFinder($finder);
