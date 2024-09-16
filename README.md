@@ -1,5 +1,5 @@
 # e-invoicing
-[![Generic badge](https://img.shields.io/badge/Version-0.2.2-important.svg)]()
+![Packagist Version](https://img.shields.io/packagist/v/easybill/e-invoicing)
 [![Generic badge](https://img.shields.io/badge/License-MIT-blue.svg)]()
 
 ## Introduction
