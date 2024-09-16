@@ -1,5 +1,5 @@
 # e-invoicing
-![Packagist Version](https://img.shields.io/packagist/v/easybill/e-invoicing)
+![Packagist Version](https://img.shields.io/packagist/v/easybill/e-invoicing?link=https%3A%2F%2Fpackagist.org%2Fpackages%2Feasybill%2Fe-invoicing)
 [![Generic badge](https://img.shields.io/badge/License-MIT-blue.svg)]()
 
 ## Introduction
