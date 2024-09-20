@@ -70,12 +70,10 @@ final class HeaderTradeSettlement
     #[XmlList(entry: 'SpecifiedLogisticsServiceCharge', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $specifiedLogisticsServiceCharge = [];
 
-    /**
-     * @var TradePaymentTerms[]
-     */
-    #[Type('array<easybill\eInvoicing\CII\Models\TradePaymentTerms>')]
-    #[XmlList(entry: 'SpecifiedTradePaymentTerms', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
-    public array $specifiedTradePaymentTerms = [];
+    #[Type(TradePaymentTerms::class)]
+    #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
+    #[SerializedName('SpecifiedTradePaymentTerms')]
+    public ?TradePaymentTerms $specifiedTradePaymentTerms = null;
 
     #[Type(TradeSettlementHeaderMonetarySummation::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
