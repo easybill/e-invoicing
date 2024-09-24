@@ -13,7 +13,7 @@ final class Delivery
     #[Type('string')]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('ActualDeliveryDate')]
-    public ?string $endpointId = null;
+    public ?string $actualDeliveryDate = null;
 
     #[Type(DeliveryLocation::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
