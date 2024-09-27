@@ -11,12 +11,12 @@ use JMS\Serializer\Annotation\XmlValue;
 
 final class Id
 {
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlAttribute]
     #[SerializedName('schemeID')]
     public ?string $schemeID = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlValue(cdata: false)]
     public string $value;
 
