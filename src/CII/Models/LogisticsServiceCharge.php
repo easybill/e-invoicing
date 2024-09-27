@@ -13,7 +13,7 @@ use JMS\Serializer\Annotation\XmlList;
 #[AccessorOrder(order: 'custom', custom: ['description', 'appliedAmount', 'tradeTaxes'])]
 final class LogisticsServiceCharge
 {
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('Description')]
     public string $description;

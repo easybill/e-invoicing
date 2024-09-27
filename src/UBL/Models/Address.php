@@ -11,27 +11,27 @@ use JMS\Serializer\Annotation\XmlList;
 
 final class Address
 {
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('StreetName')]
     public ?string $streetName = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('AdditionalStreetName')]
     public ?string $additionalStreetName = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('CityName')]
     public ?string $cityName = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('PostalZone')]
     public ?string $postalZone = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('CountrySubentity')]
     public ?string $countrySubentity = null;

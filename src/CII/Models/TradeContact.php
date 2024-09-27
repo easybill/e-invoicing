@@ -10,12 +10,12 @@ use JMS\Serializer\Annotation\XmlElement;
 
 final class TradeContact
 {
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('PersonName')]
     public ?string $personName = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('DepartmentName')]
     public ?string $departmentName = null;

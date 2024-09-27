@@ -16,7 +16,7 @@ final class TradeAllowanceCharge
     #[JMS\SerializedName('ChargeIndicator')]
     public ?Indicator $indicator = null;
 
-    #[JMS\Type('string')]
+    #[JMS\Type(StringValue::class)]
     #[JMS\XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[JMS\SerializedName('CalculationPercent')]
     public ?string $calculationPercent = null;
@@ -31,12 +31,12 @@ final class TradeAllowanceCharge
     #[JMS\SerializedName('ActualAmount')]
     public Amount $actualAmount;
 
-    #[JMS\Type('string')]
+    #[JMS\Type(StringValue::class)]
     #[JMS\XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[JMS\SerializedName('ReasonCode')]
     public ?string $reasonCode = null;
 
-    #[JMS\Type('string')]
+    #[JMS\Type(StringValue::class)]
     #[JMS\XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[JMS\SerializedName('Reason')]
     public ?string $reason = null;

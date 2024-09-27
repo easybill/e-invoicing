@@ -10,7 +10,7 @@ use JMS\Serializer\Annotation\XmlElement;
 
 final class PartyLegalEntity
 {
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('RegistrationName')]
     public ?string $registrationName = null;
@@ -20,7 +20,7 @@ final class PartyLegalEntity
     #[SerializedName('CompanyID')]
     public ?Id $id = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('CompanyLegalForm')]
     public ?string $companyLegalForm = null;

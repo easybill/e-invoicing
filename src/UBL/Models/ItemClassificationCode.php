@@ -11,12 +11,12 @@ use JMS\Serializer\Annotation\XmlValue;
 
 final class ItemClassificationCode
 {
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlAttribute]
     #[SerializedName('listID')]
     public ?string $listId = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlValue(cdata: false)]
     public ?string $value = null;
 }

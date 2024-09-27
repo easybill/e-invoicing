@@ -23,12 +23,12 @@ final class TradeParty
     #[XmlList(entry: 'GlobalID', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $globalID = [];
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('Name')]
     public string $name;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('Description')]
     public ?string $description = null;
@@ -53,7 +53,7 @@ final class TradeParty
     #[SerializedName('URIUniversalCommunication')]
     public ?UniversalCommunication $uriUniversalCommunication = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('RoleCode')]
     public ?string $roleCode = null;

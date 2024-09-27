@@ -10,7 +10,7 @@ use JMS\Serializer\Annotation\XmlElement;
 
 final class PaymentTerms
 {
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('Note')]
     public ?string $note = null;

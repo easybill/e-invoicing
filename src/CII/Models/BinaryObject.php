@@ -14,12 +14,12 @@ final class BinaryObject
     #[JMS\SerializedName('mimeCode')]
     public MimeType $mimeCode;
 
-    #[JMS\Type('string')]
+    #[JMS\Type(StringValue::class)]
     #[JMS\XmlAttribute]
     #[JMS\SerializedName('filename')]
     public string $filename;
 
-    #[JMS\Type('string')]
+    #[JMS\Type(StringValue::class)]
     #[JMS\XmlValue(cdata: false)]
     public string $value;
 }

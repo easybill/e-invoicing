@@ -12,7 +12,7 @@ final class DateString
     #[JMS\XmlAttribute]
     public int $format;
 
-    #[JMS\Type('string')]
+    #[JMS\Type(StringValue::class)]
     #[JMS\XmlValue(cdata: false)]
     public string $value;
 

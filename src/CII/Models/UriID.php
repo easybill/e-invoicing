@@ -17,7 +17,7 @@ final class UriID
     #[SerializedName('schemeID')]
     public ?ElectronicAddressScheme $schemeID = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlValue(cdata: false)]
     public string $value;
 

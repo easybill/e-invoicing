@@ -12,7 +12,7 @@ use JMS\Serializer\Annotation\XmlValue;
 
 final class Amount
 {
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlValue(cdata: false)]
     public string $value;
 

@@ -22,8 +22,16 @@ test(
         $invoice->exchangedDocument->id = '   471102   ';
 
         $xml = Transformer::create()->transformToXml($invoice);
-        $xml = $this->reformatXml($xml);
+        $result = Reader::create()->read($xml);
 
-        $test = 0;
+        expect($result->isSuccess())
+            ->toBeTrue()
+            ->and($result->getDocument())
+            ->toBeInstanceOf(CrossIndustryInvoice::class)
+            ->and($result->getDocument()->exchangedDocumentContext->documentContextParameter->id)
+            ->toEqual('urn:cen.eu:en16931:2017')
+            ->and($result->getDocument()->exchangedDocument->id)
+            ->toEqual('471102')
+        ;
     }
 );

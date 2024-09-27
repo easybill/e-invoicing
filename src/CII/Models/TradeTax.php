@@ -15,7 +15,7 @@ final class TradeTax
     #[JMS\SerializedName('CalculatedAmount')]
     public ?Amount $calculatedAmount = null;
 
-    #[JMS\Type('string')]
+    #[JMS\Type(StringValue::class)]
     #[JMS\XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[JMS\SerializedName('TypeCode')]
     public string $typeCode;
@@ -35,27 +35,27 @@ final class TradeTax
     #[JMS\SerializedName('AllowanceChargeBasisAmount')]
     public ?Amount $allowanceChargeBasisAmount = null;
 
-    #[JMS\Type('string')]
+    #[JMS\Type(StringValue::class)]
     #[JMS\XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[JMS\SerializedName('ApplicablePercent')]
     public ?string $applicablePercent = null;
 
-    #[JMS\Type('string')]
+    #[JMS\Type(StringValue::class)]
     #[JMS\XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[JMS\SerializedName('CategoryCode')]
     public ?string $categoryCode = null;
 
-    #[JMS\Type('string')]
+    #[JMS\Type(StringValue::class)]
     #[JMS\XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[JMS\SerializedName('RateApplicablePercent')]
     public ?string $rateApplicablePercent = null;
 
-    #[JMS\Type('string')]
+    #[JMS\Type(StringValue::class)]
     #[JMS\XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[JMS\SerializedName('ExemptionReason')]
     public ?string $exemptionReason = null;
 
-    #[JMS\Type('string')]
+    #[JMS\Type(StringValue::class)]
     #[JMS\XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[JMS\SerializedName('ExemptionReasonCode')]
     public ?string $exemptionReasonCode = null;
@@ -65,7 +65,7 @@ final class TradeTax
     #[JMS\SerializedName('TaxPointDate')]
     public ?Date $taxPointDate = null;
 
-    #[JMS\Type('string')]
+    #[JMS\Type(StringValue::class)]
     #[JMS\XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[JMS\SerializedName('DueDateTypeCode')]
     public ?string $dueDateTypeCode = null;

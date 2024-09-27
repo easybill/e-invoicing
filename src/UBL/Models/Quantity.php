@@ -17,7 +17,7 @@ final class Quantity
     #[SerializedName('unitCode')]
     public ?UnitCode $unitCode = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlValue(cdata: false)]
     public ?string $value = null;
 }

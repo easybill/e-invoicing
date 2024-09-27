@@ -7,11 +7,11 @@ namespace easybill\eInvoicing\Dtos;
 use easybill\eInvoicing\CII\Documents\CrossIndustryInvoice;
 use easybill\eInvoicing\UBL\Documents\UblAbstractDocument;
 
-final class ReaderResult
+final readonly class ReaderResult
 {
     private function __construct(
-        public ?\Throwable $throwable = null,
-        public null|CrossIndustryInvoice|UblAbstractDocument $document = null,
+        private ?\Throwable $throwable = null,
+        private null|CrossIndustryInvoice|UblAbstractDocument $document = null,
     ) {}
 
     public static function error(\Throwable $throwable): self

@@ -15,7 +15,7 @@ final class TradeAccountingAccount
     #[SerializedName('ID')]
     public Id $id;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('TypeCode')]
     public ?string $typeCode = null;
