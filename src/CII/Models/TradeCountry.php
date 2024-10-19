@@ -10,7 +10,7 @@ use JMS\Serializer\Annotation\XmlElement;
 
 final class TradeCountry
 {
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('ID')]
     public string $id;

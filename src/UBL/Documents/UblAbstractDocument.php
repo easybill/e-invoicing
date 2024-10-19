@@ -17,6 +17,7 @@ use easybill\eInvoicing\UBL\Models\Party;
 use easybill\eInvoicing\UBL\Models\PaymentMeans;
 use easybill\eInvoicing\UBL\Models\PaymentTerms;
 use easybill\eInvoicing\UBL\Models\Period;
+use easybill\eInvoicing\UBL\Models\StringValue;
 use easybill\eInvoicing\UBL\Models\TaxTotal;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
@@ -25,22 +26,22 @@ use JMS\Serializer\Annotation\XmlList;
 
 abstract class UblAbstractDocument
 {
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('CustomizationID')]
     public ?string $customizationId = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('ProfileID')]
     public ?string $profileId = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('ID')]
     public ?string $id = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('IssueDate')]
     public ?string $issueDate = null;
@@ -61,12 +62,12 @@ abstract class UblAbstractDocument
     #[SerializedName('TaxCurrencyCode')]
     public ?CurrencyCode $taxCurrencyCode = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('AccountingCost')]
     public ?string $accountingCost = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('BuyerReference')]
     public ?string $buyerReference = null;

@@ -12,8 +12,8 @@ use easybill\eInvoicing\UBL\Documents\UblInvoice;
 
 test(
     'test if the reader can process the provided xml',
-    function (string $exampleFilePath, callable $asserter) {
-        $xml = file_get_contents($exampleFilePath);
+    function (string $filePath, callable $asserter) {
+        $xml = file_get_contents($filePath);
 
         expect($xml)->not->toBeFalse();
 
@@ -23,8 +23,8 @@ test(
     },
 )->with([
     [
-        'example' => __DIR__ . '/Examples/Reader/Broken.xml',
-        'asserter' => function (ReaderResult $readerResult) {
+        __DIR__ . '/Examples/Reader/Broken.xml',
+        function (ReaderResult $readerResult) {
             expect($readerResult->isError())
                 ->toBeTrue()
                 ->and($readerResult->getError())
@@ -33,8 +33,8 @@ test(
         },
     ],
     [
-        'example' => __DIR__ . '/Examples/Reader/InvalidFormat.xml',
-        'asserter' => function (ReaderResult $readerResult) {
+        __DIR__ . '/Examples/Reader/InvalidFormat.xml',
+        function (ReaderResult $readerResult) {
             expect($readerResult->isError())
                 ->toBeTrue()
                 ->and($readerResult->getError())
@@ -48,8 +48,8 @@ test(
         },
     ],
     [
-        'example' => __DIR__ . '/Examples/Reader/PeppolInvoice.xml',
-        'asserter' => function (ReaderResult $readerResult) {
+        __DIR__ . '/Examples/Reader/PeppolInvoice.xml',
+        function (ReaderResult $readerResult) {
             expect($readerResult->isSuccess())
                 ->toBeTrue()
                 ->and($readerResult->getDocument())
@@ -58,8 +58,8 @@ test(
         },
     ],
     [
-        'example' => __DIR__ . '/Examples/Reader/PeppolCredit.xml',
-        'asserter' => function (ReaderResult $readerResult) {
+        __DIR__ . '/Examples/Reader/PeppolCredit.xml',
+        function (ReaderResult $readerResult) {
             expect($readerResult->isSuccess())
                 ->toBeTrue()
                 ->and($readerResult->getDocument())
@@ -68,8 +68,8 @@ test(
         },
     ],
     [
-        'example' => __DIR__ . '/Examples/Reader/XRechnungCII.xml',
-        'asserter' => function (ReaderResult $readerResult) {
+        __DIR__ . '/Examples/Reader/XRechnungCII.xml',
+        function (ReaderResult $readerResult) {
             expect($readerResult->isSuccess())
                 ->toBeTrue()
                 ->and($readerResult->getDocument())
@@ -78,8 +78,8 @@ test(
         },
     ],
     [
-        'example' => __DIR__ . '/Examples/Reader/XRechnungUBL.xml',
-        'asserter' => function (ReaderResult $readerResult) {
+        __DIR__ . '/Examples/Reader/XRechnungUBL.xml',
+        function (ReaderResult $readerResult) {
             expect($readerResult->isSuccess())
                 ->toBeTrue()
                 ->and($readerResult->getDocument())
@@ -88,8 +88,8 @@ test(
         },
     ],
     [
-        'example' => __DIR__ . '/Examples/Reader/ZUGFeRD.xml',
-        'asserter' => function (ReaderResult $readerResult) {
+        __DIR__ . '/Examples/Reader/ZUGFeRD.xml',
+        function (ReaderResult $readerResult) {
             expect($readerResult->isSuccess())
                 ->toBeTrue()
                 ->and($readerResult->getDocument())
@@ -98,8 +98,8 @@ test(
         },
     ],
     [
-        'example' => __DIR__ . '/Examples/Reader/ublinvoice-invlidID.xml',
-        'asserter' => function (ReaderResult $readerResult) {
+        __DIR__ . '/Examples/Reader/ublinvoice-invlidID.xml',
+        function (ReaderResult $readerResult) {
             expect($readerResult->isError())
                 ->toBeTrue()
                 ->and($readerResult->getError())

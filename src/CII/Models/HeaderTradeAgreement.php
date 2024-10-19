@@ -24,7 +24,7 @@ use JMS\Serializer\Annotation\XmlList;
 ])]
 final class HeaderTradeAgreement
 {
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('BuyerReference')]
     public ?string $buyerReference = null;

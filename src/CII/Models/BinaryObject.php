@@ -5,21 +5,24 @@ declare(strict_types=1);
 namespace easybill\eInvoicing\CII\Models;
 
 use easybill\eInvoicing\Enums\MimeType;
-use JMS\Serializer\Annotation as JMS;
+use JMS\Serializer\Annotation\SerializedName;
+use JMS\Serializer\Annotation\Type;
+use JMS\Serializer\Annotation\XmlAttribute;
+use JMS\Serializer\Annotation\XmlValue;
 
 final class BinaryObject
 {
-    #[JMS\Type(MimeType::class)]
-    #[JMS\XmlAttribute]
-    #[JMS\SerializedName('mimeCode')]
+    #[Type(MimeType::class)]
+    #[XmlAttribute]
+    #[SerializedName('mimeCode')]
     public MimeType $mimeCode;
 
-    #[JMS\Type('string')]
-    #[JMS\XmlAttribute]
-    #[JMS\SerializedName('filename')]
+    #[Type(StringValue::class)]
+    #[XmlAttribute]
+    #[SerializedName('filename')]
     public string $filename;
 
-    #[JMS\Type('string')]
-    #[JMS\XmlValue(cdata: false)]
+    #[Type(StringValue::class)]
+    #[XmlValue(cdata: false)]
     public string $value;
 }

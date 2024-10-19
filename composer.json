@@ -1,6 +1,5 @@
 {
     "name": "easybill/e-invoicing",
-    "version": "0.2.3",
     "description": "A package to read and create EN16931 e-invoices or CIUS like: XRechnung, ZUGFeRD etc.",
     "type": "library",
     "license": "MIT",
@@ -48,7 +47,9 @@
         "pestphp/pest": "^2.35",
         "phpstan/phpstan": "^1.12",
         "friendsofphp/php-cs-fixer": "^3.64",
-        "guzzlehttp/guzzle": "^7.9"
+        "guzzlehttp/guzzle": "^7.9",
+        "phpstan/phpstan-strict-rules": "^1.6",
+        "symfony/finder": "^7.1"
     },
     "config": {
         "platform-check": false,

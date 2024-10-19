@@ -16,7 +16,7 @@ final class DocumentReference
     #[SerializedName('ID')]
     public ?Id $id = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('IssueDate')]
     public ?string $issueDate = null;
@@ -26,7 +26,7 @@ final class DocumentReference
     #[SerializedName('DocumentTypeCode')]
     public ?DocumentType $typeCode = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('DocumentDescription')]
     public ?string $documentDescription = null;

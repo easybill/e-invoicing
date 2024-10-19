@@ -13,7 +13,7 @@ use JMS\Serializer\Annotation\XmlList;
 #[AccessorOrder(order: 'custom', custom: ['lineId', 'notes'])]
 final class DocumentLineDocument
 {
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('LineID')]
     public string $lineId;

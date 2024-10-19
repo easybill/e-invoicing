@@ -15,7 +15,7 @@ final class CreditorFinancialAccount
     #[SerializedName('IBANID')]
     public ?Id $ibanId = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('AccountName')]
     public ?string $AccountName = null;

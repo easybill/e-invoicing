@@ -10,7 +10,7 @@ use JMS\Serializer\Annotation\XmlElement;
 
 final class UniversalCommunication
 {
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('CompleteNumber')]
     public ?string $completeNumber = null;

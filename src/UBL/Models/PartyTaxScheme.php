@@ -10,7 +10,7 @@ use JMS\Serializer\Annotation\XmlElement;
 
 final class PartyTaxScheme
 {
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('CompanyID')]
     public ?string $companyId = null;

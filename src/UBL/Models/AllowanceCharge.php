@@ -10,22 +10,22 @@ use JMS\Serializer\Annotation\XmlElement;
 
 final class AllowanceCharge
 {
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('ChargeIndicator')]
     public ?string $chargeIndicator = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('AllowanceChargeReasonCode')]
     public ?string $allowanceChargeReasonCode = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('AllowanceChargeReason')]
     public ?string $allowanceChargeReason = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('MultiplierFactorNumeric')]
     public ?string $multiplierFactorNumeric = null;

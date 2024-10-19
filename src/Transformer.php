@@ -9,7 +9,7 @@ use easybill\eInvoicing\UBL\Documents\UblAbstractDocument;
 
 final readonly class Transformer
 {
-    private function __construct(
+    public function __construct(
         private ConfiguredSerializer $serializer,
     ) {}
 

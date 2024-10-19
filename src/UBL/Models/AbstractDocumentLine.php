@@ -16,7 +16,7 @@ abstract class AbstractDocumentLine
     #[SerializedName('ID')]
     public ?Id $id = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('Note')]
     public ?string $note = null;
@@ -26,7 +26,7 @@ abstract class AbstractDocumentLine
     #[SerializedName('LineExtensionAmount')]
     public ?Amount $lineExtensionAmount = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('AccountingCost')]
     public ?string $accountingCost = null;

@@ -17,7 +17,7 @@ final class Amount
     #[SerializedName('currencyID')]
     public ?CurrencyCode $currencyID = null;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlValue(cdata: false)]
     public ?string $value = null;
 }

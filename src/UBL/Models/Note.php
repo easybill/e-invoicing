@@ -9,7 +9,7 @@ use JMS\Serializer\Annotation\XmlValue;
 
 final class Note
 {
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlValue(cdata: false)]
     public ?string $value = null;
 }

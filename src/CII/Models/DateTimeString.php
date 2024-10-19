@@ -4,16 +4,18 @@ declare(strict_types=1);
 
 namespace easybill\eInvoicing\CII\Models;
 
-use JMS\Serializer\Annotation as JMS;
+use JMS\Serializer\Annotation\Type;
+use JMS\Serializer\Annotation\XmlAttribute;
+use JMS\Serializer\Annotation\XmlValue;
 
 final class DateTimeString
 {
-    #[JMS\Type('integer')]
-    #[JMS\XmlAttribute]
+    #[Type('integer')]
+    #[XmlAttribute]
     public int $format;
 
-    #[JMS\Type('string')]
-    #[JMS\XmlValue(cdata: false)]
+    #[Type(StringValue::class)]
+    #[XmlValue(cdata: false)]
     public string $value;
 
     public static function create(int $format, string $value): self

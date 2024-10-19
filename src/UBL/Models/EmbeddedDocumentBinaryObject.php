@@ -17,12 +17,12 @@ final class EmbeddedDocumentBinaryObject
     #[SerializedName('mimeCode')]
     public MimeType $mimeCode;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlAttribute]
     #[SerializedName('filename')]
     public string $filename;
 
-    #[Type('string')]
+    #[Type(StringValue::class)]
     #[XmlValue(cdata: false)]
     public string $value;
 }

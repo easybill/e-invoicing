@@ -84,6 +84,28 @@ if ($document instanceof CrossIndustryInvoice) {
 
 You can refer to the [tests](https://github.com/easybill/e-invoicing/tree/main/tests/Integration) in this repository for examples of using this library.
 
+## Customization
+This library offers some degree of customization. You may create a customized Reader, Transformer or Writer.
+By default, the library does not trim whitespaces around values. This is true for values which do not end as enums.
+If you want to add that the functionality to trim the values you may refer to this [test](https://github.com/easybill/e-invoicing/tree/main/tests/Integration/SerializerTest).
+
+```PHP
+ $transformer = new Transformer(ConfiguredSerializer::createWithHandlers([
+    new TrimStringValueHandler(),
+    new CountryCodeEnumHandler(),
+    new CurrencyCodeEnumHandler(),
+    new DocumentTypeEnumHandler(),
+    new ReferenceQualifierEnumHandler(),
+    new UnitCodeEnumHandler(),
+    new MimeTypeEnumHandler(),
+    new ElectronicAddressSchemeIdentifierEnumHandler(),
+]));
+```
+
+
+This allows to register custom handlers, or even add handlers which the library offers but does not include by default (yet)
+like the TrimStringValueHandler.
+
 ## Considerations
 
 ### Limitations
