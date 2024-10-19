@@ -43,6 +43,7 @@ use easybill\eInvoicing\UBL\Models\TaxCategory;
 use easybill\eInvoicing\UBL\Models\TaxScheme;
 use easybill\eInvoicing\UBL\Models\TaxSubtotal;
 use easybill\eInvoicing\UBL\Models\TaxTotal;
+use Symfony\Component\Finder\Finder;
 
 test(
     'Allows building a valid XRechnung 3.0 document with a simple structure',
@@ -301,3 +302,37 @@ test(
     __DIR__ . '/Examples/UBL/Vat-category-S.xml',
     __DIR__ . '/Examples/UBL/vat-category-Z.xml',
 ]);
+
+test(
+    'That reading converted CII examples to UBL is successful',
+    function (string $pathToXmlExample) {
+        $xml = file_get_contents($pathToXmlExample);
+
+        expect($xml)->not->toBeFalse();
+
+        $xml = $this->fixUblRootNode($xml);
+
+        $reader = Reader::create()->read($xml);
+
+        expect($reader->isSuccess())->toBeTrue();
+        expect($reader->getDocument())->toBeInstanceOf(UblAbstractDocument::class);
+
+        $document = $reader->getDocument();
+
+        assert($document instanceof UblAbstractDocument);
+
+        $xmlFromObject = Transformer::create()->transformToXml($document);
+
+        $this->assertSame($this->reformatXml($xml), $this->reformatXml($xmlFromObject));
+    }
+)->with(function () {
+    $finder = (new Finder())
+        ->files()
+        ->name('*.xml')
+        ->in(__DIR__ . '/Examples/UBL/Converted')
+    ;
+
+    foreach ($finder as $file) {
+        yield $file->getFilename() => [$file->getRealPath()];
+    }
+});

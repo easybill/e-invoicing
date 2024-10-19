@@ -49,7 +49,8 @@
         "phpstan/phpstan": "^1.12",
         "friendsofphp/php-cs-fixer": "^3.64",
         "guzzlehttp/guzzle": "^7.9",
-        "phpstan/phpstan-strict-rules": "^1.6"
+        "phpstan/phpstan-strict-rules": "^1.6",
+        "symfony/finder": "^7.1"
     },
     "config": {
         "platform-check": false,
