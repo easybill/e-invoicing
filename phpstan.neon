@@ -3,6 +3,7 @@ includes:
 
 parameters:
     level: max
+    excludePaths:
+        - tests/*
     paths:
         - src
-        - tests
