@@ -1,6 +1,8 @@
+includes:
+    - vendor/phpstan/phpstan-strict-rules/rules.neon
+
 parameters:
-    level: 9
-    excludePaths:
-        - tests/*
+    level: max
     paths:
         - src
+        - tests

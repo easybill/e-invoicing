@@ -48,7 +48,8 @@
         "pestphp/pest": "^2.35",
         "phpstan/phpstan": "^1.12",
         "friendsofphp/php-cs-fixer": "^3.64",
-        "guzzlehttp/guzzle": "^7.9"
+        "guzzlehttp/guzzle": "^7.9",
+        "phpstan/phpstan-strict-rules": "^1.6"
     },
     "config": {
         "platform-check": false,
