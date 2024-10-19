@@ -11,7 +11,7 @@ use JMS\Serializer\Handler\SubscribingHandlerInterface;
 use JMS\Serializer\XmlDeserializationVisitor;
 use JMS\Serializer\XmlSerializationVisitor;
 
-final class StringValueHandler implements SubscribingHandlerInterface
+final class TrimStringValueHandler implements SubscribingHandlerInterface
 {
     /** @return array<int, array<string, mixed>> */
     public static function getSubscribingMethods(): array
@@ -52,11 +52,11 @@ final class StringValueHandler implements SubscribingHandlerInterface
     /** @param array<string, mixed> $type */
     public function serializeString(XmlSerializationVisitor $visitor, string $value, array $type): \DOMText
     {
-        return $visitor->visitSimpleString($value, $type);
+        return $visitor->visitSimpleString(mb_trim($value), $type);
     }
 
     public function deserializeString(XmlDeserializationVisitor $visitor, \SimpleXMLElement $value): string
     {
-        return (string)$value;
+        return mb_trim((string)$value);
     }
 }

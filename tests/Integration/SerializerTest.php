@@ -8,6 +8,8 @@ use easybill\eInvoicing\CII\Documents\CrossIndustryInvoice;
 use easybill\eInvoicing\CII\Models\DocumentContextParameter;
 use easybill\eInvoicing\CII\Models\ExchangedDocument;
 use easybill\eInvoicing\CII\Models\ExchangedDocumentContext;
+use easybill\eInvoicing\ConfiguredSerializer;
+use easybill\eInvoicing\Handlers\TrimStringValueHandler;
 use easybill\eInvoicing\Reader;
 use easybill\eInvoicing\Transformer;
 
@@ -21,7 +23,11 @@ test(
         $invoice->exchangedDocumentContext->documentContextParameter->id = '   urn:cen.eu:en16931:2017';
         $invoice->exchangedDocument->id = '   471102   ';
 
-        $xml = Transformer::create()->transformToXml($invoice);
+        $transformer = new Transformer(ConfiguredSerializer::createWithHandlers([
+            new TrimStringValueHandler(),
+        ]));
+
+        $xml = $transformer->transformToXml($invoice);
         $result = Reader::create()->read($xml);
 
         expect($result->isSuccess())
