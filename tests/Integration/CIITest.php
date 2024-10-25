@@ -180,8 +180,11 @@ test(
 
         $reader = Reader::create()->read($xml);
 
-        expect($reader->isSuccess())->toBeTrue();
-        expect($reader->getDocument())->toBeInstanceOf(CrossIndustryInvoice::class);
+        expect($reader->isSuccess())
+            ->toBeTrue()
+            ->and($reader->getDocument())
+            ->toBeInstanceOf(CrossIndustryInvoice::class)
+        ;
 
         $document = $reader->getDocument();
 

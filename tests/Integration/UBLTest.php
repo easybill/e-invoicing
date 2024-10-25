@@ -314,8 +314,11 @@ test(
 
         $reader = Reader::create()->read($xml);
 
-        expect($reader->isSuccess())->toBeTrue();
-        expect($reader->getDocument())->toBeInstanceOf(UblAbstractDocument::class);
+        expect($reader->isSuccess())
+            ->toBeTrue()
+            ->and($reader->getDocument())
+            ->toBeInstanceOf(UblAbstractDocument::class)
+        ;
 
         $document = $reader->getDocument();
 
