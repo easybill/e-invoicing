@@ -14,12 +14,12 @@ use JMS\Serializer\Annotation\XmlList;
 final class LineTradeSettlement
 {
     /** @var TradeTax[] */
-    #[Type('array<easybill\eInvoicing\CII\Models\TradeTax>')]
+    #[Type('array<' . TradeTax::class . '>')]
     #[XmlList(entry: 'ApplicableTradeTax', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $tradeTax = [];
 
     /** @var TradeAllowanceCharge[] */
-    #[Type('array<easybill\eInvoicing\CII\Models\TradeAllowanceCharge>')]
+    #[Type('array<' . TradeAllowanceCharge::class . '>')]
     #[XmlList(entry: 'SpecifiedTradeAllowanceCharge', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $specifiedTradeAllowanceCharge = [];
 
@@ -34,12 +34,12 @@ final class LineTradeSettlement
     public TradeSettlementLineMonetarySummation $monetarySummation;
 
     /** @var TradeAccountingAccount[] */
-    #[Type('array<easybill\eInvoicing\CII\Models\TradeAccountingAccount>')]
+    #[Type('array<' . TradeAccountingAccount::class . '>')]
     #[XmlList(entry: 'ReceivableSpecifiedTradeAccountingAccount', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $tradeAccountingAccount = [];
 
     /** @var ReferencedDocument[] */
-    #[Type('array<easybill\eInvoicing\CII\Models\ReferencedDocument>')]
+    #[Type('array<' . ReferencedDocument::class . '>')]
     #[XmlList(entry: 'AdditionalReferencedDocument', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $additionalReferencedDocument = [];
 }

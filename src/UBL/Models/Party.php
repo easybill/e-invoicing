@@ -24,7 +24,7 @@ final class Party
     #[Type(PartyName::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     #[SerializedName('PartyName')]
-    public ?PartyName $partyName = null;
+    public PartyName $partyName;
 
     #[Type(Address::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
@@ -32,7 +32,7 @@ final class Party
     public ?Address $postalAddress = null;
 
     /** @var PartyTaxScheme[] */
-    #[Type('array<easybill\eInvoicing\UBL\Models\PartyTaxScheme>')]
+    #[Type('array<' . PartyTaxScheme::class . '>')]
     #[SerializedName('PartyTaxScheme')]
     #[XmlList(entry: 'PartyTaxScheme', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $partyTaxScheme = [];

@@ -44,7 +44,7 @@ final class TradeProduct
     public ?TradeCountry $originTradeCountry = null;
 
     /** @var ProductCharacteristic[] */
-    #[Type('array<easybill\eInvoicing\CII\Models\ProductCharacteristic>')]
+    #[Type('array<' . ProductCharacteristic::class . '>')]
     #[XmlList(entry: 'ApplicableProductCharacteristic', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public ?array $applicableProductCharacteristic = [];
 

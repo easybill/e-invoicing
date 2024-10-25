@@ -55,7 +55,7 @@ final class UblCredit extends UblAbstractDocument
     public DocumentType $creditNoteTypeCode;
 
     /** @var CreditNoteLine[] */
-    #[Type('array<easybill\eInvoicing\UBL\Models\CreditNoteLine>')]
+    #[Type('array<' . CreditNoteLine::class . '>')]
     #[SerializedName('CreditNoteLine')]
     #[XmlList(entry: 'CreditNoteLine', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $creditNoteLine = [];

@@ -43,7 +43,7 @@ final class ExchangedDocument
     /**
      * @var Note[]
      */
-    #[Type('array<easybill\eInvoicing\CII\Models\Note>')]
+    #[Type('array<' . Note::class . '>')]
     #[XmlList(entry: 'IncludedNote', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $notes = [];
 }

@@ -47,7 +47,7 @@ abstract class UblAbstractDocument
     public string $issueDate = '';
 
     /** @var Note[] */
-    #[Type('array<easybill\eInvoicing\UBL\Models\Note>')]
+    #[Type('array<' . Note::class . '>')]
     #[SerializedName('Note')]
     #[XmlList(entry: 'Note', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     public array $note = [];
@@ -105,12 +105,12 @@ abstract class UblAbstractDocument
     #[Type(AccountingParty::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     #[SerializedName('AccountingSupplierParty')]
-    public ?AccountingParty $accountingSupplierParty = null;
+    public AccountingParty $accountingSupplierParty;
 
     #[Type(AccountingParty::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     #[SerializedName('AccountingCustomerParty')]
-    public ?AccountingParty $accountingCustomerParty = null;
+    public AccountingParty $accountingCustomerParty;
 
     #[Type(Party::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
@@ -128,7 +128,7 @@ abstract class UblAbstractDocument
     public ?Delivery $delivery = null;
 
     /** @var PaymentMeans[] */
-    #[Type('array<easybill\eInvoicing\UBL\Models\PaymentMeans>')]
+    #[Type('array<' . PaymentMeans::class . '>')]
     #[SerializedName('PaymentMeans')]
     #[XmlList(entry: 'PaymentMeans', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $paymentMeans = [];
@@ -139,13 +139,13 @@ abstract class UblAbstractDocument
     public ?PaymentTerms $paymentTerms = null;
 
     /** @var AllowanceCharge[] */
-    #[Type('array<easybill\eInvoicing\UBL\Models\AllowanceCharge>')]
+    #[Type('array<' . AllowanceCharge::class . '>')]
     #[SerializedName('AllowanceCharge')]
     #[XmlList(entry: 'AllowanceCharge', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
-    public ?array $allowanceCharge = [];
+    public array $allowanceCharge = [];
 
     /** @var TaxTotal[] */
-    #[Type('array<easybill\eInvoicing\UBL\Models\TaxTotal>')]
+    #[Type('array<' . TaxTotal::class . '>')]
     #[SerializedName('TaxTotal')]
     #[XmlList(entry: 'TaxTotal', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $taxTotal = [];

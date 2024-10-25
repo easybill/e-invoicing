@@ -40,14 +40,14 @@ final class HeaderTradeSettlement
     /**
      * @var TradeSettlementPaymentMeans[]
      */
-    #[Type('array<easybill\eInvoicing\CII\Models\TradeSettlementPaymentMeans>')]
+    #[Type('array<' . TradeSettlementPaymentMeans::class . '>')]
     #[XmlList(entry: 'SpecifiedTradeSettlementPaymentMeans', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $specifiedTradeSettlementPaymentMeans = [];
 
     /**
      * @var TradeTax[]
      */
-    #[Type('array<easybill\eInvoicing\CII\Models\TradeTax>')]
+    #[Type('array<' . TradeTax::class . '>')]
     #[XmlList(entry: 'ApplicableTradeTax', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $tradeTaxes = [];
 
@@ -59,14 +59,14 @@ final class HeaderTradeSettlement
     /**
      * @var TradeAllowanceCharge[]
      */
-    #[Type('array<easybill\eInvoicing\CII\Models\TradeAllowanceCharge>')]
+    #[Type('array<' . TradeAllowanceCharge::class . '>')]
     #[XmlList(entry: 'SpecifiedTradeAllowanceCharge', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $specifiedTradeAllowanceCharge = [];
 
     /**
      * @var LogisticsServiceCharge[]
      */
-    #[Type('array<easybill\eInvoicing\CII\Models\LogisticsServiceCharge>')]
+    #[Type('array<' . LogisticsServiceCharge::class . '>')]
     #[XmlList(entry: 'SpecifiedLogisticsServiceCharge', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $specifiedLogisticsServiceCharge = [];
 
@@ -86,7 +86,7 @@ final class HeaderTradeSettlement
     public ?ReferencedDocument $invoiceReferencedDocument = null;
 
     /** @var TradeAccountingAccount[] */
-    #[Type('array<easybill\eInvoicing\CII\Models\TradeAccountingAccount>')]
+    #[Type('array<' . TradeAccountingAccount::class . '>')]
     #[XmlList(entry: 'ReceivableSpecifiedTradeAccountingAccount', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $tradeAccountingAccount = [];
 }

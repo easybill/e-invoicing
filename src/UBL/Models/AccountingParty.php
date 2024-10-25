@@ -13,5 +13,5 @@ final class AccountingParty
     #[Type(Party::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     #[SerializedName('Party')]
-    public ?Party $party = null;
+    public Party $party;
 }

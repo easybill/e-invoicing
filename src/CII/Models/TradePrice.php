@@ -21,7 +21,7 @@ final class TradePrice
     public ?Quantity $basisQuantity = null;
 
     /** @var TradeAllowanceCharge[] */
-    #[Type('array<easybill\eInvoicing\CII\Models\TradeAllowanceCharge>')]
+    #[Type('array<' . TradeAllowanceCharge::class . '>')]
     #[XmlList(entry: 'AppliedTradeAllowanceCharge', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public ?array $appliedTradeAllowanceCharge = null;
 

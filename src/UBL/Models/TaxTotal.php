@@ -17,7 +17,7 @@ final class TaxTotal
     public ?Amount $taxAmount = null;
 
     /** @var TaxSubtotal[] */
-    #[Type('array<easybill\eInvoicing\UBL\Models\TaxSubtotal>')]
+    #[Type('array<' . TaxSubtotal::class . '>')]
     #[SerializedName('TaxSubtotal')]
     #[XmlList(entry: 'TaxSubtotal', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $taxSubtotal = [];

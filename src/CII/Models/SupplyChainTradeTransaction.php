@@ -14,7 +14,7 @@ final class SupplyChainTradeTransaction
     /**
      * @var SupplyChainTradeLineItem[]
      */
-    #[Type('array<easybill\eInvoicing\CII\Models\SupplyChainTradeLineItem>')]
+    #[Type('array<' . SupplyChainTradeLineItem::class . '>')]
     #[XmlList(entry: 'IncludedSupplyChainTradeLineItem', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $lineItems = [];
 

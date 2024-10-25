@@ -13,5 +13,5 @@ final class PartyName
     #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('Name')]
-    public ?string $name = null;
+    public string $name = '';
 }

@@ -19,7 +19,7 @@ final class TradeParty
     public ?Id $id = null;
 
     /** @var Id[] */
-    #[Type('array<easybill\eInvoicing\CII\Models\Id>')]
+    #[Type('array<' . Id::class . '>')]
     #[XmlList(entry: 'GlobalID', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $globalID = [];
 
@@ -44,7 +44,7 @@ final class TradeParty
     public ?TradeAddress $postalTradeAddress = null;
 
     /** @var TaxRegistration[] */
-    #[Type('array<easybill\eInvoicing\CII\Models\TaxRegistration>')]
+    #[Type('array<' . TaxRegistration::class . '>')]
     #[XmlList(entry: 'SpecifiedTaxRegistration', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $taxRegistrations = [];
 

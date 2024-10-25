@@ -42,13 +42,13 @@ abstract class AbstractDocumentLine
     public ?OrderLineReference $orderLineReference = null;
 
     /** @var AllowanceCharge[] */
-    #[Type('array<easybill\eInvoicing\UBL\Models\AllowanceCharge>')]
+    #[Type('array<' . AllowanceCharge::class . '>')]
     #[SerializedName('AllowanceCharge')]
     #[XmlList(entry: 'AllowanceCharge', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $allowanceCharge = [];
 
     /** @var Item[] */
-    #[Type('array<easybill\eInvoicing\UBL\Models\Item>')]
+    #[Type('array<' . Item::class . '>')]
     #[SerializedName('Item')]
     #[XmlList(entry: 'Item', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $item = [];

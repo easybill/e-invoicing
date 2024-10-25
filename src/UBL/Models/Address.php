@@ -37,7 +37,7 @@ final class Address
     public ?string $countrySubentity = null;
 
     /** @var AddressLine[] */
-    #[Type('array<easybill\eInvoicing\UBL\Models\AddressLine>')]
+    #[Type('array<' . AddressLine::class . '>')]
     #[SerializedName('AddressLine')]
     #[XmlList(entry: 'AddressLine', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $addressLines = [];

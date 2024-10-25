@@ -77,7 +77,7 @@ final class UblInvoice extends UblAbstractDocument
     public ?DocumentReference $contractDocumentReference = null;
 
     /** @var DocumentReference[] */
-    #[Type('array<easybill\eInvoicing\UBL\Models\DocumentReference>')]
+    #[Type('array<' . DocumentReference::class . '>')]
     #[SerializedName('AdditionalDocumentReference')]
     #[XmlList(entry: 'AdditionalDocumentReference', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $additionalDocumentReference = [];
@@ -88,7 +88,7 @@ final class UblInvoice extends UblAbstractDocument
     public ?DocumentReference $projectReference = null;
 
     /** @var InvoiceLine[] */
-    #[Type('array<easybill\eInvoicing\UBL\Models\InvoiceLine>')]
+    #[Type('array<' . InvoiceLine::class . '>')]
     #[SerializedName('InvoiceLine')]
     #[XmlList(entry: 'InvoiceLine', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $invoiceLine = [];

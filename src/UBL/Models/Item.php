@@ -42,10 +42,10 @@ final class Item
     public ?Country $originCountry = null;
 
     /** @var CommodityClassification[] */
-    #[Type('array<easybill\eInvoicing\UBL\Models\CommodityClassification>')]
+    #[Type('array<' . CommodityClassification::class . '>')]
     #[SerializedName('CommodityClassification')]
     #[XmlList(entry: 'CommodityClassification', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
-    public ?array $commodityClassification = [];
+    public array $commodityClassification = [];
 
     #[Type(TaxCategory::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
@@ -53,7 +53,7 @@ final class Item
     public ?TaxCategory $classifiedTaxCategory = null;
 
     /** @var ItemProperty[] */
-    #[Type('array<easybill\eInvoicing\UBL\Models\ItemProperty>')]
+    #[Type('array<' . ItemProperty::class . '>')]
     #[SerializedName('AdditionalItemProperty')]
     #[XmlList(entry: 'AdditionalItemProperty', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $additionalItemProperty = [];

@@ -19,7 +19,7 @@ final class ShipToTradeParty
     public ?Id $id = null;
 
     /** @var Id[] */
-    #[Type('array<easybill\eInvoicing\CII\Models\Id>')]
+    #[Type('array<' . Id::class . '>')]
     #[XmlList(entry: 'GlobalID', inline: true, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     public array $globalID = [];
 
