@@ -64,7 +64,7 @@ final class UblInvoice extends UblAbstractDocument
     #[Type(DocumentType::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('InvoiceTypeCode')]
-    public ?DocumentType $invoiceTypeCode = null;
+    public DocumentType $invoiceTypeCode;
 
     #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
