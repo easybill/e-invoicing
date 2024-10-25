@@ -16,7 +16,7 @@ final class DocumentLineDocument
     #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('LineID')]
-    public string $lineId;
+    public string $lineId = '';
 
     /** @var Note[] */
     #[Type('array<easybill\eInvoicing\CII\Models\Note>')]

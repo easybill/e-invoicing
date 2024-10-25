@@ -13,10 +13,10 @@ final class ProductCharacteristic
     #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('Description')]
-    public string $description;
+    public string $description = '';
 
     #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('Value')]
-    public string $value;
+    public string $value = '';
 }

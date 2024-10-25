@@ -10,10 +10,10 @@ use JMS\Serializer\Annotation\XmlElement;
 
 final class HeaderTradeDelivery
 {
-    #[Type(TradeParty::class)]
+    #[Type(ShipToTradeParty::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('ShipToTradeParty')]
-    public ?TradeParty $shipToTradeParty = null;
+    public ?ShipToTradeParty $shipToTradeParty = null;
 
     #[Type(SupplyChainEvent::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]

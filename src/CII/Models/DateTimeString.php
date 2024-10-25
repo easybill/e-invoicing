@@ -12,11 +12,11 @@ final class DateTimeString
 {
     #[Type('integer')]
     #[XmlAttribute]
-    public int $format;
+    public int $format = 102;
 
     #[Type(StringValue::class)]
     #[XmlValue(cdata: false)]
-    public string $value;
+    public string $value = '';
 
     public static function create(int $format, string $value): self
     {

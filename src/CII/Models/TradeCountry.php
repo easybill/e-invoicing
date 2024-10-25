@@ -13,7 +13,7 @@ final class TradeCountry
     #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('ID')]
-    public string $id;
+    public string $id = '';
 
     public static function create(string $id): self
     {

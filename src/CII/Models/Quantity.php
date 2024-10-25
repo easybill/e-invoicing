@@ -19,7 +19,7 @@ final class Quantity
 
     #[Type(StringValue::class)]
     #[XmlValue(cdata: false)]
-    public string $value;
+    public string $value = '';
 
     public static function create(string $value, UnitCode $unitCode): self
     {

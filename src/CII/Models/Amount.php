@@ -14,7 +14,7 @@ final class Amount
 {
     #[Type(StringValue::class)]
     #[XmlValue(cdata: false)]
-    public string $value;
+    public string $value = '';
 
     #[Type(CurrencyCode::class)]
     #[XmlAttribute]

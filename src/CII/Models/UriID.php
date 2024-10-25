@@ -19,7 +19,7 @@ final class UriID
 
     #[Type(StringValue::class)]
     #[XmlValue(cdata: false)]
-    public string $value;
+    public string $value = '';
 
     public static function create(string $id, ?ElectronicAddressScheme $schemeID = null): self
     {

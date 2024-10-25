@@ -20,9 +20,9 @@ final class BinaryObject
     #[Type(StringValue::class)]
     #[XmlAttribute]
     #[SerializedName('filename')]
-    public string $filename;
+    public string $filename = '';
 
     #[Type(StringValue::class)]
     #[XmlValue(cdata: false)]
-    public string $value;
+    public string $value = '';
 }
