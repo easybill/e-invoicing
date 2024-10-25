@@ -28,15 +28,15 @@ final class TradeParty
     #[SerializedName('Name')]
     public string $name = '';
 
-    #[Type(StringValue::class)]
-    #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
-    #[SerializedName('Description')]
-    public ?string $description = null;
-
     #[Type(TradeContact::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('DefinedTradeContact')]
     public ?TradeContact $definedTradeContact = null;
+
+    #[Type(StringValue::class)]
+    #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
+    #[SerializedName('Description')]
+    public ?string $description = null;
 
     #[Type(TradeAddress::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]

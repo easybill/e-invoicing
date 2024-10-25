@@ -9,7 +9,19 @@ use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlElement;
 
-#[AccessorOrder(order: 'custom', custom: ['calculatedAmount', 'typeCode', 'exemptionReason', 'basisAmount', 'categoryCode', 'exemptionReasonCode', 'taxPointDate', 'dueDateTypeCode', 'rateApplicablePercent'])]
+#[AccessorOrder(order: 'custom', custom: [
+    'calculatedAmount',
+    'typeCode',
+    'exemptionReason',
+    'basisAmount',
+    'lineTotalBasisAmount',
+    'allowanceChargeBasisAmount',
+    'categoryCode',
+    'exemptionReasonCode',
+    'taxPointDate',
+    'dueDateTypeCode',
+    'rateApplicablePercent',
+])]
 final class TradeTax
 {
     #[Type(Amount::class)]

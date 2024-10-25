@@ -15,6 +15,11 @@ final class LineTradeDelivery
     #[SerializedName('BilledQuantity')]
     public Quantity $billedQuantity;
 
+    #[Type(Quantity::class)]
+    #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
+    #[SerializedName('PackageQuantity')]
+    public ?Quantity $packageQuantity = null;
+
     #[Type(SupplyChainEvent::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('ActualDeliverySupplyChainEvent')]

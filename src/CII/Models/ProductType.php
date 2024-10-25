@@ -8,25 +8,25 @@ use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlElement;
 
-final class TradePaymentTerms
+final class ProductType
 {
-    #[Type(StringValue::class)]
+    #[Type(Id::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
-    #[SerializedName('Description')]
-    public ?string $description = null;
+    #[SerializedName('GlobalID')]
+    public ?Id $id;
 
-    #[Type(TradePaymentDiscountTerms::class)]
+    #[Type('string')]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
-    #[SerializedName('ApplicableTradePaymentDiscountTerms')]
-    public ?TradePaymentDiscountTerms $applicableTradePaymentDiscountTerms = null;
+    #[SerializedName('SellerAssignedID')]
+    public ?string $sellerAssignedID = null;
 
-    #[Type(DateTime::class)]
+    #[Type('string')]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
-    #[SerializedName('DueDateDateTime')]
-    public ?DateTime $dueDate = null;
+    #[SerializedName('Name')]
+    public ?string $name = null;
 
-    #[Type(StringValue::class)]
+    #[Type(Quantity::class)]
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
-    #[SerializedName('DirectDebitMandateID')]
-    public ?string $directDebitMandateID = null;
+    #[SerializedName('UnitQuantity')]
+    public ?Quantity $unitQuantity = null;
 }

@@ -272,36 +272,17 @@ test(
 
         $this->assertSame($this->reformatXml($xml), $this->reformatXml($xmlFromObject));
     }
-)->with([
-    __DIR__ . '/Examples/UBL/01.01a-INVOICE_ubl.xml',
-    __DIR__ . '/Examples/UBL/Allowance-example.xml',
-    __DIR__ . '/Examples/UBL/base-creditnote-correction.xml',
-    __DIR__ . '/Examples/UBL/base-example.xml',
-    __DIR__ . '/Examples/UBL/base-negative-inv-correction.xml',
-    __DIR__ . '/Examples/UBL/BIS3_Invoice_negativ.XML',
-    __DIR__ . '/Examples/UBL/BIS3_Invoice_positive.XML',
-    __DIR__ . '/Examples/UBL/guide-example1.xml',
-    __DIR__ . '/Examples/UBL/guide-example2.xml',
-    __DIR__ . '/Examples/UBL/guide-example3.xml',
-    __DIR__ . '/Examples/UBL/issue116.xml',
-    __DIR__ . '/Examples/UBL/sales-order-example.xml',
-    __DIR__ . '/Examples/UBL/sample-discount-price.xml',
-    __DIR__ . '/Examples/UBL/ubl-tc434-creditnote1.xml',
-    __DIR__ . '/Examples/UBL/ubl-tc434-example1.xml',
-    __DIR__ . '/Examples/UBL/ubl-tc434-example2.xml',
-    __DIR__ . '/Examples/UBL/ubl-tc434-example3.xml',
-    __DIR__ . '/Examples/UBL/ubl-tc434-example4.xml',
-    __DIR__ . '/Examples/UBL/ubl-tc434-example5.xml',
-    __DIR__ . '/Examples/UBL/ubl-tc434-example6.xml',
-    __DIR__ . '/Examples/UBL/ubl-tc434-example7.xml',
-    __DIR__ . '/Examples/UBL/ubl-tc434-example8.xml',
-    __DIR__ . '/Examples/UBL/ubl-tc434-example9.xml',
-    __DIR__ . '/Examples/UBL/ubl-tc434-example10.xml',
-    __DIR__ . '/Examples/UBL/vat-category-E.xml',
-    __DIR__ . '/Examples/UBL/vat-category-O.xml',
-    __DIR__ . '/Examples/UBL/Vat-category-S.xml',
-    __DIR__ . '/Examples/UBL/vat-category-Z.xml',
-]);
+)->with(function (): \Generator {
+    $finder = (new Finder())
+        ->files()
+        ->name('*.xml')
+        ->in(__DIR__ . '/Examples/UBL')
+    ;
+
+    foreach ($finder as $file) {
+        yield $file->getFilename() => [$file->getRealPath()];
+    }
+});
 
 test(
     'That reading converted CII examples to UBL is successful',
@@ -328,7 +309,7 @@ test(
 
         $this->assertSame($this->reformatXml($xml), $this->reformatXml($xmlFromObject));
     }
-)->with(function () {
+)->with(function (): \Generator {
     $finder = (new Finder())
         ->files()
         ->name('*.xml')

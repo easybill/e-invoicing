@@ -39,6 +39,7 @@ use easybill\eInvoicing\Enums\UnitCode;
 use easybill\eInvoicing\Reader;
 use easybill\eInvoicing\Transformer;
 use easybill\eInvoicingTests\Validators\SchemaValidator;
+use Symfony\Component\Finder\Finder;
 
 test(
     'building ZUGFeRD CII document for EN16931_Einfach.xml',
@@ -172,11 +173,13 @@ test(
 );
 
 test(
-    'That reading the CII examples and transforming to the object representation and back to xml is identical to the source',
+    'That reading CII examples is successful and transforming to xml is identical to the source',
     function (string $pathToXmlExample) {
         $xml = file_get_contents($pathToXmlExample);
 
         expect($xml)->not->toBeFalse();
+
+        $xml = $this->fixUblRootNode($xml);
 
         $reader = Reader::create()->read($xml);
 
@@ -194,22 +197,14 @@ test(
 
         $this->assertSame($this->reformatXml($xml), $this->reformatXml($xmlFromObject));
     }
-)->with([
-    __DIR__ . '/Examples/CII/CII_business_example_01.xml',
-    __DIR__ . '/Examples/CII/CII_business_example_02.xml',
-    __DIR__ . '/Examples/CII/CII_business_example_Z.xml',
-    __DIR__ . '/Examples/CII/CII_example1.xml',
-    __DIR__ . '/Examples/CII/CII_example2.xml',
-    __DIR__ . '/Examples/CII/CII_example3.xml',
-    __DIR__ . '/Examples/CII/CII_example4.xml',
-    __DIR__ . '/Examples/CII/CII_example5.xml',
-    __DIR__ . '/Examples/CII/CII_example6.xml',
-    __DIR__ . '/Examples/CII/CII_example7.xml',
-    __DIR__ . '/Examples/CII/CII_example8.xml',
-    __DIR__ . '/Examples/CII/CII_example9.xml',
-    __DIR__ . '/Examples/CII/EN16931_AbweichenderZahlungsempf.xml',
-    __DIR__ . '/Examples/CII/EN16931_Einfach.xml',
-    __DIR__ . '/Examples/CII/EN16931_Gutschrift.xml',
-    __DIR__ . '/Examples/CII/EN16931_Innergemeinschaftliche_Lieferungen.xml',
-    __DIR__ . '/Examples/CII/XRechnung-O.xml',
-]);
+)->with(function (): \Generator {
+    $finder = (new Finder())
+        ->files()
+        ->name('*.xml')
+        ->in(__DIR__ . '/Examples/CII')
+    ;
+
+    foreach ($finder as $file) {
+        yield $file->getFilename() => [$file->getRealPath()];
+    }
+});
