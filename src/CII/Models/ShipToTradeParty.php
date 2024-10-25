@@ -37,4 +37,9 @@ final class ShipToTradeParty
     #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
     #[SerializedName('PostalTradeAddress')]
     public ?TradeAddress $postalTradeAddress = null;
+
+    #[Type(UniversalCommunication::class)]
+    #[XmlElement(cdata: false, namespace: 'urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100')]
+    #[SerializedName('URIUniversalCommunication')]
+    public ?UniversalCommunication $uriUniversalCommunication = null;
 }

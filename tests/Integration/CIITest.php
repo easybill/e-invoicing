@@ -179,7 +179,7 @@ test(
 
         expect($xml)->not->toBeFalse();
 
-        $xml = $this->fixUblRootNode($xml);
+        $xml = $this->fixCIIRootNode($xml);
 
         $reader = Reader::create()->read($xml);
 
