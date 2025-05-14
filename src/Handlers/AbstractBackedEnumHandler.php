@@ -54,7 +54,7 @@ abstract class AbstractBackedEnumHandler implements SubscribingHandlerInterface
         $rBackingType = $rEnum->getBackingType();
 
         return match ((string)$rBackingType) {
-            'string' => $class::from(mb_trim((string)$data)),
+            'string' => $class::from(\mb_trim((string)$data)),
             'int' => $class::from((int)$data),
             default => throw new \BadMethodCallException('Unknown backing type'),
         };
