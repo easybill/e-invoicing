@@ -25,6 +25,7 @@ trait AssertXmlOutputTrait
         self::assertNull($result, $result ?? '');
 
         $referenceFile = file_get_contents($referenceFilePath);
+        self::assertIsString($referenceFile);
         $referenceFile = self::reformatXml($referenceFile);
         self::assertEquals($referenceFile, $xml);
     }

@@ -39,7 +39,7 @@ abstract class AbstractBackedEnumHandler implements SubscribingHandlerInterface
         return $methods;
     }
 
-    /** @param array<string, mixed> $type */
+    /** @param array{name: string, params: array<mixed>} $type */
     public function serializeEnum(XmlSerializationVisitor $visitor, \BackedEnum $enum, array $type): \DOMText
     {
         return $visitor->visitSimpleString($enum->value, $type);

@@ -49,7 +49,7 @@ final class TrimStringValueHandler implements SubscribingHandlerInterface
         return $methods;
     }
 
-    /** @param array<string, mixed> $type */
+    /** @param array{name: string, params: array<mixed>} $type */
     public function serializeString(XmlSerializationVisitor $visitor, string $value, array $type): \DOMText
     {
         return $visitor->visitSimpleString(mb_trim($value), $type);

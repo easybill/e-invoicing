@@ -38,11 +38,14 @@ use easybill\eInvoicing\Enums\DocumentType;
 use easybill\eInvoicing\Enums\UnitCode;
 use easybill\eInvoicing\Reader;
 use easybill\eInvoicing\Transformer;
+use easybill\eInvoicingTests\TestCase;
 use easybill\eInvoicingTests\Validators\SchemaValidator;
+use PHPUnit\Framework\Attributes\DataProvider;
 
-test(
-    'building ZUGFeRD CII document for EN16931_Einfach.xml',
-    function () {
+final class CIITest extends TestCase
+{
+    public function testBuildingZugferdCiiDocumentForEN16931Einfach(): void
+    {
         $invoice = new CrossIndustryInvoice();
         $invoice->exchangedDocument = new ExchangedDocument();
         $invoice->exchangedDocumentContext = new ExchangedDocumentContext();
@@ -156,57 +159,62 @@ test(
         $summation->totalPrepaidAmount = Amount::create('0.00');
         $summation->duePayableAmount = Amount::create('529.87');
 
-        $this->buildAndAssertXmlFromCII(
+        self::buildAndAssertXmlFromCII(
             $invoice,
             __DIR__ . '/Examples/CII/EN16931_Einfach.xml',
             SchemaValidator::SCHEMA_EN16931
         );
 
         $xml = Transformer::create()->transformToXml($invoice);
-        $xml = $this->reformatXml($xml);
+        $xml = self::reformatXml($xml);
 
         // This is possible due to the EN16931 profile. XRechnung (KOSIT) is able to validate CII documents, as the XRechnung specification allows both (CII and UBL) syntax.
         // XRechnung CII is an extension to ZUGFeRD EN16931 profile.
         $this->validateWithKositValidator($xml);
     }
-);
 
-test(
-    'That reading the CII examples and transforming to the object representation and back to xml is identical to the source',
-    function (string $pathToXmlExample) {
+    #[DataProvider('ciiExamplesProvider')]
+    public function testReadingCiiExamplesAndTransformingBackToXmlIsIdentical(string $pathToXmlExample): void
+    {
         $xml = file_get_contents($pathToXmlExample);
 
-        expect($xml)->not->toBeFalse();
+        self::assertNotFalse($xml);
 
         $reader = Reader::create()->read($xml);
 
-        expect($reader->isSuccess())->toBeTrue();
-        expect($reader->getDocument())->toBeInstanceOf(CrossIndustryInvoice::class);
+        self::assertTrue($reader->isSuccess());
+        self::assertInstanceOf(CrossIndustryInvoice::class, $reader->getDocument());
 
         $document = $reader->getDocument();
 
-        assert($document instanceof CrossIndustryInvoice);
+        self::assertInstanceOf(CrossIndustryInvoice::class, $document);
 
         $xmlFromObject = Transformer::create()->transformToXml($document);
 
-        $this->assertSame($this->reformatXml($xml), $this->reformatXml($xmlFromObject));
+        self::assertSame(self::reformatXml($xml), self::reformatXml($xmlFromObject));
     }
-)->with([
-    __DIR__ . '/Examples/CII/CII_business_example_01.xml',
-    __DIR__ . '/Examples/CII/CII_business_example_02.xml',
-    __DIR__ . '/Examples/CII/CII_business_example_Z.xml',
-    __DIR__ . '/Examples/CII/CII_example1.xml',
-    __DIR__ . '/Examples/CII/CII_example2.xml',
-    __DIR__ . '/Examples/CII/CII_example3.xml',
-    __DIR__ . '/Examples/CII/CII_example4.xml',
-    __DIR__ . '/Examples/CII/CII_example5.xml',
-    __DIR__ . '/Examples/CII/CII_example6.xml',
-    __DIR__ . '/Examples/CII/CII_example7.xml',
-    __DIR__ . '/Examples/CII/CII_example8.xml',
-    __DIR__ . '/Examples/CII/CII_example9.xml',
-    __DIR__ . '/Examples/CII/EN16931_AbweichenderZahlungsempf.xml',
-    __DIR__ . '/Examples/CII/EN16931_Einfach.xml',
-    __DIR__ . '/Examples/CII/EN16931_Gutschrift.xml',
-    __DIR__ . '/Examples/CII/EN16931_Innergemeinschaftliche_Lieferungen.xml',
-    __DIR__ . '/Examples/CII/XRechnung-O.xml',
-]);
+
+    /** @return array<string, array{0: string}> */
+    public static function ciiExamplesProvider(): array
+    {
+        return [
+            'CII business example 01' => [__DIR__ . '/Examples/CII/CII_business_example_01.xml'],
+            'CII business example 02' => [__DIR__ . '/Examples/CII/CII_business_example_02.xml'],
+            'CII business example Z' => [__DIR__ . '/Examples/CII/CII_business_example_Z.xml'],
+            'CII example1' => [__DIR__ . '/Examples/CII/CII_example1.xml'],
+            'CII example2' => [__DIR__ . '/Examples/CII/CII_example2.xml'],
+            'CII example3' => [__DIR__ . '/Examples/CII/CII_example3.xml'],
+            'CII example4' => [__DIR__ . '/Examples/CII/CII_example4.xml'],
+            'CII example5' => [__DIR__ . '/Examples/CII/CII_example5.xml'],
+            'CII example6' => [__DIR__ . '/Examples/CII/CII_example6.xml'],
+            'CII example7' => [__DIR__ . '/Examples/CII/CII_example7.xml'],
+            'CII example8' => [__DIR__ . '/Examples/CII/CII_example8.xml'],
+            'CII example9' => [__DIR__ . '/Examples/CII/CII_example9.xml'],
+            'EN16931 AbweichenderZahlungsempf' => [__DIR__ . '/Examples/CII/EN16931_AbweichenderZahlungsempf.xml'],
+            'EN16931 Einfach' => [__DIR__ . '/Examples/CII/EN16931_Einfach.xml'],
+            'EN16931 Gutschrift' => [__DIR__ . '/Examples/CII/EN16931_Gutschrift.xml'],
+            'EN16931 Innergemeinschaftliche Lieferungen' => [__DIR__ . '/Examples/CII/EN16931_Innergemeinschaftliche_Lieferungen.xml'],
+            'XRechnung-O' => [__DIR__ . '/Examples/CII/XRechnung-O.xml'],
+        ];
+    }
+}

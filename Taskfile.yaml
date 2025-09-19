@@ -1,4 +1,0 @@
-﻿version: '3'
-
-includes:
-  dev: ./.task/dev.yaml
