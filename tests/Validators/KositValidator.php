@@ -41,7 +41,7 @@ final class KositValidator
 
         $noScenarioMatched = $docXpath->query('//rep:noScenarioMatched');
 
-        if ($noScenarioMatched->count() > 0) {
+        if (false !== $noScenarioMatched && $noScenarioMatched->count() > 0) {
             return ['No validation scenario matched. (Unsupported document type)'];
         }
 

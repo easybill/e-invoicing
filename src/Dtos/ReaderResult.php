@@ -11,7 +11,7 @@ final readonly class ReaderResult
 {
     private function __construct(
         private ?\Throwable $throwable = null,
-        private null|CrossIndustryInvoice|UblAbstractDocument $document = null,
+        private CrossIndustryInvoice|UblAbstractDocument|null $document = null,
     ) {}
 
     public static function error(\Throwable $throwable): self

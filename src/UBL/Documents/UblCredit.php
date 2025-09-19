@@ -53,7 +53,7 @@ final class UblCredit extends UblAbstractDocument
     #[Type(DocumentType::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('CreditNoteTypeCode')]
-    public ?DocumentType $creditNoteTypeCode = null;
+    public DocumentType $creditNoteTypeCode;
 
     #[Type(CurrencyCode::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
@@ -65,4 +65,22 @@ final class UblCredit extends UblAbstractDocument
     #[SerializedName('CreditNoteLine')]
     #[XmlList(entry: 'CreditNoteLine', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $creditNoteLine = [];
+
+    public function __construct(
+        string $customizationId,
+        string $profileId,
+        string $id,
+        string $issueDate,
+        DocumentType $documentType,
+        CurrencyCode $currencyCode,
+    ) {
+        parent::__construct(
+            $customizationId,
+            $profileId,
+            $id,
+            $issueDate,
+            $currencyCode,
+        );
+        $this->creditNoteTypeCode = $documentType;
+    }
 }

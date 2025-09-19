@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace easybill\eInvoicing\UBL\Documents;
 
+use easybill\eInvoicing\Enums\CurrencyCode;
 use easybill\eInvoicing\Enums\DocumentType;
 use easybill\eInvoicing\UBL\Models\DocumentReference;
 use easybill\eInvoicing\UBL\Models\InvoiceLine;
@@ -64,7 +65,7 @@ final class UblInvoice extends UblAbstractDocument
     #[Type(DocumentType::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('InvoiceTypeCode')]
-    public ?DocumentType $invoiceTypeCode = null;
+    public DocumentType $invoiceTypeCode;
 
     #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
@@ -92,4 +93,10 @@ final class UblInvoice extends UblAbstractDocument
     #[SerializedName('InvoiceLine')]
     #[XmlList(entry: 'InvoiceLine', inline: true, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     public array $invoiceLine = [];
+
+    public function __construct(string $customizationId, string $profileId, string $id, string $issueDate, DocumentType $documentType, CurrencyCode $currencyCode)
+    {
+        parent::__construct($customizationId, $profileId, $id, $issueDate, $currencyCode);
+        $this->invoiceTypeCode = $documentType;
+    }
 }

@@ -9,11 +9,13 @@ trait ReformatXmlTrait
     public static function reformatXml(string $xml): string
     {
         $xml = preg_replace('/<!--(.|\s)*?-->/', '', $xml);
+        assert(null !== $xml);
 
         $doc = new \DOMDocument('1.0', 'UTF-8');
         $doc->preserveWhiteSpace = false;
         $doc->formatOutput = true;
         $doc->loadXML($xml);
-        return $doc->saveXML();
+        $result = $doc->saveXML();
+        return false !== $result ? $result : '';
     }
 }

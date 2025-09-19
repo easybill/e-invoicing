@@ -12,10 +12,12 @@ use easybill\eInvoicing\ConfiguredSerializer;
 use easybill\eInvoicing\Handlers\TrimStringValueHandler;
 use easybill\eInvoicing\Reader;
 use easybill\eInvoicing\Transformer;
+use easybill\eInvoicingTests\TestCase;
 
-test(
-    'That the serializer will trim values',
-    function () {
+final class SerializerTest extends TestCase
+{
+    public function testSerializerWillTrimValues(): void
+    {
         $invoice = new CrossIndustryInvoice();
         $invoice->exchangedDocument = new ExchangedDocument();
         $invoice->exchangedDocumentContext = new ExchangedDocumentContext();
@@ -30,14 +32,9 @@ test(
         $xml = $transformer->transformToXml($invoice);
         $result = Reader::create()->read($xml);
 
-        expect($result->isSuccess())
-            ->toBeTrue()
-            ->and($result->getDocument())
-            ->toBeInstanceOf(CrossIndustryInvoice::class)
-            ->and($result->getDocument()->exchangedDocumentContext->documentContextParameter->id)
-            ->toEqual('urn:cen.eu:en16931:2017')
-            ->and($result->getDocument()->exchangedDocument->id)
-            ->toEqual('471102')
-        ;
+        self::assertTrue($result->isSuccess());
+        self::assertInstanceOf(CrossIndustryInvoice::class, $result->getDocument());
+        self::assertEquals('urn:cen.eu:en16931:2017', $result->getDocument()->exchangedDocumentContext->documentContextParameter->id);
+        self::assertEquals('471102', $result->getDocument()->exchangedDocument->id);
     }
-);
+}

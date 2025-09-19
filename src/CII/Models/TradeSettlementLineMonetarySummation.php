@@ -24,7 +24,7 @@ final class TradeSettlementLineMonetarySummation
     {
         $self = new self();
         $self->totalAmount = Amount::create($totalAmount);
-        if (null != $totalAllowanceChargeAmount) {
+        if (null !== $totalAllowanceChargeAmount) {
             $self->totalAllowanceChargeAmount = Amount::create($totalAllowanceChargeAmount);
         }
         return $self;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace easybill\eInvoicingTests\Integration\XRechnung3\UBL;
+namespace easybill\eInvoicingTests\Integration;
 
 use easybill\eInvoicing\Enums\CountryCode;
 use easybill\eInvoicing\Enums\CurrencyCode;
@@ -43,24 +43,31 @@ use easybill\eInvoicing\UBL\Models\TaxCategory;
 use easybill\eInvoicing\UBL\Models\TaxScheme;
 use easybill\eInvoicing\UBL\Models\TaxSubtotal;
 use easybill\eInvoicing\UBL\Models\TaxTotal;
+use easybill\eInvoicingTests\TestCase;
+use PHPUnit\Framework\Attributes\DataProvider;
 use Symfony\Component\Finder\Finder;
 
-test(
-    'Allows building a valid XRechnung 3.0 document with a simple structure',
-    function (string $pathToXmlExample) {
+final class UBLTest extends TestCase
+{
+    #[DataProvider('xrechnungExampleProvider')]
+    public function testBuildingValidXRechnung30DocumentWithSimpleStructure(string $pathToXmlExample): void
+    {
         $exampleXml = file_get_contents($pathToXmlExample);
-        $exampleXml = $this->removeXmlMutates($exampleXml);
-        $exampleXml = $this->reformatXml($exampleXml);
+        self::assertIsString($exampleXml);
+        $exampleXml = self::removeXmlMutates($exampleXml);
+        $exampleXml = self::reformatXml($exampleXml);
 
         $this->validateWithKositValidator($exampleXml);
 
-        $invoice = new UblInvoice();
-        $invoice->customizationId = 'urn:cen.eu:en16931:2017#compliant#urn:xeinkauf.de:kosit:xrechnung_3.0';
-        $invoice->profileId = 'urn:fdc:peppol.eu:2017:poacc:billing:01:1.0';
-        $invoice->id = '123456XX';
-        $invoice->issueDate = '2016-04-04';
-        $invoice->invoiceTypeCode = DocumentType::COMMERCIAL_INVOICE;
-        $invoice->documentCurrencyCode = CurrencyCode::EUR;
+        $invoice = new UblInvoice(
+            customizationId: 'urn:cen.eu:en16931:2017#compliant#urn:xeinkauf.de:kosit:xrechnung_3.0',
+            profileId: 'urn:fdc:peppol.eu:2017:poacc:billing:01:1.0',
+            id: '123456XX',
+            issueDate: '2016-04-04',
+            documentType: DocumentType::COMMERCIAL_INVOICE,
+            currencyCode: CurrencyCode::EUR
+        );
+
         $invoice->buyerReference = '04011000-12345-03';
 
         // Notes
@@ -241,98 +248,111 @@ test(
         $invoiceLine2->price->priceAmount->value = '26.07';
 
         $xml = Transformer::create()->transformToXml($invoice);
-        $xml = $this->reformatXml($xml);
+        $xml = self::reformatXml($xml);
 
-        $this->assertSame($exampleXml, $xml);
+        self::assertSame($exampleXml, $xml);
         $this->validateWithKositValidator($xml);
     }
-)->with([
-    __DIR__ . '/Examples/UBL/01.01a-INVOICE_ubl.xml',
-]);
 
-test(
-    'That reading the ubl examples and transforming to the object representation and back to xml is identical to the source',
-    function (string $pathToXmlExample) {
+    /** @return array<string, array{0: string}> */
+    public static function xrechnungExampleProvider(): array
+    {
+        return [
+            '01.01a-INVOICE_ubl' => [__DIR__ . '/Examples/UBL/01.01a-INVOICE_ubl.xml'],
+        ];
+    }
+
+    #[DataProvider('ublExamplesProvider')]
+    public function testReadingUblExamplesAndTransformingBackToXmlIsIdentical(string $pathToXmlExample): void
+    {
         $xml = file_get_contents($pathToXmlExample);
 
-        expect($xml)->not->toBeFalse();
+        self::assertNotFalse($xml);
 
-        $xml = $this->fixUblRootNode($xml);
+        $xml = self::fixUblRootNode($xml);
 
         $reader = Reader::create()->read($xml);
 
-        expect($reader->isSuccess())->toBeTrue();
-        expect($reader->getDocument())->toBeInstanceOf(UblAbstractDocument::class);
+        self::assertTrue($reader->isSuccess());
+        self::assertInstanceOf(UblAbstractDocument::class, $reader->getDocument());
 
         $document = $reader->getDocument();
 
-        assert($document instanceof UblAbstractDocument);
+        self::assertInstanceOf(UblAbstractDocument::class, $document);
 
         $xmlFromObject = Transformer::create()->transformToXml($document);
 
-        $this->assertSame($this->reformatXml($xml), $this->reformatXml($xmlFromObject));
+        self::assertSame(self::reformatXml($xml), self::reformatXml($xmlFromObject));
     }
-)->with([
-    __DIR__ . '/Examples/UBL/01.01a-INVOICE_ubl.xml',
-    __DIR__ . '/Examples/UBL/Allowance-example.xml',
-    __DIR__ . '/Examples/UBL/base-creditnote-correction.xml',
-    __DIR__ . '/Examples/UBL/base-example.xml',
-    __DIR__ . '/Examples/UBL/base-negative-inv-correction.xml',
-    __DIR__ . '/Examples/UBL/BIS3_Invoice_negativ.XML',
-    __DIR__ . '/Examples/UBL/BIS3_Invoice_positive.XML',
-    __DIR__ . '/Examples/UBL/guide-example1.xml',
-    __DIR__ . '/Examples/UBL/guide-example2.xml',
-    __DIR__ . '/Examples/UBL/guide-example3.xml',
-    __DIR__ . '/Examples/UBL/issue116.xml',
-    __DIR__ . '/Examples/UBL/sales-order-example.xml',
-    __DIR__ . '/Examples/UBL/sample-discount-price.xml',
-    __DIR__ . '/Examples/UBL/ubl-tc434-creditnote1.xml',
-    __DIR__ . '/Examples/UBL/ubl-tc434-example1.xml',
-    __DIR__ . '/Examples/UBL/ubl-tc434-example2.xml',
-    __DIR__ . '/Examples/UBL/ubl-tc434-example3.xml',
-    __DIR__ . '/Examples/UBL/ubl-tc434-example4.xml',
-    __DIR__ . '/Examples/UBL/ubl-tc434-example5.xml',
-    __DIR__ . '/Examples/UBL/ubl-tc434-example6.xml',
-    __DIR__ . '/Examples/UBL/ubl-tc434-example7.xml',
-    __DIR__ . '/Examples/UBL/ubl-tc434-example8.xml',
-    __DIR__ . '/Examples/UBL/ubl-tc434-example9.xml',
-    __DIR__ . '/Examples/UBL/ubl-tc434-example10.xml',
-    __DIR__ . '/Examples/UBL/vat-category-E.xml',
-    __DIR__ . '/Examples/UBL/vat-category-O.xml',
-    __DIR__ . '/Examples/UBL/Vat-category-S.xml',
-    __DIR__ . '/Examples/UBL/vat-category-Z.xml',
-]);
 
-test(
-    'That reading converted CII examples to UBL is successful',
-    function (string $pathToXmlExample) {
+    /** @return array<string, array{0: string}> */
+    public static function ublExamplesProvider(): array
+    {
+        return [
+            '01.01a-INVOICE_ubl' => [__DIR__ . '/Examples/UBL/01.01a-INVOICE_ubl.xml'],
+            'Allowance-example' => [__DIR__ . '/Examples/UBL/Allowance-example.xml'],
+            'base-creditnote-correction' => [__DIR__ . '/Examples/UBL/base-creditnote-correction.xml'],
+            'base-example' => [__DIR__ . '/Examples/UBL/base-example.xml'],
+            'base-negative-inv-correction' => [__DIR__ . '/Examples/UBL/base-negative-inv-correction.xml'],
+            'BIS3_Invoice_negativ' => [__DIR__ . '/Examples/UBL/BIS3_Invoice_negativ.XML'],
+            'BIS3_Invoice_positive' => [__DIR__ . '/Examples/UBL/BIS3_Invoice_positive.XML'],
+            'guide-example1' => [__DIR__ . '/Examples/UBL/guide-example1.xml'],
+            'guide-example2' => [__DIR__ . '/Examples/UBL/guide-example2.xml'],
+            'guide-example3' => [__DIR__ . '/Examples/UBL/guide-example3.xml'],
+            'issue116' => [__DIR__ . '/Examples/UBL/issue116.xml'],
+            'sales-order-example' => [__DIR__ . '/Examples/UBL/sales-order-example.xml'],
+            'sample-discount-price' => [__DIR__ . '/Examples/UBL/sample-discount-price.xml'],
+            'ubl-tc434-creditnote1' => [__DIR__ . '/Examples/UBL/ubl-tc434-creditnote1.xml'],
+            'ubl-tc434-example1' => [__DIR__ . '/Examples/UBL/ubl-tc434-example1.xml'],
+            'ubl-tc434-example2' => [__DIR__ . '/Examples/UBL/ubl-tc434-example2.xml'],
+            'ubl-tc434-example3' => [__DIR__ . '/Examples/UBL/ubl-tc434-example3.xml'],
+            'ubl-tc434-example4' => [__DIR__ . '/Examples/UBL/ubl-tc434-example4.xml'],
+            'ubl-tc434-example5' => [__DIR__ . '/Examples/UBL/ubl-tc434-example5.xml'],
+            'ubl-tc434-example6' => [__DIR__ . '/Examples/UBL/ubl-tc434-example6.xml'],
+            'ubl-tc434-example7' => [__DIR__ . '/Examples/UBL/ubl-tc434-example7.xml'],
+            'ubl-tc434-example8' => [__DIR__ . '/Examples/UBL/ubl-tc434-example8.xml'],
+            'ubl-tc434-example9' => [__DIR__ . '/Examples/UBL/ubl-tc434-example9.xml'],
+            'ubl-tc434-example10' => [__DIR__ . '/Examples/UBL/ubl-tc434-example10.xml'],
+            'vat-category-E' => [__DIR__ . '/Examples/UBL/vat-category-E.xml'],
+            'vat-category-O' => [__DIR__ . '/Examples/UBL/vat-category-O.xml'],
+            'Vat-category-S' => [__DIR__ . '/Examples/UBL/Vat-category-S.xml'],
+            'vat-category-Z' => [__DIR__ . '/Examples/UBL/vat-category-Z.xml'],
+        ];
+    }
+
+    #[DataProvider('convertedCiiExamplesProvider')]
+    public function testReadingConvertedCiiExamplesToUblIsSuccessful(string $pathToXmlExample): void
+    {
         $xml = file_get_contents($pathToXmlExample);
 
-        expect($xml)->not->toBeFalse();
+        self::assertNotFalse($xml);
 
-        $xml = $this->fixUblRootNode($xml);
+        $xml = self::fixUblRootNode($xml);
 
         $reader = Reader::create()->read($xml);
 
-        expect($reader->isSuccess())->toBeTrue();
-        expect($reader->getDocument())->toBeInstanceOf(UblAbstractDocument::class);
+        self::assertTrue($reader->isSuccess());
+        self::assertInstanceOf(UblAbstractDocument::class, $reader->getDocument());
 
         $document = $reader->getDocument();
 
-        assert($document instanceof UblAbstractDocument);
+        self::assertInstanceOf(UblAbstractDocument::class, $document);
 
         $xmlFromObject = Transformer::create()->transformToXml($document);
 
-        $this->assertSame($this->reformatXml($xml), $this->reformatXml($xmlFromObject));
+        self::assertSame(self::reformatXml($xml), self::reformatXml($xmlFromObject));
     }
-)->with(function () {
-    $finder = (new Finder())
-        ->files()
-        ->name('*.xml')
-        ->in(__DIR__ . '/Examples/UBL/Converted')
-    ;
 
-    foreach ($finder as $file) {
-        yield $file->getFilename() => [$file->getRealPath()];
+    public static function convertedCiiExamplesProvider(): \Generator
+    {
+        $finder = (new Finder())
+            ->files()
+            ->name('*.xml')
+            ->in(__DIR__ . '/Examples/UBL/Converted')
+        ;
+
+        foreach ($finder as $file) {
+            yield $file->getFilename() => [$file->getRealPath()];
+        }
     }
-});
+}

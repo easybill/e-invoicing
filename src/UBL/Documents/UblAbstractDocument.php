@@ -29,22 +29,22 @@ abstract class UblAbstractDocument
     #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('CustomizationID')]
-    public ?string $customizationId = null;
+    public string $customizationId;
 
     #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('ProfileID')]
-    public ?string $profileId = null;
+    public string $profileId;
 
     #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('ID')]
-    public ?string $id = null;
+    public string $id;
 
     #[Type(StringValue::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('IssueDate')]
-    public ?string $issueDate = null;
+    public string $issueDate;
 
     /** @var Note[] */
     #[Type('array<easybill\eInvoicing\UBL\Models\Note>')]
@@ -55,7 +55,7 @@ abstract class UblAbstractDocument
     #[Type(CurrencyCode::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
     #[SerializedName('DocumentCurrencyCode')]
-    public ?CurrencyCode $documentCurrencyCode = null;
+    public CurrencyCode $documentCurrencyCode;
 
     #[Type(CurrencyCode::class)]
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2')]
@@ -154,4 +154,18 @@ abstract class UblAbstractDocument
     #[XmlElement(cdata: false, namespace: 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2')]
     #[SerializedName('LegalMonetaryTotal')]
     public ?LegalMonetaryTotal $legalMonetaryTotal = null;
+
+    public function __construct(
+        string $customizationId,
+        string $profileId,
+        string $id,
+        string $issueDate,
+        CurrencyCode $documentCurrencyCode,
+    ) {
+        $this->customizationId = $customizationId;
+        $this->profileId = $profileId;
+        $this->id = $id;
+        $this->issueDate = $issueDate;
+        $this->documentCurrencyCode = $documentCurrencyCode;
+    }
 }

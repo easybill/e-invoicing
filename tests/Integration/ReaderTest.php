@@ -9,107 +9,93 @@ use easybill\eInvoicing\Dtos\ReaderResult;
 use easybill\eInvoicing\Reader;
 use easybill\eInvoicing\UBL\Documents\UblCredit;
 use easybill\eInvoicing\UBL\Documents\UblInvoice;
+use easybill\eInvoicingTests\TestCase;
+use PHPUnit\Framework\Attributes\DataProvider;
 
-test(
-    'test if the reader can process the provided xml',
-    function (string $filePath, callable $asserter) {
+final class ReaderTest extends TestCase
+{
+    #[DataProvider('readerDataProvider')]
+    public function testReaderCanProcessProvidedXml(string $filePath, \Closure $asserter): void
+    {
         $xml = file_get_contents($filePath);
 
-        expect($xml)->not->toBeFalse();
+        self::assertNotFalse($xml);
 
         $reader = Reader::create()->read($xml);
 
         $asserter($reader);
-    },
-)->with([
-    [
-        __DIR__ . '/Examples/Reader/Broken.xml',
-        function (ReaderResult $readerResult) {
-            expect($readerResult->isError())
-                ->toBeTrue()
-                ->and($readerResult->getError())
-                ->toBeInstanceOf(\RuntimeException::class)
-            ;
-        },
-    ],
-    [
-        __DIR__ . '/Examples/Reader/InvalidFormat.xml',
-        function (ReaderResult $readerResult) {
-            expect($readerResult->isError())
-                ->toBeTrue()
-                ->and($readerResult->getError())
-                ->toBeInstanceOf(\RuntimeException::class)
-                ->and($readerResult->getError()->getPrevious())
-                ->not()
-                ->toBeNull()
-                ->and($readerResult->getError()->getPrevious()->getMessage())
-                ->toContain('CII or UBL syntax is supported.')
-            ;
-        },
-    ],
-    [
-        __DIR__ . '/Examples/Reader/PeppolInvoice.xml',
-        function (ReaderResult $readerResult) {
-            expect($readerResult->isSuccess())
-                ->toBeTrue()
-                ->and($readerResult->getDocument())
-                ->toBeInstanceOf(UblInvoice::class)
-            ;
-        },
-    ],
-    [
-        __DIR__ . '/Examples/Reader/PeppolCredit.xml',
-        function (ReaderResult $readerResult) {
-            expect($readerResult->isSuccess())
-                ->toBeTrue()
-                ->and($readerResult->getDocument())
-                ->toBeInstanceOf(UblCredit::class)
-            ;
-        },
-    ],
-    [
-        __DIR__ . '/Examples/Reader/XRechnungCII.xml',
-        function (ReaderResult $readerResult) {
-            expect($readerResult->isSuccess())
-                ->toBeTrue()
-                ->and($readerResult->getDocument())
-                ->toBeInstanceOf(CrossIndustryInvoice::class)
-            ;
-        },
-    ],
-    [
-        __DIR__ . '/Examples/Reader/XRechnungUBL.xml',
-        function (ReaderResult $readerResult) {
-            expect($readerResult->isSuccess())
-                ->toBeTrue()
-                ->and($readerResult->getDocument())
-                ->toBeInstanceOf(UblInvoice::class)
-            ;
-        },
-    ],
-    [
-        __DIR__ . '/Examples/Reader/ZUGFeRD.xml',
-        function (ReaderResult $readerResult) {
-            expect($readerResult->isSuccess())
-                ->toBeTrue()
-                ->and($readerResult->getDocument())
-                ->toBeInstanceOf(CrossIndustryInvoice::class)
-            ;
-        },
-    ],
-    [
-        __DIR__ . '/Examples/Reader/ublinvoice-invlidID.xml',
-        function (ReaderResult $readerResult) {
-            expect($readerResult->isError())
-                ->toBeTrue()
-                ->and($readerResult->getError())
-                ->toBeInstanceOf(\RuntimeException::class)
-                ->and($readerResult->getError()->getPrevious())
-                ->not()
-                ->toBeNull()
-                ->and($readerResult->getError()->getPrevious()->getMessage())
-                ->toContain('CII or UBL syntax is supported.')
-            ;
-        },
-    ],
-]);
+    }
+
+    /** @return array<string, array{0: string, 1: \Closure}> */
+    public static function readerDataProvider(): array
+    {
+        return [
+            'broken xml' => [
+                __DIR__ . '/Examples/Reader/Broken.xml',
+                function (ReaderResult $readerResult): void {
+                    self::assertTrue($readerResult->isError());
+                    self::assertInstanceOf(\RuntimeException::class, $readerResult->getError());
+                },
+            ],
+            'invalid format xml' => [
+                __DIR__ . '/Examples/Reader/InvalidFormat.xml',
+                function (ReaderResult $readerResult): void {
+                    self::assertTrue($readerResult->isError());
+                    self::assertInstanceOf(\RuntimeException::class, $readerResult->getError());
+                    self::assertNotNull($readerResult->getError()->getPrevious());
+                    self::assertStringContainsString(
+                        'CII or UBL syntax is supported.',
+                        $readerResult->getError()->getPrevious()->getMessage()
+                    );
+                },
+            ],
+            'peppol invoice' => [
+                __DIR__ . '/Examples/Reader/PeppolInvoice.xml',
+                function (ReaderResult $readerResult): void {
+                    self::assertTrue($readerResult->isSuccess());
+                    self::assertInstanceOf(UblInvoice::class, $readerResult->getDocument());
+                },
+            ],
+            'peppol credit' => [
+                __DIR__ . '/Examples/Reader/PeppolCredit.xml',
+                function (ReaderResult $readerResult): void {
+                    self::assertTrue($readerResult->isSuccess());
+                    self::assertInstanceOf(UblCredit::class, $readerResult->getDocument());
+                },
+            ],
+            'xrechnung cii' => [
+                __DIR__ . '/Examples/Reader/XRechnungCII.xml',
+                function (ReaderResult $readerResult): void {
+                    self::assertTrue($readerResult->isSuccess());
+                    self::assertInstanceOf(CrossIndustryInvoice::class, $readerResult->getDocument());
+                },
+            ],
+            'xrechnung ubl' => [
+                __DIR__ . '/Examples/Reader/XRechnungUBL.xml',
+                function (ReaderResult $readerResult): void {
+                    self::assertTrue($readerResult->isSuccess());
+                    self::assertInstanceOf(UblInvoice::class, $readerResult->getDocument());
+                },
+            ],
+            'zugferd' => [
+                __DIR__ . '/Examples/Reader/ZUGFeRD.xml',
+                function (ReaderResult $readerResult): void {
+                    self::assertTrue($readerResult->isSuccess());
+                    self::assertInstanceOf(CrossIndustryInvoice::class, $readerResult->getDocument());
+                },
+            ],
+            'ubl invoice invalid id' => [
+                __DIR__ . '/Examples/Reader/ublinvoice-invlidID.xml',
+                function (ReaderResult $readerResult): void {
+                    self::assertTrue($readerResult->isError());
+                    self::assertInstanceOf(\RuntimeException::class, $readerResult->getError());
+                    self::assertNotNull($readerResult->getError()->getPrevious());
+                    self::assertStringContainsString(
+                        'CII or UBL syntax is supported.',
+                        $readerResult->getError()->getPrevious()->getMessage()
+                    );
+                },
+            ],
+        ];
+    }
+}
