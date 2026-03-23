@@ -47,10 +47,12 @@ final class KositValidator
 
         $errorMsgElems = $docXpath->query('//rep:validationStepResult/rep:message');
 
-        if (is_iterable($errorMsgElems)) {
-            return array_map(fn (\DOMNode $node) => $node->textContent, iterator_to_array($errorMsgElems));
+        if (!is_iterable($errorMsgElems)) {
+            throw new \RuntimeException('could not parse validation errors. MsgElements are not iterable.');
         }
 
-        throw new \RuntimeException('could not parse validation errors');
+        $domNodes = array_filter(iterator_to_array($errorMsgElems), fn (mixed $node) => $node instanceof \DOMNode);
+
+        return array_map(fn (\DOMNode $node) => $node->textContent, $domNodes);
     }
 }
