@@ -42,5 +42,8 @@
 633;Port charges documents;Invoice
 751;Invoice information for accounting purposes;Invoice
 780;Freight invoice;Invoice
+875;Partial construction invoice;Invoice
+876;Partial final construction invoice;Invoice
+877;Final construction invoice;Invoice
 916;Related document;Additional document
 935;Customs invoice;Invoice

@@ -6,6 +6,7 @@ namespace easybill\eInvoicingTests\Integration;
 
 use easybill\eInvoicing\CII\Documents\CrossIndustryInvoice;
 use easybill\eInvoicing\Dtos\ReaderResult;
+use easybill\eInvoicing\Enums\DocumentType;
 use easybill\eInvoicing\Reader;
 use easybill\eInvoicing\UBL\Documents\UblCredit;
 use easybill\eInvoicing\UBL\Documents\UblInvoice;
@@ -82,6 +83,24 @@ final class ReaderTest extends TestCase
                 function (ReaderResult $readerResult): void {
                     self::assertTrue($readerResult->isSuccess());
                     self::assertInstanceOf(CrossIndustryInvoice::class, $readerResult->getDocument());
+                },
+            ],
+            'zugferd partial construction invoice' => [
+                __DIR__ . '/Examples/Reader/ZUGFeRD_PartialConstructionInvoice.xml',
+                function (ReaderResult $readerResult): void {
+                    self::assertTrue($readerResult->isSuccess());
+                    $document = $readerResult->getDocument();
+                    self::assertInstanceOf(CrossIndustryInvoice::class, $document);
+                    self::assertSame(DocumentType::PARTIAL_CONSTRUCTION_INVOICE, $document->exchangedDocument->typeCode);
+                },
+            ],
+            'zugferd final construction invoice' => [
+                __DIR__ . '/Examples/Reader/ZUGFeRD_FinalConstructionInvoice.xml',
+                function (ReaderResult $readerResult): void {
+                    self::assertTrue($readerResult->isSuccess());
+                    $document = $readerResult->getDocument();
+                    self::assertInstanceOf(CrossIndustryInvoice::class, $document);
+                    self::assertSame(DocumentType::FINAL_CONSTRUCTION_INVOICE, $document->exchangedDocument->typeCode);
                 },
             ],
             'ubl invoice invalid id' => [

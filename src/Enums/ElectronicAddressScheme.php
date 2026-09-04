@@ -90,4 +90,7 @@ enum ElectronicAddressScheme: string
     case AS2_EXCHANGE = 'AS';
     case FILE_TRANSFER_PROTOCOL = 'AU';
     case ELECTRONIC_MAIL = 'EM';
+    case DIGAVEID = 'XR01';
+    case FREISCHALTCODE = 'XR02';
+    case IK = 'XR03';
 }
