@@ -7,7 +7,7 @@ function parseCSVFile(string $filename): array
 {
     $countries = [];
     if (($handle = fopen($filename, 'r')) !== false) {
-        while (($data = fgetcsv($handle, 1000, ';')) !== false) {
+        while (($data = fgetcsv($handle, 1000, ';', '"', '')) !== false) {
             if (count($data) >= 2) {
                 $countries[trim($data[0])] = trim($data[1]);
             }

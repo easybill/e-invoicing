@@ -5,7 +5,7 @@ declare(strict_types=1);
 function generateEnumFromCSV(string $csvContent): string
 {
     $csv = array_map(function ($line) {
-        return str_getcsv($line, ';');  // Semikolon als Trennzeichen
+        return str_getcsv($line, ';', '"', '');  // Semikolon als Trennzeichen
     }, array_filter(explode("\n", trim($csvContent))));
 
     $lines = [
