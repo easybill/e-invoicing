@@ -28,6 +28,9 @@ enum DocumentType: int
     case DEBIT_NOTE_RELATED_TO_FINANCIAL_ADJUSTMENTS = 84;
 
     /** Applicable for Invoice. */
+    case TAX_NOTIFICATION = 102;
+
+    /** Applicable for Invoice. */
     case INVOICING_DATA_SHEET = 130;
 
     /** Applicable for Invoice. */
@@ -41,6 +44,12 @@ enum DocumentType: int
 
     /** Applicable for Invoice. */
     case INTERIM_APPLICATION_FOR_PAYMENT = 211;
+
+    /** Applicable for Invoice. */
+    case FINAL_PAYMENT_REQUEST_BASED_ON_COMPLETION_OF_WORK = 218;
+
+    /** Applicable for Invoice. */
+    case PAYMENT_REQUEST_FOR_COMPLETED_UNITS = 219;
 
     /** Applicable for Credit Note. */
     case SELF_BILLED_CREDIT_NOTE = 261;
@@ -64,10 +73,16 @@ enum DocumentType: int
     case PARTIAL_INVOICE = 326;
 
     /** Applicable for Invoice. */
+    case COMMERCIAL_INVOICE_WHICH_INCLUDES_A_PACKING_LIST = 331;
+
+    /** Applicable for Invoice. */
     case COMMERCIAL_INVOICE = 380;
 
     /** Applicable for Credit Note. */
     case CREDIT_NOTE = 381;
+
+    /** Applicable for Invoice. */
+    case COMMISSION_NOTE = 382;
 
     /** Applicable for Invoice. */
     case DEBIT_NOTE = 383;
@@ -118,10 +133,34 @@ enum DocumentType: int
     case REVERSAL_OF_CREDIT = 458;
 
     /** Applicable for Invoice. */
+    case SELF_BILLED_CORRECTIVE_INVOICE_INVOICE_TYPE_CORRECTED = 471;
+
+    /** Applicable for Invoice. */
+    case FACTORED_CORRECTIVE_INVOICE_INVOICE_TYPE_CORRECTED = 472;
+
+    /** Applicable for Invoice. */
+    case SELF_BILLED_FACTORED_CORRECTIVE_INVOICE_INVOICE_TYPE_CORRECTED = 473;
+
+    /** Applicable for Invoice. */
+    case SELF_PREPAYMENT_INVOICE_INVOICE_TYPE_ORIGINAL = 500;
+
+    /** Applicable for Invoice. */
+    case SELF_BILLED_FACTORED_INVOICE_INVOICE_TYPE_ORIGINAL = 501;
+
+    /** Applicable for Credit Note. */
+    case SELF_BILLET_FACTORED_CREDIT_NOTE_CREDIT_NOTE_TYPE_CORRECTED = 502;
+
+    /** Applicable for Credit Note. */
+    case PREPAYMENT_CREDIT_NOTE_CREDIT_NOTE_TYPE_CORRECTED = 503;
+
+    /** Applicable for Invoice. */
     case SELF_BILLED_DEBIT_NOTE = 527;
 
     /** Applicable for Credit Note. */
     case FORWARDER_S_CREDIT_NOTE = 532;
+
+    /** Applicable for Invoice. */
+    case FORWARDER_S_INVOICE_DISCREPANCY_REPORT = 553;
 
     /** Applicable for Invoice. */
     case INSURER_S_INVOICE = 575;
@@ -137,6 +176,12 @@ enum DocumentType: int
 
     /** Applicable for Invoice. */
     case FREIGHT_INVOICE = 780;
+
+    /** Applicable for Invoice. */
+    case CLAIM_NOTIFICATION = 817;
+
+    /** Applicable for Invoice. */
+    case CONSULAR_INVOICE = 870;
 
     /** Applicable for Invoice. */
     case PARTIAL_CONSTRUCTION_INVOICE = 875;

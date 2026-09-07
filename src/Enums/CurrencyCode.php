@@ -108,6 +108,9 @@ enum CurrencyCode: string
     /** Yuan Renminbi */
     case CNY = 'CNY';
 
+    /** Renminbi (offshore) */
+    case CNH = 'CNH';
+
     /** Colombian Peso */
     case COP = 'COP';
 
@@ -393,6 +396,9 @@ enum CurrencyCode: string
     /** Saint Helena Pound */
     case SHP = 'SHP';
 
+    /** Sierra Leone (new valuation 2022) */
+    case SLE = 'SLE';
+
     /** Leone */
     case SLL = 'SLL';
 
@@ -468,6 +474,9 @@ enum CurrencyCode: string
     /** Uzbekistan Sum */
     case UZS = 'UZS';
 
+    /** Bolívar Soberano, new valuation */
+    case VED = 'VED';
+
     /** Bolívar Soberano */
     case VES = 'VES';
 
@@ -504,6 +513,9 @@ enum CurrencyCode: string
     /** East Caribbean Dollar */
     case XCD = 'XCD';
 
+    /** Caribbean guilder */
+    case XCG = 'XCG';
+
     /** SDR (Special Drawing Right) */
     case XDR = 'XDR';
 
@@ -539,6 +551,9 @@ enum CurrencyCode: string
 
     /** Zambian Kwacha */
     case ZMW = 'ZMW';
+
+    /** Zimbabwe Gold */
+    case ZWG = 'ZWG';
 
     /** Zimbabwe Dollar */
     case ZWL = 'ZWL';
