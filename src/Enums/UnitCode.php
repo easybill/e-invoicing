@@ -6,6489 +6,6489 @@ namespace easybill\eInvoicing\Enums;
 
 enum UnitCode: string
 {
-    // group
+    /** group */
     case _10 = '10';
 
-    // outfit
+    /** outfit */
     case _11 = '11';
 
-    // ration
+    /** ration */
     case _13 = '13';
 
-    // shot
+    /** shot */
     case _14 = '14';
 
-    // stick, military
+    /** stick, military */
     case _15 = '15';
 
-    // twenty foot container
+    /** twenty foot container */
     case _20 = '20';
 
-    // forty foot container
+    /** forty foot container */
     case _21 = '21';
 
-    // decilitre per gram
+    /** decilitre per gram */
     case _22 = '22';
 
-    // gram per cubic centimetre
+    /** gram per cubic centimetre */
     case _23 = '23';
 
-    // theoretical pound
+    /** theoretical pound */
     case _24 = '24';
 
-    // gram per square centimetre
+    /** gram per square centimetre */
     case _25 = '25';
 
-    // theoretical ton
+    /** theoretical ton */
     case _27 = '27';
 
-    // kilogram per square metre
+    /** kilogram per square metre */
     case _28 = '28';
 
-    // kilopascal square metre per gram
+    /** kilopascal square metre per gram */
     case _33 = '33';
 
-    // kilopascal per millimetre
+    /** kilopascal per millimetre */
     case _34 = '34';
 
-    // millilitre per square centimetre second
+    /** millilitre per square centimetre second */
     case _35 = '35';
 
-    // ounce per square foot
+    /** ounce per square foot */
     case _37 = '37';
 
-    // ounce per square foot per 0,01inch
+    /** ounce per square foot per 0,01inch */
     case _38 = '38';
 
-    // millilitre per second
+    /** millilitre per second */
     case _40 = '40';
 
-    // millilitre per minute
+    /** millilitre per minute */
     case _41 = '41';
 
-    // sitas
+    /** sitas */
     case _56 = '56';
 
-    // mesh
+    /** mesh */
     case _57 = '57';
 
-    // net kilogram
+    /** net kilogram */
     case _58 = '58';
 
-    // part per million
+    /** part per million */
     case _59 = '59';
 
-    // percent weight
+    /** percent weight */
     case _60 = '60';
 
-    // part per billion (US)
+    /** part per billion (US) */
     case _61 = '61';
 
-    // millipascal
+    /** millipascal */
     case _74 = '74';
 
-    // milli-inch
+    /** milli-inch */
     case _77 = '77';
 
-    // pound per square inch absolute
+    /** pound per square inch absolute */
     case _80 = '80';
 
-    // henry
+    /** henry */
     case _81 = '81';
 
-    // foot pound-force
+    /** foot pound-force */
     case _85 = '85';
 
-    // pound per cubic foot
+    /** pound per cubic foot */
     case _87 = '87';
 
-    // poise
+    /** poise */
     case _89 = '89';
 
-    // stokes
+    /** stokes */
     case _91 = '91';
 
-    // fixed rate
+    /** fixed rate */
     case _1I = '1I';
 
-    // radian per second
+    /** radian per second */
     case _2A = '2A';
 
-    // radian per second squared
+    /** radian per second squared */
     case _2B = '2B';
 
-    // roentgen
+    /** roentgen */
     case _2C = '2C';
 
-    // volt AC
+    /** volt AC */
     case _2G = '2G';
 
-    // volt DC
+    /** volt DC */
     case _2H = '2H';
 
-    // British thermal unit (international table) per hour
+    /** British thermal unit (international table) per hour */
     case _2I = '2I';
 
-    // cubic centimetre per second
+    /** cubic centimetre per second */
     case _2J = '2J';
 
-    // cubic foot per hour
+    /** cubic foot per hour */
     case _2K = '2K';
 
-    // cubic foot per minute
+    /** cubic foot per minute */
     case _2L = '2L';
 
-    // centimetre per second
+    /** centimetre per second */
     case _2M = '2M';
 
-    // decibel
+    /** decibel */
     case _2N = '2N';
 
-    // kilobyte
+    /** kilobyte */
     case _2P = '2P';
 
-    // kilobecquerel
+    /** kilobecquerel */
     case _2Q = '2Q';
 
-    // kilocurie
+    /** kilocurie */
     case _2R = '2R';
 
-    // megagram
+    /** megagram */
     case _2U = '2U';
 
-    // metre per minute
+    /** metre per minute */
     case _2X = '2X';
 
-    // milliroentgen
+    /** milliroentgen */
     case _2Y = '2Y';
 
-    // millivolt
+    /** millivolt */
     case _2Z = '2Z';
 
-    // megajoule
+    /** megajoule */
     case _3B = '3B';
 
-    // manmonth
+    /** manmonth */
     case _3C = '3C';
 
-    // centistokes
+    /** centistokes */
     case _4C = '4C';
 
-    // microlitre
+    /** microlitre */
     case _4G = '4G';
 
-    // micrometre (micron)
+    /** micrometre (micron) */
     case _4H = '4H';
 
-    // milliampere
+    /** milliampere */
     case _4K = '4K';
 
-    // megabyte
+    /** megabyte */
     case _4L = '4L';
 
-    // milligram per hour
+    /** milligram per hour */
     case _4M = '4M';
 
-    // megabecquerel
+    /** megabecquerel */
     case _4N = '4N';
 
-    // microfarad
+    /** microfarad */
     case _4O = '4O';
 
-    // newton per metre
+    /** newton per metre */
     case _4P = '4P';
 
-    // ounce inch
+    /** ounce inch */
     case _4Q = '4Q';
 
-    // ounce foot
+    /** ounce foot */
     case _4R = '4R';
 
-    // picofarad
+    /** picofarad */
     case _4T = '4T';
 
-    // pound per hour
+    /** pound per hour */
     case _4U = '4U';
 
-    // ton (US) per hour
+    /** ton (US) per hour */
     case _4W = '4W';
 
-    // kilolitre per hour
+    /** kilolitre per hour */
     case _4X = '4X';
 
-    // barrel (US) per minute
+    /** barrel (US) per minute */
     case _5A = '5A';
 
-    // batch
+    /** batch */
     case _5B = '5B';
 
-    // MMSCF/day
+    /** MMSCF/day */
     case _5E = '5E';
 
-    // hydraulic horse power
+    /** hydraulic horse power */
     case _5J = '5J';
 
-    // ampere square metre per joule second
+    /** ampere square metre per joule second */
     case A10 = 'A10';
 
-    // angstrom
+    /** angstrom */
     case A11 = 'A11';
 
-    // astronomical unit
+    /** astronomical unit */
     case A12 = 'A12';
 
-    // attojoule
+    /** attojoule */
     case A13 = 'A13';
 
-    // barn
+    /** barn */
     case A14 = 'A14';
 
-    // barn per electronvolt
+    /** barn per electronvolt */
     case A15 = 'A15';
 
-    // barn per steradian electronvolt
+    /** barn per steradian electronvolt */
     case A16 = 'A16';
 
-    // barn per steradian
+    /** barn per steradian */
     case A17 = 'A17';
 
-    // becquerel per kilogram
+    /** becquerel per kilogram */
     case A18 = 'A18';
 
-    // becquerel per cubic metre
+    /** becquerel per cubic metre */
     case A19 = 'A19';
 
-    // ampere per centimetre
+    /** ampere per centimetre */
     case A2 = 'A2';
 
-    // British thermal unit (international table) per second square foot degree Rankine
+    /** British thermal unit (international table) per second square foot degree Rankine */
     case A20 = 'A20';
 
-    // British thermal unit (international table) per pound degree Rankine
+    /** British thermal unit (international table) per pound degree Rankine */
     case A21 = 'A21';
 
-    // British thermal unit (international table) per second foot degree Rankine
+    /** British thermal unit (international table) per second foot degree Rankine */
     case A22 = 'A22';
 
-    // British thermal unit (international table) per hour square foot degree Rankine
+    /** British thermal unit (international table) per hour square foot degree Rankine */
     case A23 = 'A23';
 
-    // candela per square metre
+    /** candela per square metre */
     case A24 = 'A24';
 
-    // coulomb metre
+    /** coulomb metre */
     case A26 = 'A26';
 
-    // coulomb metre squared per volt
+    /** coulomb metre squared per volt */
     case A27 = 'A27';
 
-    // coulomb per cubic centimetre
+    /** coulomb per cubic centimetre */
     case A28 = 'A28';
 
-    // coulomb per cubic metre
+    /** coulomb per cubic metre */
     case A29 = 'A29';
 
-    // ampere per millimetre
+    /** ampere per millimetre */
     case A3 = 'A3';
 
-    // coulomb per cubic millimetre
+    /** coulomb per cubic millimetre */
     case A30 = 'A30';
 
-    // coulomb per kilogram second
+    /** coulomb per kilogram second */
     case A31 = 'A31';
 
-    // coulomb per mole
+    /** coulomb per mole */
     case A32 = 'A32';
 
-    // coulomb per square centimetre
+    /** coulomb per square centimetre */
     case A33 = 'A33';
 
-    // coulomb per square metre
+    /** coulomb per square metre */
     case A34 = 'A34';
 
-    // coulomb per square millimetre
+    /** coulomb per square millimetre */
     case A35 = 'A35';
 
-    // cubic centimetre per mole
+    /** cubic centimetre per mole */
     case A36 = 'A36';
 
-    // cubic decimetre per mole
+    /** cubic decimetre per mole */
     case A37 = 'A37';
 
-    // cubic metre per coulomb
+    /** cubic metre per coulomb */
     case A38 = 'A38';
 
-    // cubic metre per kilogram
+    /** cubic metre per kilogram */
     case A39 = 'A39';
 
-    // ampere per square centimetre
+    /** ampere per square centimetre */
     case A4 = 'A4';
 
-    // cubic metre per mole
+    /** cubic metre per mole */
     case A40 = 'A40';
 
-    // ampere per square metre
+    /** ampere per square metre */
     case A41 = 'A41';
 
-    // curie per kilogram
+    /** curie per kilogram */
     case A42 = 'A42';
 
-    // deadweight tonnage
+    /** deadweight tonnage */
     case A43 = 'A43';
 
-    // decalitre
+    /** decalitre */
     case A44 = 'A44';
 
-    // decametre
+    /** decametre */
     case A45 = 'A45';
 
-    // decitex
+    /** decitex */
     case A47 = 'A47';
 
-    // degree Rankine
+    /** degree Rankine */
     case A48 = 'A48';
 
-    // denier
+    /** denier */
     case A49 = 'A49';
 
-    // ampere square metre
+    /** ampere square metre */
     case A5 = 'A5';
 
-    // electronvolt
+    /** electronvolt */
     case A53 = 'A53';
 
-    // electronvolt per metre
+    /** electronvolt per metre */
     case A54 = 'A54';
 
-    // electronvolt square metre
+    /** electronvolt square metre */
     case A55 = 'A55';
 
-    // electronvolt square metre per kilogram
+    /** electronvolt square metre per kilogram */
     case A56 = 'A56';
 
-    // 8-part cloud cover
+    /** 8-part cloud cover */
     case A59 = 'A59';
 
-    // ampere per square metre kelvin squared
+    /** ampere per square metre kelvin squared */
     case A6 = 'A6';
 
-    // exajoule
+    /** exajoule */
     case A68 = 'A68';
 
-    // farad per metre
+    /** farad per metre */
     case A69 = 'A69';
 
-    // ampere per square millimetre
+    /** ampere per square millimetre */
     case A7 = 'A7';
 
-    // femtojoule
+    /** femtojoule */
     case A70 = 'A70';
 
-    // femtometre
+    /** femtometre */
     case A71 = 'A71';
 
-    // foot per second squared
+    /** foot per second squared */
     case A73 = 'A73';
 
-    // foot pound-force per second
+    /** foot pound-force per second */
     case A74 = 'A74';
 
-    // freight ton
+    /** freight ton */
     case A75 = 'A75';
 
-    // gal
+    /** gal */
     case A76 = 'A76';
 
-    // ampere second
+    /** ampere second */
     case A8 = 'A8';
 
-    // gigacoulomb per cubic metre
+    /** gigacoulomb per cubic metre */
     case A84 = 'A84';
 
-    // gigaelectronvolt
+    /** gigaelectronvolt */
     case A85 = 'A85';
 
-    // gigahertz
+    /** gigahertz */
     case A86 = 'A86';
 
-    // gigaohm
+    /** gigaohm */
     case A87 = 'A87';
 
-    // gigaohm metre
+    /** gigaohm metre */
     case A88 = 'A88';
 
-    // gigapascal
+    /** gigapascal */
     case A89 = 'A89';
 
-    // rate
+    /** rate */
     case A9 = 'A9';
 
-    // gigawatt
+    /** gigawatt */
     case A90 = 'A90';
 
-    // gon
+    /** gon */
     case A91 = 'A91';
 
-    // gram per cubic metre
+    /** gram per cubic metre */
     case A93 = 'A93';
 
-    // gram per mole
+    /** gram per mole */
     case A94 = 'A94';
 
-    // gray
+    /** gray */
     case A95 = 'A95';
 
-    // gray per second
+    /** gray per second */
     case A96 = 'A96';
 
-    // hectopascal
+    /** hectopascal */
     case A97 = 'A97';
 
-    // henry per metre
+    /** henry per metre */
     case A98 = 'A98';
 
-    // bit
+    /** bit */
     case A99 = 'A99';
 
-    // ball
+    /** ball */
     case AA = 'AA';
 
-    // bulk pack
+    /** bulk pack */
     case AB = 'AB';
 
-    // acre
+    /** acre */
     case ACR = 'ACR';
 
-    // activity
+    /** activity */
     case ACT = 'ACT';
 
-    // byte
+    /** byte */
     case AD = 'AD';
 
-    // ampere per metre
+    /** ampere per metre */
     case AE = 'AE';
 
-    // additional minute
+    /** additional minute */
     case AH = 'AH';
 
-    // average minute per call
+    /** average minute per call */
     case AI = 'AI';
 
-    // fathom
+    /** fathom */
     case AK = 'AK';
 
-    // access line
+    /** access line */
     case AL = 'AL';
 
-    // ampere hour
+    /** ampere hour */
     case AMH = 'AMH';
 
-    // ampere
+    /** ampere */
     case AMP = 'AMP';
 
-    // year
+    /** year */
     case ANN = 'ANN';
 
-    // troy ounce or apothecary ounce
+    /** troy ounce or apothecary ounce */
     case APZ = 'APZ';
 
-    // anti-hemophilic factor (AHF) unit
+    /** anti-hemophilic factor (AHF) unit */
     case AQ = 'AQ';
 
-    // assortment
+    /** assortment */
     case AS = 'AS';
 
-    // alcoholic strength by mass
+    /** alcoholic strength by mass */
     case ASM = 'ASM';
 
-    // alcoholic strength by volume
+    /** alcoholic strength by volume */
     case ASU = 'ASU';
 
-    // standard atmosphere
+    /** standard atmosphere */
     case ATM = 'ATM';
 
-    // american wire gauge
+    /** american wire gauge */
     case AWG = 'AWG';
 
-    // assembly
+    /** assembly */
     case AY = 'AY';
 
-    // British thermal unit (international table) per pound
+    /** British thermal unit (international table) per pound */
     case AZ = 'AZ';
 
-    // barrel (US) per day
+    /** barrel (US) per day */
     case B1 = 'B1';
 
-    // bit per second
+    /** bit per second */
     case B10 = 'B10';
 
-    // joule per kilogram kelvin
+    /** joule per kilogram kelvin */
     case B11 = 'B11';
 
-    // joule per metre
+    /** joule per metre */
     case B12 = 'B12';
 
-    // joule per square metre
+    /** joule per square metre */
     case B13 = 'B13';
 
-    // joule per metre to the fourth power
+    /** joule per metre to the fourth power */
     case B14 = 'B14';
 
-    // joule per mole
+    /** joule per mole */
     case B15 = 'B15';
 
-    // joule per mole kelvin
+    /** joule per mole kelvin */
     case B16 = 'B16';
 
-    // credit
+    /** credit */
     case B17 = 'B17';
 
-    // joule second
+    /** joule second */
     case B18 = 'B18';
 
-    // digit
+    /** digit */
     case B19 = 'B19';
 
-    // joule square metre per kilogram
+    /** joule square metre per kilogram */
     case B20 = 'B20';
 
-    // kelvin per watt
+    /** kelvin per watt */
     case B21 = 'B21';
 
-    // kiloampere
+    /** kiloampere */
     case B22 = 'B22';
 
-    // kiloampere per square metre
+    /** kiloampere per square metre */
     case B23 = 'B23';
 
-    // kiloampere per metre
+    /** kiloampere per metre */
     case B24 = 'B24';
 
-    // kilobecquerel per kilogram
+    /** kilobecquerel per kilogram */
     case B25 = 'B25';
 
-    // kilocoulomb
+    /** kilocoulomb */
     case B26 = 'B26';
 
-    // kilocoulomb per cubic metre
+    /** kilocoulomb per cubic metre */
     case B27 = 'B27';
 
-    // kilocoulomb per square metre
+    /** kilocoulomb per square metre */
     case B28 = 'B28';
 
-    // kiloelectronvolt
+    /** kiloelectronvolt */
     case B29 = 'B29';
 
-    // batting pound
+    /** batting pound */
     case B3 = 'B3';
 
-    // gibibit
+    /** gibibit */
     case B30 = 'B30';
 
-    // kilogram metre per second
+    /** kilogram metre per second */
     case B31 = 'B31';
 
-    // kilogram metre squared
+    /** kilogram metre squared */
     case B32 = 'B32';
 
-    // kilogram metre squared per second
+    /** kilogram metre squared per second */
     case B33 = 'B33';
 
-    // kilogram per cubic decimetre
+    /** kilogram per cubic decimetre */
     case B34 = 'B34';
 
-    // kilogram per litre
+    /** kilogram per litre */
     case B35 = 'B35';
 
-    // barrel, imperial
+    /** barrel, imperial */
     case B4 = 'B4';
 
-    // kilojoule per kelvin
+    /** kilojoule per kelvin */
     case B41 = 'B41';
 
-    // kilojoule per kilogram
+    /** kilojoule per kilogram */
     case B42 = 'B42';
 
-    // kilojoule per kilogram kelvin
+    /** kilojoule per kilogram kelvin */
     case B43 = 'B43';
 
-    // kilojoule per mole
+    /** kilojoule per mole */
     case B44 = 'B44';
 
-    // kilomole
+    /** kilomole */
     case B45 = 'B45';
 
-    // kilomole per cubic metre
+    /** kilomole per cubic metre */
     case B46 = 'B46';
 
-    // kilonewton
+    /** kilonewton */
     case B47 = 'B47';
 
-    // kilonewton metre
+    /** kilonewton metre */
     case B48 = 'B48';
 
-    // kiloohm
+    /** kiloohm */
     case B49 = 'B49';
 
-    // kiloohm metre
+    /** kiloohm metre */
     case B50 = 'B50';
 
-    // kilosecond
+    /** kilosecond */
     case B52 = 'B52';
 
-    // kilosiemens
+    /** kilosiemens */
     case B53 = 'B53';
 
-    // kilosiemens per metre
+    /** kilosiemens per metre */
     case B54 = 'B54';
 
-    // kilovolt per metre
+    /** kilovolt per metre */
     case B55 = 'B55';
 
-    // kiloweber per metre
+    /** kiloweber per metre */
     case B56 = 'B56';
 
-    // light year
+    /** light year */
     case B57 = 'B57';
 
-    // litre per mole
+    /** litre per mole */
     case B58 = 'B58';
 
-    // lumen hour
+    /** lumen hour */
     case B59 = 'B59';
 
-    // lumen per square metre
+    /** lumen per square metre */
     case B60 = 'B60';
 
-    // lumen per watt
+    /** lumen per watt */
     case B61 = 'B61';
 
-    // lumen second
+    /** lumen second */
     case B62 = 'B62';
 
-    // lux hour
+    /** lux hour */
     case B63 = 'B63';
 
-    // lux second
+    /** lux second */
     case B64 = 'B64';
 
-    // megaampere per square metre
+    /** megaampere per square metre */
     case B66 = 'B66';
 
-    // megabecquerel per kilogram
+    /** megabecquerel per kilogram */
     case B67 = 'B67';
 
-    // gigabit
+    /** gigabit */
     case B68 = 'B68';
 
-    // megacoulomb per cubic metre
+    /** megacoulomb per cubic metre */
     case B69 = 'B69';
 
-    // cycle
+    /** cycle */
     case B7 = 'B7';
 
-    // megacoulomb per square metre
+    /** megacoulomb per square metre */
     case B70 = 'B70';
 
-    // megaelectronvolt
+    /** megaelectronvolt */
     case B71 = 'B71';
 
-    // megagram per cubic metre
+    /** megagram per cubic metre */
     case B72 = 'B72';
 
-    // meganewton
+    /** meganewton */
     case B73 = 'B73';
 
-    // meganewton metre
+    /** meganewton metre */
     case B74 = 'B74';
 
-    // megaohm
+    /** megaohm */
     case B75 = 'B75';
 
-    // megaohm metre
+    /** megaohm metre */
     case B76 = 'B76';
 
-    // megasiemens per metre
+    /** megasiemens per metre */
     case B77 = 'B77';
 
-    // megavolt
+    /** megavolt */
     case B78 = 'B78';
 
-    // megavolt per metre
+    /** megavolt per metre */
     case B79 = 'B79';
 
-    // joule per cubic metre
+    /** joule per cubic metre */
     case B8 = 'B8';
 
-    // gigabit per second
+    /** gigabit per second */
     case B80 = 'B80';
 
-    // reciprocal metre squared reciprocal second
+    /** reciprocal metre squared reciprocal second */
     case B81 = 'B81';
 
-    // inch per linear foot
+    /** inch per linear foot */
     case B82 = 'B82';
 
-    // metre to the fourth power
+    /** metre to the fourth power */
     case B83 = 'B83';
 
-    // microampere
+    /** microampere */
     case B84 = 'B84';
 
-    // microbar
+    /** microbar */
     case B85 = 'B85';
 
-    // microcoulomb
+    /** microcoulomb */
     case B86 = 'B86';
 
-    // microcoulomb per cubic metre
+    /** microcoulomb per cubic metre */
     case B87 = 'B87';
 
-    // microcoulomb per square metre
+    /** microcoulomb per square metre */
     case B88 = 'B88';
 
-    // microfarad per metre
+    /** microfarad per metre */
     case B89 = 'B89';
 
-    // microhenry
+    /** microhenry */
     case B90 = 'B90';
 
-    // microhenry per metre
+    /** microhenry per metre */
     case B91 = 'B91';
 
-    // micronewton
+    /** micronewton */
     case B92 = 'B92';
 
-    // micronewton metre
+    /** micronewton metre */
     case B93 = 'B93';
 
-    // microohm
+    /** microohm */
     case B94 = 'B94';
 
-    // microohm metre
+    /** microohm metre */
     case B95 = 'B95';
 
-    // micropascal
+    /** micropascal */
     case B96 = 'B96';
 
-    // microradian
+    /** microradian */
     case B97 = 'B97';
 
-    // microsecond
+    /** microsecond */
     case B98 = 'B98';
 
-    // microsiemens
+    /** microsiemens */
     case B99 = 'B99';
 
-    // bar [unit of pressure]
+    /** bar [unit of pressure] */
     case BAR = 'BAR';
 
-    // base box
+    /** base box */
     case BB = 'BB';
 
-    // board foot
+    /** board foot */
     case BFT = 'BFT';
 
-    // brake horse power
+    /** brake horse power */
     case BHP = 'BHP';
 
-    // billion (EUR)
+    /** billion (EUR) */
     case BIL = 'BIL';
 
-    // dry barrel (US)
+    /** dry barrel (US) */
     case BLD = 'BLD';
 
-    // barrel (US)
+    /** barrel (US) */
     case BLL = 'BLL';
 
-    // hundred board foot
+    /** hundred board foot */
     case BP = 'BP';
 
-    // beats per minute
+    /** beats per minute */
     case BPM = 'BPM';
 
-    // becquerel
+    /** becquerel */
     case BQL = 'BQL';
 
-    // British thermal unit (international table)
+    /** British thermal unit (international table) */
     case BTU = 'BTU';
 
-    // bushel (US)
+    /** bushel (US) */
     case BUA = 'BUA';
 
-    // bushel (UK)
+    /** bushel (UK) */
     case BUI = 'BUI';
 
-    // call
+    /** call */
     case C0 = 'C0';
 
-    // millifarad
+    /** millifarad */
     case C10 = 'C10';
 
-    // milligal
+    /** milligal */
     case C11 = 'C11';
 
-    // milligram per metre
+    /** milligram per metre */
     case C12 = 'C12';
 
-    // milligray
+    /** milligray */
     case C13 = 'C13';
 
-    // millihenry
+    /** millihenry */
     case C14 = 'C14';
 
-    // millijoule
+    /** millijoule */
     case C15 = 'C15';
 
-    // millimetre per second
+    /** millimetre per second */
     case C16 = 'C16';
 
-    // millimetre squared per second
+    /** millimetre squared per second */
     case C17 = 'C17';
 
-    // millimole
+    /** millimole */
     case C18 = 'C18';
 
-    // mole per kilogram
+    /** mole per kilogram */
     case C19 = 'C19';
 
-    // millinewton
+    /** millinewton */
     case C20 = 'C20';
 
-    // kibibit
+    /** kibibit */
     case C21 = 'C21';
 
-    // millinewton per metre
+    /** millinewton per metre */
     case C22 = 'C22';
 
-    // milliohm metre
+    /** milliohm metre */
     case C23 = 'C23';
 
-    // millipascal second
+    /** millipascal second */
     case C24 = 'C24';
 
-    // milliradian
+    /** milliradian */
     case C25 = 'C25';
 
-    // millisecond
+    /** millisecond */
     case C26 = 'C26';
 
-    // millisiemens
+    /** millisiemens */
     case C27 = 'C27';
 
-    // millisievert
+    /** millisievert */
     case C28 = 'C28';
 
-    // millitesla
+    /** millitesla */
     case C29 = 'C29';
 
-    // microvolt per metre
+    /** microvolt per metre */
     case C3 = 'C3';
 
-    // millivolt per metre
+    /** millivolt per metre */
     case C30 = 'C30';
 
-    // milliwatt
+    /** milliwatt */
     case C31 = 'C31';
 
-    // milliwatt per square metre
+    /** milliwatt per square metre */
     case C32 = 'C32';
 
-    // milliweber
+    /** milliweber */
     case C33 = 'C33';
 
-    // mole
+    /** mole */
     case C34 = 'C34';
 
-    // mole per cubic decimetre
+    /** mole per cubic decimetre */
     case C35 = 'C35';
 
-    // mole per cubic metre
+    /** mole per cubic metre */
     case C36 = 'C36';
 
-    // kilobit
+    /** kilobit */
     case C37 = 'C37';
 
-    // mole per litre
+    /** mole per litre */
     case C38 = 'C38';
 
-    // nanoampere
+    /** nanoampere */
     case C39 = 'C39';
 
-    // nanocoulomb
+    /** nanocoulomb */
     case C40 = 'C40';
 
-    // nanofarad
+    /** nanofarad */
     case C41 = 'C41';
 
-    // nanofarad per metre
+    /** nanofarad per metre */
     case C42 = 'C42';
 
-    // nanohenry
+    /** nanohenry */
     case C43 = 'C43';
 
-    // nanohenry per metre
+    /** nanohenry per metre */
     case C44 = 'C44';
 
-    // nanometre
+    /** nanometre */
     case C45 = 'C45';
 
-    // nanoohm metre
+    /** nanoohm metre */
     case C46 = 'C46';
 
-    // nanosecond
+    /** nanosecond */
     case C47 = 'C47';
 
-    // nanotesla
+    /** nanotesla */
     case C48 = 'C48';
 
-    // nanowatt
+    /** nanowatt */
     case C49 = 'C49';
 
-    // neper
+    /** neper */
     case C50 = 'C50';
 
-    // neper per second
+    /** neper per second */
     case C51 = 'C51';
 
-    // picometre
+    /** picometre */
     case C52 = 'C52';
 
-    // newton metre second
+    /** newton metre second */
     case C53 = 'C53';
 
-    // newton metre squared per kilogram squared
+    /** newton metre squared per kilogram squared */
     case C54 = 'C54';
 
-    // newton per square metre
+    /** newton per square metre */
     case C55 = 'C55';
 
-    // newton per square millimetre
+    /** newton per square millimetre */
     case C56 = 'C56';
 
-    // newton second
+    /** newton second */
     case C57 = 'C57';
 
-    // newton second per metre
+    /** newton second per metre */
     case C58 = 'C58';
 
-    // octave
+    /** octave */
     case C59 = 'C59';
 
-    // ohm centimetre
+    /** ohm centimetre */
     case C60 = 'C60';
 
-    // ohm metre
+    /** ohm metre */
     case C61 = 'C61';
 
-    // one
+    /** one */
     case C62 = 'C62';
 
-    // parsec
+    /** parsec */
     case C63 = 'C63';
 
-    // pascal per kelvin
+    /** pascal per kelvin */
     case C64 = 'C64';
 
-    // pascal second
+    /** pascal second */
     case C65 = 'C65';
 
-    // pascal second per cubic metre
+    /** pascal second per cubic metre */
     case C66 = 'C66';
 
-    // pascal second per metre
+    /** pascal second per metre */
     case C67 = 'C67';
 
-    // petajoule
+    /** petajoule */
     case C68 = 'C68';
 
-    // phon
+    /** phon */
     case C69 = 'C69';
 
-    // centipoise
+    /** centipoise */
     case C7 = 'C7';
 
-    // picoampere
+    /** picoampere */
     case C70 = 'C70';
 
-    // picocoulomb
+    /** picocoulomb */
     case C71 = 'C71';
 
-    // picofarad per metre
+    /** picofarad per metre */
     case C72 = 'C72';
 
-    // picohenry
+    /** picohenry */
     case C73 = 'C73';
 
-    // kilobit per second
+    /** kilobit per second */
     case C74 = 'C74';
 
-    // picowatt
+    /** picowatt */
     case C75 = 'C75';
 
-    // picowatt per square metre
+    /** picowatt per square metre */
     case C76 = 'C76';
 
-    // pound-force
+    /** pound-force */
     case C78 = 'C78';
 
-    // kilovolt ampere hour
+    /** kilovolt ampere hour */
     case C79 = 'C79';
 
-    // millicoulomb per kilogram
+    /** millicoulomb per kilogram */
     case C8 = 'C8';
 
-    // rad
+    /** rad */
     case C80 = 'C80';
 
-    // radian
+    /** radian */
     case C81 = 'C81';
 
-    // radian square metre per mole
+    /** radian square metre per mole */
     case C82 = 'C82';
 
-    // radian square metre per kilogram
+    /** radian square metre per kilogram */
     case C83 = 'C83';
 
-    // radian per metre
+    /** radian per metre */
     case C84 = 'C84';
 
-    // reciprocal angstrom
+    /** reciprocal angstrom */
     case C85 = 'C85';
 
-    // reciprocal cubic metre
+    /** reciprocal cubic metre */
     case C86 = 'C86';
 
-    // reciprocal cubic metre per second
+    /** reciprocal cubic metre per second */
     case C87 = 'C87';
 
-    // reciprocal electron volt per cubic metre
+    /** reciprocal electron volt per cubic metre */
     case C88 = 'C88';
 
-    // reciprocal henry
+    /** reciprocal henry */
     case C89 = 'C89';
 
-    // coil group
+    /** coil group */
     case C9 = 'C9';
 
-    // reciprocal joule per cubic metre
+    /** reciprocal joule per cubic metre */
     case C90 = 'C90';
 
-    // reciprocal kelvin or kelvin to the power minus one
+    /** reciprocal kelvin or kelvin to the power minus one */
     case C91 = 'C91';
 
-    // reciprocal metre
+    /** reciprocal metre */
     case C92 = 'C92';
 
-    // reciprocal square metre
+    /** reciprocal square metre */
     case C93 = 'C93';
 
-    // reciprocal minute
+    /** reciprocal minute */
     case C94 = 'C94';
 
-    // reciprocal mole
+    /** reciprocal mole */
     case C95 = 'C95';
 
-    // reciprocal pascal or pascal to the power minus one
+    /** reciprocal pascal or pascal to the power minus one */
     case C96 = 'C96';
 
-    // reciprocal second
+    /** reciprocal second */
     case C97 = 'C97';
 
-    // reciprocal second per metre squared
+    /** reciprocal second per metre squared */
     case C99 = 'C99';
 
-    // carrying capacity in metric ton
+    /** carrying capacity in metric ton */
     case CCT = 'CCT';
 
-    // candela
+    /** candela */
     case CDL = 'CDL';
 
-    // degree Celsius
+    /** degree Celsius */
     case CEL = 'CEL';
 
-    // hundred
+    /** hundred */
     case CEN = 'CEN';
 
-    // card
+    /** card */
     case CG = 'CG';
 
-    // centigram
+    /** centigram */
     case CGM = 'CGM';
 
-    // coulomb per kilogram
+    /** coulomb per kilogram */
     case CKG = 'CKG';
 
-    // hundred leave
+    /** hundred leave */
     case CLF = 'CLF';
 
-    // centilitre
+    /** centilitre */
     case CLT = 'CLT';
 
-    // square centimetre
+    /** square centimetre */
     case CMK = 'CMK';
 
-    // cubic centimetre
+    /** cubic centimetre */
     case CMQ = 'CMQ';
 
-    // centimetre
+    /** centimetre */
     case CMT = 'CMT';
 
-    // hundred pack
+    /** hundred pack */
     case CNP = 'CNP';
 
-    // cental (UK)
+    /** cental (UK) */
     case CNT = 'CNT';
 
-    // coulomb
+    /** coulomb */
     case COU = 'COU';
 
-    // content gram
+    /** content gram */
     case CTG = 'CTG';
 
-    // metric carat
+    /** metric carat */
     case CTM = 'CTM';
 
-    // content ton (metric)
+    /** content ton (metric) */
     case CTN = 'CTN';
 
-    // curie
+    /** curie */
     case CUR = 'CUR';
 
-    // hundred pound (cwt) / hundred weight (US)
+    /** hundred pound (cwt) / hundred weight (US) */
     case CWA = 'CWA';
 
-    // hundred weight (UK)
+    /** hundred weight (UK) */
     case CWI = 'CWI';
 
-    // kilowatt hour per hour
+    /** kilowatt hour per hour */
     case D03 = 'D03';
 
-    // lot  [unit of weight]
+    /** lot  [unit of weight] */
     case D04 = 'D04';
 
-    // reciprocal second per steradian
+    /** reciprocal second per steradian */
     case D1 = 'D1';
 
-    // siemens per metre
+    /** siemens per metre */
     case D10 = 'D10';
 
-    // mebibit
+    /** mebibit */
     case D11 = 'D11';
 
-    // siemens square metre per mole
+    /** siemens square metre per mole */
     case D12 = 'D12';
 
-    // sievert
+    /** sievert */
     case D13 = 'D13';
 
-    // sone
+    /** sone */
     case D15 = 'D15';
 
-    // square centimetre per erg
+    /** square centimetre per erg */
     case D16 = 'D16';
 
-    // square centimetre per steradian erg
+    /** square centimetre per steradian erg */
     case D17 = 'D17';
 
-    // metre kelvin
+    /** metre kelvin */
     case D18 = 'D18';
 
-    // square metre kelvin per watt
+    /** square metre kelvin per watt */
     case D19 = 'D19';
 
-    // reciprocal second per steradian metre squared
+    /** reciprocal second per steradian metre squared */
     case D2 = 'D2';
 
-    // square metre per joule
+    /** square metre per joule */
     case D20 = 'D20';
 
-    // square metre per kilogram
+    /** square metre per kilogram */
     case D21 = 'D21';
 
-    // square metre per mole
+    /** square metre per mole */
     case D22 = 'D22';
 
-    // pen gram (protein)
+    /** pen gram (protein) */
     case D23 = 'D23';
 
-    // square metre per steradian
+    /** square metre per steradian */
     case D24 = 'D24';
 
-    // square metre per steradian joule
+    /** square metre per steradian joule */
     case D25 = 'D25';
 
-    // square metre per volt second
+    /** square metre per volt second */
     case D26 = 'D26';
 
-    // steradian
+    /** steradian */
     case D27 = 'D27';
 
-    // terahertz
+    /** terahertz */
     case D29 = 'D29';
 
-    // terajoule
+    /** terajoule */
     case D30 = 'D30';
 
-    // terawatt
+    /** terawatt */
     case D31 = 'D31';
 
-    // terawatt hour
+    /** terawatt hour */
     case D32 = 'D32';
 
-    // tesla
+    /** tesla */
     case D33 = 'D33';
 
-    // tex
+    /** tex */
     case D34 = 'D34';
 
-    // megabit
+    /** megabit */
     case D36 = 'D36';
 
-    // tonne per cubic metre
+    /** tonne per cubic metre */
     case D41 = 'D41';
 
-    // tropical year
+    /** tropical year */
     case D42 = 'D42';
 
-    // unified atomic mass unit
+    /** unified atomic mass unit */
     case D43 = 'D43';
 
-    // var
+    /** var */
     case D44 = 'D44';
 
-    // volt squared per kelvin squared
+    /** volt squared per kelvin squared */
     case D45 = 'D45';
 
-    // volt - ampere
+    /** volt - ampere */
     case D46 = 'D46';
 
-    // volt per centimetre
+    /** volt per centimetre */
     case D47 = 'D47';
 
-    // volt per kelvin
+    /** volt per kelvin */
     case D48 = 'D48';
 
-    // millivolt per kelvin
+    /** millivolt per kelvin */
     case D49 = 'D49';
 
-    // kilogram per square centimetre
+    /** kilogram per square centimetre */
     case D5 = 'D5';
 
-    // volt per metre
+    /** volt per metre */
     case D50 = 'D50';
 
-    // volt per millimetre
+    /** volt per millimetre */
     case D51 = 'D51';
 
-    // watt per kelvin
+    /** watt per kelvin */
     case D52 = 'D52';
 
-    // watt per metre kelvin
+    /** watt per metre kelvin */
     case D53 = 'D53';
 
-    // watt per square metre
+    /** watt per square metre */
     case D54 = 'D54';
 
-    // watt per square metre kelvin
+    /** watt per square metre kelvin */
     case D55 = 'D55';
 
-    // watt per square metre kelvin to the fourth power
+    /** watt per square metre kelvin to the fourth power */
     case D56 = 'D56';
 
-    // watt per steradian
+    /** watt per steradian */
     case D57 = 'D57';
 
-    // watt per steradian square metre
+    /** watt per steradian square metre */
     case D58 = 'D58';
 
-    // weber per metre
+    /** weber per metre */
     case D59 = 'D59';
 
-    // roentgen per second
+    /** roentgen per second */
     case D6 = 'D6';
 
-    // weber per millimetre
+    /** weber per millimetre */
     case D60 = 'D60';
 
-    // minute [unit of angle]
+    /** minute [unit of angle] */
     case D61 = 'D61';
 
-    // second [unit of angle]
+    /** second [unit of angle] */
     case D62 = 'D62';
 
-    // book
+    /** book */
     case D63 = 'D63';
 
-    // round
+    /** round */
     case D65 = 'D65';
 
-    // number of words
+    /** number of words */
     case D68 = 'D68';
 
-    // inch to the fourth power
+    /** inch to the fourth power */
     case D69 = 'D69';
 
-    // joule square metre
+    /** joule square metre */
     case D73 = 'D73';
 
-    // kilogram per mole
+    /** kilogram per mole */
     case D74 = 'D74';
 
-    // megacoulomb
+    /** megacoulomb */
     case D77 = 'D77';
 
-    // megajoule per second
+    /** megajoule per second */
     case D78 = 'D78';
 
-    // microwatt
+    /** microwatt */
     case D80 = 'D80';
 
-    // microtesla
+    /** microtesla */
     case D81 = 'D81';
 
-    // microvolt
+    /** microvolt */
     case D82 = 'D82';
 
-    // millinewton metre
+    /** millinewton metre */
     case D83 = 'D83';
 
-    // microwatt per square metre
+    /** microwatt per square metre */
     case D85 = 'D85';
 
-    // millicoulomb
+    /** millicoulomb */
     case D86 = 'D86';
 
-    // millimole per kilogram
+    /** millimole per kilogram */
     case D87 = 'D87';
 
-    // millicoulomb per cubic metre
+    /** millicoulomb per cubic metre */
     case D88 = 'D88';
 
-    // millicoulomb per square metre
+    /** millicoulomb per square metre */
     case D89 = 'D89';
 
-    // rem
+    /** rem */
     case D91 = 'D91';
 
-    // second per cubic metre
+    /** second per cubic metre */
     case D93 = 'D93';
 
-    // second per cubic metre radian
+    /** second per cubic metre radian */
     case D94 = 'D94';
 
-    // joule per gram
+    /** joule per gram */
     case D95 = 'D95';
 
-    // decare
+    /** decare */
     case DAA = 'DAA';
 
-    // ten day
+    /** ten day */
     case DAD = 'DAD';
 
-    // day
+    /** day */
     case DAY = 'DAY';
 
-    // dry pound
+    /** dry pound */
     case DB = 'DB';
 
-    // Decibel-milliwatts
+    /** Decibel-milliwatts */
     case DBM = 'DBM';
 
-    // Decibel watt
+    /** Decibel watt */
     case DBW = 'DBW';
 
-    // degree [unit of angle]
+    /** degree [unit of angle] */
     case DD = 'DD';
 
-    // decade
+    /** decade */
     case DEC = 'DEC';
 
-    // decigram
+    /** decigram */
     case DG = 'DG';
 
-    // decagram
+    /** decagram */
     case DJ = 'DJ';
 
-    // decilitre
+    /** decilitre */
     case DLT = 'DLT';
 
-    // cubic decametre
+    /** cubic decametre */
     case DMA = 'DMA';
 
-    // square decimetre
+    /** square decimetre */
     case DMK = 'DMK';
 
-    // standard kilolitre
+    /** standard kilolitre */
     case DMO = 'DMO';
 
-    // cubic decimetre
+    /** cubic decimetre */
     case DMQ = 'DMQ';
 
-    // decimetre
+    /** decimetre */
     case DMT = 'DMT';
 
-    // decinewton metre
+    /** decinewton metre */
     case DN = 'DN';
 
-    // dozen piece
+    /** dozen piece */
     case DPC = 'DPC';
 
-    // dozen pair
+    /** dozen pair */
     case DPR = 'DPR';
 
-    // displacement tonnage
+    /** displacement tonnage */
     case DPT = 'DPT';
 
-    // dram (US)
+    /** dram (US) */
     case DRA = 'DRA';
 
-    // dram (UK)
+    /** dram (UK) */
     case DRI = 'DRI';
 
-    // dozen roll
+    /** dozen roll */
     case DRL = 'DRL';
 
-    // dry ton
+    /** dry ton */
     case DT = 'DT';
 
-    // decitonne
+    /** decitonne */
     case DTN = 'DTN';
 
-    // pennyweight
+    /** pennyweight */
     case DWT = 'DWT';
 
-    // dozen
+    /** dozen */
     case DZN = 'DZN';
 
-    // dozen pack
+    /** dozen pack */
     case DZP = 'DZP';
 
-    // newton per square centimetre
+    /** newton per square centimetre */
     case E01 = 'E01';
 
-    // megawatt hour per hour
+    /** megawatt hour per hour */
     case E07 = 'E07';
 
-    // megawatt per hertz
+    /** megawatt per hertz */
     case E08 = 'E08';
 
-    // milliampere hour
+    /** milliampere hour */
     case E09 = 'E09';
 
-    // degree day
+    /** degree day */
     case E10 = 'E10';
 
-    // mille
+    /** mille */
     case E12 = 'E12';
 
-    // kilocalorie (international table)
+    /** kilocalorie (international table) */
     case E14 = 'E14';
 
-    // kilocalorie (thermochemical) per hour
+    /** kilocalorie (thermochemical) per hour */
     case E15 = 'E15';
 
-    // million Btu(IT) per hour
+    /** million Btu(IT) per hour */
     case E16 = 'E16';
 
-    // cubic foot per second
+    /** cubic foot per second */
     case E17 = 'E17';
 
-    // tonne per hour
+    /** tonne per hour */
     case E18 = 'E18';
 
-    // ping
+    /** ping */
     case E19 = 'E19';
 
-    // megabit per second
+    /** megabit per second */
     case E20 = 'E20';
 
-    // shares
+    /** shares */
     case E21 = 'E21';
 
-    // TEU
+    /** TEU */
     case E22 = 'E22';
 
-    // tyre
+    /** tyre */
     case E23 = 'E23';
 
-    // active unit
+    /** active unit */
     case E25 = 'E25';
 
-    // dose
+    /** dose */
     case E27 = 'E27';
 
-    // air dry ton
+    /** air dry ton */
     case E28 = 'E28';
 
-    // strand
+    /** strand */
     case E30 = 'E30';
 
-    // square metre per litre
+    /** square metre per litre */
     case E31 = 'E31';
 
-    // litre per hour
+    /** litre per hour */
     case E32 = 'E32';
 
-    // foot per thousand
+    /** foot per thousand */
     case E33 = 'E33';
 
-    // gigabyte
+    /** gigabyte */
     case E34 = 'E34';
 
-    // terabyte
+    /** terabyte */
     case E35 = 'E35';
 
-    // petabyte
+    /** petabyte */
     case E36 = 'E36';
 
-    // pixel
+    /** pixel */
     case E37 = 'E37';
 
-    // megapixel
+    /** megapixel */
     case E38 = 'E38';
 
-    // dots per inch
+    /** dots per inch */
     case E39 = 'E39';
 
-    // gross kilogram
+    /** gross kilogram */
     case E4 = 'E4';
 
-    // part per hundred thousand
+    /** part per hundred thousand */
     case E40 = 'E40';
 
-    // kilogram-force per square millimetre
+    /** kilogram-force per square millimetre */
     case E41 = 'E41';
 
-    // kilogram-force per square centimetre
+    /** kilogram-force per square centimetre */
     case E42 = 'E42';
 
-    // joule per square centimetre
+    /** joule per square centimetre */
     case E43 = 'E43';
 
-    // kilogram-force metre per square centimetre
+    /** kilogram-force metre per square centimetre */
     case E44 = 'E44';
 
-    // milliohm
+    /** milliohm */
     case E45 = 'E45';
 
-    // kilowatt hour per cubic metre
+    /** kilowatt hour per cubic metre */
     case E46 = 'E46';
 
-    // kilowatt hour per kelvin
+    /** kilowatt hour per kelvin */
     case E47 = 'E47';
 
-    // service unit
+    /** service unit */
     case E48 = 'E48';
 
-    // working day
+    /** working day */
     case E49 = 'E49';
 
-    // accounting unit
+    /** accounting unit */
     case E50 = 'E50';
 
-    // job
+    /** job */
     case E51 = 'E51';
 
-    // run foot
+    /** run foot */
     case E52 = 'E52';
 
-    // test
+    /** test */
     case E53 = 'E53';
 
-    // trip
+    /** trip */
     case E54 = 'E54';
 
-    // use
+    /** use */
     case E55 = 'E55';
 
-    // well
+    /** well */
     case E56 = 'E56';
 
-    // zone
+    /** zone */
     case E57 = 'E57';
 
-    // exabit per second
+    /** exabit per second */
     case E58 = 'E58';
 
-    // exbibyte
+    /** exbibyte */
     case E59 = 'E59';
 
-    // pebibyte
+    /** pebibyte */
     case E60 = 'E60';
 
-    // tebibyte
+    /** tebibyte */
     case E61 = 'E61';
 
-    // gibibyte
+    /** gibibyte */
     case E62 = 'E62';
 
-    // mebibyte
+    /** mebibyte */
     case E63 = 'E63';
 
-    // kibibyte
+    /** kibibyte */
     case E64 = 'E64';
 
-    // exbibit per metre
+    /** exbibit per metre */
     case E65 = 'E65';
 
-    // exbibit per square metre
+    /** exbibit per square metre */
     case E66 = 'E66';
 
-    // exbibit per cubic metre
+    /** exbibit per cubic metre */
     case E67 = 'E67';
 
-    // gigabyte per second
+    /** gigabyte per second */
     case E68 = 'E68';
 
-    // gibibit per metre
+    /** gibibit per metre */
     case E69 = 'E69';
 
-    // gibibit per square metre
+    /** gibibit per square metre */
     case E70 = 'E70';
 
-    // gibibit per cubic metre
+    /** gibibit per cubic metre */
     case E71 = 'E71';
 
-    // kibibit per metre
+    /** kibibit per metre */
     case E72 = 'E72';
 
-    // kibibit per square metre
+    /** kibibit per square metre */
     case E73 = 'E73';
 
-    // kibibit per cubic metre
+    /** kibibit per cubic metre */
     case E74 = 'E74';
 
-    // mebibit per metre
+    /** mebibit per metre */
     case E75 = 'E75';
 
-    // mebibit per square metre
+    /** mebibit per square metre */
     case E76 = 'E76';
 
-    // mebibit per cubic metre
+    /** mebibit per cubic metre */
     case E77 = 'E77';
 
-    // petabit
+    /** petabit */
     case E78 = 'E78';
 
-    // petabit per second
+    /** petabit per second */
     case E79 = 'E79';
 
-    // pebibit per metre
+    /** pebibit per metre */
     case E80 = 'E80';
 
-    // pebibit per square metre
+    /** pebibit per square metre */
     case E81 = 'E81';
 
-    // pebibit per cubic metre
+    /** pebibit per cubic metre */
     case E82 = 'E82';
 
-    // terabit
+    /** terabit */
     case E83 = 'E83';
 
-    // terabit per second
+    /** terabit per second */
     case E84 = 'E84';
 
-    // tebibit per metre
+    /** tebibit per metre */
     case E85 = 'E85';
 
-    // tebibit per cubic metre
+    /** tebibit per cubic metre */
     case E86 = 'E86';
 
-    // tebibit per square metre
+    /** tebibit per square metre */
     case E87 = 'E87';
 
-    // bit per metre
+    /** bit per metre */
     case E88 = 'E88';
 
-    // bit per square metre
+    /** bit per square metre */
     case E89 = 'E89';
 
-    // reciprocal centimetre
+    /** reciprocal centimetre */
     case E90 = 'E90';
 
-    // reciprocal day
+    /** reciprocal day */
     case E91 = 'E91';
 
-    // cubic decimetre per hour
+    /** cubic decimetre per hour */
     case E92 = 'E92';
 
-    // kilogram per hour
+    /** kilogram per hour */
     case E93 = 'E93';
 
-    // kilomole per second
+    /** kilomole per second */
     case E94 = 'E94';
 
-    // mole per second
+    /** mole per second */
     case E95 = 'E95';
 
-    // degree per second
+    /** degree per second */
     case E96 = 'E96';
 
-    // millimetre per degree Celcius metre
+    /** millimetre per degree Celcius metre */
     case E97 = 'E97';
 
-    // degree Celsius per kelvin
+    /** degree Celsius per kelvin */
     case E98 = 'E98';
 
-    // hectopascal per bar
+    /** hectopascal per bar */
     case E99 = 'E99';
 
-    // each
+    /** each */
     case EA = 'EA';
 
-    // electronic mail box
+    /** electronic mail box */
     case EB = 'EB';
 
-    // equivalent gallon
+    /** equivalent gallon */
     case EQ = 'EQ';
 
-    // bit per cubic metre
+    /** bit per cubic metre */
     case F01 = 'F01';
 
-    // kelvin per kelvin
+    /** kelvin per kelvin */
     case F02 = 'F02';
 
-    // kilopascal per bar
+    /** kilopascal per bar */
     case F03 = 'F03';
 
-    // millibar per bar
+    /** millibar per bar */
     case F04 = 'F04';
 
-    // megapascal per bar
+    /** megapascal per bar */
     case F05 = 'F05';
 
-    // poise per bar
+    /** poise per bar */
     case F06 = 'F06';
 
-    // pascal per bar
+    /** pascal per bar */
     case F07 = 'F07';
 
-    // milliampere per inch
+    /** milliampere per inch */
     case F08 = 'F08';
 
-    // kelvin per hour
+    /** kelvin per hour */
     case F10 = 'F10';
 
-    // kelvin per minute
+    /** kelvin per minute */
     case F11 = 'F11';
 
-    // kelvin per second
+    /** kelvin per second */
     case F12 = 'F12';
 
-    // slug
+    /** slug */
     case F13 = 'F13';
 
-    // gram per kelvin
+    /** gram per kelvin */
     case F14 = 'F14';
 
-    // kilogram per kelvin
+    /** kilogram per kelvin */
     case F15 = 'F15';
 
-    // milligram per kelvin
+    /** milligram per kelvin */
     case F16 = 'F16';
 
-    // pound-force per foot
+    /** pound-force per foot */
     case F17 = 'F17';
 
-    // kilogram square centimetre
+    /** kilogram square centimetre */
     case F18 = 'F18';
 
-    // kilogram square millimetre
+    /** kilogram square millimetre */
     case F19 = 'F19';
 
-    // pound inch squared
+    /** pound inch squared */
     case F20 = 'F20';
 
-    // pound-force inch
+    /** pound-force inch */
     case F21 = 'F21';
 
-    // pound-force foot per ampere
+    /** pound-force foot per ampere */
     case F22 = 'F22';
 
-    // gram per cubic decimetre
+    /** gram per cubic decimetre */
     case F23 = 'F23';
 
-    // kilogram per kilomol
+    /** kilogram per kilomol */
     case F24 = 'F24';
 
-    // gram per hertz
+    /** gram per hertz */
     case F25 = 'F25';
 
-    // gram per day
+    /** gram per day */
     case F26 = 'F26';
 
-    // gram per hour
+    /** gram per hour */
     case F27 = 'F27';
 
-    // gram per minute
+    /** gram per minute */
     case F28 = 'F28';
 
-    // gram per second
+    /** gram per second */
     case F29 = 'F29';
 
-    // kilogram per day
+    /** kilogram per day */
     case F30 = 'F30';
 
-    // kilogram per minute
+    /** kilogram per minute */
     case F31 = 'F31';
 
-    // milligram per day
+    /** milligram per day */
     case F32 = 'F32';
 
-    // milligram per minute
+    /** milligram per minute */
     case F33 = 'F33';
 
-    // milligram per second
+    /** milligram per second */
     case F34 = 'F34';
 
-    // gram per day kelvin
+    /** gram per day kelvin */
     case F35 = 'F35';
 
-    // gram per hour kelvin
+    /** gram per hour kelvin */
     case F36 = 'F36';
 
-    // gram per minute kelvin
+    /** gram per minute kelvin */
     case F37 = 'F37';
 
-    // gram per second kelvin
+    /** gram per second kelvin */
     case F38 = 'F38';
 
-    // kilogram per day kelvin
+    /** kilogram per day kelvin */
     case F39 = 'F39';
 
-    // kilogram per hour kelvin
+    /** kilogram per hour kelvin */
     case F40 = 'F40';
 
-    // kilogram per minute kelvin
+    /** kilogram per minute kelvin */
     case F41 = 'F41';
 
-    // kilogram per second kelvin
+    /** kilogram per second kelvin */
     case F42 = 'F42';
 
-    // milligram per day kelvin
+    /** milligram per day kelvin */
     case F43 = 'F43';
 
-    // milligram per hour kelvin
+    /** milligram per hour kelvin */
     case F44 = 'F44';
 
-    // milligram per minute kelvin
+    /** milligram per minute kelvin */
     case F45 = 'F45';
 
-    // milligram per second kelvin
+    /** milligram per second kelvin */
     case F46 = 'F46';
 
-    // newton per millimetre
+    /** newton per millimetre */
     case F47 = 'F47';
 
-    // pound-force per inch
+    /** pound-force per inch */
     case F48 = 'F48';
 
-    // rod [unit of distance]
+    /** rod [unit of distance] */
     case F49 = 'F49';
 
-    // micrometre per kelvin
+    /** micrometre per kelvin */
     case F50 = 'F50';
 
-    // centimetre per kelvin
+    /** centimetre per kelvin */
     case F51 = 'F51';
 
-    // metre per kelvin
+    /** metre per kelvin */
     case F52 = 'F52';
 
-    // millimetre per kelvin
+    /** millimetre per kelvin */
     case F53 = 'F53';
 
-    // milliohm per metre
+    /** milliohm per metre */
     case F54 = 'F54';
 
-    // ohm per mile (statute mile)
+    /** ohm per mile (statute mile) */
     case F55 = 'F55';
 
-    // ohm per kilometre
+    /** ohm per kilometre */
     case F56 = 'F56';
 
-    // milliampere per pound-force per square inch
+    /** milliampere per pound-force per square inch */
     case F57 = 'F57';
 
-    // reciprocal bar
+    /** reciprocal bar */
     case F58 = 'F58';
 
-    // milliampere per bar
+    /** milliampere per bar */
     case F59 = 'F59';
 
-    // degree Celsius per bar
+    /** degree Celsius per bar */
     case F60 = 'F60';
 
-    // kelvin per bar
+    /** kelvin per bar */
     case F61 = 'F61';
 
-    // gram per day bar
+    /** gram per day bar */
     case F62 = 'F62';
 
-    // gram per hour bar
+    /** gram per hour bar */
     case F63 = 'F63';
 
-    // gram per minute bar
+    /** gram per minute bar */
     case F64 = 'F64';
 
-    // gram per second bar
+    /** gram per second bar */
     case F65 = 'F65';
 
-    // kilogram per day bar
+    /** kilogram per day bar */
     case F66 = 'F66';
 
-    // kilogram per hour bar
+    /** kilogram per hour bar */
     case F67 = 'F67';
 
-    // kilogram per minute bar
+    /** kilogram per minute bar */
     case F68 = 'F68';
 
-    // kilogram per second bar
+    /** kilogram per second bar */
     case F69 = 'F69';
 
-    // milligram per day bar
+    /** milligram per day bar */
     case F70 = 'F70';
 
-    // milligram per hour bar
+    /** milligram per hour bar */
     case F71 = 'F71';
 
-    // milligram per minute bar
+    /** milligram per minute bar */
     case F72 = 'F72';
 
-    // milligram per second bar
+    /** milligram per second bar */
     case F73 = 'F73';
 
-    // gram per bar
+    /** gram per bar */
     case F74 = 'F74';
 
-    // milligram per bar
+    /** milligram per bar */
     case F75 = 'F75';
 
-    // milliampere per millimetre
+    /** milliampere per millimetre */
     case F76 = 'F76';
 
-    // pascal second per kelvin
+    /** pascal second per kelvin */
     case F77 = 'F77';
 
-    // inch of water
+    /** inch of water */
     case F78 = 'F78';
 
-    // inch of mercury
+    /** inch of mercury */
     case F79 = 'F79';
 
-    // water horse power
+    /** water horse power */
     case F80 = 'F80';
 
-    // bar per kelvin
+    /** bar per kelvin */
     case F81 = 'F81';
 
-    // hectopascal per kelvin
+    /** hectopascal per kelvin */
     case F82 = 'F82';
 
-    // kilopascal per kelvin
+    /** kilopascal per kelvin */
     case F83 = 'F83';
 
-    // millibar per kelvin
+    /** millibar per kelvin */
     case F84 = 'F84';
 
-    // megapascal per kelvin
+    /** megapascal per kelvin */
     case F85 = 'F85';
 
-    // poise per kelvin
+    /** poise per kelvin */
     case F86 = 'F86';
 
-    // volt per litre minute
+    /** volt per litre minute */
     case F87 = 'F87';
 
-    // newton centimetre
+    /** newton centimetre */
     case F88 = 'F88';
 
-    // newton metre per degree
+    /** newton metre per degree */
     case F89 = 'F89';
 
-    // newton metre per ampere
+    /** newton metre per ampere */
     case F90 = 'F90';
 
-    // bar litre per second
+    /** bar litre per second */
     case F91 = 'F91';
 
-    // bar cubic metre per second
+    /** bar cubic metre per second */
     case F92 = 'F92';
 
-    // hectopascal litre per second
+    /** hectopascal litre per second */
     case F93 = 'F93';
 
-    // hectopascal cubic metre per second
+    /** hectopascal cubic metre per second */
     case F94 = 'F94';
 
-    // millibar litre per second
+    /** millibar litre per second */
     case F95 = 'F95';
 
-    // millibar cubic metre per second
+    /** millibar cubic metre per second */
     case F96 = 'F96';
 
-    // megapascal litre per second
+    /** megapascal litre per second */
     case F97 = 'F97';
 
-    // megapascal cubic metre per second
+    /** megapascal cubic metre per second */
     case F98 = 'F98';
 
-    // pascal litre per second
+    /** pascal litre per second */
     case F99 = 'F99';
 
-    // degree Fahrenheit
+    /** degree Fahrenheit */
     case FAH = 'FAH';
 
-    // farad
+    /** farad */
     case FAR = 'FAR';
 
-    // fibre metre
+    /** fibre metre */
     case FBM = 'FBM';
 
-    // thousand cubic foot
+    /** thousand cubic foot */
     case FC = 'FC';
 
-    // hundred cubic metre
+    /** hundred cubic metre */
     case FF = 'FF';
 
-    // micromole
+    /** micromole */
     case FH = 'FH';
 
-    // failures in time
+    /** failures in time */
     case FIT = 'FIT';
 
-    // flake ton
+    /** flake ton */
     case FL = 'FL';
 
-    // Formazin nephelometric unit
+    /** Formazin nephelometric unit */
     case FNU = 'FNU';
 
-    // foot
+    /** foot */
     case FOT = 'FOT';
 
-    // pound per square foot
+    /** pound per square foot */
     case FP = 'FP';
 
-    // foot per minute
+    /** foot per minute */
     case FR = 'FR';
 
-    // foot per second
+    /** foot per second */
     case FS = 'FS';
 
-    // square foot
+    /** square foot */
     case FTK = 'FTK';
 
-    // cubic foot
+    /** cubic foot */
     case FTQ = 'FTQ';
 
-    // pascal cubic metre per second
+    /** pascal cubic metre per second */
     case G01 = 'G01';
 
-    // centimetre per bar
+    /** centimetre per bar */
     case G04 = 'G04';
 
-    // metre per bar
+    /** metre per bar */
     case G05 = 'G05';
 
-    // millimetre per bar
+    /** millimetre per bar */
     case G06 = 'G06';
 
-    // square inch per second
+    /** square inch per second */
     case G08 = 'G08';
 
-    // square metre per second kelvin
+    /** square metre per second kelvin */
     case G09 = 'G09';
 
-    // stokes per kelvin
+    /** stokes per kelvin */
     case G10 = 'G10';
 
-    // gram per cubic centimetre bar
+    /** gram per cubic centimetre bar */
     case G11 = 'G11';
 
-    // gram per cubic decimetre bar
+    /** gram per cubic decimetre bar */
     case G12 = 'G12';
 
-    // gram per litre bar
+    /** gram per litre bar */
     case G13 = 'G13';
 
-    // gram per cubic metre bar
+    /** gram per cubic metre bar */
     case G14 = 'G14';
 
-    // gram per millilitre bar
+    /** gram per millilitre bar */
     case G15 = 'G15';
 
-    // kilogram per cubic centimetre bar
+    /** kilogram per cubic centimetre bar */
     case G16 = 'G16';
 
-    // kilogram per litre bar
+    /** kilogram per litre bar */
     case G17 = 'G17';
 
-    // kilogram per cubic metre bar
+    /** kilogram per cubic metre bar */
     case G18 = 'G18';
 
-    // newton metre per kilogram
+    /** newton metre per kilogram */
     case G19 = 'G19';
 
-    // US gallon per minute
+    /** US gallon per minute */
     case G2 = 'G2';
 
-    // pound-force foot per pound
+    /** pound-force foot per pound */
     case G20 = 'G20';
 
-    // cup [unit of volume]
+    /** cup [unit of volume] */
     case G21 = 'G21';
 
-    // peck
+    /** peck */
     case G23 = 'G23';
 
-    // tablespoon (US)
+    /** tablespoon (US) */
     case G24 = 'G24';
 
-    // teaspoon (US)
+    /** teaspoon (US) */
     case G25 = 'G25';
 
-    // stere
+    /** stere */
     case G26 = 'G26';
 
-    // cubic centimetre per kelvin
+    /** cubic centimetre per kelvin */
     case G27 = 'G27';
 
-    // litre per kelvin
+    /** litre per kelvin */
     case G28 = 'G28';
 
-    // cubic metre per kelvin
+    /** cubic metre per kelvin */
     case G29 = 'G29';
 
-    // Imperial gallon per minute
+    /** Imperial gallon per minute */
     case G3 = 'G3';
 
-    // millilitre per kelvin
+    /** millilitre per kelvin */
     case G30 = 'G30';
 
-    // kilogram per cubic centimetre
+    /** kilogram per cubic centimetre */
     case G31 = 'G31';
 
-    // ounce (avoirdupois) per cubic yard
+    /** ounce (avoirdupois) per cubic yard */
     case G32 = 'G32';
 
-    // gram per cubic centimetre kelvin
+    /** gram per cubic centimetre kelvin */
     case G33 = 'G33';
 
-    // gram per cubic decimetre kelvin
+    /** gram per cubic decimetre kelvin */
     case G34 = 'G34';
 
-    // gram per litre kelvin
+    /** gram per litre kelvin */
     case G35 = 'G35';
 
-    // gram per cubic metre kelvin
+    /** gram per cubic metre kelvin */
     case G36 = 'G36';
 
-    // gram per millilitre kelvin
+    /** gram per millilitre kelvin */
     case G37 = 'G37';
 
-    // kilogram per cubic centimetre kelvin
+    /** kilogram per cubic centimetre kelvin */
     case G38 = 'G38';
 
-    // kilogram per litre kelvin
+    /** kilogram per litre kelvin */
     case G39 = 'G39';
 
-    // kilogram per cubic metre kelvin
+    /** kilogram per cubic metre kelvin */
     case G40 = 'G40';
 
-    // square metre per second bar
+    /** square metre per second bar */
     case G41 = 'G41';
 
-    // microsiemens per centimetre
+    /** microsiemens per centimetre */
     case G42 = 'G42';
 
-    // microsiemens per metre
+    /** microsiemens per metre */
     case G43 = 'G43';
 
-    // nanosiemens per centimetre
+    /** nanosiemens per centimetre */
     case G44 = 'G44';
 
-    // nanosiemens per metre
+    /** nanosiemens per metre */
     case G45 = 'G45';
 
-    // stokes per bar
+    /** stokes per bar */
     case G46 = 'G46';
 
-    // cubic centimetre per day
+    /** cubic centimetre per day */
     case G47 = 'G47';
 
-    // cubic centimetre per hour
+    /** cubic centimetre per hour */
     case G48 = 'G48';
 
-    // cubic centimetre per minute
+    /** cubic centimetre per minute */
     case G49 = 'G49';
 
-    // gallon (US) per hour
+    /** gallon (US) per hour */
     case G50 = 'G50';
 
-    // litre per second
+    /** litre per second */
     case G51 = 'G51';
 
-    // cubic metre per day
+    /** cubic metre per day */
     case G52 = 'G52';
 
-    // cubic metre per minute
+    /** cubic metre per minute */
     case G53 = 'G53';
 
-    // millilitre per day
+    /** millilitre per day */
     case G54 = 'G54';
 
-    // millilitre per hour
+    /** millilitre per hour */
     case G55 = 'G55';
 
-    // cubic inch per hour
+    /** cubic inch per hour */
     case G56 = 'G56';
 
-    // cubic inch per minute
+    /** cubic inch per minute */
     case G57 = 'G57';
 
-    // cubic inch per second
+    /** cubic inch per second */
     case G58 = 'G58';
 
-    // milliampere per litre minute
+    /** milliampere per litre minute */
     case G59 = 'G59';
 
-    // volt per bar
+    /** volt per bar */
     case G60 = 'G60';
 
-    // cubic centimetre per day kelvin
+    /** cubic centimetre per day kelvin */
     case G61 = 'G61';
 
-    // cubic centimetre per hour kelvin
+    /** cubic centimetre per hour kelvin */
     case G62 = 'G62';
 
-    // cubic centimetre per minute kelvin
+    /** cubic centimetre per minute kelvin */
     case G63 = 'G63';
 
-    // cubic centimetre per second kelvin
+    /** cubic centimetre per second kelvin */
     case G64 = 'G64';
 
-    // litre per day kelvin
+    /** litre per day kelvin */
     case G65 = 'G65';
 
-    // litre per hour kelvin
+    /** litre per hour kelvin */
     case G66 = 'G66';
 
-    // litre per minute kelvin
+    /** litre per minute kelvin */
     case G67 = 'G67';
 
-    // litre per second kelvin
+    /** litre per second kelvin */
     case G68 = 'G68';
 
-    // cubic metre per day kelvin
+    /** cubic metre per day kelvin */
     case G69 = 'G69';
 
-    // cubic metre per hour kelvin
+    /** cubic metre per hour kelvin */
     case G70 = 'G70';
 
-    // cubic metre per minute kelvin
+    /** cubic metre per minute kelvin */
     case G71 = 'G71';
 
-    // cubic metre per second kelvin
+    /** cubic metre per second kelvin */
     case G72 = 'G72';
 
-    // millilitre per day kelvin
+    /** millilitre per day kelvin */
     case G73 = 'G73';
 
-    // millilitre per hour kelvin
+    /** millilitre per hour kelvin */
     case G74 = 'G74';
 
-    // millilitre per minute kelvin
+    /** millilitre per minute kelvin */
     case G75 = 'G75';
 
-    // millilitre per second kelvin
+    /** millilitre per second kelvin */
     case G76 = 'G76';
 
-    // millimetre to the fourth power
+    /** millimetre to the fourth power */
     case G77 = 'G77';
 
-    // cubic centimetre per day bar
+    /** cubic centimetre per day bar */
     case G78 = 'G78';
 
-    // cubic centimetre per hour bar
+    /** cubic centimetre per hour bar */
     case G79 = 'G79';
 
-    // cubic centimetre per minute bar
+    /** cubic centimetre per minute bar */
     case G80 = 'G80';
 
-    // cubic centimetre per second bar
+    /** cubic centimetre per second bar */
     case G81 = 'G81';
 
-    // litre per day bar
+    /** litre per day bar */
     case G82 = 'G82';
 
-    // litre per hour bar
+    /** litre per hour bar */
     case G83 = 'G83';
 
-    // litre per minute bar
+    /** litre per minute bar */
     case G84 = 'G84';
 
-    // litre per second bar
+    /** litre per second bar */
     case G85 = 'G85';
 
-    // cubic metre per day bar
+    /** cubic metre per day bar */
     case G86 = 'G86';
 
-    // cubic metre per hour bar
+    /** cubic metre per hour bar */
     case G87 = 'G87';
 
-    // cubic metre per minute bar
+    /** cubic metre per minute bar */
     case G88 = 'G88';
 
-    // cubic metre per second bar
+    /** cubic metre per second bar */
     case G89 = 'G89';
 
-    // millilitre per day bar
+    /** millilitre per day bar */
     case G90 = 'G90';
 
-    // millilitre per hour bar
+    /** millilitre per hour bar */
     case G91 = 'G91';
 
-    // millilitre per minute bar
+    /** millilitre per minute bar */
     case G92 = 'G92';
 
-    // millilitre per second bar
+    /** millilitre per second bar */
     case G93 = 'G93';
 
-    // cubic centimetre per bar
+    /** cubic centimetre per bar */
     case G94 = 'G94';
 
-    // litre per bar
+    /** litre per bar */
     case G95 = 'G95';
 
-    // cubic metre per bar
+    /** cubic metre per bar */
     case G96 = 'G96';
 
-    // millilitre per bar
+    /** millilitre per bar */
     case G97 = 'G97';
 
-    // microhenry per kiloohm
+    /** microhenry per kiloohm */
     case G98 = 'G98';
 
-    // microhenry per ohm
+    /** microhenry per ohm */
     case G99 = 'G99';
 
-    // gallon (US) per day
+    /** gallon (US) per day */
     case GB = 'GB';
 
-    // gigabecquerel
+    /** gigabecquerel */
     case GBQ = 'GBQ';
 
-    // gram, dry weight
+    /** gram, dry weight */
     case GDW = 'GDW';
 
-    // pound per gallon (US)
+    /** pound per gallon (US) */
     case GE = 'GE';
 
-    // gram per metre (gram per 100 centimetres)
+    /** gram per metre (gram per 100 centimetres) */
     case GF = 'GF';
 
-    // gram of fissile isotope
+    /** gram of fissile isotope */
     case GFI = 'GFI';
 
-    // great gross
+    /** great gross */
     case GGR = 'GGR';
 
-    // gill (US)
+    /** gill (US) */
     case GIA = 'GIA';
 
-    // gram, including container
+    /** gram, including container */
     case GIC = 'GIC';
 
-    // gill (UK)
+    /** gill (UK) */
     case GII = 'GII';
 
-    // gram, including inner packaging
+    /** gram, including inner packaging */
     case GIP = 'GIP';
 
-    // gram per millilitre
+    /** gram per millilitre */
     case GJ = 'GJ';
 
-    // gram per litre
+    /** gram per litre */
     case GL = 'GL';
 
-    // dry gallon (US)
+    /** dry gallon (US) */
     case GLD = 'GLD';
 
-    // gallon (UK)
+    /** gallon (UK) */
     case GLI = 'GLI';
 
-    // gallon (US)
+    /** gallon (US) */
     case GLL = 'GLL';
 
-    // gram per square metre
+    /** gram per square metre */
     case GM = 'GM';
 
-    // milligram per square metre
+    /** milligram per square metre */
     case GO = 'GO';
 
-    // milligram per cubic metre
+    /** milligram per cubic metre */
     case GP = 'GP';
 
-    // microgram per cubic metre
+    /** microgram per cubic metre */
     case GQ = 'GQ';
 
-    // gram
+    /** gram */
     case GRM = 'GRM';
 
-    // grain
+    /** grain */
     case GRN = 'GRN';
 
-    // gross
+    /** gross */
     case GRO = 'GRO';
 
-    // gigajoule
+    /** gigajoule */
     case GV = 'GV';
 
-    // gigawatt hour
+    /** gigawatt hour */
     case GWH = 'GWH';
 
-    // henry per kiloohm
+    /** henry per kiloohm */
     case H03 = 'H03';
 
-    // henry per ohm
+    /** henry per ohm */
     case H04 = 'H04';
 
-    // millihenry per kiloohm
+    /** millihenry per kiloohm */
     case H05 = 'H05';
 
-    // millihenry per ohm
+    /** millihenry per ohm */
     case H06 = 'H06';
 
-    // pascal second per bar
+    /** pascal second per bar */
     case H07 = 'H07';
 
-    // microbecquerel
+    /** microbecquerel */
     case H08 = 'H08';
 
-    // reciprocal year
+    /** reciprocal year */
     case H09 = 'H09';
 
-    // reciprocal hour
+    /** reciprocal hour */
     case H10 = 'H10';
 
-    // reciprocal month
+    /** reciprocal month */
     case H11 = 'H11';
 
-    // degree Celsius per hour
+    /** degree Celsius per hour */
     case H12 = 'H12';
 
-    // degree Celsius per minute
+    /** degree Celsius per minute */
     case H13 = 'H13';
 
-    // degree Celsius per second
+    /** degree Celsius per second */
     case H14 = 'H14';
 
-    // square centimetre per gram
+    /** square centimetre per gram */
     case H15 = 'H15';
 
-    // square decametre
+    /** square decametre */
     case H16 = 'H16';
 
-    // square hectometre
+    /** square hectometre */
     case H18 = 'H18';
 
-    // cubic hectometre
+    /** cubic hectometre */
     case H19 = 'H19';
 
-    // cubic kilometre
+    /** cubic kilometre */
     case H20 = 'H20';
 
-    // blank
+    /** blank */
     case H21 = 'H21';
 
-    // volt square inch per pound-force
+    /** volt square inch per pound-force */
     case H22 = 'H22';
 
-    // volt per inch
+    /** volt per inch */
     case H23 = 'H23';
 
-    // volt per microsecond
+    /** volt per microsecond */
     case H24 = 'H24';
 
-    // percent per kelvin
+    /** percent per kelvin */
     case H25 = 'H25';
 
-    // ohm per metre
+    /** ohm per metre */
     case H26 = 'H26';
 
-    // degree per metre
+    /** degree per metre */
     case H27 = 'H27';
 
-    // microfarad per kilometre
+    /** microfarad per kilometre */
     case H28 = 'H28';
 
-    // microgram per litre
+    /** microgram per litre */
     case H29 = 'H29';
 
-    // square micrometre (square micron)
+    /** square micrometre (square micron) */
     case H30 = 'H30';
 
-    // ampere per kilogram
+    /** ampere per kilogram */
     case H31 = 'H31';
 
-    // ampere squared second
+    /** ampere squared second */
     case H32 = 'H32';
 
-    // farad per kilometre
+    /** farad per kilometre */
     case H33 = 'H33';
 
-    // hertz metre
+    /** hertz metre */
     case H34 = 'H34';
 
-    // kelvin metre per watt
+    /** kelvin metre per watt */
     case H35 = 'H35';
 
-    // megaohm per kilometre
+    /** megaohm per kilometre */
     case H36 = 'H36';
 
-    // megaohm per metre
+    /** megaohm per metre */
     case H37 = 'H37';
 
-    // megaampere
+    /** megaampere */
     case H38 = 'H38';
 
-    // megahertz kilometre
+    /** megahertz kilometre */
     case H39 = 'H39';
 
-    // newton per ampere
+    /** newton per ampere */
     case H40 = 'H40';
 
-    // newton metre watt to the power minus 0,5
+    /** newton metre watt to the power minus 0,5 */
     case H41 = 'H41';
 
-    // pascal per metre
+    /** pascal per metre */
     case H42 = 'H42';
 
-    // siemens per centimetre
+    /** siemens per centimetre */
     case H43 = 'H43';
 
-    // teraohm
+    /** teraohm */
     case H44 = 'H44';
 
-    // volt second per metre
+    /** volt second per metre */
     case H45 = 'H45';
 
-    // volt per second
+    /** volt per second */
     case H46 = 'H46';
 
-    // watt per cubic metre
+    /** watt per cubic metre */
     case H47 = 'H47';
 
-    // attofarad
+    /** attofarad */
     case H48 = 'H48';
 
-    // centimetre per hour
+    /** centimetre per hour */
     case H49 = 'H49';
 
-    // reciprocal cubic centimetre
+    /** reciprocal cubic centimetre */
     case H50 = 'H50';
 
-    // decibel per kilometre
+    /** decibel per kilometre */
     case H51 = 'H51';
 
-    // decibel per metre
+    /** decibel per metre */
     case H52 = 'H52';
 
-    // kilogram per bar
+    /** kilogram per bar */
     case H53 = 'H53';
 
-    // kilogram per cubic decimetre kelvin
+    /** kilogram per cubic decimetre kelvin */
     case H54 = 'H54';
 
-    // kilogram per cubic decimetre bar
+    /** kilogram per cubic decimetre bar */
     case H55 = 'H55';
 
-    // kilogram per square metre second
+    /** kilogram per square metre second */
     case H56 = 'H56';
 
-    // inch per two pi radiant
+    /** inch per two pi radiant */
     case H57 = 'H57';
 
-    // metre per volt second
+    /** metre per volt second */
     case H58 = 'H58';
 
-    // square metre per newton
+    /** square metre per newton */
     case H59 = 'H59';
 
-    // cubic metre per cubic metre
+    /** cubic metre per cubic metre */
     case H60 = 'H60';
 
-    // millisiemens per centimetre
+    /** millisiemens per centimetre */
     case H61 = 'H61';
 
-    // millivolt per minute
+    /** millivolt per minute */
     case H62 = 'H62';
 
-    // milligram per square centimetre
+    /** milligram per square centimetre */
     case H63 = 'H63';
 
-    // milligram per gram
+    /** milligram per gram */
     case H64 = 'H64';
 
-    // millilitre per cubic metre
+    /** millilitre per cubic metre */
     case H65 = 'H65';
 
-    // millimetre per year
+    /** millimetre per year */
     case H66 = 'H66';
 
-    // millimetre per hour
+    /** millimetre per hour */
     case H67 = 'H67';
 
-    // millimole per gram
+    /** millimole per gram */
     case H68 = 'H68';
 
-    // picopascal per kilometre
+    /** picopascal per kilometre */
     case H69 = 'H69';
 
-    // picosecond
+    /** picosecond */
     case H70 = 'H70';
 
-    // percent per month
+    /** percent per month */
     case H71 = 'H71';
 
-    // percent per hectobar
+    /** percent per hectobar */
     case H72 = 'H72';
 
-    // percent per decakelvin
+    /** percent per decakelvin */
     case H73 = 'H73';
 
-    // watt per metre
+    /** watt per metre */
     case H74 = 'H74';
 
-    // decapascal
+    /** decapascal */
     case H75 = 'H75';
 
-    // gram per millimetre
+    /** gram per millimetre */
     case H76 = 'H76';
 
-    // module width
+    /** module width */
     case H77 = 'H77';
 
-    // French gauge
+    /** French gauge */
     case H79 = 'H79';
 
-    // rack unit
+    /** rack unit */
     case H80 = 'H80';
 
-    // millimetre per minute
+    /** millimetre per minute */
     case H81 = 'H81';
 
-    // big point
+    /** big point */
     case H82 = 'H82';
 
-    // litre per kilogram
+    /** litre per kilogram */
     case H83 = 'H83';
 
-    // gram millimetre
+    /** gram millimetre */
     case H84 = 'H84';
 
-    // reciprocal week
+    /** reciprocal week */
     case H85 = 'H85';
 
-    // piece
+    /** piece */
     case H87 = 'H87';
 
-    // megaohm kilometre
+    /** megaohm kilometre */
     case H88 = 'H88';
 
-    // percent per ohm
+    /** percent per ohm */
     case H89 = 'H89';
 
-    // percent per degree
+    /** percent per degree */
     case H90 = 'H90';
 
-    // percent per ten thousand
+    /** percent per ten thousand */
     case H91 = 'H91';
 
-    // percent per one hundred thousand
+    /** percent per one hundred thousand */
     case H92 = 'H92';
 
-    // percent per hundred
+    /** percent per hundred */
     case H93 = 'H93';
 
-    // percent per thousand
+    /** percent per thousand */
     case H94 = 'H94';
 
-    // percent per volt
+    /** percent per volt */
     case H95 = 'H95';
 
-    // percent per bar
+    /** percent per bar */
     case H96 = 'H96';
 
-    // percent per inch
+    /** percent per inch */
     case H98 = 'H98';
 
-    // percent per metre
+    /** percent per metre */
     case H99 = 'H99';
 
-    // hank
+    /** hank */
     case HA = 'HA';
 
-    // Piece Day
+    /** Piece Day */
     case HAD = 'HAD';
 
-    // hectobar
+    /** hectobar */
     case HBA = 'HBA';
 
-    // hundred boxes
+    /** hundred boxes */
     case HBX = 'HBX';
 
-    // hundred count
+    /** hundred count */
     case HC = 'HC';
 
-    // hundred kilogram, dry weight
+    /** hundred kilogram, dry weight */
     case HDW = 'HDW';
 
-    // head
+    /** head */
     case HEA = 'HEA';
 
-    // hectogram
+    /** hectogram */
     case HGM = 'HGM';
 
-    // hundred cubic foot
+    /** hundred cubic foot */
     case HH = 'HH';
 
-    // hundred international unit
+    /** hundred international unit */
     case HIU = 'HIU';
 
-    // hundred kilogram, net mass
+    /** hundred kilogram, net mass */
     case HKM = 'HKM';
 
-    // hectolitre
+    /** hectolitre */
     case HLT = 'HLT';
 
-    // mile per hour (statute mile)
+    /** mile per hour (statute mile) */
     case HM = 'HM';
 
-    // Piece Month
+    /** Piece Month */
     case HMO = 'HMO';
 
-    // million cubic metre
+    /** million cubic metre */
     case HMQ = 'HMQ';
 
-    // hectometre
+    /** hectometre */
     case HMT = 'HMT';
 
-    // hectolitre of pure alcohol
+    /** hectolitre of pure alcohol */
     case HPA = 'HPA';
 
-    // hertz
+    /** hertz */
     case HTZ = 'HTZ';
 
-    // hour
+    /** hour */
     case HUR = 'HUR';
 
-    // Piece Week
+    /** Piece Week */
     case HWE = 'HWE';
 
-    // inch pound (pound inch)
+    /** inch pound (pound inch) */
     case IA = 'IA';
 
-    // person
+    /** person */
     case IE = 'IE';
 
-    // inch
+    /** inch */
     case INH = 'INH';
 
-    // square inch
+    /** square inch */
     case INK = 'INK';
 
-    // cubic inch
+    /** cubic inch */
     case INQ = 'INQ';
 
-    // international sugar degree
+    /** international sugar degree */
     case ISD = 'ISD';
 
-    // inch per second
+    /** inch per second */
     case IU = 'IU';
 
-    // international unit per gram
+    /** international unit per gram */
     case IUG = 'IUG';
 
-    // inch per second squared
+    /** inch per second squared */
     case IV = 'IV';
 
-    // percent per millimetre
+    /** percent per millimetre */
     case J10 = 'J10';
 
-    // per mille per psi
+    /** per mille per psi */
     case J12 = 'J12';
 
-    // degree API
+    /** degree API */
     case J13 = 'J13';
 
-    // degree Baume (origin scale)
+    /** degree Baume (origin scale) */
     case J14 = 'J14';
 
-    // degree Baume (US heavy)
+    /** degree Baume (US heavy) */
     case J15 = 'J15';
 
-    // degree Baume (US light)
+    /** degree Baume (US light) */
     case J16 = 'J16';
 
-    // degree Balling
+    /** degree Balling */
     case J17 = 'J17';
 
-    // degree Brix
+    /** degree Brix */
     case J18 = 'J18';
 
-    // degree Fahrenheit hour square foot per British thermal unit (thermochemical)
+    /** degree Fahrenheit hour square foot per British thermal unit (thermochemical) */
     case J19 = 'J19';
 
-    // joule per kilogram
+    /** joule per kilogram */
     case J2 = 'J2';
 
-    // degree Fahrenheit per kelvin
+    /** degree Fahrenheit per kelvin */
     case J20 = 'J20';
 
-    // degree Fahrenheit per bar
+    /** degree Fahrenheit per bar */
     case J21 = 'J21';
 
-    // degree Fahrenheit hour square foot per British thermal unit (international table)
+    /** degree Fahrenheit hour square foot per British thermal unit (international table) */
     case J22 = 'J22';
 
-    // degree Fahrenheit per hour
+    /** degree Fahrenheit per hour */
     case J23 = 'J23';
 
-    // degree Fahrenheit per minute
+    /** degree Fahrenheit per minute */
     case J24 = 'J24';
 
-    // degree Fahrenheit per second
+    /** degree Fahrenheit per second */
     case J25 = 'J25';
 
-    // reciprocal degree Fahrenheit
+    /** reciprocal degree Fahrenheit */
     case J26 = 'J26';
 
-    // degree Oechsle
+    /** degree Oechsle */
     case J27 = 'J27';
 
-    // degree Rankine per hour
+    /** degree Rankine per hour */
     case J28 = 'J28';
 
-    // degree Rankine per minute
+    /** degree Rankine per minute */
     case J29 = 'J29';
 
-    // degree Rankine per second
+    /** degree Rankine per second */
     case J30 = 'J30';
 
-    // degree Twaddell
+    /** degree Twaddell */
     case J31 = 'J31';
 
-    // micropoise
+    /** micropoise */
     case J32 = 'J32';
 
-    // microgram per kilogram
+    /** microgram per kilogram */
     case J33 = 'J33';
 
-    // microgram per cubic metre kelvin
+    /** microgram per cubic metre kelvin */
     case J34 = 'J34';
 
-    // microgram per cubic metre bar
+    /** microgram per cubic metre bar */
     case J35 = 'J35';
 
-    // microlitre per litre
+    /** microlitre per litre */
     case J36 = 'J36';
 
-    // baud
+    /** baud */
     case J38 = 'J38';
 
-    // British thermal unit (mean)
+    /** British thermal unit (mean) */
     case J39 = 'J39';
 
-    // British thermal unit (international table) foot per hour square foot degree Fahrenheit
+    /** British thermal unit (international table) foot per hour square foot degree Fahrenheit */
     case J40 = 'J40';
 
-    // British thermal unit (international table) inch per hour square foot degree Fahrenheit
+    /** British thermal unit (international table) inch per hour square foot degree Fahrenheit */
     case J41 = 'J41';
 
-    // British thermal unit (international table) inch per second square foot degree Fahrenheit
+    /** British thermal unit (international table) inch per second square foot degree Fahrenheit */
     case J42 = 'J42';
 
-    // British thermal unit (international table) per pound degree Fahrenheit
+    /** British thermal unit (international table) per pound degree Fahrenheit */
     case J43 = 'J43';
 
-    // British thermal unit (international table) per minute
+    /** British thermal unit (international table) per minute */
     case J44 = 'J44';
 
-    // British thermal unit (international table) per second
+    /** British thermal unit (international table) per second */
     case J45 = 'J45';
 
-    // British thermal unit (thermochemical) foot per hour square foot degree Fahrenheit
+    /** British thermal unit (thermochemical) foot per hour square foot degree Fahrenheit */
     case J46 = 'J46';
 
-    // British thermal unit (thermochemical) per hour
+    /** British thermal unit (thermochemical) per hour */
     case J47 = 'J47';
 
-    // British thermal unit (thermochemical) inch per hour square foot degree Fahrenheit
+    /** British thermal unit (thermochemical) inch per hour square foot degree Fahrenheit */
     case J48 = 'J48';
 
-    // British thermal unit (thermochemical) inch per second square foot degree Fahrenheit
+    /** British thermal unit (thermochemical) inch per second square foot degree Fahrenheit */
     case J49 = 'J49';
 
-    // British thermal unit (thermochemical) per pound degree Fahrenheit
+    /** British thermal unit (thermochemical) per pound degree Fahrenheit */
     case J50 = 'J50';
 
-    // British thermal unit (thermochemical) per minute
+    /** British thermal unit (thermochemical) per minute */
     case J51 = 'J51';
 
-    // British thermal unit (thermochemical) per second
+    /** British thermal unit (thermochemical) per second */
     case J52 = 'J52';
 
-    // coulomb square metre per kilogram
+    /** coulomb square metre per kilogram */
     case J53 = 'J53';
 
-    // megabaud
+    /** megabaud */
     case J54 = 'J54';
 
-    // watt second
+    /** watt second */
     case J55 = 'J55';
 
-    // bar per bar
+    /** bar per bar */
     case J56 = 'J56';
 
-    // barrel (UK petroleum)
+    /** barrel (UK petroleum) */
     case J57 = 'J57';
 
-    // barrel (UK petroleum) per minute
+    /** barrel (UK petroleum) per minute */
     case J58 = 'J58';
 
-    // barrel (UK petroleum) per day
+    /** barrel (UK petroleum) per day */
     case J59 = 'J59';
 
-    // barrel (UK petroleum) per hour
+    /** barrel (UK petroleum) per hour */
     case J60 = 'J60';
 
-    // barrel (UK petroleum) per second
+    /** barrel (UK petroleum) per second */
     case J61 = 'J61';
 
-    // barrel (US petroleum) per hour
+    /** barrel (US petroleum) per hour */
     case J62 = 'J62';
 
-    // barrel (US petroleum) per second
+    /** barrel (US petroleum) per second */
     case J63 = 'J63';
 
-    // bushel (UK) per day
+    /** bushel (UK) per day */
     case J64 = 'J64';
 
-    // bushel (UK) per hour
+    /** bushel (UK) per hour */
     case J65 = 'J65';
 
-    // bushel (UK) per minute
+    /** bushel (UK) per minute */
     case J66 = 'J66';
 
-    // bushel (UK) per second
+    /** bushel (UK) per second */
     case J67 = 'J67';
 
-    // bushel (US dry) per day
+    /** bushel (US dry) per day */
     case J68 = 'J68';
 
-    // bushel (US dry) per hour
+    /** bushel (US dry) per hour */
     case J69 = 'J69';
 
-    // bushel (US dry) per minute
+    /** bushel (US dry) per minute */
     case J70 = 'J70';
 
-    // bushel (US dry) per second
+    /** bushel (US dry) per second */
     case J71 = 'J71';
 
-    // centinewton metre
+    /** centinewton metre */
     case J72 = 'J72';
 
-    // centipoise per kelvin
+    /** centipoise per kelvin */
     case J73 = 'J73';
 
-    // centipoise per bar
+    /** centipoise per bar */
     case J74 = 'J74';
 
-    // calorie (mean)
+    /** calorie (mean) */
     case J75 = 'J75';
 
-    // calorie (international table) per gram degree Celsius
+    /** calorie (international table) per gram degree Celsius */
     case J76 = 'J76';
 
-    // calorie (thermochemical) per centimetre second degree Celsius
+    /** calorie (thermochemical) per centimetre second degree Celsius */
     case J78 = 'J78';
 
-    // calorie (thermochemical) per gram degree Celsius
+    /** calorie (thermochemical) per gram degree Celsius */
     case J79 = 'J79';
 
-    // calorie (thermochemical) per minute
+    /** calorie (thermochemical) per minute */
     case J81 = 'J81';
 
-    // calorie (thermochemical) per second
+    /** calorie (thermochemical) per second */
     case J82 = 'J82';
 
-    // clo
+    /** clo */
     case J83 = 'J83';
 
-    // centimetre per second kelvin
+    /** centimetre per second kelvin */
     case J84 = 'J84';
 
-    // centimetre per second bar
+    /** centimetre per second bar */
     case J85 = 'J85';
 
-    // cubic centimetre per cubic metre
+    /** cubic centimetre per cubic metre */
     case J87 = 'J87';
 
-    // cubic decimetre per day
+    /** cubic decimetre per day */
     case J90 = 'J90';
 
-    // cubic decimetre per cubic metre
+    /** cubic decimetre per cubic metre */
     case J91 = 'J91';
 
-    // cubic decimetre per minute
+    /** cubic decimetre per minute */
     case J92 = 'J92';
 
-    // cubic decimetre per second
+    /** cubic decimetre per second */
     case J93 = 'J93';
 
-    // ounce (UK fluid) per day
+    /** ounce (UK fluid) per day */
     case J95 = 'J95';
 
-    // ounce (UK fluid) per hour
+    /** ounce (UK fluid) per hour */
     case J96 = 'J96';
 
-    // ounce (UK fluid) per minute
+    /** ounce (UK fluid) per minute */
     case J97 = 'J97';
 
-    // ounce (UK fluid) per second
+    /** ounce (UK fluid) per second */
     case J98 = 'J98';
 
-    // ounce (US fluid) per day
+    /** ounce (US fluid) per day */
     case J99 = 'J99';
 
-    // joule per kelvin
+    /** joule per kelvin */
     case JE = 'JE';
 
-    // megajoule per kilogram
+    /** megajoule per kilogram */
     case JK = 'JK';
 
-    // megajoule per cubic metre
+    /** megajoule per cubic metre */
     case JM = 'JM';
 
-    // pipeline joint
+    /** pipeline joint */
     case JNT = 'JNT';
 
-    // joule
+    /** joule */
     case JOU = 'JOU';
 
-    // hundred metre
+    /** hundred metre */
     case JPS = 'JPS';
 
-    // number of jewels
+    /** number of jewels */
     case JWL = 'JWL';
 
-    // kilowatt demand
+    /** kilowatt demand */
     case K1 = 'K1';
 
-    // ounce (US fluid) per hour
+    /** ounce (US fluid) per hour */
     case K10 = 'K10';
 
-    // ounce (US fluid) per minute
+    /** ounce (US fluid) per minute */
     case K11 = 'K11';
 
-    // ounce (US fluid) per second
+    /** ounce (US fluid) per second */
     case K12 = 'K12';
 
-    // foot per degree Fahrenheit
+    /** foot per degree Fahrenheit */
     case K13 = 'K13';
 
-    // foot per hour
+    /** foot per hour */
     case K14 = 'K14';
 
-    // foot pound-force per hour
+    /** foot pound-force per hour */
     case K15 = 'K15';
 
-    // foot pound-force per minute
+    /** foot pound-force per minute */
     case K16 = 'K16';
 
-    // foot per psi
+    /** foot per psi */
     case K17 = 'K17';
 
-    // foot per second degree Fahrenheit
+    /** foot per second degree Fahrenheit */
     case K18 = 'K18';
 
-    // foot per second psi
+    /** foot per second psi */
     case K19 = 'K19';
 
-    // kilovolt ampere reactive demand
+    /** kilovolt ampere reactive demand */
     case K2 = 'K2';
 
-    // reciprocal cubic foot
+    /** reciprocal cubic foot */
     case K20 = 'K20';
 
-    // cubic foot per degree Fahrenheit
+    /** cubic foot per degree Fahrenheit */
     case K21 = 'K21';
 
-    // cubic foot per day
+    /** cubic foot per day */
     case K22 = 'K22';
 
-    // cubic foot per psi
+    /** cubic foot per psi */
     case K23 = 'K23';
 
-    // gallon (UK) per day
+    /** gallon (UK) per day */
     case K26 = 'K26';
 
-    // gallon (UK) per hour
+    /** gallon (UK) per hour */
     case K27 = 'K27';
 
-    // gallon (UK) per second
+    /** gallon (UK) per second */
     case K28 = 'K28';
 
-    // kilovolt ampere reactive hour
+    /** kilovolt ampere reactive hour */
     case K3 = 'K3';
 
-    // gallon (US liquid) per second
+    /** gallon (US liquid) per second */
     case K30 = 'K30';
 
-    // gram-force per square centimetre
+    /** gram-force per square centimetre */
     case K31 = 'K31';
 
-    // gill (UK) per day
+    /** gill (UK) per day */
     case K32 = 'K32';
 
-    // gill (UK) per hour
+    /** gill (UK) per hour */
     case K33 = 'K33';
 
-    // gill (UK) per minute
+    /** gill (UK) per minute */
     case K34 = 'K34';
 
-    // gill (UK) per second
+    /** gill (UK) per second */
     case K35 = 'K35';
 
-    // gill (US) per day
+    /** gill (US) per day */
     case K36 = 'K36';
 
-    // gill (US) per hour
+    /** gill (US) per hour */
     case K37 = 'K37';
 
-    // gill (US) per minute
+    /** gill (US) per minute */
     case K38 = 'K38';
 
-    // gill (US) per second
+    /** gill (US) per second */
     case K39 = 'K39';
 
-    // standard acceleration of free fall
+    /** standard acceleration of free fall */
     case K40 = 'K40';
 
-    // grain per gallon (US)
+    /** grain per gallon (US) */
     case K41 = 'K41';
 
-    // horsepower (boiler)
+    /** horsepower (boiler) */
     case K42 = 'K42';
 
-    // horsepower (electric)
+    /** horsepower (electric) */
     case K43 = 'K43';
 
-    // inch per degree Fahrenheit
+    /** inch per degree Fahrenheit */
     case K45 = 'K45';
 
-    // inch per psi
+    /** inch per psi */
     case K46 = 'K46';
 
-    // inch per second degree Fahrenheit
+    /** inch per second degree Fahrenheit */
     case K47 = 'K47';
 
-    // inch per second psi
+    /** inch per second psi */
     case K48 = 'K48';
 
-    // reciprocal cubic inch
+    /** reciprocal cubic inch */
     case K49 = 'K49';
 
-    // kilobaud
+    /** kilobaud */
     case K50 = 'K50';
 
-    // kilocalorie (mean)
+    /** kilocalorie (mean) */
     case K51 = 'K51';
 
-    // kilocalorie (international table) per hour metre degree Celsius
+    /** kilocalorie (international table) per hour metre degree Celsius */
     case K52 = 'K52';
 
-    // kilocalorie (thermochemical)
+    /** kilocalorie (thermochemical) */
     case K53 = 'K53';
 
-    // kilocalorie (thermochemical) per minute
+    /** kilocalorie (thermochemical) per minute */
     case K54 = 'K54';
 
-    // kilocalorie (thermochemical) per second
+    /** kilocalorie (thermochemical) per second */
     case K55 = 'K55';
 
-    // kilomole per hour
+    /** kilomole per hour */
     case K58 = 'K58';
 
-    // kilomole per cubic metre kelvin
+    /** kilomole per cubic metre kelvin */
     case K59 = 'K59';
 
-    // kilolitre
+    /** kilolitre */
     case K6 = 'K6';
 
-    // kilomole per cubic metre bar
+    /** kilomole per cubic metre bar */
     case K60 = 'K60';
 
-    // kilomole per minute
+    /** kilomole per minute */
     case K61 = 'K61';
 
-    // litre per litre
+    /** litre per litre */
     case K62 = 'K62';
 
-    // reciprocal litre
+    /** reciprocal litre */
     case K63 = 'K63';
 
-    // pound (avoirdupois) per degree Fahrenheit
+    /** pound (avoirdupois) per degree Fahrenheit */
     case K64 = 'K64';
 
-    // pound (avoirdupois) square foot
+    /** pound (avoirdupois) square foot */
     case K65 = 'K65';
 
-    // pound (avoirdupois) per day
+    /** pound (avoirdupois) per day */
     case K66 = 'K66';
 
-    // pound per foot hour
+    /** pound per foot hour */
     case K67 = 'K67';
 
-    // pound per foot second
+    /** pound per foot second */
     case K68 = 'K68';
 
-    // pound (avoirdupois) per cubic foot degree Fahrenheit
+    /** pound (avoirdupois) per cubic foot degree Fahrenheit */
     case K69 = 'K69';
 
-    // pound (avoirdupois) per cubic foot psi
+    /** pound (avoirdupois) per cubic foot psi */
     case K70 = 'K70';
 
-    // pound (avoirdupois) per gallon (UK)
+    /** pound (avoirdupois) per gallon (UK) */
     case K71 = 'K71';
 
-    // pound (avoirdupois) per hour degree Fahrenheit
+    /** pound (avoirdupois) per hour degree Fahrenheit */
     case K73 = 'K73';
 
-    // pound (avoirdupois) per hour psi
+    /** pound (avoirdupois) per hour psi */
     case K74 = 'K74';
 
-    // pound (avoirdupois) per cubic inch degree Fahrenheit
+    /** pound (avoirdupois) per cubic inch degree Fahrenheit */
     case K75 = 'K75';
 
-    // pound (avoirdupois) per cubic inch psi
+    /** pound (avoirdupois) per cubic inch psi */
     case K76 = 'K76';
 
-    // pound (avoirdupois) per psi
+    /** pound (avoirdupois) per psi */
     case K77 = 'K77';
 
-    // pound (avoirdupois) per minute
+    /** pound (avoirdupois) per minute */
     case K78 = 'K78';
 
-    // pound (avoirdupois) per minute degree Fahrenheit
+    /** pound (avoirdupois) per minute degree Fahrenheit */
     case K79 = 'K79';
 
-    // pound (avoirdupois) per minute psi
+    /** pound (avoirdupois) per minute psi */
     case K80 = 'K80';
 
-    // pound (avoirdupois) per second
+    /** pound (avoirdupois) per second */
     case K81 = 'K81';
 
-    // pound (avoirdupois) per second degree Fahrenheit
+    /** pound (avoirdupois) per second degree Fahrenheit */
     case K82 = 'K82';
 
-    // pound (avoirdupois) per second psi
+    /** pound (avoirdupois) per second psi */
     case K83 = 'K83';
 
-    // pound per cubic yard
+    /** pound per cubic yard */
     case K84 = 'K84';
 
-    // pound-force per square foot
+    /** pound-force per square foot */
     case K85 = 'K85';
 
-    // pound-force per square inch degree Fahrenheit
+    /** pound-force per square inch degree Fahrenheit */
     case K86 = 'K86';
 
-    // psi cubic inch per second
+    /** psi cubic inch per second */
     case K87 = 'K87';
 
-    // psi litre per second
+    /** psi litre per second */
     case K88 = 'K88';
 
-    // psi cubic metre per second
+    /** psi cubic metre per second */
     case K89 = 'K89';
 
-    // psi cubic yard per second
+    /** psi cubic yard per second */
     case K90 = 'K90';
 
-    // pound-force second per square foot
+    /** pound-force second per square foot */
     case K91 = 'K91';
 
-    // pound-force second per square inch
+    /** pound-force second per square inch */
     case K92 = 'K92';
 
-    // reciprocal psi
+    /** reciprocal psi */
     case K93 = 'K93';
 
-    // quart (UK liquid) per day
+    /** quart (UK liquid) per day */
     case K94 = 'K94';
 
-    // quart (UK liquid) per hour
+    /** quart (UK liquid) per hour */
     case K95 = 'K95';
 
-    // quart (UK liquid) per minute
+    /** quart (UK liquid) per minute */
     case K96 = 'K96';
 
-    // quart (UK liquid) per second
+    /** quart (UK liquid) per second */
     case K97 = 'K97';
 
-    // quart (US liquid) per day
+    /** quart (US liquid) per day */
     case K98 = 'K98';
 
-    // quart (US liquid) per hour
+    /** quart (US liquid) per hour */
     case K99 = 'K99';
 
-    // cake
+    /** cake */
     case KA = 'KA';
 
-    // katal
+    /** katal */
     case KAT = 'KAT';
 
-    // kilocharacter
+    /** kilocharacter */
     case KB = 'KB';
 
-    // kilobar
+    /** kilobar */
     case KBA = 'KBA';
 
-    // kilogram of choline chloride
+    /** kilogram of choline chloride */
     case KCC = 'KCC';
 
-    // kilogram drained net weight
+    /** kilogram drained net weight */
     case KDW = 'KDW';
 
-    // kelvin
+    /** kelvin */
     case KEL = 'KEL';
 
-    // kilogram
+    /** kilogram */
     case KGM = 'KGM';
 
-    // kilogram per second
+    /** kilogram per second */
     case KGS = 'KGS';
 
-    // kilogram of hydrogen peroxide
+    /** kilogram of hydrogen peroxide */
     case KHY = 'KHY';
 
-    // kilohertz
+    /** kilohertz */
     case KHZ = 'KHZ';
 
-    // kilogram per millimetre width
+    /** kilogram per millimetre width */
     case KI = 'KI';
 
-    // kilogram, including container
+    /** kilogram, including container */
     case KIC = 'KIC';
 
-    // kilogram, including inner packaging
+    /** kilogram, including inner packaging */
     case KIP = 'KIP';
 
-    // kilosegment
+    /** kilosegment */
     case KJ = 'KJ';
 
-    // kilojoule
+    /** kilojoule */
     case KJO = 'KJO';
 
-    // kilogram per metre
+    /** kilogram per metre */
     case KL = 'KL';
 
-    // lactic dry material percentage
+    /** lactic dry material percentage */
     case KLK = 'KLK';
 
-    // kilolux
+    /** kilolux */
     case KLX = 'KLX';
 
-    // kilogram of methylamine
+    /** kilogram of methylamine */
     case KMA = 'KMA';
 
-    // kilometre per hour
+    /** kilometre per hour */
     case KMH = 'KMH';
 
-    // square kilometre
+    /** square kilometre */
     case KMK = 'KMK';
 
-    // kilogram per cubic metre
+    /** kilogram per cubic metre */
     case KMQ = 'KMQ';
 
-    // kilometre
+    /** kilometre */
     case KMT = 'KMT';
 
-    // kilogram of nitrogen
+    /** kilogram of nitrogen */
     case KNI = 'KNI';
 
-    // kilonewton per square metre
+    /** kilonewton per square metre */
     case KNM = 'KNM';
 
-    // kilogram named substance
+    /** kilogram named substance */
     case KNS = 'KNS';
 
-    // knot
+    /** knot */
     case KNT = 'KNT';
 
-    // milliequivalence caustic potash per gram of product
+    /** milliequivalence caustic potash per gram of product */
     case KO = 'KO';
 
-    // kilopascal
+    /** kilopascal */
     case KPA = 'KPA';
 
-    // kilogram of potassium hydroxide (caustic potash)
+    /** kilogram of potassium hydroxide (caustic potash) */
     case KPH = 'KPH';
 
-    // kilogram of potassium oxide
+    /** kilogram of potassium oxide */
     case KPO = 'KPO';
 
-    // kilogram of phosphorus pentoxide (phosphoric anhydride)
+    /** kilogram of phosphorus pentoxide (phosphoric anhydride) */
     case KPP = 'KPP';
 
-    // kiloroentgen
+    /** kiloroentgen */
     case KR = 'KR';
 
-    // kilogram of substance 90 % dry
+    /** kilogram of substance 90 % dry */
     case KSD = 'KSD';
 
-    // kilogram of sodium hydroxide (caustic soda)
+    /** kilogram of sodium hydroxide (caustic soda) */
     case KSH = 'KSH';
 
-    // kit
+    /** kit */
     case KT = 'KT';
 
-    // kilotonne
+    /** kilotonne */
     case KTN = 'KTN';
 
-    // kilogram of uranium
+    /** kilogram of uranium */
     case KUR = 'KUR';
 
-    // kilovolt - ampere
+    /** kilovolt - ampere */
     case KVA = 'KVA';
 
-    // kilovar
+    /** kilovar */
     case KVR = 'KVR';
 
-    // kilovolt
+    /** kilovolt */
     case KVT = 'KVT';
 
-    // kilogram per millimetre
+    /** kilogram per millimetre */
     case KW = 'KW';
 
-    // kilowatt hour
+    /** kilowatt hour */
     case KWH = 'KWH';
 
-    // Kilowatt hour per normalized cubic metre
+    /** Kilowatt hour per normalized cubic metre */
     case KWN = 'KWN';
 
-    // kilogram of tungsten trioxide
+    /** kilogram of tungsten trioxide */
     case KWO = 'KWO';
 
-    // Kilowatt hour per standard cubic metre
+    /** Kilowatt hour per standard cubic metre */
     case KWS = 'KWS';
 
-    // kilowatt
+    /** kilowatt */
     case KWT = 'KWT';
 
-    // kilowatt year
+    /** kilowatt year */
     case KWY = 'KWY';
 
-    // millilitre per kilogram
+    /** millilitre per kilogram */
     case KX = 'KX';
 
-    // quart (US liquid) per minute
+    /** quart (US liquid) per minute */
     case L10 = 'L10';
 
-    // quart (US liquid) per second
+    /** quart (US liquid) per second */
     case L11 = 'L11';
 
-    // metre per second kelvin
+    /** metre per second kelvin */
     case L12 = 'L12';
 
-    // metre per second bar
+    /** metre per second bar */
     case L13 = 'L13';
 
-    // square metre hour degree Celsius per kilocalorie (international table)
+    /** square metre hour degree Celsius per kilocalorie (international table) */
     case L14 = 'L14';
 
-    // millipascal second per kelvin
+    /** millipascal second per kelvin */
     case L15 = 'L15';
 
-    // millipascal second per bar
+    /** millipascal second per bar */
     case L16 = 'L16';
 
-    // milligram per cubic metre kelvin
+    /** milligram per cubic metre kelvin */
     case L17 = 'L17';
 
-    // milligram per cubic metre bar
+    /** milligram per cubic metre bar */
     case L18 = 'L18';
 
-    // millilitre per litre
+    /** millilitre per litre */
     case L19 = 'L19';
 
-    // litre per minute
+    /** litre per minute */
     case L2 = 'L2';
 
-    // reciprocal cubic millimetre
+    /** reciprocal cubic millimetre */
     case L20 = 'L20';
 
-    // cubic millimetre per cubic metre
+    /** cubic millimetre per cubic metre */
     case L21 = 'L21';
 
-    // mole per hour
+    /** mole per hour */
     case L23 = 'L23';
 
-    // mole per kilogram kelvin
+    /** mole per kilogram kelvin */
     case L24 = 'L24';
 
-    // mole per kilogram bar
+    /** mole per kilogram bar */
     case L25 = 'L25';
 
-    // mole per litre kelvin
+    /** mole per litre kelvin */
     case L26 = 'L26';
 
-    // mole per litre bar
+    /** mole per litre bar */
     case L27 = 'L27';
 
-    // mole per cubic metre kelvin
+    /** mole per cubic metre kelvin */
     case L28 = 'L28';
 
-    // mole per cubic metre bar
+    /** mole per cubic metre bar */
     case L29 = 'L29';
 
-    // mole per minute
+    /** mole per minute */
     case L30 = 'L30';
 
-    // milliroentgen aequivalent men
+    /** milliroentgen aequivalent men */
     case L31 = 'L31';
 
-    // nanogram per kilogram
+    /** nanogram per kilogram */
     case L32 = 'L32';
 
-    // ounce (avoirdupois) per day
+    /** ounce (avoirdupois) per day */
     case L33 = 'L33';
 
-    // ounce (avoirdupois) per hour
+    /** ounce (avoirdupois) per hour */
     case L34 = 'L34';
 
-    // ounce (avoirdupois) per minute
+    /** ounce (avoirdupois) per minute */
     case L35 = 'L35';
 
-    // ounce (avoirdupois) per second
+    /** ounce (avoirdupois) per second */
     case L36 = 'L36';
 
-    // ounce (avoirdupois) per gallon (UK)
+    /** ounce (avoirdupois) per gallon (UK) */
     case L37 = 'L37';
 
-    // ounce (avoirdupois) per gallon (US)
+    /** ounce (avoirdupois) per gallon (US) */
     case L38 = 'L38';
 
-    // ounce (avoirdupois) per cubic inch
+    /** ounce (avoirdupois) per cubic inch */
     case L39 = 'L39';
 
-    // ounce (avoirdupois)-force
+    /** ounce (avoirdupois)-force */
     case L40 = 'L40';
 
-    // ounce (avoirdupois)-force inch
+    /** ounce (avoirdupois)-force inch */
     case L41 = 'L41';
 
-    // picosiemens per metre
+    /** picosiemens per metre */
     case L42 = 'L42';
 
-    // peck (UK)
+    /** peck (UK) */
     case L43 = 'L43';
 
-    // peck (UK) per day
+    /** peck (UK) per day */
     case L44 = 'L44';
 
-    // peck (UK) per hour
+    /** peck (UK) per hour */
     case L45 = 'L45';
 
-    // peck (UK) per minute
+    /** peck (UK) per minute */
     case L46 = 'L46';
 
-    // peck (UK) per second
+    /** peck (UK) per second */
     case L47 = 'L47';
 
-    // peck (US dry) per day
+    /** peck (US dry) per day */
     case L48 = 'L48';
 
-    // peck (US dry) per hour
+    /** peck (US dry) per hour */
     case L49 = 'L49';
 
-    // peck (US dry) per minute
+    /** peck (US dry) per minute */
     case L50 = 'L50';
 
-    // peck (US dry) per second
+    /** peck (US dry) per second */
     case L51 = 'L51';
 
-    // psi per psi
+    /** psi per psi */
     case L52 = 'L52';
 
-    // pint (UK) per day
+    /** pint (UK) per day */
     case L53 = 'L53';
 
-    // pint (UK) per hour
+    /** pint (UK) per hour */
     case L54 = 'L54';
 
-    // pint (UK) per minute
+    /** pint (UK) per minute */
     case L55 = 'L55';
 
-    // pint (UK) per second
+    /** pint (UK) per second */
     case L56 = 'L56';
 
-    // pint (US liquid) per day
+    /** pint (US liquid) per day */
     case L57 = 'L57';
 
-    // pint (US liquid) per hour
+    /** pint (US liquid) per hour */
     case L58 = 'L58';
 
-    // pint (US liquid) per minute
+    /** pint (US liquid) per minute */
     case L59 = 'L59';
 
-    // pint (US liquid) per second
+    /** pint (US liquid) per second */
     case L60 = 'L60';
 
-    // slug per day
+    /** slug per day */
     case L63 = 'L63';
 
-    // slug per foot second
+    /** slug per foot second */
     case L64 = 'L64';
 
-    // slug per cubic foot
+    /** slug per cubic foot */
     case L65 = 'L65';
 
-    // slug per hour
+    /** slug per hour */
     case L66 = 'L66';
 
-    // slug per minute
+    /** slug per minute */
     case L67 = 'L67';
 
-    // slug per second
+    /** slug per second */
     case L68 = 'L68';
 
-    // tonne per kelvin
+    /** tonne per kelvin */
     case L69 = 'L69';
 
-    // tonne per bar
+    /** tonne per bar */
     case L70 = 'L70';
 
-    // tonne per day
+    /** tonne per day */
     case L71 = 'L71';
 
-    // tonne per day kelvin
+    /** tonne per day kelvin */
     case L72 = 'L72';
 
-    // tonne per day bar
+    /** tonne per day bar */
     case L73 = 'L73';
 
-    // tonne per hour kelvin
+    /** tonne per hour kelvin */
     case L74 = 'L74';
 
-    // tonne per hour bar
+    /** tonne per hour bar */
     case L75 = 'L75';
 
-    // tonne per cubic metre kelvin
+    /** tonne per cubic metre kelvin */
     case L76 = 'L76';
 
-    // tonne per cubic metre bar
+    /** tonne per cubic metre bar */
     case L77 = 'L77';
 
-    // tonne per minute
+    /** tonne per minute */
     case L78 = 'L78';
 
-    // tonne per minute kelvin
+    /** tonne per minute kelvin */
     case L79 = 'L79';
 
-    // tonne per minute bar
+    /** tonne per minute bar */
     case L80 = 'L80';
 
-    // tonne per second
+    /** tonne per second */
     case L81 = 'L81';
 
-    // tonne per second kelvin
+    /** tonne per second kelvin */
     case L82 = 'L82';
 
-    // tonne per second bar
+    /** tonne per second bar */
     case L83 = 'L83';
 
-    // ton (UK shipping)
+    /** ton (UK shipping) */
     case L84 = 'L84';
 
-    // ton long per day
+    /** ton long per day */
     case L85 = 'L85';
 
-    // ton (US shipping)
+    /** ton (US shipping) */
     case L86 = 'L86';
 
-    // ton short per degree Fahrenheit
+    /** ton short per degree Fahrenheit */
     case L87 = 'L87';
 
-    // ton short per day
+    /** ton short per day */
     case L88 = 'L88';
 
-    // ton short per hour degree Fahrenheit
+    /** ton short per hour degree Fahrenheit */
     case L89 = 'L89';
 
-    // ton short per hour psi
+    /** ton short per hour psi */
     case L90 = 'L90';
 
-    // ton short per psi
+    /** ton short per psi */
     case L91 = 'L91';
 
-    // ton (UK long) per cubic yard
+    /** ton (UK long) per cubic yard */
     case L92 = 'L92';
 
-    // ton (US short) per cubic yard
+    /** ton (US short) per cubic yard */
     case L93 = 'L93';
 
-    // ton-force (US short)
+    /** ton-force (US short) */
     case L94 = 'L94';
 
-    // common year
+    /** common year */
     case L95 = 'L95';
 
-    // sidereal year
+    /** sidereal year */
     case L96 = 'L96';
 
-    // yard per degree Fahrenheit
+    /** yard per degree Fahrenheit */
     case L98 = 'L98';
 
-    // yard per psi
+    /** yard per psi */
     case L99 = 'L99';
 
-    // pound per cubic inch
+    /** pound per cubic inch */
     case LA = 'LA';
 
-    // lactose excess percentage
+    /** lactose excess percentage */
     case LAC = 'LAC';
 
-    // pound
+    /** pound */
     case LBR = 'LBR';
 
-    // troy pound (US)
+    /** troy pound (US) */
     case LBT = 'LBT';
 
-    // litre per day
+    /** litre per day */
     case LD = 'LD';
 
-    // leaf
+    /** leaf */
     case LEF = 'LEF';
 
-    // linear foot
+    /** linear foot */
     case LF = 'LF';
 
-    // labour hour
+    /** labour hour */
     case LH = 'LH';
 
-    // link
+    /** link */
     case LK = 'LK';
 
-    // linear metre
+    /** linear metre */
     case LM = 'LM';
 
-    // length
+    /** length */
     case LN = 'LN';
 
-    // lot  [unit of procurement]
+    /** lot  [unit of procurement] */
     case LO = 'LO';
 
-    // liquid pound
+    /** liquid pound */
     case LP = 'LP';
 
-    // litre of pure alcohol
+    /** litre of pure alcohol */
     case LPA = 'LPA';
 
-    // layer
+    /** layer */
     case LR = 'LR';
 
-    // lump sum
+    /** lump sum */
     case LS = 'LS';
 
-    // ton (UK) or long ton (US)
+    /** ton (UK) or long ton (US) */
     case LTN = 'LTN';
 
-    // litre
+    /** litre */
     case LTR = 'LTR';
 
-    // metric ton, lubricating oil
+    /** metric ton, lubricating oil */
     case LUB = 'LUB';
 
-    // lumen
+    /** lumen */
     case LUM = 'LUM';
 
-    // lux
+    /** lux */
     case LUX = 'LUX';
 
-    // linear yard
+    /** linear yard */
     case LY = 'LY';
 
-    // milligram per litre
+    /** milligram per litre */
     case M1 = 'M1';
 
-    // reciprocal cubic yard
+    /** reciprocal cubic yard */
     case M10 = 'M10';
 
-    // cubic yard per degree Fahrenheit
+    /** cubic yard per degree Fahrenheit */
     case M11 = 'M11';
 
-    // cubic yard per day
+    /** cubic yard per day */
     case M12 = 'M12';
 
-    // cubic yard per hour
+    /** cubic yard per hour */
     case M13 = 'M13';
 
-    // cubic yard per psi
+    /** cubic yard per psi */
     case M14 = 'M14';
 
-    // cubic yard per minute
+    /** cubic yard per minute */
     case M15 = 'M15';
 
-    // cubic yard per second
+    /** cubic yard per second */
     case M16 = 'M16';
 
-    // kilohertz metre
+    /** kilohertz metre */
     case M17 = 'M17';
 
-    // gigahertz metre
+    /** gigahertz metre */
     case M18 = 'M18';
 
-    // Beaufort
+    /** Beaufort */
     case M19 = 'M19';
 
-    // reciprocal megakelvin or megakelvin to the power minus one
+    /** reciprocal megakelvin or megakelvin to the power minus one */
     case M20 = 'M20';
 
-    // reciprocal kilovolt - ampere reciprocal hour
+    /** reciprocal kilovolt - ampere reciprocal hour */
     case M21 = 'M21';
 
-    // millilitre per square centimetre minute
+    /** millilitre per square centimetre minute */
     case M22 = 'M22';
 
-    // newton per centimetre
+    /** newton per centimetre */
     case M23 = 'M23';
 
-    // ohm kilometre
+    /** ohm kilometre */
     case M24 = 'M24';
 
-    // percent per degree Celsius
+    /** percent per degree Celsius */
     case M25 = 'M25';
 
-    // gigaohm per metre
+    /** gigaohm per metre */
     case M26 = 'M26';
 
-    // megahertz metre
+    /** megahertz metre */
     case M27 = 'M27';
 
-    // kilogram per kilogram
+    /** kilogram per kilogram */
     case M29 = 'M29';
 
-    // reciprocal volt - ampere reciprocal second
+    /** reciprocal volt - ampere reciprocal second */
     case M30 = 'M30';
 
-    // kilogram per kilometre
+    /** kilogram per kilometre */
     case M31 = 'M31';
 
-    // pascal second per litre
+    /** pascal second per litre */
     case M32 = 'M32';
 
-    // millimole per litre
+    /** millimole per litre */
     case M33 = 'M33';
 
-    // newton metre per square metre
+    /** newton metre per square metre */
     case M34 = 'M34';
 
-    // millivolt - ampere
+    /** millivolt - ampere */
     case M35 = 'M35';
 
-    // 30-day month
+    /** 30-day month */
     case M36 = 'M36';
 
-    // actual/360
+    /** actual/360 */
     case M37 = 'M37';
 
-    // kilometre per second squared
+    /** kilometre per second squared */
     case M38 = 'M38';
 
-    // centimetre per second squared
+    /** centimetre per second squared */
     case M39 = 'M39';
 
-    // monetary value
+    /** monetary value */
     case M4 = 'M4';
 
-    // yard per second squared
+    /** yard per second squared */
     case M40 = 'M40';
 
-    // millimetre per second squared
+    /** millimetre per second squared */
     case M41 = 'M41';
 
-    // mile (statute mile) per second squared
+    /** mile (statute mile) per second squared */
     case M42 = 'M42';
 
-    // mil
+    /** mil */
     case M43 = 'M43';
 
-    // revolution
+    /** revolution */
     case M44 = 'M44';
 
-    // degree [unit of angle] per second squared
+    /** degree [unit of angle] per second squared */
     case M45 = 'M45';
 
-    // revolution per minute
+    /** revolution per minute */
     case M46 = 'M46';
 
-    // circular mil
+    /** circular mil */
     case M47 = 'M47';
 
-    // square mile (based on U.S. survey foot)
+    /** square mile (based on U.S. survey foot) */
     case M48 = 'M48';
 
-    // chain (based on U.S. survey foot)
+    /** chain (based on U.S. survey foot) */
     case M49 = 'M49';
 
-    // microcurie
+    /** microcurie */
     case M5 = 'M5';
 
-    // furlong
+    /** furlong */
     case M50 = 'M50';
 
-    // foot (U.S. survey)
+    /** foot (U.S. survey) */
     case M51 = 'M51';
 
-    // mile (based on U.S. survey foot)
+    /** mile (based on U.S. survey foot) */
     case M52 = 'M52';
 
-    // metre per pascal
+    /** metre per pascal */
     case M53 = 'M53';
 
-    // metre per radiant
+    /** metre per radiant */
     case M55 = 'M55';
 
-    // shake
+    /** shake */
     case M56 = 'M56';
 
-    // mile per minute
+    /** mile per minute */
     case M57 = 'M57';
 
-    // mile per second
+    /** mile per second */
     case M58 = 'M58';
 
-    // metre per second pascal
+    /** metre per second pascal */
     case M59 = 'M59';
 
-    // metre per hour
+    /** metre per hour */
     case M60 = 'M60';
 
-    // inch per year
+    /** inch per year */
     case M61 = 'M61';
 
-    // kilometre per second
+    /** kilometre per second */
     case M62 = 'M62';
 
-    // inch per minute
+    /** inch per minute */
     case M63 = 'M63';
 
-    // yard per second
+    /** yard per second */
     case M64 = 'M64';
 
-    // yard per minute
+    /** yard per minute */
     case M65 = 'M65';
 
-    // yard per hour
+    /** yard per hour */
     case M66 = 'M66';
 
-    // acre-foot (based on U.S. survey foot)
+    /** acre-foot (based on U.S. survey foot) */
     case M67 = 'M67';
 
-    // cord (128 ft3)
+    /** cord (128 ft3) */
     case M68 = 'M68';
 
-    // cubic mile (UK statute)
+    /** cubic mile (UK statute) */
     case M69 = 'M69';
 
-    // micro-inch
+    /** micro-inch */
     case M7 = 'M7';
 
-    // ton, register
+    /** ton, register */
     case M70 = 'M70';
 
-    // cubic metre per pascal
+    /** cubic metre per pascal */
     case M71 = 'M71';
 
-    // bel
+    /** bel */
     case M72 = 'M72';
 
-    // kilogram per cubic metre pascal
+    /** kilogram per cubic metre pascal */
     case M73 = 'M73';
 
-    // kilogram per pascal
+    /** kilogram per pascal */
     case M74 = 'M74';
 
-    // kilopound-force
+    /** kilopound-force */
     case M75 = 'M75';
 
-    // poundal
+    /** poundal */
     case M76 = 'M76';
 
-    // kilogram metre per second squared
+    /** kilogram metre per second squared */
     case M77 = 'M77';
 
-    // pond
+    /** pond */
     case M78 = 'M78';
 
-    // square foot per hour
+    /** square foot per hour */
     case M79 = 'M79';
 
-    // stokes per pascal
+    /** stokes per pascal */
     case M80 = 'M80';
 
-    // square centimetre per second
+    /** square centimetre per second */
     case M81 = 'M81';
 
-    // square metre per second pascal
+    /** square metre per second pascal */
     case M82 = 'M82';
 
-    // denier
+    /** denier */
     case M83 = 'M83';
 
-    // pound per yard
+    /** pound per yard */
     case M84 = 'M84';
 
-    // ton, assay
+    /** ton, assay */
     case M85 = 'M85';
 
-    // pfund
+    /** pfund */
     case M86 = 'M86';
 
-    // kilogram per second pascal
+    /** kilogram per second pascal */
     case M87 = 'M87';
 
-    // tonne per month
+    /** tonne per month */
     case M88 = 'M88';
 
-    // tonne per year
+    /** tonne per year */
     case M89 = 'M89';
 
-    // million Btu per 1000 cubic foot
+    /** million Btu per 1000 cubic foot */
     case M9 = 'M9';
 
-    // kilopound per hour
+    /** kilopound per hour */
     case M90 = 'M90';
 
-    // pound per pound
+    /** pound per pound */
     case M91 = 'M91';
 
-    // pound-force foot
+    /** pound-force foot */
     case M92 = 'M92';
 
-    // newton metre per radian
+    /** newton metre per radian */
     case M93 = 'M93';
 
-    // kilogram metre
+    /** kilogram metre */
     case M94 = 'M94';
 
-    // poundal foot
+    /** poundal foot */
     case M95 = 'M95';
 
-    // poundal inch
+    /** poundal inch */
     case M96 = 'M96';
 
-    // dyne metre
+    /** dyne metre */
     case M97 = 'M97';
 
-    // kilogram centimetre per second
+    /** kilogram centimetre per second */
     case M98 = 'M98';
 
-    // gram centimetre per second
+    /** gram centimetre per second */
     case M99 = 'M99';
 
-    // megavolt ampere reactive hour
+    /** megavolt ampere reactive hour */
     case MAH = 'MAH';
 
-    // megalitre
+    /** megalitre */
     case MAL = 'MAL';
 
-    // megametre
+    /** megametre */
     case MAM = 'MAM';
 
-    // megavar
+    /** megavar */
     case MAR = 'MAR';
 
-    // megawatt
+    /** megawatt */
     case MAW = 'MAW';
 
-    // thousand standard brick equivalent
+    /** thousand standard brick equivalent */
     case MBE = 'MBE';
 
-    // thousand board foot
+    /** thousand board foot */
     case MBF = 'MBF';
 
-    // millibar
+    /** millibar */
     case MBR = 'MBR';
 
-    // microgram
+    /** microgram */
     case MC = 'MC';
 
-    // millicurie
+    /** millicurie */
     case MCU = 'MCU';
 
-    // air dry metric ton
+    /** air dry metric ton */
     case MD = 'MD';
 
-    // milligram
+    /** milligram */
     case MGM = 'MGM';
 
-    // megahertz
+    /** megahertz */
     case MHZ = 'MHZ';
 
-    // square mile (statute mile)
+    /** square mile (statute mile) */
     case MIK = 'MIK';
 
-    // thousand
+    /** thousand */
     case MIL = 'MIL';
 
-    // minute [unit of time]
+    /** minute [unit of time] */
     case MIN = 'MIN';
 
-    // million
+    /** million */
     case MIO = 'MIO';
 
-    // million international unit
+    /** million international unit */
     case MIU = 'MIU';
 
-    // Square Metre Day
+    /** Square Metre Day */
     case MKD = 'MKD';
 
-    // Square Metre Month
+    /** Square Metre Month */
     case MKM = 'MKM';
 
-    // Square Metre Week
+    /** Square Metre Week */
     case MKW = 'MKW';
 
-    // milliard
+    /** milliard */
     case MLD = 'MLD';
 
-    // millilitre
+    /** millilitre */
     case MLT = 'MLT';
 
-    // square millimetre
+    /** square millimetre */
     case MMK = 'MMK';
 
-    // cubic millimetre
+    /** cubic millimetre */
     case MMQ = 'MMQ';
 
-    // millimetre
+    /** millimetre */
     case MMT = 'MMT';
 
-    // kilogram, dry weight
+    /** kilogram, dry weight */
     case MND = 'MND';
 
-    // Mega Joule per Normalised cubic Metre
+    /** Mega Joule per Normalised cubic Metre */
     case MNJ = 'MNJ';
 
-    // month
+    /** month */
     case MON = 'MON';
 
-    // megapascal
+    /** megapascal */
     case MPA = 'MPA';
 
-    // Cubic Metre Day
+    /** Cubic Metre Day */
     case MQD = 'MQD';
 
-    // cubic metre per hour
+    /** cubic metre per hour */
     case MQH = 'MQH';
 
-    // Cubic Metre Month
+    /** Cubic Metre Month */
     case MQM = 'MQM';
 
-    // cubic metre per second
+    /** cubic metre per second */
     case MQS = 'MQS';
 
-    // Cubic Metre Week
+    /** Cubic Metre Week */
     case MQW = 'MQW';
 
-    // Metre Day
+    /** Metre Day */
     case MRD = 'MRD';
 
-    // Metre Month
+    /** Metre Month */
     case MRM = 'MRM';
 
-    // Metre Week
+    /** Metre Week */
     case MRW = 'MRW';
 
-    // metre per second squared
+    /** metre per second squared */
     case MSK = 'MSK';
 
-    // square metre
+    /** square metre */
     case MTK = 'MTK';
 
-    // cubic metre
+    /** cubic metre */
     case MTQ = 'MTQ';
 
-    // metre
+    /** metre */
     case MTR = 'MTR';
 
-    // metre per second
+    /** metre per second */
     case MTS = 'MTS';
 
-    // milihertz
+    /** milihertz */
     case MTZ = 'MTZ';
 
-    // megavolt - ampere
+    /** megavolt - ampere */
     case MVA = 'MVA';
 
-    // megawatt hour (1000 kW.h)
+    /** megawatt hour (1000 kW.h) */
     case MWH = 'MWH';
 
-    // pen calorie
+    /** pen calorie */
     case N1 = 'N1';
 
-    // pound foot per second
+    /** pound foot per second */
     case N10 = 'N10';
 
-    // pound inch per second
+    /** pound inch per second */
     case N11 = 'N11';
 
-    // Pferdestaerke
+    /** Pferdestaerke */
     case N12 = 'N12';
 
-    // centimetre of mercury (0 ºC)
+    /** centimetre of mercury (0 ºC) */
     case N13 = 'N13';
 
-    // centimetre of water (4 ºC)
+    /** centimetre of water (4 ºC) */
     case N14 = 'N14';
 
-    // foot of water (39.2 ºF)
+    /** foot of water (39.2 ºF) */
     case N15 = 'N15';
 
-    // inch of mercury (32 ºF)
+    /** inch of mercury (32 ºF) */
     case N16 = 'N16';
 
-    // inch of mercury (60 ºF)
+    /** inch of mercury (60 ºF) */
     case N17 = 'N17';
 
-    // inch of water (39.2 ºF)
+    /** inch of water (39.2 ºF) */
     case N18 = 'N18';
 
-    // inch of water (60 ºF)
+    /** inch of water (60 ºF) */
     case N19 = 'N19';
 
-    // kip per square inch
+    /** kip per square inch */
     case N20 = 'N20';
 
-    // poundal per square foot
+    /** poundal per square foot */
     case N21 = 'N21';
 
-    // ounce (avoirdupois) per square inch
+    /** ounce (avoirdupois) per square inch */
     case N22 = 'N22';
 
-    // conventional metre of water
+    /** conventional metre of water */
     case N23 = 'N23';
 
-    // gram per square millimetre
+    /** gram per square millimetre */
     case N24 = 'N24';
 
-    // pound per square yard
+    /** pound per square yard */
     case N25 = 'N25';
 
-    // poundal per square inch
+    /** poundal per square inch */
     case N26 = 'N26';
 
-    // foot to the fourth power
+    /** foot to the fourth power */
     case N27 = 'N27';
 
-    // cubic decimetre per kilogram
+    /** cubic decimetre per kilogram */
     case N28 = 'N28';
 
-    // cubic foot per pound
+    /** cubic foot per pound */
     case N29 = 'N29';
 
-    // print point
+    /** print point */
     case N3 = 'N3';
 
-    // cubic inch per pound
+    /** cubic inch per pound */
     case N30 = 'N30';
 
-    // kilonewton per metre
+    /** kilonewton per metre */
     case N31 = 'N31';
 
-    // poundal per inch
+    /** poundal per inch */
     case N32 = 'N32';
 
-    // pound-force per yard
+    /** pound-force per yard */
     case N33 = 'N33';
 
-    // poundal second per square foot
+    /** poundal second per square foot */
     case N34 = 'N34';
 
-    // poise per pascal
+    /** poise per pascal */
     case N35 = 'N35';
 
-    // newton second per square metre
+    /** newton second per square metre */
     case N36 = 'N36';
 
-    // kilogram per metre second
+    /** kilogram per metre second */
     case N37 = 'N37';
 
-    // kilogram per metre minute
+    /** kilogram per metre minute */
     case N38 = 'N38';
 
-    // kilogram per metre day
+    /** kilogram per metre day */
     case N39 = 'N39';
 
-    // kilogram per metre hour
+    /** kilogram per metre hour */
     case N40 = 'N40';
 
-    // gram per centimetre second
+    /** gram per centimetre second */
     case N41 = 'N41';
 
-    // poundal second per square inch
+    /** poundal second per square inch */
     case N42 = 'N42';
 
-    // pound per foot minute
+    /** pound per foot minute */
     case N43 = 'N43';
 
-    // pound per foot day
+    /** pound per foot day */
     case N44 = 'N44';
 
-    // cubic metre per second pascal
+    /** cubic metre per second pascal */
     case N45 = 'N45';
 
-    // foot poundal
+    /** foot poundal */
     case N46 = 'N46';
 
-    // inch poundal
+    /** inch poundal */
     case N47 = 'N47';
 
-    // watt per square centimetre
+    /** watt per square centimetre */
     case N48 = 'N48';
 
-    // watt per square inch
+    /** watt per square inch */
     case N49 = 'N49';
 
-    // British thermal unit (international table) per square foot hour
+    /** British thermal unit (international table) per square foot hour */
     case N50 = 'N50';
 
-    // British thermal unit (thermochemical) per square foot hour
+    /** British thermal unit (thermochemical) per square foot hour */
     case N51 = 'N51';
 
-    // British thermal unit (thermochemical) per square foot minute
+    /** British thermal unit (thermochemical) per square foot minute */
     case N52 = 'N52';
 
-    // British thermal unit (international table) per square foot second
+    /** British thermal unit (international table) per square foot second */
     case N53 = 'N53';
 
-    // British thermal unit (thermochemical) per square foot second
+    /** British thermal unit (thermochemical) per square foot second */
     case N54 = 'N54';
 
-    // British thermal unit (international table) per square inch second
+    /** British thermal unit (international table) per square inch second */
     case N55 = 'N55';
 
-    // calorie (thermochemical) per square centimetre minute
+    /** calorie (thermochemical) per square centimetre minute */
     case N56 = 'N56';
 
-    // calorie (thermochemical) per square centimetre second
+    /** calorie (thermochemical) per square centimetre second */
     case N57 = 'N57';
 
-    // British thermal unit (international table) per cubic foot
+    /** British thermal unit (international table) per cubic foot */
     case N58 = 'N58';
 
-    // British thermal unit (thermochemical) per cubic foot
+    /** British thermal unit (thermochemical) per cubic foot */
     case N59 = 'N59';
 
-    // British thermal unit (international table) per degree Fahrenheit
+    /** British thermal unit (international table) per degree Fahrenheit */
     case N60 = 'N60';
 
-    // British thermal unit (thermochemical) per degree Fahrenheit
+    /** British thermal unit (thermochemical) per degree Fahrenheit */
     case N61 = 'N61';
 
-    // British thermal unit (international table) per degree Rankine
+    /** British thermal unit (international table) per degree Rankine */
     case N62 = 'N62';
 
-    // British thermal unit (thermochemical) per degree Rankine
+    /** British thermal unit (thermochemical) per degree Rankine */
     case N63 = 'N63';
 
-    // British thermal unit (thermochemical) per pound degree Rankine
+    /** British thermal unit (thermochemical) per pound degree Rankine */
     case N64 = 'N64';
 
-    // kilocalorie (international table) per gram kelvin
+    /** kilocalorie (international table) per gram kelvin */
     case N65 = 'N65';
 
-    // British thermal unit (39 ºF)
+    /** British thermal unit (39 ºF) */
     case N66 = 'N66';
 
-    // British thermal unit (59 ºF)
+    /** British thermal unit (59 ºF) */
     case N67 = 'N67';
 
-    // British thermal unit (60 ºF)
+    /** British thermal unit (60 ºF) */
     case N68 = 'N68';
 
-    // calorie (20 ºC)
+    /** calorie (20 ºC) */
     case N69 = 'N69';
 
-    // quad (1015 BtuIT)
+    /** quad (1015 BtuIT) */
     case N70 = 'N70';
 
-    // therm (EC)
+    /** therm (EC) */
     case N71 = 'N71';
 
-    // therm (U.S.)
+    /** therm (U.S.) */
     case N72 = 'N72';
 
-    // British thermal unit (thermochemical) per pound
+    /** British thermal unit (thermochemical) per pound */
     case N73 = 'N73';
 
-    // British thermal unit (international table) per hour square foot degree Fahrenheit
+    /** British thermal unit (international table) per hour square foot degree Fahrenheit */
     case N74 = 'N74';
 
-    // British thermal unit (thermochemical) per hour square foot degree Fahrenheit
+    /** British thermal unit (thermochemical) per hour square foot degree Fahrenheit */
     case N75 = 'N75';
 
-    // British thermal unit (international table) per second square foot degree Fahrenheit
+    /** British thermal unit (international table) per second square foot degree Fahrenheit */
     case N76 = 'N76';
 
-    // British thermal unit (thermochemical) per second square foot degree Fahrenheit
+    /** British thermal unit (thermochemical) per second square foot degree Fahrenheit */
     case N77 = 'N77';
 
-    // kilowatt per square metre kelvin
+    /** kilowatt per square metre kelvin */
     case N78 = 'N78';
 
-    // kelvin per pascal
+    /** kelvin per pascal */
     case N79 = 'N79';
 
-    // watt per metre degree Celsius
+    /** watt per metre degree Celsius */
     case N80 = 'N80';
 
-    // kilowatt per metre kelvin
+    /** kilowatt per metre kelvin */
     case N81 = 'N81';
 
-    // kilowatt per metre degree Celsius
+    /** kilowatt per metre degree Celsius */
     case N82 = 'N82';
 
-    // metre per degree Celcius metre
+    /** metre per degree Celcius metre */
     case N83 = 'N83';
 
-    // degree Fahrenheit hour per British thermal unit (international table)
+    /** degree Fahrenheit hour per British thermal unit (international table) */
     case N84 = 'N84';
 
-    // degree Fahrenheit hour per British thermal unit (thermochemical)
+    /** degree Fahrenheit hour per British thermal unit (thermochemical) */
     case N85 = 'N85';
 
-    // degree Fahrenheit second per British thermal unit (international table)
+    /** degree Fahrenheit second per British thermal unit (international table) */
     case N86 = 'N86';
 
-    // degree Fahrenheit second per British thermal unit (thermochemical)
+    /** degree Fahrenheit second per British thermal unit (thermochemical) */
     case N87 = 'N87';
 
-    // degree Fahrenheit hour square foot per British thermal unit (international table) inch
+    /** degree Fahrenheit hour square foot per British thermal unit (international table) inch */
     case N88 = 'N88';
 
-    // degree Fahrenheit hour square foot per British thermal unit (thermochemical) inch
+    /** degree Fahrenheit hour square foot per British thermal unit (thermochemical) inch */
     case N89 = 'N89';
 
-    // kilofarad
+    /** kilofarad */
     case N90 = 'N90';
 
-    // reciprocal joule
+    /** reciprocal joule */
     case N91 = 'N91';
 
-    // picosiemens
+    /** picosiemens */
     case N92 = 'N92';
 
-    // ampere per pascal
+    /** ampere per pascal */
     case N93 = 'N93';
 
-    // franklin
+    /** franklin */
     case N94 = 'N94';
 
-    // ampere minute
+    /** ampere minute */
     case N95 = 'N95';
 
-    // biot
+    /** biot */
     case N96 = 'N96';
 
-    // gilbert
+    /** gilbert */
     case N97 = 'N97';
 
-    // volt per pascal
+    /** volt per pascal */
     case N98 = 'N98';
 
-    // picovolt
+    /** picovolt */
     case N99 = 'N99';
 
-    // milligram per kilogram
+    /** milligram per kilogram */
     case NA = 'NA';
 
-    // number of articles
+    /** number of articles */
     case NAR = 'NAR';
 
-    // number of cells
+    /** number of cells */
     case NCL = 'NCL';
 
-    // newton
+    /** newton */
     case NEW = 'NEW';
 
-    // message
+    /** message */
     case NF = 'NF';
 
-    // nil
+    /** nil */
     case NIL = 'NIL';
 
-    // number of international units
+    /** number of international units */
     case NIU = 'NIU';
 
-    // load
+    /** load */
     case NL = 'NL';
 
-    // Normalised cubic metre
+    /** Normalised cubic metre */
     case NM3 = 'NM3';
 
-    // nautical mile
+    /** nautical mile */
     case NMI = 'NMI';
 
-    // number of packs
+    /** number of packs */
     case NMP = 'NMP';
 
-    // number of parts
+    /** number of parts */
     case NPT = 'NPT';
 
-    // net ton
+    /** net ton */
     case NT = 'NT';
 
-    // Nephelometric turbidity unit
+    /** Nephelometric turbidity unit */
     case NTU = 'NTU';
 
-    // newton metre
+    /** newton metre */
     case NU = 'NU';
 
-    // part per thousand
+    /** part per thousand */
     case NX = 'NX';
 
-    // panel
+    /** panel */
     case OA = 'OA';
 
-    // ozone depletion equivalent
+    /** ozone depletion equivalent */
     case ODE = 'ODE';
 
-    // ODS Grams
+    /** ODS Grams */
     case ODG = 'ODG';
 
-    // ODS Kilograms
+    /** ODS Kilograms */
     case ODK = 'ODK';
 
-    // ODS Milligrams
+    /** ODS Milligrams */
     case ODM = 'ODM';
 
-    // ohm
+    /** ohm */
     case OHM = 'OHM';
 
-    // ounce per square yard
+    /** ounce per square yard */
     case ON = 'ON';
 
-    // ounce (avoirdupois)
+    /** ounce (avoirdupois) */
     case ONZ = 'ONZ';
 
-    // oscillations per minute
+    /** oscillations per minute */
     case OPM = 'OPM';
 
-    // overtime hour
+    /** overtime hour */
     case OT = 'OT';
 
-    // fluid ounce (US)
+    /** fluid ounce (US) */
     case OZA = 'OZA';
 
-    // fluid ounce (UK)
+    /** fluid ounce (UK) */
     case OZI = 'OZI';
 
-    // percent
+    /** percent */
     case P1 = 'P1';
 
-    // coulomb per metre
+    /** coulomb per metre */
     case P10 = 'P10';
 
-    // kiloweber
+    /** kiloweber */
     case P11 = 'P11';
 
-    // gamma
+    /** gamma */
     case P12 = 'P12';
 
-    // kilotesla
+    /** kilotesla */
     case P13 = 'P13';
 
-    // joule per second
+    /** joule per second */
     case P14 = 'P14';
 
-    // joule per minute
+    /** joule per minute */
     case P15 = 'P15';
 
-    // joule per hour
+    /** joule per hour */
     case P16 = 'P16';
 
-    // joule per day
+    /** joule per day */
     case P17 = 'P17';
 
-    // kilojoule per second
+    /** kilojoule per second */
     case P18 = 'P18';
 
-    // kilojoule per minute
+    /** kilojoule per minute */
     case P19 = 'P19';
 
-    // pound per foot
+    /** pound per foot */
     case P2 = 'P2';
 
-    // kilojoule per hour
+    /** kilojoule per hour */
     case P20 = 'P20';
 
-    // kilojoule per day
+    /** kilojoule per day */
     case P21 = 'P21';
 
-    // nanoohm
+    /** nanoohm */
     case P22 = 'P22';
 
-    // ohm circular-mil per foot
+    /** ohm circular-mil per foot */
     case P23 = 'P23';
 
-    // kilohenry
+    /** kilohenry */
     case P24 = 'P24';
 
-    // lumen per square foot
+    /** lumen per square foot */
     case P25 = 'P25';
 
-    // phot
+    /** phot */
     case P26 = 'P26';
 
-    // footcandle
+    /** footcandle */
     case P27 = 'P27';
 
-    // candela per square inch
+    /** candela per square inch */
     case P28 = 'P28';
 
-    // footlambert
+    /** footlambert */
     case P29 = 'P29';
 
-    // lambert
+    /** lambert */
     case P30 = 'P30';
 
-    // stilb
+    /** stilb */
     case P31 = 'P31';
 
-    // candela per square foot
+    /** candela per square foot */
     case P32 = 'P32';
 
-    // kilocandela
+    /** kilocandela */
     case P33 = 'P33';
 
-    // millicandela
+    /** millicandela */
     case P34 = 'P34';
 
-    // Hefner-Kerze
+    /** Hefner-Kerze */
     case P35 = 'P35';
 
-    // international candle
+    /** international candle */
     case P36 = 'P36';
 
-    // British thermal unit (international table) per square foot
+    /** British thermal unit (international table) per square foot */
     case P37 = 'P37';
 
-    // British thermal unit (thermochemical) per square foot
+    /** British thermal unit (thermochemical) per square foot */
     case P38 = 'P38';
 
-    // calorie (thermochemical) per square centimetre
+    /** calorie (thermochemical) per square centimetre */
     case P39 = 'P39';
 
-    // langley
+    /** langley */
     case P40 = 'P40';
 
-    // decade (logarithmic)
+    /** decade (logarithmic) */
     case P41 = 'P41';
 
-    // pascal squared second
+    /** pascal squared second */
     case P42 = 'P42';
 
-    // bel per metre
+    /** bel per metre */
     case P43 = 'P43';
 
-    // pound mole
+    /** pound mole */
     case P44 = 'P44';
 
-    // pound mole per second
+    /** pound mole per second */
     case P45 = 'P45';
 
-    // pound mole per minute
+    /** pound mole per minute */
     case P46 = 'P46';
 
-    // kilomole per kilogram
+    /** kilomole per kilogram */
     case P47 = 'P47';
 
-    // pound mole per pound
+    /** pound mole per pound */
     case P48 = 'P48';
 
-    // newton square metre per ampere
+    /** newton square metre per ampere */
     case P49 = 'P49';
 
-    // five pack
+    /** five pack */
     case P5 = 'P5';
 
-    // weber metre
+    /** weber metre */
     case P50 = 'P50';
 
-    // mol per kilogram pascal
+    /** mol per kilogram pascal */
     case P51 = 'P51';
 
-    // mol per cubic metre pascal
+    /** mol per cubic metre pascal */
     case P52 = 'P52';
 
-    // unit pole
+    /** unit pole */
     case P53 = 'P53';
 
-    // milligray per second
+    /** milligray per second */
     case P54 = 'P54';
 
-    // microgray per second
+    /** microgray per second */
     case P55 = 'P55';
 
-    // nanogray per second
+    /** nanogray per second */
     case P56 = 'P56';
 
-    // gray per minute
+    /** gray per minute */
     case P57 = 'P57';
 
-    // milligray per minute
+    /** milligray per minute */
     case P58 = 'P58';
 
-    // microgray per minute
+    /** microgray per minute */
     case P59 = 'P59';
 
-    // nanogray per minute
+    /** nanogray per minute */
     case P60 = 'P60';
 
-    // gray per hour
+    /** gray per hour */
     case P61 = 'P61';
 
-    // milligray per hour
+    /** milligray per hour */
     case P62 = 'P62';
 
-    // microgray per hour
+    /** microgray per hour */
     case P63 = 'P63';
 
-    // nanogray per hour
+    /** nanogray per hour */
     case P64 = 'P64';
 
-    // sievert per second
+    /** sievert per second */
     case P65 = 'P65';
 
-    // millisievert per second
+    /** millisievert per second */
     case P66 = 'P66';
 
-    // microsievert per second
+    /** microsievert per second */
     case P67 = 'P67';
 
-    // nanosievert per second
+    /** nanosievert per second */
     case P68 = 'P68';
 
-    // rem per second
+    /** rem per second */
     case P69 = 'P69';
 
-    // sievert per hour
+    /** sievert per hour */
     case P70 = 'P70';
 
-    // millisievert per hour
+    /** millisievert per hour */
     case P71 = 'P71';
 
-    // microsievert per hour
+    /** microsievert per hour */
     case P72 = 'P72';
 
-    // nanosievert per hour
+    /** nanosievert per hour */
     case P73 = 'P73';
 
-    // sievert per minute
+    /** sievert per minute */
     case P74 = 'P74';
 
-    // millisievert per minute
+    /** millisievert per minute */
     case P75 = 'P75';
 
-    // microsievert per minute
+    /** microsievert per minute */
     case P76 = 'P76';
 
-    // nanosievert per minute
+    /** nanosievert per minute */
     case P77 = 'P77';
 
-    // reciprocal square inch
+    /** reciprocal square inch */
     case P78 = 'P78';
 
-    // pascal square metre per kilogram
+    /** pascal square metre per kilogram */
     case P79 = 'P79';
 
-    // millipascal per metre
+    /** millipascal per metre */
     case P80 = 'P80';
 
-    // kilopascal per metre
+    /** kilopascal per metre */
     case P81 = 'P81';
 
-    // hectopascal per metre
+    /** hectopascal per metre */
     case P82 = 'P82';
 
-    // standard atmosphere per metre
+    /** standard atmosphere per metre */
     case P83 = 'P83';
 
-    // technical atmosphere per metre
+    /** technical atmosphere per metre */
     case P84 = 'P84';
 
-    // torr per metre
+    /** torr per metre */
     case P85 = 'P85';
 
-    // psi per inch
+    /** psi per inch */
     case P86 = 'P86';
 
-    // cubic metre per second square metre
+    /** cubic metre per second square metre */
     case P87 = 'P87';
 
-    // rhe
+    /** rhe */
     case P88 = 'P88';
 
-    // pound-force foot per inch
+    /** pound-force foot per inch */
     case P89 = 'P89';
 
-    // pound-force inch per inch
+    /** pound-force inch per inch */
     case P90 = 'P90';
 
-    // perm (0 ºC)
+    /** perm (0 ºC) */
     case P91 = 'P91';
 
-    // perm (23 ºC)
+    /** perm (23 ºC) */
     case P92 = 'P92';
 
-    // byte per second
+    /** byte per second */
     case P93 = 'P93';
 
-    // kilobyte per second
+    /** kilobyte per second */
     case P94 = 'P94';
 
-    // megabyte per second
+    /** megabyte per second */
     case P95 = 'P95';
 
-    // reciprocal volt
+    /** reciprocal volt */
     case P96 = 'P96';
 
-    // reciprocal radian
+    /** reciprocal radian */
     case P97 = 'P97';
 
-    // pascal to the power sum of stoichiometric numbers
+    /** pascal to the power sum of stoichiometric numbers */
     case P98 = 'P98';
 
-    // mole per cubiv metre to the power sum of stoichiometric numbers
+    /** mole per cubiv metre to the power sum of stoichiometric numbers */
     case P99 = 'P99';
 
-    // pascal
+    /** pascal */
     case PAL = 'PAL';
 
-    // pad
+    /** pad */
     case PD = 'PD';
 
-    // proof litre
+    /** proof litre */
     case PFL = 'PFL';
 
-    // proof gallon
+    /** proof gallon */
     case PGL = 'PGL';
 
-    // pitch
+    /** pitch */
     case PI = 'PI';
 
-    // degree Plato
+    /** degree Plato */
     case PLA = 'PLA';
 
-    // pound per inch of length
+    /** pound per inch of length */
     case PO = 'PO';
 
-    // page per inch
+    /** page per inch */
     case PQ = 'PQ';
 
-    // pair
+    /** pair */
     case PR = 'PR';
 
-    // pound-force per square inch
+    /** pound-force per square inch */
     case PS = 'PS';
 
-    // dry pint (US)
+    /** dry pint (US) */
     case PTD = 'PTD';
 
-    // pint (UK)
+    /** pint (UK) */
     case PTI = 'PTI';
 
-    // liquid pint (US)
+    /** liquid pint (US) */
     case PTL = 'PTL';
 
-    // portion
+    /** portion */
     case PTN = 'PTN';
 
-    // joule per tesla
+    /** joule per tesla */
     case Q10 = 'Q10';
 
-    // erlang
+    /** erlang */
     case Q11 = 'Q11';
 
-    // octet
+    /** octet */
     case Q12 = 'Q12';
 
-    // octet per second
+    /** octet per second */
     case Q13 = 'Q13';
 
-    // shannon
+    /** shannon */
     case Q14 = 'Q14';
 
-    // hartley
+    /** hartley */
     case Q15 = 'Q15';
 
-    // natural unit of information
+    /** natural unit of information */
     case Q16 = 'Q16';
 
-    // shannon per second
+    /** shannon per second */
     case Q17 = 'Q17';
 
-    // hartley per second
+    /** hartley per second */
     case Q18 = 'Q18';
 
-    // natural unit of information per second
+    /** natural unit of information per second */
     case Q19 = 'Q19';
 
-    // second per kilogramm
+    /** second per kilogramm */
     case Q20 = 'Q20';
 
-    // watt square metre
+    /** watt square metre */
     case Q21 = 'Q21';
 
-    // second per radian cubic metre
+    /** second per radian cubic metre */
     case Q22 = 'Q22';
 
-    // weber to the power minus one
+    /** weber to the power minus one */
     case Q23 = 'Q23';
 
-    // reciprocal inch
+    /** reciprocal inch */
     case Q24 = 'Q24';
 
-    // dioptre
+    /** dioptre */
     case Q25 = 'Q25';
 
-    // one per one
+    /** one per one */
     case Q26 = 'Q26';
 
-    // newton metre per metre
+    /** newton metre per metre */
     case Q27 = 'Q27';
 
-    // kilogram per square metre pascal second
+    /** kilogram per square metre pascal second */
     case Q28 = 'Q28';
 
-    // microgram per hectogram
+    /** microgram per hectogram */
     case Q29 = 'Q29';
 
-    // meal
+    /** meal */
     case Q3 = 'Q3';
 
-    // pH (potential of Hydrogen)
+    /** pH (potential of Hydrogen) */
     case Q30 = 'Q30';
 
-    // kilojoule per gram
+    /** kilojoule per gram */
     case Q31 = 'Q31';
 
-    // femtolitre
+    /** femtolitre */
     case Q32 = 'Q32';
 
-    // picolitre
+    /** picolitre */
     case Q33 = 'Q33';
 
-    // nanolitre
+    /** nanolitre */
     case Q34 = 'Q34';
 
-    // megawatts per minute
+    /** megawatts per minute */
     case Q35 = 'Q35';
 
-    // square metre per cubic metre
+    /** square metre per cubic metre */
     case Q36 = 'Q36';
 
-    // Standard cubic metre per day
+    /** Standard cubic metre per day */
     case Q37 = 'Q37';
 
-    // Standard cubic metre per hour
+    /** Standard cubic metre per hour */
     case Q38 = 'Q38';
 
-    // Normalized cubic metre per day
+    /** Normalized cubic metre per day */
     case Q39 = 'Q39';
 
-    // Normalized cubic metre per hour
+    /** Normalized cubic metre per hour */
     case Q40 = 'Q40';
 
-    // Joule per normalised cubic metre
+    /** Joule per normalised cubic metre */
     case Q41 = 'Q41';
 
-    // Joule per standard cubic metre
+    /** Joule per standard cubic metre */
     case Q42 = 'Q42';
 
-    // page - facsimile
+    /** page - facsimile */
     case QA = 'QA';
 
-    // quarter (of a year)
+    /** quarter (of a year) */
     case QAN = 'QAN';
 
-    // page - hardcopy
+    /** page - hardcopy */
     case QB = 'QB';
 
-    // quire
+    /** quire */
     case QR = 'QR';
 
-    // dry quart (US)
+    /** dry quart (US) */
     case QTD = 'QTD';
 
-    // quart (UK)
+    /** quart (UK) */
     case QTI = 'QTI';
 
-    // liquid quart (US)
+    /** liquid quart (US) */
     case QTL = 'QTL';
 
-    // quarter (UK)
+    /** quarter (UK) */
     case QTR = 'QTR';
 
-    // pica
+    /** pica */
     case R1 = 'R1';
 
-    // thousand cubic metre
+    /** thousand cubic metre */
     case R9 = 'R9';
 
-    // running or operating hour
+    /** running or operating hour */
     case RH = 'RH';
 
-    // ream
+    /** ream */
     case RM = 'RM';
 
-    // room
+    /** room */
     case ROM = 'ROM';
 
-    // pound per ream
+    /** pound per ream */
     case RP = 'RP';
 
-    // revolutions per minute
+    /** revolutions per minute */
     case RPM = 'RPM';
 
-    // revolutions per second
+    /** revolutions per second */
     case RPS = 'RPS';
 
-    // revenue ton mile
+    /** revenue ton mile */
     case RT = 'RT';
 
-    // square foot per second
+    /** square foot per second */
     case S3 = 'S3';
 
-    // square metre per second
+    /** square metre per second */
     case S4 = 'S4';
 
-    // half year (6 months)
+    /** half year (6 months) */
     case SAN = 'SAN';
 
-    // score
+    /** score */
     case SCO = 'SCO';
 
-    // scruple
+    /** scruple */
     case SCR = 'SCR';
 
-    // second [unit of time]
+    /** second [unit of time] */
     case SEC = 'SEC';
 
-    // set
+    /** set */
     case SET = 'SET';
 
-    // segment
+    /** segment */
     case SG = 'SG';
 
-    // siemens
+    /** siemens */
     case SIE = 'SIE';
 
-    // Standard cubic metre
+    /** Standard cubic metre */
     case SM3 = 'SM3';
 
-    // mile (statute mile)
+    /** mile (statute mile) */
     case SMI = 'SMI';
 
-    // square
+    /** square */
     case SQ = 'SQ';
 
-    // square, roofing
+    /** square, roofing */
     case SQR = 'SQR';
 
-    // strip
+    /** strip */
     case SR = 'SR';
 
-    // stick
+    /** stick */
     case STC = 'STC';
 
-    // stone (UK)
+    /** stone (UK) */
     case STI = 'STI';
 
-    // stick, cigarette
+    /** stick, cigarette */
     case STK = 'STK';
 
-    // standard litre
+    /** standard litre */
     case STL = 'STL';
 
-    // ton (US) or short ton (UK/US)
+    /** ton (US) or short ton (UK/US) */
     case STN = 'STN';
 
-    // straw
+    /** straw */
     case STW = 'STW';
 
-    // skein
+    /** skein */
     case SW = 'SW';
 
-    // shipment
+    /** shipment */
     case SX = 'SX';
 
-    // syringe
+    /** syringe */
     case SYR = 'SYR';
 
-    // telecommunication line in service
+    /** telecommunication line in service */
     case T0 = 'T0';
 
-    // thousand piece
+    /** thousand piece */
     case T3 = 'T3';
 
-    // kiloampere hour (thousand ampere hour)
+    /** kiloampere hour (thousand ampere hour) */
     case TAH = 'TAH';
 
-    // total acid number
+    /** total acid number */
     case TAN = 'TAN';
 
-    // thousand square inch
+    /** thousand square inch */
     case TI = 'TI';
 
-    // metric ton, including container
+    /** metric ton, including container */
     case TIC = 'TIC';
 
-    // metric ton, including inner packaging
+    /** metric ton, including inner packaging */
     case TIP = 'TIP';
 
-    // tonne kilometre
+    /** tonne kilometre */
     case TKM = 'TKM';
 
-    // kilogram of imported meat, less offal
+    /** kilogram of imported meat, less offal */
     case TMS = 'TMS';
 
-    // tonne (metric ton)
+    /** tonne (metric ton) */
     case TNE = 'TNE';
 
-    // ten pack
+    /** ten pack */
     case TP = 'TP';
 
-    // teeth per inch
+    /** teeth per inch */
     case TPI = 'TPI';
 
-    // ten pair
+    /** ten pair */
     case TPR = 'TPR';
 
-    // thousand cubic metre per day
+    /** thousand cubic metre per day */
     case TQD = 'TQD';
 
-    // trillion (EUR)
+    /** trillion (EUR) */
     case TRL = 'TRL';
 
-    // ten set
+    /** ten set */
     case TST = 'TST';
 
-    // ten thousand sticks
+    /** ten thousand sticks */
     case TTS = 'TTS';
 
-    // treatment
+    /** treatment */
     case U1 = 'U1';
 
-    // tablet
+    /** tablet */
     case U2 = 'U2';
 
-    // telecommunication line in service average
+    /** telecommunication line in service average */
     case UB = 'UB';
 
-    // telecommunication port
+    /** telecommunication port */
     case UC = 'UC';
 
-    // volt - ampere per kilogram
+    /** volt - ampere per kilogram */
     case VA = 'VA';
 
-    // volt
+    /** volt */
     case VLT = 'VLT';
 
-    // percent volume
+    /** percent volume */
     case VP = 'VP';
 
-    // wet kilo
+    /** wet kilo */
     case W2 = 'W2';
 
-    // watt per kilogram
+    /** watt per kilogram */
     case WA = 'WA';
 
-    // wet pound
+    /** wet pound */
     case WB = 'WB';
 
-    // cord
+    /** cord */
     case WCD = 'WCD';
 
-    // wet ton
+    /** wet ton */
     case WE = 'WE';
 
-    // weber
+    /** weber */
     case WEB = 'WEB';
 
-    // week
+    /** week */
     case WEE = 'WEE';
 
-    // wine gallon
+    /** wine gallon */
     case WG = 'WG';
 
-    // watt hour
+    /** watt hour */
     case WHR = 'WHR';
 
-    // working month
+    /** working month */
     case WM = 'WM';
 
-    // standard
+    /** standard */
     case WSD = 'WSD';
 
-    // watt
+    /** watt */
     case WTT = 'WTT';
 
-    // Gunter's chain
+    /** Gunter's chain */
     case X1 = 'X1';
 
-    // square yard
+    /** square yard */
     case YDK = 'YDK';
 
-    // cubic yard
+    /** cubic yard */
     case YDQ = 'YDQ';
 
-    // yard
+    /** yard */
     case YRD = 'YRD';
 
-    // hanging container
+    /** hanging container */
     case Z11 = 'Z11';
 
-    // nanomole
+    /** nanomole */
     case Z9 = 'Z9';
 
-    // page
+    /** page */
     case ZP = 'ZP';
 
-    // mutually defined
+    /** mutually defined */
     case ZZ = 'ZZ';
 
-    // Drum, steel
+    /** Drum, steel */
     case X1A = 'X1A';
 
-    // Drum, aluminium
+    /** Drum, aluminium */
     case X1B = 'X1B';
 
-    // Drum, plywood
+    /** Drum, plywood */
     case X1D = 'X1D';
 
-    // Container, flexible
+    /** Container, flexible */
     case X1F = 'X1F';
 
-    // Drum, fibre
+    /** Drum, fibre */
     case X1G = 'X1G';
 
-    // Drum, wooden
+    /** Drum, wooden */
     case X1W = 'X1W';
 
-    // Barrel, wooden
+    /** Barrel, wooden */
     case X2C = 'X2C';
 
-    // Jerrican, steel
+    /** Jerrican, steel */
     case X3A = 'X3A';
 
-    // Jerrican, plastic
+    /** Jerrican, plastic */
     case X3H = 'X3H';
 
-    // Bag, super bulk
+    /** Bag, super bulk */
     case X43 = 'X43';
 
-    // Bag, polybag
+    /** Bag, polybag */
     case X44 = 'X44';
 
-    // Box, steel
+    /** Box, steel */
     case X4A = 'X4A';
 
-    // Box, aluminium
+    /** Box, aluminium */
     case X4B = 'X4B';
 
-    // Box, natural wood
+    /** Box, natural wood */
     case X4C = 'X4C';
 
-    // Box, plywood
+    /** Box, plywood */
     case X4D = 'X4D';
 
-    // Box, reconstituted wood
+    /** Box, reconstituted wood */
     case X4F = 'X4F';
 
-    // Box, fibreboard
+    /** Box, fibreboard */
     case X4G = 'X4G';
 
-    // Box, plastic
+    /** Box, plastic */
     case X4H = 'X4H';
 
-    // Bag, woven plastic
+    /** Bag, woven plastic */
     case X5H = 'X5H';
 
-    // Bag, textile
+    /** Bag, textile */
     case X5L = 'X5L';
 
-    // Bag, paper
+    /** Bag, paper */
     case X5M = 'X5M';
 
-    // Composite packaging, plastic receptacle
+    /** Composite packaging, plastic receptacle */
     case X6H = 'X6H';
 
-    // Composite packaging, glass receptacle
+    /** Composite packaging, glass receptacle */
     case X6P = 'X6P';
 
-    // Case, car
+    /** Case, car */
     case X7A = 'X7A';
 
-    // Case, wooden
+    /** Case, wooden */
     case X7B = 'X7B';
 
-    // Pallet, wooden
+    /** Pallet, wooden */
     case X8A = 'X8A';
 
-    // Crate, wooden
+    /** Crate, wooden */
     case X8B = 'X8B';
 
-    // Bundle, wooden
+    /** Bundle, wooden */
     case X8C = 'X8C';
 
-    // Intermediate bulk container, rigid plastic
+    /** Intermediate bulk container, rigid plastic */
     case XAA = 'XAA';
 
-    // Receptacle, fibre
+    /** Receptacle, fibre */
     case XAB = 'XAB';
 
-    // Receptacle, paper
+    /** Receptacle, paper */
     case XAC = 'XAC';
 
-    // Receptacle, wooden
+    /** Receptacle, wooden */
     case XAD = 'XAD';
 
-    // Aerosol
+    /** Aerosol */
     case XAE = 'XAE';
 
-    // Pallet, modular, collars 80cms * 60cms
+    /** Pallet, modular, collars 80cms * 60cms */
     case XAF = 'XAF';
 
-    // Pallet, shrinkwrapped
+    /** Pallet, shrinkwrapped */
     case XAG = 'XAG';
 
-    // Pallet, 100cms * 110cms
+    /** Pallet, 100cms * 110cms */
     case XAH = 'XAH';
 
-    // Clamshell
+    /** Clamshell */
     case XAI = 'XAI';
 
-    // Cone
+    /** Cone */
     case XAJ = 'XAJ';
 
-    // Ball
+    /** Ball */
     case XAL = 'XAL';
 
-    // Ampoule, non-protected
+    /** Ampoule, non-protected */
     case XAM = 'XAM';
 
-    // Ampoule, protected
+    /** Ampoule, protected */
     case XAP = 'XAP';
 
-    // Atomizer
+    /** Atomizer */
     case XAT = 'XAT';
 
-    // Capsule
+    /** Capsule */
     case XAV = 'XAV';
 
-    // Belt
+    /** Belt */
     case XB4 = 'XB4';
 
-    // Barrel
+    /** Barrel */
     case XBA = 'XBA';
 
-    // Bobbin
+    /** Bobbin */
     case XBB = 'XBB';
 
-    // Bottlecrate / bottlerack
+    /** Bottlecrate / bottlerack */
     case XBC = 'XBC';
 
-    // Board
+    /** Board */
     case XBD = 'XBD';
 
-    // Bundle
+    /** Bundle */
     case XBE = 'XBE';
 
-    // Balloon, non-protected
+    /** Balloon, non-protected */
     case XBF = 'XBF';
 
-    // Bag
+    /** Bag */
     case XBG = 'XBG';
 
-    // Bunch
+    /** Bunch */
     case XBH = 'XBH';
 
-    // Bin
+    /** Bin */
     case XBI = 'XBI';
 
-    // Bucket
+    /** Bucket */
     case XBJ = 'XBJ';
 
-    // Basket
+    /** Basket */
     case XBK = 'XBK';
 
-    // Bale, compressed
+    /** Bale, compressed */
     case XBL = 'XBL';
 
-    // Basin
+    /** Basin */
     case XBM = 'XBM';
 
-    // Bale, non-compressed
+    /** Bale, non-compressed */
     case XBN = 'XBN';
 
-    // Bottle, non-protected, cylindrical
+    /** Bottle, non-protected, cylindrical */
     case XBO = 'XBO';
 
-    // Balloon, protected
+    /** Balloon, protected */
     case XBP = 'XBP';
 
-    // Bottle, protected cylindrical
+    /** Bottle, protected cylindrical */
     case XBQ = 'XBQ';
 
-    // Bar
+    /** Bar */
     case XBR = 'XBR';
 
-    // Bottle, non-protected, bulbous
+    /** Bottle, non-protected, bulbous */
     case XBS = 'XBS';
 
-    // Bolt
+    /** Bolt */
     case XBT = 'XBT';
 
-    // Butt
+    /** Butt */
     case XBU = 'XBU';
 
-    // Bottle, protected bulbous
+    /** Bottle, protected bulbous */
     case XBV = 'XBV';
 
-    // Box, for liquids
+    /** Box, for liquids */
     case XBW = 'XBW';
 
-    // Box
+    /** Box */
     case XBX = 'XBX';
 
-    // Board, in bundle/bunch/truss
+    /** Board, in bundle/bunch/truss */
     case XBY = 'XBY';
 
-    // Bars, in bundle/bunch/truss
+    /** Bars, in bundle/bunch/truss */
     case XBZ = 'XBZ';
 
-    // Can, rectangular
+    /** Can, rectangular */
     case XCA = 'XCA';
 
-    // Crate, beer
+    /** Crate, beer */
     case XCB = 'XCB';
 
-    // Churn
+    /** Churn */
     case XCC = 'XCC';
 
-    // Can, with handle and spout
+    /** Can, with handle and spout */
     case XCD = 'XCD';
 
-    // Creel
+    /** Creel */
     case XCE = 'XCE';
 
-    // Coffer
+    /** Coffer */
     case XCF = 'XCF';
 
-    // Cage
+    /** Cage */
     case XCG = 'XCG';
 
-    // Chest
+    /** Chest */
     case XCH = 'XCH';
 
-    // Canister
+    /** Canister */
     case XCI = 'XCI';
 
-    // Coffin
+    /** Coffin */
     case XCJ = 'XCJ';
 
-    // Cask
+    /** Cask */
     case XCK = 'XCK';
 
-    // Coil
+    /** Coil */
     case XCL = 'XCL';
 
-    // Card
+    /** Card */
     case XCM = 'XCM';
 
-    // Container, not otherwise specified as transport equipment
+    /** Container, not otherwise specified as transport equipment */
     case XCN = 'XCN';
 
-    // Carboy, non-protected
+    /** Carboy, non-protected */
     case XCO = 'XCO';
 
-    // Carboy, protected
+    /** Carboy, protected */
     case XCP = 'XCP';
 
-    // Cartridge
+    /** Cartridge */
     case XCQ = 'XCQ';
 
-    // Crate
+    /** Crate */
     case XCR = 'XCR';
 
-    // Case
+    /** Case */
     case XCS = 'XCS';
 
-    // Carton
+    /** Carton */
     case XCT = 'XCT';
 
-    // Cup
+    /** Cup */
     case XCU = 'XCU';
 
-    // Cover
+    /** Cover */
     case XCV = 'XCV';
 
-    // Cage, roll
+    /** Cage, roll */
     case XCW = 'XCW';
 
-    // Can, cylindrical
+    /** Can, cylindrical */
     case XCX = 'XCX';
 
-    // Cylinder
+    /** Cylinder */
     case XCY = 'XCY';
 
-    // Canvas
+    /** Canvas */
     case XCZ = 'XCZ';
 
-    // Crate, multiple layer, plastic
+    /** Crate, multiple layer, plastic */
     case XDA = 'XDA';
 
-    // Crate, multiple layer, wooden
+    /** Crate, multiple layer, wooden */
     case XDB = 'XDB';
 
-    // Crate, multiple layer, cardboard
+    /** Crate, multiple layer, cardboard */
     case XDC = 'XDC';
 
-    // Cage, Commonwealth Handling Equipment Pool  (CHEP)
+    /** Cage, Commonwealth Handling Equipment Pool  (CHEP) */
     case XDG = 'XDG';
 
-    // Box, Commonwealth Handling Equipment Pool (CHEP), Eurobox
+    /** Box, Commonwealth Handling Equipment Pool (CHEP), Eurobox */
     case XDH = 'XDH';
 
-    // Drum, iron
+    /** Drum, iron */
     case XDI = 'XDI';
 
-    // Demijohn, non-protected
+    /** Demijohn, non-protected */
     case XDJ = 'XDJ';
 
-    // Crate, bulk, cardboard
+    /** Crate, bulk, cardboard */
     case XDK = 'XDK';
 
-    // Crate, bulk, plastic
+    /** Crate, bulk, plastic */
     case XDL = 'XDL';
 
-    // Crate, bulk, wooden
+    /** Crate, bulk, wooden */
     case XDM = 'XDM';
 
-    // Dispenser
+    /** Dispenser */
     case XDN = 'XDN';
 
-    // Demijohn, protected
+    /** Demijohn, protected */
     case XDP = 'XDP';
 
-    // Drum
+    /** Drum */
     case XDR = 'XDR';
 
-    // Tray, one layer no cover, plastic
+    /** Tray, one layer no cover, plastic */
     case XDS = 'XDS';
 
-    // Tray, one layer no cover, wooden
+    /** Tray, one layer no cover, wooden */
     case XDT = 'XDT';
 
-    // Tray, one layer no cover, polystyrene
+    /** Tray, one layer no cover, polystyrene */
     case XDU = 'XDU';
 
-    // Tray, one layer no cover, cardboard
+    /** Tray, one layer no cover, cardboard */
     case XDV = 'XDV';
 
-    // Tray, two layers no cover, plastic tray
+    /** Tray, two layers no cover, plastic tray */
     case XDW = 'XDW';
 
-    // Tray, two layers no cover, wooden
+    /** Tray, two layers no cover, wooden */
     case XDX = 'XDX';
 
-    // Tray, two layers no cover, cardboard
+    /** Tray, two layers no cover, cardboard */
     case XDY = 'XDY';
 
-    // Bag, plastic
+    /** Bag, plastic */
     case XEC = 'XEC';
 
-    // Case, with pallet base
+    /** Case, with pallet base */
     case XED = 'XED';
 
-    // Case, with pallet base, wooden
+    /** Case, with pallet base, wooden */
     case XEE = 'XEE';
 
-    // Case, with pallet base, cardboard
+    /** Case, with pallet base, cardboard */
     case XEF = 'XEF';
 
-    // Case, with pallet base, plastic
+    /** Case, with pallet base, plastic */
     case XEG = 'XEG';
 
-    // Case, with pallet base, metal
+    /** Case, with pallet base, metal */
     case XEH = 'XEH';
 
-    // Case, isothermic
+    /** Case, isothermic */
     case XEI = 'XEI';
 
-    // Envelope
+    /** Envelope */
     case XEN = 'XEN';
 
-    // Flexibag
+    /** Flexibag */
     case XFB = 'XFB';
 
-    // Crate, fruit
+    /** Crate, fruit */
     case XFC = 'XFC';
 
-    // Crate, framed
+    /** Crate, framed */
     case XFD = 'XFD';
 
-    // Flexitank
+    /** Flexitank */
     case XFE = 'XFE';
 
-    // Firkin
+    /** Firkin */
     case XFI = 'XFI';
 
-    // Flask
+    /** Flask */
     case XFL = 'XFL';
 
-    // Footlocker
+    /** Footlocker */
     case XFO = 'XFO';
 
-    // Filmpack
+    /** Filmpack */
     case XFP = 'XFP';
 
-    // Frame
+    /** Frame */
     case XFR = 'XFR';
 
-    // Foodtainer
+    /** Foodtainer */
     case XFT = 'XFT';
 
-    // Cart, flatbed
+    /** Cart, flatbed */
     case XFW = 'XFW';
 
-    // Bag, flexible container
+    /** Bag, flexible container */
     case XFX = 'XFX';
 
-    // Bottle, gas
+    /** Bottle, gas */
     case XGB = 'XGB';
 
-    // Girder
+    /** Girder */
     case XGI = 'XGI';
 
-    // Container, gallon
+    /** Container, gallon */
     case XGL = 'XGL';
 
-    // Receptacle, glass
+    /** Receptacle, glass */
     case XGR = 'XGR';
 
-    // Tray, containing horizontally stacked flat items
+    /** Tray, containing horizontally stacked flat items */
     case XGU = 'XGU';
 
-    // Bag, gunny
+    /** Bag, gunny */
     case XGY = 'XGY';
 
-    // Girders, in bundle/bunch/truss
+    /** Girders, in bundle/bunch/truss */
     case XGZ = 'XGZ';
 
-    // Basket, with handle, plastic
+    /** Basket, with handle, plastic */
     case XHA = 'XHA';
 
-    // Basket, with handle, wooden
+    /** Basket, with handle, wooden */
     case XHB = 'XHB';
 
-    // Basket, with handle, cardboard
+    /** Basket, with handle, cardboard */
     case XHC = 'XHC';
 
-    // Hogshead
+    /** Hogshead */
     case XHG = 'XHG';
 
-    // Hanger
+    /** Hanger */
     case XHN = 'XHN';
 
-    // Hamper
+    /** Hamper */
     case XHR = 'XHR';
 
-    // Package, display, wooden
+    /** Package, display, wooden */
     case XIA = 'XIA';
 
-    // Package, display, cardboard
+    /** Package, display, cardboard */
     case XIB = 'XIB';
 
-    // Package, display, plastic
+    /** Package, display, plastic */
     case XIC = 'XIC';
 
-    // Package, display, metal
+    /** Package, display, metal */
     case XID = 'XID';
 
-    // Package, show
+    /** Package, show */
     case XIE = 'XIE';
 
-    // Package, flow
+    /** Package, flow */
     case XIF = 'XIF';
 
-    // Package, paper wrapped
+    /** Package, paper wrapped */
     case XIG = 'XIG';
 
-    // Drum, plastic
+    /** Drum, plastic */
     case XIH = 'XIH';
 
-    // Package, cardboard, with bottle grip-holes
+    /** Package, cardboard, with bottle grip-holes */
     case XIK = 'XIK';
 
-    // Tray, rigid, lidded stackable (CEN TS 14482:2002)
+    /** Tray, rigid, lidded stackable (CEN TS 14482:2002) */
     case XIL = 'XIL';
 
-    // Ingot
+    /** Ingot */
     case XIN = 'XIN';
 
-    // Ingots, in bundle/bunch/truss
+    /** Ingots, in bundle/bunch/truss */
     case XIZ = 'XIZ';
 
-    // Bag, jumbo
+    /** Bag, jumbo */
     case XJB = 'XJB';
 
-    // Jerrican, rectangular
+    /** Jerrican, rectangular */
     case XJC = 'XJC';
 
-    // Jug
+    /** Jug */
     case XJG = 'XJG';
 
-    // Jar
+    /** Jar */
     case XJR = 'XJR';
 
-    // Jutebag
+    /** Jutebag */
     case XJT = 'XJT';
 
-    // Jerrican, cylindrical
+    /** Jerrican, cylindrical */
     case XJY = 'XJY';
 
-    // Keg
+    /** Keg */
     case XKG = 'XKG';
 
-    // Kit
+    /** Kit */
     case XKI = 'XKI';
 
-    // Luggage
+    /** Luggage */
     case XLE = 'XLE';
 
-    // Log
+    /** Log */
     case XLG = 'XLG';
 
-    // Lot
+    /** Lot */
     case XLT = 'XLT';
 
-    // Lug
+    /** Lug */
     case XLU = 'XLU';
 
-    // Liftvan
+    /** Liftvan */
     case XLV = 'XLV';
 
-    // Logs, in bundle/bunch/truss
+    /** Logs, in bundle/bunch/truss */
     case XLZ = 'XLZ';
 
-    // Crate, metal
+    /** Crate, metal */
     case XMA = 'XMA';
 
-    // Bag, multiply
+    /** Bag, multiply */
     case XMB = 'XMB';
 
-    // Crate, milk
+    /** Crate, milk */
     case XMC = 'XMC';
 
-    // Container, metal
+    /** Container, metal */
     case XME = 'XME';
 
-    // Receptacle, metal
+    /** Receptacle, metal */
     case XMR = 'XMR';
 
-    // Sack, multi-wall
+    /** Sack, multi-wall */
     case XMS = 'XMS';
 
-    // Mat
+    /** Mat */
     case XMT = 'XMT';
 
-    // Receptacle, plastic wrapped
+    /** Receptacle, plastic wrapped */
     case XMW = 'XMW';
 
-    // Matchbox
+    /** Matchbox */
     case XMX = 'XMX';
 
-    // Not available
+    /** Not available */
     case XNA = 'XNA';
 
-    // Unpacked or unpackaged
+    /** Unpacked or unpackaged */
     case XNE = 'XNE';
 
-    // Unpacked or unpackaged, single unit
+    /** Unpacked or unpackaged, single unit */
     case XNF = 'XNF';
 
-    // Unpacked or unpackaged, multiple units
+    /** Unpacked or unpackaged, multiple units */
     case XNG = 'XNG';
 
-    // Nest
+    /** Nest */
     case XNS = 'XNS';
 
-    // Net
+    /** Net */
     case XNT = 'XNT';
 
-    // Net, tube, plastic
+    /** Net, tube, plastic */
     case XNU = 'XNU';
 
-    // Net, tube, textile
+    /** Net, tube, textile */
     case XNV = 'XNV';
 
-    // Two sided cage on wheels with fixing strap
+    /** Two sided cage on wheels with fixing strap */
     case XO1 = 'XO1';
 
-    // Trolley
+    /** Trolley */
     case XO2 = 'XO2';
 
-    // Oneway pallet ISO 0 - 1/2 EURO Pallet
+    /** Oneway pallet ISO 0 - 1/2 EURO Pallet */
     case XO3 = 'XO3';
 
-    // Oneway pallet ISO 1 - 1/1 EURO Pallet
+    /** Oneway pallet ISO 1 - 1/1 EURO Pallet */
     case XO4 = 'XO4';
 
-    // Oneway pallet ISO 2 - 2/1 EURO Pallet
+    /** Oneway pallet ISO 2 - 2/1 EURO Pallet */
     case XO5 = 'XO5';
 
-    // Pallet with exceptional dimensions
+    /** Pallet with exceptional dimensions */
     case XO6 = 'XO6';
 
-    // Wooden pallet  40 cm x 80 cm
+    /** Wooden pallet  40 cm x 80 cm */
     case XO7 = 'XO7';
 
-    // Plastic pallet SRS 60 cm x 80 cm
+    /** Plastic pallet SRS 60 cm x 80 cm */
     case XO8 = 'XO8';
 
-    // Plastic pallet SRS 80 cm x 120 cm
+    /** Plastic pallet SRS 80 cm x 120 cm */
     case XO9 = 'XO9';
 
-    // Pallet, CHEP 40 cm x 60 cm
+    /** Pallet, CHEP 40 cm x 60 cm */
     case XOA = 'XOA';
 
-    // Pallet, CHEP 80 cm x 120 cm
+    /** Pallet, CHEP 80 cm x 120 cm */
     case XOB = 'XOB';
 
-    // Pallet, CHEP 100 cm x 120 cm
+    /** Pallet, CHEP 100 cm x 120 cm */
     case XOC = 'XOC';
 
-    // Pallet, AS 4068-1993
+    /** Pallet, AS 4068-1993 */
     case XOD = 'XOD';
 
-    // Pallet, ISO T11
+    /** Pallet, ISO T11 */
     case XOE = 'XOE';
 
-    // Platform, unspecified weight or dimension
+    /** Platform, unspecified weight or dimension */
     case XOF = 'XOF';
 
-    // Pallet ISO 0 - 1/2 EURO Pallet
+    /** Pallet ISO 0 - 1/2 EURO Pallet */
     case XOG = 'XOG';
 
-    // Pallet ISO 1 - 1/1 EURO Pallet
+    /** Pallet ISO 1 - 1/1 EURO Pallet */
     case XOH = 'XOH';
 
-    // Pallet ISO 2 – 2/1 EURO Pallet
+    /** Pallet ISO 2 – 2/1 EURO Pallet */
     case XOI = 'XOI';
 
-    // 1/4 EURO Pallet
+    /** 1/4 EURO Pallet */
     case XOJ = 'XOJ';
 
-    // Block
+    /** Block */
     case XOK = 'XOK';
 
-    // 1/8 EURO Pallet
+    /** 1/8 EURO Pallet */
     case XOL = 'XOL';
 
-    // Synthetic pallet ISO 1
+    /** Synthetic pallet ISO 1 */
     case XOM = 'XOM';
 
-    // Synthetic pallet ISO 2
+    /** Synthetic pallet ISO 2 */
     case XON = 'XON';
 
-    // Wholesaler pallet
+    /** Wholesaler pallet */
     case XOP = 'XOP';
 
-    // Pallet 80 X 100 cm
+    /** Pallet 80 X 100 cm */
     case XOQ = 'XOQ';
 
-    // Pallet 60 X 100 cm
+    /** Pallet 60 X 100 cm */
     case XOR = 'XOR';
 
-    // Oneway pallet
+    /** Oneway pallet */
     case XOS = 'XOS';
 
-    // Octabin
+    /** Octabin */
     case XOT = 'XOT';
 
-    // Container, outer
+    /** Container, outer */
     case XOU = 'XOU';
 
-    // Returnable pallet
+    /** Returnable pallet */
     case XOV = 'XOV';
 
-    // Large bag, pallet sized
+    /** Large bag, pallet sized */
     case XOW = 'XOW';
 
-    // A wheeled pallet with raised rim (81 x 67 x 135)
+    /** A wheeled pallet with raised rim (81 x 67 x 135) */
     case XOX = 'XOX';
 
-    // A Wheeled pallet with raised rim (81 x 72 x 135)
+    /** A Wheeled pallet with raised rim (81 x 72 x 135) */
     case XOY = 'XOY';
 
-    // Wheeled pallet with raised rim ( 81 x 60 x 16)
+    /** Wheeled pallet with raised rim ( 81 x 60 x 16) */
     case XOZ = 'XOZ';
 
-    // CHEP pallet 60 cm x 80 cm
+    /** CHEP pallet 60 cm x 80 cm */
     case XP1 = 'XP1';
 
-    // Pan
+    /** Pan */
     case XP2 = 'XP2';
 
-    // LPR pallet 60 cm x 80 cm
+    /** LPR pallet 60 cm x 80 cm */
     case XP3 = 'XP3';
 
-    // LPR pallet 80 cm x 120 cm
+    /** LPR pallet 80 cm x 120 cm */
     case XP4 = 'XP4';
 
-    // Packet
+    /** Packet */
     case XPA = 'XPA';
 
-    // Pallet, box Combined open-ended box and pallet
+    /** Pallet, box Combined open-ended box and pallet */
     case XPB = 'XPB';
 
-    // Parcel
+    /** Parcel */
     case XPC = 'XPC';
 
-    // Pallet, modular, collars 80cms * 100cms
+    /** Pallet, modular, collars 80cms * 100cms */
     case XPD = 'XPD';
 
-    // Pallet, modular, collars 80cms * 120cms
+    /** Pallet, modular, collars 80cms * 120cms */
     case XPE = 'XPE';
 
-    // Pen
+    /** Pen */
     case XPF = 'XPF';
 
-    // Plate
+    /** Plate */
     case XPG = 'XPG';
 
-    // Pitcher
+    /** Pitcher */
     case XPH = 'XPH';
 
-    // Pipe
+    /** Pipe */
     case XPI = 'XPI';
 
-    // Punnet
+    /** Punnet */
     case XPJ = 'XPJ';
 
-    // Package
+    /** Package */
     case XPK = 'XPK';
 
-    // Pail
+    /** Pail */
     case XPL = 'XPL';
 
-    // Plank
+    /** Plank */
     case XPN = 'XPN';
 
-    // Pouch
+    /** Pouch */
     case XPO = 'XPO';
 
-    // Piece
+    /** Piece */
     case XPP = 'XPP';
 
-    // Receptacle, plastic
+    /** Receptacle, plastic */
     case XPR = 'XPR';
 
-    // Pot
+    /** Pot */
     case XPT = 'XPT';
 
-    // Tray
+    /** Tray */
     case XPU = 'XPU';
 
-    // Pipes, in bundle/bunch/truss
+    /** Pipes, in bundle/bunch/truss */
     case XPV = 'XPV';
 
-    // Pallet
+    /** Pallet */
     case XPX = 'XPX';
 
-    // Plates, in bundle/bunch/truss
+    /** Plates, in bundle/bunch/truss */
     case XPY = 'XPY';
 
-    // Planks, in bundle/bunch/truss
+    /** Planks, in bundle/bunch/truss */
     case XPZ = 'XPZ';
 
-    // Drum, steel, non-removable head
+    /** Drum, steel, non-removable head */
     case XQA = 'XQA';
 
-    // Drum, steel, removable head
+    /** Drum, steel, removable head */
     case XQB = 'XQB';
 
-    // Drum, aluminium, non-removable head
+    /** Drum, aluminium, non-removable head */
     case XQC = 'XQC';
 
-    // Drum, aluminium, removable head
+    /** Drum, aluminium, removable head */
     case XQD = 'XQD';
 
-    // Drum, plastic, non-removable head
+    /** Drum, plastic, non-removable head */
     case XQF = 'XQF';
 
-    // Drum, plastic, removable head
+    /** Drum, plastic, removable head */
     case XQG = 'XQG';
 
-    // Barrel, wooden, bung type
+    /** Barrel, wooden, bung type */
     case XQH = 'XQH';
 
-    // Barrel, wooden, removable head
+    /** Barrel, wooden, removable head */
     case XQJ = 'XQJ';
 
-    // Jerrican, steel, non-removable head
+    /** Jerrican, steel, non-removable head */
     case XQK = 'XQK';
 
-    // Jerrican, steel, removable head
+    /** Jerrican, steel, removable head */
     case XQL = 'XQL';
 
-    // Jerrican, plastic, non-removable head
+    /** Jerrican, plastic, non-removable head */
     case XQM = 'XQM';
 
-    // Jerrican, plastic, removable head
+    /** Jerrican, plastic, removable head */
     case XQN = 'XQN';
 
-    // Box, wooden, natural wood, ordinary
+    /** Box, wooden, natural wood, ordinary */
     case XQP = 'XQP';
 
-    // Box, wooden, natural wood, with sift proof walls
+    /** Box, wooden, natural wood, with sift proof walls */
     case XQQ = 'XQQ';
 
-    // Box, plastic, expanded
+    /** Box, plastic, expanded */
     case XQR = 'XQR';
 
-    // Box, plastic, solid
+    /** Box, plastic, solid */
     case XQS = 'XQS';
 
-    // Rod
+    /** Rod */
     case XRD = 'XRD';
 
-    // Ring
+    /** Ring */
     case XRG = 'XRG';
 
-    // Rack, clothing hanger
+    /** Rack, clothing hanger */
     case XRJ = 'XRJ';
 
-    // Rack
+    /** Rack */
     case XRK = 'XRK';
 
-    // Reel
+    /** Reel */
     case XRL = 'XRL';
 
-    // Roll
+    /** Roll */
     case XRO = 'XRO';
 
-    // Rednet
+    /** Rednet */
     case XRT = 'XRT';
 
-    // Rods, in bundle/bunch/truss
+    /** Rods, in bundle/bunch/truss */
     case XRZ = 'XRZ';
 
-    // Sack
+    /** Sack */
     case XSA = 'XSA';
 
-    // Slab
+    /** Slab */
     case XSB = 'XSB';
 
-    // Crate, shallow
+    /** Crate, shallow */
     case XSC = 'XSC';
 
-    // Spindle
+    /** Spindle */
     case XSD = 'XSD';
 
-    // Sea-chest
+    /** Sea-chest */
     case XSE = 'XSE';
 
-    // Sachet
+    /** Sachet */
     case XSH = 'XSH';
 
-    // Skid
+    /** Skid */
     case XSI = 'XSI';
 
-    // Case, skeleton
+    /** Case, skeleton */
     case XSK = 'XSK';
 
-    // Slipsheet
+    /** Slipsheet */
     case XSL = 'XSL';
 
-    // Sheetmetal
+    /** Sheetmetal */
     case XSM = 'XSM';
 
-    // Spool
+    /** Spool */
     case XSO = 'XSO';
 
-    // Sheet, plastic wrapping
+    /** Sheet, plastic wrapping */
     case XSP = 'XSP';
 
-    // Case, steel
+    /** Case, steel */
     case XSS = 'XSS';
 
-    // Sheet
+    /** Sheet */
     case XST = 'XST';
 
-    // Suitcase
+    /** Suitcase */
     case XSU = 'XSU';
 
-    // Envelope, steel
+    /** Envelope, steel */
     case XSV = 'XSV';
 
-    // Shrinkwrapped
+    /** Shrinkwrapped */
     case XSW = 'XSW';
 
-    // Set
+    /** Set */
     case XSX = 'XSX';
 
-    // Sleeve
+    /** Sleeve */
     case XSY = 'XSY';
 
-    // Sheets, in bundle/bunch/truss
+    /** Sheets, in bundle/bunch/truss */
     case XSZ = 'XSZ';
 
-    // Tablet
+    /** Tablet */
     case XT1 = 'XT1';
 
-    // Tub
+    /** Tub */
     case XTB = 'XTB';
 
-    // Tea-chest
+    /** Tea-chest */
     case XTC = 'XTC';
 
-    // Tube, collapsible
+    /** Tube, collapsible */
     case XTD = 'XTD';
 
-    // Tyre
+    /** Tyre */
     case XTE = 'XTE';
 
-    // Tank container, generic
+    /** Tank container, generic */
     case XTG = 'XTG';
 
-    // Tierce
+    /** Tierce */
     case XTI = 'XTI';
 
-    // Tank, rectangular
+    /** Tank, rectangular */
     case XTK = 'XTK';
 
-    // Tub, with lid
+    /** Tub, with lid */
     case XTL = 'XTL';
 
-    // Tin
+    /** Tin */
     case XTN = 'XTN';
 
-    // Tun
+    /** Tun */
     case XTO = 'XTO';
 
-    // Trunk
+    /** Trunk */
     case XTR = 'XTR';
 
-    // Truss
+    /** Truss */
     case XTS = 'XTS';
 
-    // Bag, tote
+    /** Bag, tote */
     case XTT = 'XTT';
 
-    // Tube
+    /** Tube */
     case XTU = 'XTU';
 
-    // Tube, with nozzle
+    /** Tube, with nozzle */
     case XTV = 'XTV';
 
-    // Pallet, triwall
+    /** Pallet, triwall */
     case XTW = 'XTW';
 
-    // Tank, cylindrical
+    /** Tank, cylindrical */
     case XTY = 'XTY';
 
-    // Tubes, in bundle/bunch/truss
+    /** Tubes, in bundle/bunch/truss */
     case XTZ = 'XTZ';
 
-    // Uncaged
+    /** Uncaged */
     case XUC = 'XUC';
 
-    // Unit
+    /** Unit */
     case XUN = 'XUN';
 
-    // Vat
+    /** Vat */
     case XVA = 'XVA';
 
-    // Bulk, gas (at 1031 mbar and 15°C)
+    /** Bulk, gas (at 1031 mbar and 15°C) */
     case XVG = 'XVG';
 
-    // Vial
+    /** Vial */
     case XVI = 'XVI';
 
-    // Vanpack
+    /** Vanpack */
     case XVK = 'XVK';
 
-    // Bulk, liquid
+    /** Bulk, liquid */
     case XVL = 'XVL';
 
-    // Vehicle
+    /** Vehicle */
     case XVN = 'XVN';
 
-    // Bulk, solid, large particles (“nodules”)
+    /** Bulk, solid, large particles (“nodules”) */
     case XVO = 'XVO';
 
-    // Vacuum-packed
+    /** Vacuum-packed */
     case XVP = 'XVP';
 
-    // Bulk, liquefied gas (at abnormal temperature/pressure)
+    /** Bulk, liquefied gas (at abnormal temperature/pressure) */
     case XVQ = 'XVQ';
 
-    // Bulk, solid, granular particles (“grains”)
+    /** Bulk, solid, granular particles (“grains”) */
     case XVR = 'XVR';
 
-    // Bulk, scrap metal
+    /** Bulk, scrap metal */
     case XVS = 'XVS';
 
-    // Bulk, solid, fine particles (“powders”)
+    /** Bulk, solid, fine particles (“powders”) */
     case XVY = 'XVY';
 
-    // Intermediate bulk container
+    /** Intermediate bulk container */
     case XWA = 'XWA';
 
-    // Wickerbottle
+    /** Wickerbottle */
     case XWB = 'XWB';
 
-    // Intermediate bulk container, steel
+    /** Intermediate bulk container, steel */
     case XWC = 'XWC';
 
-    // Intermediate bulk container, aluminium
+    /** Intermediate bulk container, aluminium */
     case XWD = 'XWD';
 
-    // Intermediate bulk container, metal
+    /** Intermediate bulk container, metal */
     case XWF = 'XWF';
 
-    // Intermediate bulk container, steel, pressurised > 10 kpa
+    /** Intermediate bulk container, steel, pressurised > 10 kpa */
     case XWG = 'XWG';
 
-    // Intermediate bulk container, aluminium, pressurised > 10 kpa
+    /** Intermediate bulk container, aluminium, pressurised > 10 kpa */
     case XWH = 'XWH';
 
-    // Intermediate bulk container, metal, pressure 10 kpa
+    /** Intermediate bulk container, metal, pressure 10 kpa */
     case XWJ = 'XWJ';
 
-    // Intermediate bulk container, steel, liquid
+    /** Intermediate bulk container, steel, liquid */
     case XWK = 'XWK';
 
-    // Intermediate bulk container, aluminium, liquid
+    /** Intermediate bulk container, aluminium, liquid */
     case XWL = 'XWL';
 
-    // Intermediate bulk container, metal, liquid
+    /** Intermediate bulk container, metal, liquid */
     case XWM = 'XWM';
 
-    // Intermediate bulk container, woven plastic, without coat/liner
+    /** Intermediate bulk container, woven plastic, without coat/liner */
     case XWN = 'XWN';
 
-    // Intermediate bulk container, woven plastic, coated
+    /** Intermediate bulk container, woven plastic, coated */
     case XWP = 'XWP';
 
-    // Intermediate bulk container, woven plastic, with liner
+    /** Intermediate bulk container, woven plastic, with liner */
     case XWQ = 'XWQ';
 
-    // Intermediate bulk container, woven plastic, coated and liner
+    /** Intermediate bulk container, woven plastic, coated and liner */
     case XWR = 'XWR';
 
-    // Intermediate bulk container, plastic film
+    /** Intermediate bulk container, plastic film */
     case XWS = 'XWS';
 
-    // Intermediate bulk container, textile with out coat/liner
+    /** Intermediate bulk container, textile with out coat/liner */
     case XWT = 'XWT';
 
-    // Intermediate bulk container, natural wood, with inner liner
+    /** Intermediate bulk container, natural wood, with inner liner */
     case XWU = 'XWU';
 
-    // Intermediate bulk container, textile, coated
+    /** Intermediate bulk container, textile, coated */
     case XWV = 'XWV';
 
-    // Intermediate bulk container, textile, with liner
+    /** Intermediate bulk container, textile, with liner */
     case XWW = 'XWW';
 
-    // Intermediate bulk container, textile, coated and liner
+    /** Intermediate bulk container, textile, coated and liner */
     case XWX = 'XWX';
 
-    // Intermediate bulk container, plywood, with inner liner
+    /** Intermediate bulk container, plywood, with inner liner */
     case XWY = 'XWY';
 
-    // Intermediate bulk container, reconstituted wood, with inner liner
+    /** Intermediate bulk container, reconstituted wood, with inner liner */
     case XWZ = 'XWZ';
 
-    // Bag, woven plastic, without inner coat/liner
+    /** Bag, woven plastic, without inner coat/liner */
     case XXA = 'XXA';
 
-    // Bag, woven plastic, sift proof
+    /** Bag, woven plastic, sift proof */
     case XXB = 'XXB';
 
-    // Bag, woven plastic, water resistant
+    /** Bag, woven plastic, water resistant */
     case XXC = 'XXC';
 
-    // Bag, plastics film
+    /** Bag, plastics film */
     case XXD = 'XXD';
 
-    // Bag, textile, without inner coat/liner
+    /** Bag, textile, without inner coat/liner */
     case XXF = 'XXF';
 
-    // Bag, textile, sift proof
+    /** Bag, textile, sift proof */
     case XXG = 'XXG';
 
-    // Bag, textile, water resistant
+    /** Bag, textile, water resistant */
     case XXH = 'XXH';
 
-    // Bag, paper, multi-wall
+    /** Bag, paper, multi-wall */
     case XXJ = 'XXJ';
 
-    // Bag, paper, multi-wall, water resistant
+    /** Bag, paper, multi-wall, water resistant */
     case XXK = 'XXK';
 
-    // Composite packaging, plastic receptacle in steel drum
+    /** Composite packaging, plastic receptacle in steel drum */
     case XYA = 'XYA';
 
-    // Composite packaging, plastic receptacle in steel crate box
+    /** Composite packaging, plastic receptacle in steel crate box */
     case XYB = 'XYB';
 
-    // Composite packaging, plastic receptacle in aluminium drum
+    /** Composite packaging, plastic receptacle in aluminium drum */
     case XYC = 'XYC';
 
-    // Composite packaging, plastic receptacle in aluminium crate
+    /** Composite packaging, plastic receptacle in aluminium crate */
     case XYD = 'XYD';
 
-    // Composite packaging, plastic receptacle in wooden box
+    /** Composite packaging, plastic receptacle in wooden box */
     case XYF = 'XYF';
 
-    // Composite packaging, plastic receptacle in plywood drum
+    /** Composite packaging, plastic receptacle in plywood drum */
     case XYG = 'XYG';
 
-    // Composite packaging, plastic receptacle in plywood box
+    /** Composite packaging, plastic receptacle in plywood box */
     case XYH = 'XYH';
 
-    // Composite packaging, plastic receptacle in fibre drum
+    /** Composite packaging, plastic receptacle in fibre drum */
     case XYJ = 'XYJ';
 
-    // Composite packaging, plastic receptacle in fibreboard box
+    /** Composite packaging, plastic receptacle in fibreboard box */
     case XYK = 'XYK';
 
-    // Composite packaging, plastic receptacle in plastic drum
+    /** Composite packaging, plastic receptacle in plastic drum */
     case XYL = 'XYL';
 
-    // Composite packaging, plastic receptacle in solid plastic box
+    /** Composite packaging, plastic receptacle in solid plastic box */
     case XYM = 'XYM';
 
-    // Composite packaging, glass receptacle in steel drum
+    /** Composite packaging, glass receptacle in steel drum */
     case XYN = 'XYN';
 
-    // Composite packaging, glass receptacle in steel crate box
+    /** Composite packaging, glass receptacle in steel crate box */
     case XYP = 'XYP';
 
-    // Composite packaging, glass receptacle in aluminium drum
+    /** Composite packaging, glass receptacle in aluminium drum */
     case XYQ = 'XYQ';
 
-    // Composite packaging, glass receptacle in aluminium crate
+    /** Composite packaging, glass receptacle in aluminium crate */
     case XYR = 'XYR';
 
-    // Composite packaging, glass receptacle in wooden box
+    /** Composite packaging, glass receptacle in wooden box */
     case XYS = 'XYS';
 
-    // Composite packaging, glass receptacle in plywood drum
+    /** Composite packaging, glass receptacle in plywood drum */
     case XYT = 'XYT';
 
-    // Composite packaging, glass receptacle in wickerwork hamper
+    /** Composite packaging, glass receptacle in wickerwork hamper */
     case XYV = 'XYV';
 
-    // Composite packaging, glass receptacle in fibre drum
+    /** Composite packaging, glass receptacle in fibre drum */
     case XYW = 'XYW';
 
-    // Composite packaging, glass receptacle in fibreboard box
+    /** Composite packaging, glass receptacle in fibreboard box */
     case XYX = 'XYX';
 
-    // Composite packaging, glass receptacle in expandable plastic pack
+    /** Composite packaging, glass receptacle in expandable plastic pack */
     case XYY = 'XYY';
 
-    // Composite packaging, glass receptacle in solid plastic pack
+    /** Composite packaging, glass receptacle in solid plastic pack */
     case XYZ = 'XYZ';
 
-    // Intermediate bulk container, paper, multi-wall
+    /** Intermediate bulk container, paper, multi-wall */
     case XZA = 'XZA';
 
-    // Bag, large
+    /** Bag, large */
     case XZB = 'XZB';
 
-    // Intermediate bulk container, paper, multi-wall, water resistant
+    /** Intermediate bulk container, paper, multi-wall, water resistant */
     case XZC = 'XZC';
 
-    // Intermediate bulk container, rigid plastic, with structural equipment, solids
+    /** Intermediate bulk container, rigid plastic, with structural equipment, solids */
     case XZD = 'XZD';
 
-    // Intermediate bulk container, rigid plastic, freestanding, solids
+    /** Intermediate bulk container, rigid plastic, freestanding, solids */
     case XZF = 'XZF';
 
-    // Intermediate bulk container, rigid plastic, with structural equipment, pressurised
+    /** Intermediate bulk container, rigid plastic, with structural equipment, pressurised */
     case XZG = 'XZG';
 
-    // Intermediate bulk container, rigid plastic, freestanding, pressurised
+    /** Intermediate bulk container, rigid plastic, freestanding, pressurised */
     case XZH = 'XZH';
 
-    // Intermediate bulk container, rigid plastic, with structural equipment, liquids
+    /** Intermediate bulk container, rigid plastic, with structural equipment, liquids */
     case XZJ = 'XZJ';
 
-    // Intermediate bulk container, rigid plastic, freestanding, liquids
+    /** Intermediate bulk container, rigid plastic, freestanding, liquids */
     case XZK = 'XZK';
 
-    // Intermediate bulk container, composite, rigid plastic, solids
+    /** Intermediate bulk container, composite, rigid plastic, solids */
     case XZL = 'XZL';
 
-    // Intermediate bulk container, composite, flexible plastic, solids
+    /** Intermediate bulk container, composite, flexible plastic, solids */
     case XZM = 'XZM';
 
-    // Intermediate bulk container, composite, rigid plastic, pressurised
+    /** Intermediate bulk container, composite, rigid plastic, pressurised */
     case XZN = 'XZN';
 
-    // Intermediate bulk container, composite, flexible plastic, pressurised
+    /** Intermediate bulk container, composite, flexible plastic, pressurised */
     case XZP = 'XZP';
 
-    // Intermediate bulk container, composite, rigid plastic, liquids
+    /** Intermediate bulk container, composite, rigid plastic, liquids */
     case XZQ = 'XZQ';
 
-    // Intermediate bulk container, composite, flexible plastic, liquids
+    /** Intermediate bulk container, composite, flexible plastic, liquids */
     case XZR = 'XZR';
 
-    // Intermediate bulk container, composite
+    /** Intermediate bulk container, composite */
     case XZS = 'XZS';
 
-    // Intermediate bulk container, fibreboard
+    /** Intermediate bulk container, fibreboard */
     case XZT = 'XZT';
 
-    // Intermediate bulk container, flexible
+    /** Intermediate bulk container, flexible */
     case XZU = 'XZU';
 
-    // Intermediate bulk container, metal, other than steel
+    /** Intermediate bulk container, metal, other than steel */
     case XZV = 'XZV';
 
-    // Intermediate bulk container, natural wood
+    /** Intermediate bulk container, natural wood */
     case XZW = 'XZW';
 
-    // Intermediate bulk container, plywood
+    /** Intermediate bulk container, plywood */
     case XZX = 'XZX';
 
-    // Intermediate bulk container, reconstituted wood
+    /** Intermediate bulk container, reconstituted wood */
     case XZY = 'XZY';
 
-    // Mutually defined
+    /** Mutually defined */
     case XZZ = 'XZZ';
 }

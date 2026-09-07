@@ -6,756 +6,756 @@ namespace easybill\eInvoicing\Enums;
 
 enum CountryCode: string
 {
-    // Andorra
+    /** Andorra */
     case AD = 'AD';
 
-    // United Arab Emirates (the)
+    /** United Arab Emirates (the) */
     case AE = 'AE';
 
-    // Afghanistan
+    /** Afghanistan */
     case AF = 'AF';
 
-    // Antigua and Barbuda
+    /** Antigua and Barbuda */
     case AG = 'AG';
 
-    // Anguilla
+    /** Anguilla */
     case AI = 'AI';
 
-    // Albania
+    /** Albania */
     case AL = 'AL';
 
-    // Armenia
+    /** Armenia */
     case AM = 'AM';
 
-    // Angola
+    /** Angola */
     case AO = 'AO';
 
-    // Antarctica
+    /** Antarctica */
     case AQ = 'AQ';
 
-    // Argentina
+    /** Argentina */
     case AR = 'AR';
 
-    // American Samoa
+    /** American Samoa */
     case AS = 'AS';
 
-    // Austria
+    /** Austria */
     case AT = 'AT';
 
-    // Australia
+    /** Australia */
     case AU = 'AU';
 
-    // Aruba
+    /** Aruba */
     case AW = 'AW';
 
-    // Åland Islands
+    /** Åland Islands */
     case AX = 'AX';
 
-    // Azerbaijan
+    /** Azerbaijan */
     case AZ = 'AZ';
 
-    // Bosnia and Herzegovina
+    /** Bosnia and Herzegovina */
     case BA = 'BA';
 
-    // Barbados
+    /** Barbados */
     case BB = 'BB';
 
-    // Bangladesh
+    /** Bangladesh */
     case BD = 'BD';
 
-    // Belgium
+    /** Belgium */
     case BE = 'BE';
 
-    // Burkina Faso
+    /** Burkina Faso */
     case BF = 'BF';
 
-    // Bulgaria
+    /** Bulgaria */
     case BG = 'BG';
 
-    // Bahrain
+    /** Bahrain */
     case BH = 'BH';
 
-    // Burundi
+    /** Burundi */
     case BI = 'BI';
 
-    // Benin
+    /** Benin */
     case BJ = 'BJ';
 
-    // Saint Barthélemy
+    /** Saint Barthélemy */
     case BL = 'BL';
 
-    // Bermuda
+    /** Bermuda */
     case BM = 'BM';
 
-    // Brunei Darussalam
+    /** Brunei Darussalam */
     case BN = 'BN';
 
-    // Bolivia (Plurinational State of)
+    /** Bolivia (Plurinational State of) */
     case BO = 'BO';
 
-    // Bonaire, Sint Eustatius and Saba
+    /** Bonaire, Sint Eustatius and Saba */
     case BQ = 'BQ';
 
-    // Brazil
+    /** Brazil */
     case BR = 'BR';
 
-    // Bahamas (the)
+    /** Bahamas (the) */
     case BS = 'BS';
 
-    // Bhutan
+    /** Bhutan */
     case BT = 'BT';
 
-    // Bouvet Island
+    /** Bouvet Island */
     case BV = 'BV';
 
-    // Botswana
+    /** Botswana */
     case BW = 'BW';
 
-    // Belarus
+    /** Belarus */
     case BY = 'BY';
 
-    // Belize
+    /** Belize */
     case BZ = 'BZ';
 
-    // Canada
+    /** Canada */
     case CA = 'CA';
 
-    // Cocos (Keeling) Islands (the)
+    /** Cocos (Keeling) Islands (the) */
     case CC = 'CC';
 
-    // Congo (the Democratic Republic of the)
+    /** Congo (the Democratic Republic of the) */
     case CD = 'CD';
 
-    // Central African Republic (the)
+    /** Central African Republic (the) */
     case CF = 'CF';
 
-    // Congo (the)
+    /** Congo (the) */
     case CG = 'CG';
 
-    // Switzerland
+    /** Switzerland */
     case CH = 'CH';
 
-    // Côte d'Ivoire
+    /** Côte d'Ivoire */
     case CI = 'CI';
 
-    // Cook Islands (the)
+    /** Cook Islands (the) */
     case CK = 'CK';
 
-    // Chile
+    /** Chile */
     case CL = 'CL';
 
-    // Cameroon
+    /** Cameroon */
     case CM = 'CM';
 
-    // China
+    /** China */
     case CN = 'CN';
 
-    // Colombia
+    /** Colombia */
     case CO = 'CO';
 
-    // Costa Rica
+    /** Costa Rica */
     case CR = 'CR';
 
-    // Cuba
+    /** Cuba */
     case CU = 'CU';
 
-    // Cabo Verde
+    /** Cabo Verde */
     case CV = 'CV';
 
-    // Curaçao
+    /** Curaçao */
     case CW = 'CW';
 
-    // Christmas Island
+    /** Christmas Island */
     case CX = 'CX';
 
-    // Cyprus
+    /** Cyprus */
     case CY = 'CY';
 
-    // Czechia
+    /** Czechia */
     case CZ = 'CZ';
 
-    // Germany
+    /** Germany */
     case DE = 'DE';
 
-    // Djibouti
+    /** Djibouti */
     case DJ = 'DJ';
 
-    // Denmark
+    /** Denmark */
     case DK = 'DK';
 
-    // Dominica
+    /** Dominica */
     case DM = 'DM';
 
-    // Dominican Republic (the)
+    /** Dominican Republic (the) */
     case DO = 'DO';
 
-    // Algeria
+    /** Algeria */
     case DZ = 'DZ';
 
-    // Ecuador
+    /** Ecuador */
     case EC = 'EC';
 
-    // Estonia
+    /** Estonia */
     case EE = 'EE';
 
-    // Egypt
+    /** Egypt */
     case EG = 'EG';
 
-    // Western Sahara*
+    /** Western Sahara* */
     case EH = 'EH';
 
-    // Eritrea
+    /** Eritrea */
     case ER = 'ER';
 
-    // Spain
+    /** Spain */
     case ES = 'ES';
 
-    // Ethiopia
+    /** Ethiopia */
     case ET = 'ET';
 
-    // Finland
+    /** Finland */
     case FI = 'FI';
 
-    // Fiji
+    /** Fiji */
     case FJ = 'FJ';
 
-    // Falkland Islands (the) [Malvinas]
+    /** Falkland Islands (the) [Malvinas] */
     case FK = 'FK';
 
-    // Micronesia (Federated States of)
+    /** Micronesia (Federated States of) */
     case FM = 'FM';
 
-    // Faroe Islands (the)
+    /** Faroe Islands (the) */
     case FO = 'FO';
 
-    // France
+    /** France */
     case FR = 'FR';
 
-    // Gabon
+    /** Gabon */
     case GA = 'GA';
 
-    // United Kingdom of Great Britain and Northern Ireland (the)
+    /** United Kingdom of Great Britain and Northern Ireland (the) */
     case GB = 'GB';
 
-    // Grenada
+    /** Grenada */
     case GD = 'GD';
 
-    // Georgia
+    /** Georgia */
     case GE = 'GE';
 
-    // French Guiana
+    /** French Guiana */
     case GF = 'GF';
 
-    // Guernsey
+    /** Guernsey */
     case GG = 'GG';
 
-    // Ghana
+    /** Ghana */
     case GH = 'GH';
 
-    // Gibraltar
+    /** Gibraltar */
     case GI = 'GI';
 
-    // Greenland
+    /** Greenland */
     case GL = 'GL';
 
-    // Gambia (the)
+    /** Gambia (the) */
     case GM = 'GM';
 
-    // Guinea
+    /** Guinea */
     case GN = 'GN';
 
-    // Guadeloupe
+    /** Guadeloupe */
     case GP = 'GP';
 
-    // Equatorial Guinea
+    /** Equatorial Guinea */
     case GQ = 'GQ';
 
-    // Greece
+    /** Greece */
     case GR = 'GR';
 
-    // South Georgia and the South Sandwich Islands
+    /** South Georgia and the South Sandwich Islands */
     case GS = 'GS';
 
-    // Guatemala
+    /** Guatemala */
     case GT = 'GT';
 
-    // Guam
+    /** Guam */
     case GU = 'GU';
 
-    // Guinea-Bissau
+    /** Guinea-Bissau */
     case GW = 'GW';
 
-    // Guyana
+    /** Guyana */
     case GY = 'GY';
 
-    // Hong Kong
+    /** Hong Kong */
     case HK = 'HK';
 
-    // Heard Island and McDonald Islands
+    /** Heard Island and McDonald Islands */
     case HM = 'HM';
 
-    // Honduras
+    /** Honduras */
     case HN = 'HN';
 
-    // Croatia
+    /** Croatia */
     case HR = 'HR';
 
-    // Haiti
+    /** Haiti */
     case HT = 'HT';
 
-    // Hungary
+    /** Hungary */
     case HU = 'HU';
 
-    // Indonesia
+    /** Indonesia */
     case ID = 'ID';
 
-    // Ireland
+    /** Ireland */
     case IE = 'IE';
 
-    // Israel
+    /** Israel */
     case IL = 'IL';
 
-    // Isle of Man
+    /** Isle of Man */
     case IM = 'IM';
 
-    // India
+    /** India */
     case IN = 'IN';
 
-    // British Indian Ocean Territory (the)
+    /** British Indian Ocean Territory (the) */
     case IO = 'IO';
 
-    // Iraq
+    /** Iraq */
     case IQ = 'IQ';
 
-    // Iran (Islamic Republic of)
+    /** Iran (Islamic Republic of) */
     case IR = 'IR';
 
-    // Iceland
+    /** Iceland */
     case IS = 'IS';
 
-    // Italy
+    /** Italy */
     case IT = 'IT';
 
-    // Jersey
+    /** Jersey */
     case JE = 'JE';
 
-    // Jamaica
+    /** Jamaica */
     case JM = 'JM';
 
-    // Jordan
+    /** Jordan */
     case JO = 'JO';
 
-    // Japan
+    /** Japan */
     case JP = 'JP';
 
-    // Kenya
+    /** Kenya */
     case KE = 'KE';
 
-    // Kyrgyzstan
+    /** Kyrgyzstan */
     case KG = 'KG';
 
-    // Cambodia
+    /** Cambodia */
     case KH = 'KH';
 
-    // Kiribati
+    /** Kiribati */
     case KI = 'KI';
 
-    // Comoros (the)
+    /** Comoros (the) */
     case KM = 'KM';
 
-    // Saint Kitts and Nevis
+    /** Saint Kitts and Nevis */
     case KN = 'KN';
 
-    // Korea (the Democratic People's Republic of)
+    /** Korea (the Democratic People's Republic of) */
     case KP = 'KP';
 
-    // Korea (the Republic of)
+    /** Korea (the Republic of) */
     case KR = 'KR';
 
-    // Kuwait
+    /** Kuwait */
     case KW = 'KW';
 
-    // Cayman Islands (the)
+    /** Cayman Islands (the) */
     case KY = 'KY';
 
-    // Kazakhstan
+    /** Kazakhstan */
     case KZ = 'KZ';
 
-    // Lao People's Democratic Republic (the)
+    /** Lao People's Democratic Republic (the) */
     case LA = 'LA';
 
-    // Lebanon
+    /** Lebanon */
     case LB = 'LB';
 
-    // Saint Lucia
+    /** Saint Lucia */
     case LC = 'LC';
 
-    // Liechtenstein
+    /** Liechtenstein */
     case LI = 'LI';
 
-    // Sri Lanka
+    /** Sri Lanka */
     case LK = 'LK';
 
-    // Liberia
+    /** Liberia */
     case LR = 'LR';
 
-    // Lesotho
+    /** Lesotho */
     case LS = 'LS';
 
-    // Lithuania
+    /** Lithuania */
     case LT = 'LT';
 
-    // Luxembourg
+    /** Luxembourg */
     case LU = 'LU';
 
-    // Latvia
+    /** Latvia */
     case LV = 'LV';
 
-    // Libya
+    /** Libya */
     case LY = 'LY';
 
-    // Morocco
+    /** Morocco */
     case MA = 'MA';
 
-    // Monaco
+    /** Monaco */
     case MC = 'MC';
 
-    // Moldova (the Republic of)
+    /** Moldova (the Republic of) */
     case MD = 'MD';
 
-    // Montenegro
+    /** Montenegro */
     case ME = 'ME';
 
-    // Saint Martin (French part)
+    /** Saint Martin (French part) */
     case MF = 'MF';
 
-    // Madagascar
+    /** Madagascar */
     case MG = 'MG';
 
-    // Marshall Islands (the)
+    /** Marshall Islands (the) */
     case MH = 'MH';
 
-    // North Macedonia
+    /** North Macedonia */
     case MK = 'MK';
 
-    // Mali
+    /** Mali */
     case ML = 'ML';
 
-    // Myanmar
+    /** Myanmar */
     case MM = 'MM';
 
-    // Mongolia
+    /** Mongolia */
     case MN = 'MN';
 
-    // Macao
+    /** Macao */
     case MO = 'MO';
 
-    // Northern Mariana Islands (the)
+    /** Northern Mariana Islands (the) */
     case MP = 'MP';
 
-    // Martinique
+    /** Martinique */
     case MQ = 'MQ';
 
-    // Mauritania
+    /** Mauritania */
     case MR = 'MR';
 
-    // Montserrat
+    /** Montserrat */
     case MS = 'MS';
 
-    // Malta
+    /** Malta */
     case MT = 'MT';
 
-    // Mauritius
+    /** Mauritius */
     case MU = 'MU';
 
-    // Maldives
+    /** Maldives */
     case MV = 'MV';
 
-    // Malawi
+    /** Malawi */
     case MW = 'MW';
 
-    // Mexico
+    /** Mexico */
     case MX = 'MX';
 
-    // Malaysia
+    /** Malaysia */
     case MY = 'MY';
 
-    // Mozambique
+    /** Mozambique */
     case MZ = 'MZ';
 
-    // Namibia
+    /** Namibia */
     case NA = 'NA';
 
-    // New Caledonia
+    /** New Caledonia */
     case NC = 'NC';
 
-    // Niger (the)
+    /** Niger (the) */
     case NE = 'NE';
 
-    // Norfolk Island
+    /** Norfolk Island */
     case NF = 'NF';
 
-    // Nigeria
+    /** Nigeria */
     case NG = 'NG';
 
-    // Nicaragua
+    /** Nicaragua */
     case NI = 'NI';
 
-    // Netherlands (the)
+    /** Netherlands (the) */
     case NL = 'NL';
 
-    // Norway
+    /** Norway */
     case NO = 'NO';
 
-    // Nepal
+    /** Nepal */
     case NP = 'NP';
 
-    // Nauru
+    /** Nauru */
     case NR = 'NR';
 
-    // Niue
+    /** Niue */
     case NU = 'NU';
 
-    // New Zealand
+    /** New Zealand */
     case NZ = 'NZ';
 
-    // Oman
+    /** Oman */
     case OM = 'OM';
 
-    // Panama
+    /** Panama */
     case PA = 'PA';
 
-    // Peru
+    /** Peru */
     case PE = 'PE';
 
-    // French Polynesia
+    /** French Polynesia */
     case PF = 'PF';
 
-    // Papua New Guinea
+    /** Papua New Guinea */
     case PG = 'PG';
 
-    // Philippines (the)
+    /** Philippines (the) */
     case PH = 'PH';
 
-    // Pakistan
+    /** Pakistan */
     case PK = 'PK';
 
-    // Poland
+    /** Poland */
     case PL = 'PL';
 
-    // Saint Pierre and Miquelon
+    /** Saint Pierre and Miquelon */
     case PM = 'PM';
 
-    // Pitcairn
+    /** Pitcairn */
     case PN = 'PN';
 
-    // Puerto Rico
+    /** Puerto Rico */
     case PR = 'PR';
 
-    // Palestine, State of
+    /** Palestine, State of */
     case PS = 'PS';
 
-    // Portugal
+    /** Portugal */
     case PT = 'PT';
 
-    // Palau
+    /** Palau */
     case PW = 'PW';
 
-    // Paraguay
+    /** Paraguay */
     case PY = 'PY';
 
-    // Qatar
+    /** Qatar */
     case QA = 'QA';
 
-    // Réunion
+    /** Réunion */
     case RE = 'RE';
 
-    // Romania
+    /** Romania */
     case RO = 'RO';
 
-    // Serbia
+    /** Serbia */
     case RS = 'RS';
 
-    // Russian Federation (the)
+    /** Russian Federation (the) */
     case RU = 'RU';
 
-    // Rwanda
+    /** Rwanda */
     case RW = 'RW';
 
-    // Saudi Arabia
+    /** Saudi Arabia */
     case SA = 'SA';
 
-    // Solomon Islands
+    /** Solomon Islands */
     case SB = 'SB';
 
-    // Seychelles
+    /** Seychelles */
     case SC = 'SC';
 
-    // Sudan (the)
+    /** Sudan (the) */
     case SD = 'SD';
 
-    // Sweden
+    /** Sweden */
     case SE = 'SE';
 
-    // Singapore
+    /** Singapore */
     case SG = 'SG';
 
-    // Saint Helena, Ascension and Tristan da Cunha
+    /** Saint Helena, Ascension and Tristan da Cunha */
     case SH = 'SH';
 
-    // Slovenia
+    /** Slovenia */
     case SI = 'SI';
 
-    // Svalbard and Jan Mayen
+    /** Svalbard and Jan Mayen */
     case SJ = 'SJ';
 
-    // Slovakia
+    /** Slovakia */
     case SK = 'SK';
 
-    // Sierra Leone
+    /** Sierra Leone */
     case SL = 'SL';
 
-    // San Marino
+    /** San Marino */
     case SM = 'SM';
 
-    // Senegal
+    /** Senegal */
     case SN = 'SN';
 
-    // Somalia
+    /** Somalia */
     case SO = 'SO';
 
-    // Suriname
+    /** Suriname */
     case SR = 'SR';
 
-    // South Sudan
+    /** South Sudan */
     case SS = 'SS';
 
-    // Sao Tome and Principe
+    /** Sao Tome and Principe */
     case ST = 'ST';
 
-    // El Salvador
+    /** El Salvador */
     case SV = 'SV';
 
-    // Sint Maarten (Dutch part)
+    /** Sint Maarten (Dutch part) */
     case SX = 'SX';
 
-    // Syrian Arab Republic (the)
+    /** Syrian Arab Republic (the) */
     case SY = 'SY';
 
-    // Eswatini
+    /** Eswatini */
     case SZ = 'SZ';
 
-    // Turks and Caicos Islands (the)
+    /** Turks and Caicos Islands (the) */
     case TC = 'TC';
 
-    // Chad
+    /** Chad */
     case TD = 'TD';
 
-    // French Southern Territories (the)
+    /** French Southern Territories (the) */
     case TF = 'TF';
 
-    // Togo
+    /** Togo */
     case TG = 'TG';
 
-    // Thailand
+    /** Thailand */
     case TH = 'TH';
 
-    // Tajikistan
+    /** Tajikistan */
     case TJ = 'TJ';
 
-    // Tokelau
+    /** Tokelau */
     case TK = 'TK';
 
-    // Timor-Leste
+    /** Timor-Leste */
     case TL = 'TL';
 
-    // Turkmenistan
+    /** Turkmenistan */
     case TM = 'TM';
 
-    // Tunisia
+    /** Tunisia */
     case TN = 'TN';
 
-    // Tonga
+    /** Tonga */
     case TO = 'TO';
 
-    // Turkey
+    /** Turkey */
     case TR = 'TR';
 
-    // Trinidad and Tobago
+    /** Trinidad and Tobago */
     case TT = 'TT';
 
-    // Tuvalu
+    /** Tuvalu */
     case TV = 'TV';
 
-    // Taiwan (Province of China)
+    /** Taiwan (Province of China) */
     case TW = 'TW';
 
-    // Tanzania, the United Republic of
+    /** Tanzania, the United Republic of */
     case TZ = 'TZ';
 
-    // Ukraine
+    /** Ukraine */
     case UA = 'UA';
 
-    // Uganda
+    /** Uganda */
     case UG = 'UG';
 
-    // United States Minor Outlying Islands (the)
+    /** United States Minor Outlying Islands (the) */
     case UM = 'UM';
 
-    // United States of America (the)
+    /** United States of America (the) */
     case US = 'US';
 
-    // Uruguay
+    /** Uruguay */
     case UY = 'UY';
 
-    // Uzbekistan
+    /** Uzbekistan */
     case UZ = 'UZ';
 
-    // Holy See (the)
+    /** Holy See (the) */
     case VA = 'VA';
 
-    // Saint Vincent and the Grenadines
+    /** Saint Vincent and the Grenadines */
     case VC = 'VC';
 
-    // Venezuela (Bolivarian Republic of)
+    /** Venezuela (Bolivarian Republic of) */
     case VE = 'VE';
 
-    // Virgin Islands (British)
+    /** Virgin Islands (British) */
     case VG = 'VG';
 
-    // Virgin Islands (U.S.)
+    /** Virgin Islands (U.S.) */
     case VI = 'VI';
 
-    // Viet Nam
+    /** Viet Nam */
     case VN = 'VN';
 
-    // Vanuatu
+    /** Vanuatu */
     case VU = 'VU';
 
-    // Wallis and Futuna
+    /** Wallis and Futuna */
     case WF = 'WF';
 
-    // Samoa
+    /** Samoa */
     case WS = 'WS';
 
-    // Yemen
+    /** Yemen */
     case YE = 'YE';
 
-    // Mayotte
+    /** Mayotte */
     case YT = 'YT';
 
-    // South Africa
+    /** South Africa */
     case ZA = 'ZA';
 
-    // Zambia
+    /** Zambia */
     case ZM = 'ZM';
 
-    // Zimbabwe
+    /** Zimbabwe */
     case ZW = 'ZW';
 
-    // Kosovo
+    /** Kosovo */
     case _1A = '1A';
 
-    // United Kingdom (Northern Ireland)
+    /** United Kingdom (Northern Ireland) */
     case XI = 'XI';
 }

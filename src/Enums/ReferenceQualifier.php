@@ -6,2454 +6,2454 @@ namespace easybill\eInvoicing\Enums;
 
 enum ReferenceQualifier: string
 {
-    // Order acknowledgement document identifier
+    /** Order acknowledgement document identifier */
     case AAA = 'AAA';
 
-    // Proforma invoice document identifier
+    /** Proforma invoice document identifier */
     case AAB = 'AAB';
 
-    // Documentary credit identifier
+    /** Documentary credit identifier */
     case AAC = 'AAC';
 
-    // Contract document addendum identifier
+    /** Contract document addendum identifier */
     case AAD = 'AAD';
 
-    // Goods declaration number
+    /** Goods declaration number */
     case AAE = 'AAE';
 
-    // Debit card number
+    /** Debit card number */
     case AAF = 'AAF';
 
-    // Offer number
+    /** Offer number */
     case AAG = 'AAG';
 
-    // Bank's batch interbank transaction reference number
+    /** Bank's batch interbank transaction reference number */
     case AAH = 'AAH';
 
-    // Bank's individual interbank transaction reference number
+    /** Bank's individual interbank transaction reference number */
     case AAI = 'AAI';
 
-    // Delivery order number
+    /** Delivery order number */
     case AAJ = 'AAJ';
 
-    // Despatch advice number
+    /** Despatch advice number */
     case AAK = 'AAK';
 
-    // Drawing number
+    /** Drawing number */
     case AAL = 'AAL';
 
-    // Waybill number
+    /** Waybill number */
     case AAM = 'AAM';
 
-    // Delivery schedule number
+    /** Delivery schedule number */
     case AAN = 'AAN';
 
-    // Consignment identifier, consignee assigned
+    /** Consignment identifier, consignee assigned */
     case AAO = 'AAO';
 
-    // Partial shipment identifier
+    /** Partial shipment identifier */
     case AAP = 'AAP';
 
-    // Transport equipment identifier
+    /** Transport equipment identifier */
     case AAQ = 'AAQ';
 
-    // Municipality assigned business registry number
+    /** Municipality assigned business registry number */
     case AAR = 'AAR';
 
-    // Transport contract document identifier
+    /** Transport contract document identifier */
     case AAS = 'AAS';
 
-    // Master label number
+    /** Master label number */
     case AAT = 'AAT';
 
-    // Despatch note document identifier
+    /** Despatch note document identifier */
     case AAU = 'AAU';
 
-    // Enquiry number
+    /** Enquiry number */
     case AAV = 'AAV';
 
-    // Docket number
+    /** Docket number */
     case AAW = 'AAW';
 
-    // Civil action number
+    /** Civil action number */
     case AAX = 'AAX';
 
-    // Carrier's agent reference number
+    /** Carrier's agent reference number */
     case AAY = 'AAY';
 
-    // Standard Carrier Alpha Code (SCAC) number
+    /** Standard Carrier Alpha Code (SCAC) number */
     case AAZ = 'AAZ';
 
-    // Customs valuation decision number
+    /** Customs valuation decision number */
     case ABA = 'ABA';
 
-    // End use authorization number
+    /** End use authorization number */
     case ABB = 'ABB';
 
-    // Anti-dumping case number
+    /** Anti-dumping case number */
     case ABC = 'ABC';
 
-    // Customs tariff number
+    /** Customs tariff number */
     case ABD = 'ABD';
 
-    // Declarant's reference number
+    /** Declarant's reference number */
     case ABE = 'ABE';
 
-    // Repair estimate number
+    /** Repair estimate number */
     case ABF = 'ABF';
 
-    // Customs decision request number
+    /** Customs decision request number */
     case ABG = 'ABG';
 
-    // Sub-house bill of lading number
+    /** Sub-house bill of lading number */
     case ABH = 'ABH';
 
-    // Tax payment identifier
+    /** Tax payment identifier */
     case ABI = 'ABI';
 
-    // Quota number
+    /** Quota number */
     case ABJ = 'ABJ';
 
-    // Transit (onward carriage) guarantee (bond) number
+    /** Transit (onward carriage) guarantee (bond) number */
     case ABK = 'ABK';
 
-    // Customs guarantee number
+    /** Customs guarantee number */
     case ABL = 'ABL';
 
-    // Replacing part number
+    /** Replacing part number */
     case ABM = 'ABM';
 
-    // Seller's catalogue number
+    /** Seller's catalogue number */
     case ABN = 'ABN';
 
-    // Originator's reference
+    /** Originator's reference */
     case ABO = 'ABO';
 
-    // Declarant's Customs identity number
+    /** Declarant's Customs identity number */
     case ABP = 'ABP';
 
-    // Importer reference number
+    /** Importer reference number */
     case ABQ = 'ABQ';
 
-    // Export clearance instruction reference number
+    /** Export clearance instruction reference number */
     case ABR = 'ABR';
 
-    // Import clearance instruction reference number
+    /** Import clearance instruction reference number */
     case ABS = 'ABS';
 
-    // Goods declaration document identifier, Customs
+    /** Goods declaration document identifier, Customs */
     case ABT = 'ABT';
 
-    // Article number
+    /** Article number */
     case ABU = 'ABU';
 
-    // Intra-plant routing
+    /** Intra-plant routing */
     case ABV = 'ABV';
 
-    // Stock keeping unit number
+    /** Stock keeping unit number */
     case ABW = 'ABW';
 
-    // Text Element Identifier deletion reference
+    /** Text Element Identifier deletion reference */
     case ABX = 'ABX';
 
-    // Allotment identification (Air)
+    /** Allotment identification (Air) */
     case ABY = 'ABY';
 
-    // Vehicle licence number
+    /** Vehicle licence number */
     case ABZ = 'ABZ';
 
-    // Air cargo transfer manifest
+    /** Air cargo transfer manifest */
     case AC = 'AC';
 
-    // Cargo acceptance order reference number
+    /** Cargo acceptance order reference number */
     case ACA = 'ACA';
 
-    // US government agency number
+    /** US government agency number */
     case ACB = 'ACB';
 
-    // Shipping unit identification
+    /** Shipping unit identification */
     case ACC = 'ACC';
 
-    // Additional reference number
+    /** Additional reference number */
     case ACD = 'ACD';
 
-    // Related document number
+    /** Related document number */
     case ACE = 'ACE';
 
-    // Addressee reference
+    /** Addressee reference */
     case ACF = 'ACF';
 
-    // ATA carnet number
+    /** ATA carnet number */
     case ACG = 'ACG';
 
-    // Packaging unit identification
+    /** Packaging unit identification */
     case ACH = 'ACH';
 
-    // Outerpackaging unit identification
+    /** Outerpackaging unit identification */
     case ACI = 'ACI';
 
-    // Customer material specification number
+    /** Customer material specification number */
     case ACJ = 'ACJ';
 
-    // Bank reference
+    /** Bank reference */
     case ACK = 'ACK';
 
-    // Principal reference number
+    /** Principal reference number */
     case ACL = 'ACL';
 
-    // Collection advice document identifier
+    /** Collection advice document identifier */
     case ACN = 'ACN';
 
-    // Iron charge number
+    /** Iron charge number */
     case ACO = 'ACO';
 
-    // Hot roll number
+    /** Hot roll number */
     case ACP = 'ACP';
 
-    // Cold roll number
+    /** Cold roll number */
     case ACQ = 'ACQ';
 
-    // Railway wagon number
+    /** Railway wagon number */
     case ACR = 'ACR';
 
-    // Unique claims reference number of the sender
+    /** Unique claims reference number of the sender */
     case ACT = 'ACT';
 
-    // Loss/event number
+    /** Loss/event number */
     case ACU = 'ACU';
 
-    // Estimate order reference number
+    /** Estimate order reference number */
     case ACV = 'ACV';
 
-    // Reference number to previous message
+    /** Reference number to previous message */
     case ACW = 'ACW';
 
-    // Banker's acceptance
+    /** Banker's acceptance */
     case ACX = 'ACX';
 
-    // Duty memo number
+    /** Duty memo number */
     case ACY = 'ACY';
 
-    // Equipment transport charge number
+    /** Equipment transport charge number */
     case ACZ = 'ACZ';
 
-    // Buyer's item number
+    /** Buyer's item number */
     case ADA = 'ADA';
 
-    // Matured certificate of deposit
+    /** Matured certificate of deposit */
     case ADB = 'ADB';
 
-    // Loan
+    /** Loan */
     case ADC = 'ADC';
 
-    // Analysis number/test number
+    /** Analysis number/test number */
     case ADD = 'ADD';
 
-    // Account number
+    /** Account number */
     case ADE = 'ADE';
 
-    // Treaty number
+    /** Treaty number */
     case ADF = 'ADF';
 
-    // Catastrophe number
+    /** Catastrophe number */
     case ADG = 'ADG';
 
-    // Bureau signing (statement reference)
+    /** Bureau signing (statement reference) */
     case ADI = 'ADI';
 
-    // Company / syndicate reference 1
+    /** Company / syndicate reference 1 */
     case ADJ = 'ADJ';
 
-    // Company / syndicate reference 2
+    /** Company / syndicate reference 2 */
     case ADK = 'ADK';
 
-    // Ordering customer consignment reference number
+    /** Ordering customer consignment reference number */
     case ADL = 'ADL';
 
-    // Shipowner's authorization number
+    /** Shipowner's authorization number */
     case ADM = 'ADM';
 
-    // Inland transport order number
+    /** Inland transport order number */
     case ADN = 'ADN';
 
-    // Container work order reference number
+    /** Container work order reference number */
     case ADO = 'ADO';
 
-    // Statement number
+    /** Statement number */
     case ADP = 'ADP';
 
-    // Unique market reference
+    /** Unique market reference */
     case ADQ = 'ADQ';
 
-    // Group accounting
+    /** Group accounting */
     case ADT = 'ADT';
 
-    // Broker reference 1
+    /** Broker reference 1 */
     case ADU = 'ADU';
 
-    // Broker reference 2
+    /** Broker reference 2 */
     case ADV = 'ADV';
 
-    // Lloyd's claims office reference
+    /** Lloyd's claims office reference */
     case ADW = 'ADW';
 
-    // Secure delivery terms and conditions agreement reference
+    /** Secure delivery terms and conditions agreement reference */
     case ADX = 'ADX';
 
-    // Report number
+    /** Report number */
     case ADY = 'ADY';
 
-    // Trader account number
+    /** Trader account number */
     case ADZ = 'ADZ';
 
-    // Authorization for expense (AFE) number
+    /** Authorization for expense (AFE) number */
     case AE = 'AE';
 
-    // Government agency reference number
+    /** Government agency reference number */
     case AEA = 'AEA';
 
-    // Assembly number
+    /** Assembly number */
     case AEB = 'AEB';
 
-    // Symbol number
+    /** Symbol number */
     case AEC = 'AEC';
 
-    // Commodity number
+    /** Commodity number */
     case AED = 'AED';
 
-    // Eur 1 certificate number
+    /** Eur 1 certificate number */
     case AEE = 'AEE';
 
-    // Customer process specification number
+    /** Customer process specification number */
     case AEF = 'AEF';
 
-    // Customer specification number
+    /** Customer specification number */
     case AEG = 'AEG';
 
-    // Applicable instructions or standards
+    /** Applicable instructions or standards */
     case AEH = 'AEH';
 
-    // Registration number of previous Customs declaration
+    /** Registration number of previous Customs declaration */
     case AEI = 'AEI';
 
-    // Post-entry reference
+    /** Post-entry reference */
     case AEJ = 'AEJ';
 
-    // Payment order number
+    /** Payment order number */
     case AEK = 'AEK';
 
-    // Delivery number (transport)
+    /** Delivery number (transport) */
     case AEL = 'AEL';
 
-    // Transport route
+    /** Transport route */
     case AEM = 'AEM';
 
-    // Customer's unit inventory number
+    /** Customer's unit inventory number */
     case AEN = 'AEN';
 
-    // Product reservation number
+    /** Product reservation number */
     case AEO = 'AEO';
 
-    // Project number
+    /** Project number */
     case AEP = 'AEP';
 
-    // Drawing list number
+    /** Drawing list number */
     case AEQ = 'AEQ';
 
-    // Project specification number
+    /** Project specification number */
     case AER = 'AER';
 
-    // Primary reference
+    /** Primary reference */
     case AES = 'AES';
 
-    // Request for cancellation number
+    /** Request for cancellation number */
     case AET = 'AET';
 
-    // Supplier's control number
+    /** Supplier's control number */
     case AEU = 'AEU';
 
-    // Shipping note number
+    /** Shipping note number */
     case AEV = 'AEV';
 
-    // Empty container bill number
+    /** Empty container bill number */
     case AEW = 'AEW';
 
-    // Non-negotiable maritime transport document number
+    /** Non-negotiable maritime transport document number */
     case AEX = 'AEX';
 
-    // Substitute air waybill number
+    /** Substitute air waybill number */
     case AEY = 'AEY';
 
-    // Despatch note (post parcels) number
+    /** Despatch note (post parcels) number */
     case AEZ = 'AEZ';
 
-    // Airlines flight identification number
+    /** Airlines flight identification number */
     case AF = 'AF';
 
-    // Through bill of lading number
+    /** Through bill of lading number */
     case AFA = 'AFA';
 
-    // Cargo manifest number
+    /** Cargo manifest number */
     case AFB = 'AFB';
 
-    // Bordereau number
+    /** Bordereau number */
     case AFC = 'AFC';
 
-    // Customs item number
+    /** Customs item number */
     case AFD = 'AFD';
 
-    // Export Control Commodity number (ECCN)
+    /** Export Control Commodity number (ECCN) */
     case AFE = 'AFE';
 
-    // Marking/label reference
+    /** Marking/label reference */
     case AFF = 'AFF';
 
-    // Tariff number
+    /** Tariff number */
     case AFG = 'AFG';
 
-    // Replenishment purchase order number
+    /** Replenishment purchase order number */
     case AFH = 'AFH';
 
-    // Immediate transportation no. for in bond movement
+    /** Immediate transportation no. for in bond movement */
     case AFI = 'AFI';
 
-    // Transportation exportation no. for in bond movement
+    /** Transportation exportation no. for in bond movement */
     case AFJ = 'AFJ';
 
-    // Immediate exportation no. for in bond movement
+    /** Immediate exportation no. for in bond movement */
     case AFK = 'AFK';
 
-    // Associated invoices
+    /** Associated invoices */
     case AFL = 'AFL';
 
-    // Secondary Customs reference
+    /** Secondary Customs reference */
     case AFM = 'AFM';
 
-    // Account party's reference
+    /** Account party's reference */
     case AFN = 'AFN';
 
-    // Beneficiary's reference
+    /** Beneficiary's reference */
     case AFO = 'AFO';
 
-    // Second beneficiary's reference
+    /** Second beneficiary's reference */
     case AFP = 'AFP';
 
-    // Applicant's bank reference
+    /** Applicant's bank reference */
     case AFQ = 'AFQ';
 
-    // Issuing bank's reference
+    /** Issuing bank's reference */
     case AFR = 'AFR';
 
-    // Beneficiary's bank reference
+    /** Beneficiary's bank reference */
     case AFS = 'AFS';
 
-    // Direct payment valuation number
+    /** Direct payment valuation number */
     case AFT = 'AFT';
 
-    // Direct payment valuation request number
+    /** Direct payment valuation request number */
     case AFU = 'AFU';
 
-    // Quantity valuation number
+    /** Quantity valuation number */
     case AFV = 'AFV';
 
-    // Quantity valuation request number
+    /** Quantity valuation request number */
     case AFW = 'AFW';
 
-    // Bill of quantities number
+    /** Bill of quantities number */
     case AFX = 'AFX';
 
-    // Payment valuation number
+    /** Payment valuation number */
     case AFY = 'AFY';
 
-    // Situation number
+    /** Situation number */
     case AFZ = 'AFZ';
 
-    // Agreement to pay number
+    /** Agreement to pay number */
     case AGA = 'AGA';
 
-    // Contract party reference number
+    /** Contract party reference number */
     case AGB = 'AGB';
 
-    // Account party's bank reference
+    /** Account party's bank reference */
     case AGC = 'AGC';
 
-    // Agent's bank reference
+    /** Agent's bank reference */
     case AGD = 'AGD';
 
-    // Agent's reference
+    /** Agent's reference */
     case AGE = 'AGE';
 
-    // Applicant's reference
+    /** Applicant's reference */
     case AGF = 'AGF';
 
-    // Dispute number
+    /** Dispute number */
     case AGG = 'AGG';
 
-    // Credit rating agency's reference number
+    /** Credit rating agency's reference number */
     case AGH = 'AGH';
 
-    // Request number
+    /** Request number */
     case AGI = 'AGI';
 
-    // Single transaction sequence number
+    /** Single transaction sequence number */
     case AGJ = 'AGJ';
 
-    // Application reference number
+    /** Application reference number */
     case AGK = 'AGK';
 
-    // Delivery verification certificate
+    /** Delivery verification certificate */
     case AGL = 'AGL';
 
-    // Number of temporary importation document
+    /** Number of temporary importation document */
     case AGM = 'AGM';
 
-    // Reference number quoted on statement
+    /** Reference number quoted on statement */
     case AGN = 'AGN';
 
-    // Sender's reference to the original message
+    /** Sender's reference to the original message */
     case AGO = 'AGO';
 
-    // Company issued equipment ID
+    /** Company issued equipment ID */
     case AGP = 'AGP';
 
-    // Domestic flight number
+    /** Domestic flight number */
     case AGQ = 'AGQ';
 
-    // International flight number
+    /** International flight number */
     case AGR = 'AGR';
 
-    // Employer identification number of service bureau
+    /** Employer identification number of service bureau */
     case AGS = 'AGS';
 
-    // Service group identification number
+    /** Service group identification number */
     case AGT = 'AGT';
 
-    // Member number
+    /** Member number */
     case AGU = 'AGU';
 
-    // Previous member number
+    /** Previous member number */
     case AGV = 'AGV';
 
-    // Scheme/plan number
+    /** Scheme/plan number */
     case AGW = 'AGW';
 
-    // Previous scheme/plan number
+    /** Previous scheme/plan number */
     case AGX = 'AGX';
 
-    // Receiving party's member identification
+    /** Receiving party's member identification */
     case AGY = 'AGY';
 
-    // Payroll number
+    /** Payroll number */
     case AGZ = 'AGZ';
 
-    // Packaging specification number
+    /** Packaging specification number */
     case AHA = 'AHA';
 
-    // Authority issued equipment identification
+    /** Authority issued equipment identification */
     case AHB = 'AHB';
 
-    // Training flight number
+    /** Training flight number */
     case AHC = 'AHC';
 
-    // Fund code number
+    /** Fund code number */
     case AHD = 'AHD';
 
-    // Signal code number
+    /** Signal code number */
     case AHE = 'AHE';
 
-    // Major force program number
+    /** Major force program number */
     case AHF = 'AHF';
 
-    // Nomination number
+    /** Nomination number */
     case AHG = 'AHG';
 
-    // Laboratory registration number
+    /** Laboratory registration number */
     case AHH = 'AHH';
 
-    // Transport contract reference number
+    /** Transport contract reference number */
     case AHI = 'AHI';
 
-    // Payee's reference number
+    /** Payee's reference number */
     case AHJ = 'AHJ';
 
-    // Payer's reference number
+    /** Payer's reference number */
     case AHK = 'AHK';
 
-    // Creditor's reference number
+    /** Creditor's reference number */
     case AHL = 'AHL';
 
-    // Debtor's reference number
+    /** Debtor's reference number */
     case AHM = 'AHM';
 
-    // Joint venture reference number
+    /** Joint venture reference number */
     case AHN = 'AHN';
 
-    // Chamber of Commerce registration number
+    /** Chamber of Commerce registration number */
     case AHO = 'AHO';
 
-    // Tax registration number
+    /** Tax registration number */
     case AHP = 'AHP';
 
-    // Wool identification number
+    /** Wool identification number */
     case AHQ = 'AHQ';
 
-    // Wool tax reference number
+    /** Wool tax reference number */
     case AHR = 'AHR';
 
-    // Meat processing establishment registration number
+    /** Meat processing establishment registration number */
     case AHS = 'AHS';
 
-    // Quarantine/treatment status reference number
+    /** Quarantine/treatment status reference number */
     case AHT = 'AHT';
 
-    // Request for quote number
+    /** Request for quote number */
     case AHU = 'AHU';
 
-    // Manual processing authority number
+    /** Manual processing authority number */
     case AHV = 'AHV';
 
-    // Rate note number
+    /** Rate note number */
     case AHX = 'AHX';
 
-    // Freight Forwarder number
+    /** Freight Forwarder number */
     case AHY = 'AHY';
 
-    // Customs release code
+    /** Customs release code */
     case AHZ = 'AHZ';
 
-    // Compliance code number
+    /** Compliance code number */
     case AIA = 'AIA';
 
-    // Department of transportation bond number
+    /** Department of transportation bond number */
     case AIB = 'AIB';
 
-    // Export establishment number
+    /** Export establishment number */
     case AIC = 'AIC';
 
-    // Certificate of conformity
+    /** Certificate of conformity */
     case AID = 'AID';
 
-    // Ministerial certificate of homologation
+    /** Ministerial certificate of homologation */
     case AIE = 'AIE';
 
-    // Previous delivery instruction number
+    /** Previous delivery instruction number */
     case AIF = 'AIF';
 
-    // Passport number
+    /** Passport number */
     case AIG = 'AIG';
 
-    // Common transaction reference number
+    /** Common transaction reference number */
     case AIH = 'AIH';
 
-    // Bank's common transaction reference number
+    /** Bank's common transaction reference number */
     case AII = 'AII';
 
-    // Customer's individual transaction reference number
+    /** Customer's individual transaction reference number */
     case AIJ = 'AIJ';
 
-    // Bank's individual transaction reference number
+    /** Bank's individual transaction reference number */
     case AIK = 'AIK';
 
-    // Customer's common transaction reference number
+    /** Customer's common transaction reference number */
     case AIL = 'AIL';
 
-    // Individual transaction reference number
+    /** Individual transaction reference number */
     case AIM = 'AIM';
 
-    // Product sourcing agreement number
+    /** Product sourcing agreement number */
     case AIN = 'AIN';
 
-    // Customs transhipment number
+    /** Customs transhipment number */
     case AIO = 'AIO';
 
-    // Customs preference inquiry number
+    /** Customs preference inquiry number */
     case AIP = 'AIP';
 
-    // Packing plant number
+    /** Packing plant number */
     case AIQ = 'AIQ';
 
-    // Original certificate number
+    /** Original certificate number */
     case AIR = 'AIR';
 
-    // Processing plant number
+    /** Processing plant number */
     case AIS = 'AIS';
 
-    // Slaughter plant number
+    /** Slaughter plant number */
     case AIT = 'AIT';
 
-    // Charge card account number
+    /** Charge card account number */
     case AIU = 'AIU';
 
-    // Event reference number
+    /** Event reference number */
     case AIV = 'AIV';
 
-    // Transport section reference number
+    /** Transport section reference number */
     case AIW = 'AIW';
 
-    // Referred product for mechanical analysis
+    /** Referred product for mechanical analysis */
     case AIX = 'AIX';
 
-    // Referred product for chemical analysis
+    /** Referred product for chemical analysis */
     case AIY = 'AIY';
 
-    // Consolidated invoice number
+    /** Consolidated invoice number */
     case AIZ = 'AIZ';
 
-    // Part reference indicator in a drawing
+    /** Part reference indicator in a drawing */
     case AJA = 'AJA';
 
-    // U.S. Code of Federal Regulations (CFR)
+    /** U.S. Code of Federal Regulations (CFR) */
     case AJB = 'AJB';
 
-    // Purchasing activity clause number
+    /** Purchasing activity clause number */
     case AJC = 'AJC';
 
-    // U.S. Defense Federal Acquisition Regulation Supplement
+    /** U.S. Defense Federal Acquisition Regulation Supplement */
     case AJD = 'AJD';
 
-    // Agency clause number
+    /** Agency clause number */
     case AJE = 'AJE';
 
-    // Circular publication number
+    /** Circular publication number */
     case AJF = 'AJF';
 
-    // U.S. Federal Acquisition Regulation
+    /** U.S. Federal Acquisition Regulation */
     case AJG = 'AJG';
 
-    // U.S. General Services Administration Regulation
+    /** U.S. General Services Administration Regulation */
     case AJH = 'AJH';
 
-    // U.S. Federal Information Resources Management Regulation
+    /** U.S. Federal Information Resources Management Regulation */
     case AJI = 'AJI';
 
-    // Paragraph
+    /** Paragraph */
     case AJJ = 'AJJ';
 
-    // Special instructions number
+    /** Special instructions number */
     case AJK = 'AJK';
 
-    // Site specific procedures, terms, and conditions number
+    /** Site specific procedures, terms, and conditions number */
     case AJL = 'AJL';
 
-    // Master solicitation procedures, terms, and conditions
+    /** Master solicitation procedures, terms, and conditions */
     case AJM = 'AJM';
 
-    // U.S. Department of Veterans Affairs Acquisition Regulation
+    /** U.S. Department of Veterans Affairs Acquisition Regulation */
     case AJN = 'AJN';
 
-    // Military Interdepartmental Purchase Request (MIPR) number
+    /** Military Interdepartmental Purchase Request (MIPR) number */
     case AJO = 'AJO';
 
-    // Foreign military sales number
+    /** Foreign military sales number */
     case AJP = 'AJP';
 
-    // Defense priorities allocation system priority rating
+    /** Defense priorities allocation system priority rating */
     case AJQ = 'AJQ';
 
-    // Wage determination number
+    /** Wage determination number */
     case AJR = 'AJR';
 
-    // Agreement number
+    /** Agreement number */
     case AJS = 'AJS';
 
-    // Standard Industry Classification (SIC) number
+    /** Standard Industry Classification (SIC) number */
     case AJT = 'AJT';
 
-    // End item number
+    /** End item number */
     case AJU = 'AJU';
 
-    // Federal supply schedule item number
+    /** Federal supply schedule item number */
     case AJV = 'AJV';
 
-    // Technical document number
+    /** Technical document number */
     case AJW = 'AJW';
 
-    // Technical order number
+    /** Technical order number */
     case AJX = 'AJX';
 
-    // Suffix
+    /** Suffix */
     case AJY = 'AJY';
 
-    // Transportation account number
+    /** Transportation account number */
     case AJZ = 'AJZ';
 
-    // Container disposition order reference number
+    /** Container disposition order reference number */
     case AKA = 'AKA';
 
-    // Container prefix
+    /** Container prefix */
     case AKB = 'AKB';
 
-    // Transport equipment return reference
+    /** Transport equipment return reference */
     case AKC = 'AKC';
 
-    // Transport equipment survey reference
+    /** Transport equipment survey reference */
     case AKD = 'AKD';
 
-    // Transport equipment survey report number
+    /** Transport equipment survey report number */
     case AKE = 'AKE';
 
-    // Transport equipment stuffing order
+    /** Transport equipment stuffing order */
     case AKF = 'AKF';
 
-    // Vehicle Identification Number (VIN)
+    /** Vehicle Identification Number (VIN) */
     case AKG = 'AKG';
 
-    // Government bill of lading
+    /** Government bill of lading */
     case AKH = 'AKH';
 
-    // Ordering customer's second reference number
+    /** Ordering customer's second reference number */
     case AKI = 'AKI';
 
-    // Direct debit reference
+    /** Direct debit reference */
     case AKJ = 'AKJ';
 
-    // Meter reading at the beginning of the delivery
+    /** Meter reading at the beginning of the delivery */
     case AKK = 'AKK';
 
-    // Meter reading at the end of delivery
+    /** Meter reading at the end of delivery */
     case AKL = 'AKL';
 
-    // Replenishment purchase order range start number
+    /** Replenishment purchase order range start number */
     case AKM = 'AKM';
 
-    // Third bank's reference
+    /** Third bank's reference */
     case AKN = 'AKN';
 
-    // Action authorization number
+    /** Action authorization number */
     case AKO = 'AKO';
 
-    // Appropriation number
+    /** Appropriation number */
     case AKP = 'AKP';
 
-    // Product change authority number
+    /** Product change authority number */
     case AKQ = 'AKQ';
 
-    // General cargo consignment reference number
+    /** General cargo consignment reference number */
     case AKR = 'AKR';
 
-    // Catalogue sequence number
+    /** Catalogue sequence number */
     case AKS = 'AKS';
 
-    // Forwarding order number
+    /** Forwarding order number */
     case AKT = 'AKT';
 
-    // Transport equipment survey reference number
+    /** Transport equipment survey reference number */
     case AKU = 'AKU';
 
-    // Lease contract reference
+    /** Lease contract reference */
     case AKV = 'AKV';
 
-    // Transport costs reference number
+    /** Transport costs reference number */
     case AKW = 'AKW';
 
-    // Transport equipment stripping order
+    /** Transport equipment stripping order */
     case AKX = 'AKX';
 
-    // Prior policy number
+    /** Prior policy number */
     case AKY = 'AKY';
 
-    // Policy number
+    /** Policy number */
     case AKZ = 'AKZ';
 
-    // Procurement budget number
+    /** Procurement budget number */
     case ALA = 'ALA';
 
-    // Domestic inventory management code
+    /** Domestic inventory management code */
     case ALB = 'ALB';
 
-    // Customer reference number assigned to previous balance of
+    /** Customer reference number assigned to previous balance of */
     case ALC = 'ALC';
 
-    // Previous credit advice reference number
+    /** Previous credit advice reference number */
     case ALD = 'ALD';
 
-    // Reporting form number
+    /** Reporting form number */
     case ALE = 'ALE';
 
-    // Authorization number for exception to dangerous goods
+    /** Authorization number for exception to dangerous goods */
     case ALF = 'ALF';
 
-    // Dangerous goods security number
+    /** Dangerous goods security number */
     case ALG = 'ALG';
 
-    // Dangerous goods transport licence number
+    /** Dangerous goods transport licence number */
     case ALH = 'ALH';
 
-    // Previous rental agreement number
+    /** Previous rental agreement number */
     case ALI = 'ALI';
 
-    // Next rental agreement reason number
+    /** Next rental agreement reason number */
     case ALJ = 'ALJ';
 
-    // Consignee's invoice number
+    /** Consignee's invoice number */
     case ALK = 'ALK';
 
-    // Message batch number
+    /** Message batch number */
     case ALL = 'ALL';
 
-    // Previous delivery schedule number
+    /** Previous delivery schedule number */
     case ALM = 'ALM';
 
-    // Physical inventory recount reference number
+    /** Physical inventory recount reference number */
     case ALN = 'ALN';
 
-    // Receiving advice number
+    /** Receiving advice number */
     case ALO = 'ALO';
 
-    // Returnable container reference number
+    /** Returnable container reference number */
     case ALP = 'ALP';
 
-    // Returns notice number
+    /** Returns notice number */
     case ALQ = 'ALQ';
 
-    // Sales forecast number
+    /** Sales forecast number */
     case ALR = 'ALR';
 
-    // Sales report number
+    /** Sales report number */
     case ALS = 'ALS';
 
-    // Previous tax control number
+    /** Previous tax control number */
     case ALT = 'ALT';
 
-    // AGERD (Aerospace Ground Equipment Requirement Data) number
+    /** AGERD (Aerospace Ground Equipment Requirement Data) number */
     case ALU = 'ALU';
 
-    // Registered capital reference
+    /** Registered capital reference */
     case ALV = 'ALV';
 
-    // Standard number of inspection document
+    /** Standard number of inspection document */
     case ALW = 'ALW';
 
-    // Model
+    /** Model */
     case ALX = 'ALX';
 
-    // Financial management reference
+    /** Financial management reference */
     case ALY = 'ALY';
 
-    // NOTIfication for COLlection number (NOTICOL)
+    /** NOTIfication for COLlection number (NOTICOL) */
     case ALZ = 'ALZ';
 
-    // Previous request for metered reading reference number
+    /** Previous request for metered reading reference number */
     case AMA = 'AMA';
 
-    // Next rental agreement number
+    /** Next rental agreement number */
     case AMB = 'AMB';
 
-    // Reference number of a request for metered reading
+    /** Reference number of a request for metered reading */
     case AMC = 'AMC';
 
-    // Hastening number
+    /** Hastening number */
     case AMD = 'AMD';
 
-    // Repair data request number
+    /** Repair data request number */
     case AME = 'AME';
 
-    // Consumption data request number
+    /** Consumption data request number */
     case AMF = 'AMF';
 
-    // Profile number
+    /** Profile number */
     case AMG = 'AMG';
 
-    // Case number
+    /** Case number */
     case AMH = 'AMH';
 
-    // Government quality assurance and control level Number
+    /** Government quality assurance and control level Number */
     case AMI = 'AMI';
 
-    // Payment plan reference
+    /** Payment plan reference */
     case AMJ = 'AMJ';
 
-    // Replaced meter unit number
+    /** Replaced meter unit number */
     case AMK = 'AMK';
 
-    // Replenishment purchase order range end number
+    /** Replenishment purchase order range end number */
     case AML = 'AML';
 
-    // Insurer assigned reference number
+    /** Insurer assigned reference number */
     case AMM = 'AMM';
 
-    // Canadian excise entry number
+    /** Canadian excise entry number */
     case AMN = 'AMN';
 
-    // Premium rate table
+    /** Premium rate table */
     case AMO = 'AMO';
 
-    // Advise through bank's reference
+    /** Advise through bank's reference */
     case AMP = 'AMP';
 
-    // US, Department of Transportation bond surety code
+    /** US, Department of Transportation bond surety code */
     case AMQ = 'AMQ';
 
-    // US, Food and Drug Administration establishment indicator
+    /** US, Food and Drug Administration establishment indicator */
     case AMR = 'AMR';
 
-    // US, Federal Communications Commission (FCC) import
+    /** US, Federal Communications Commission (FCC) import */
     case AMS = 'AMS';
 
-    // Goods and Services Tax identification number
+    /** Goods and Services Tax identification number */
     case AMT = 'AMT';
 
-    // Integrated logistic support cross reference number
+    /** Integrated logistic support cross reference number */
     case AMU = 'AMU';
 
-    // Department number
+    /** Department number */
     case AMV = 'AMV';
 
-    // Buyer's catalogue number
+    /** Buyer's catalogue number */
     case AMW = 'AMW';
 
-    // Financial settlement party's reference number
+    /** Financial settlement party's reference number */
     case AMX = 'AMX';
 
-    // Standard's version number
+    /** Standard's version number */
     case AMY = 'AMY';
 
-    // Pipeline number
+    /** Pipeline number */
     case AMZ = 'AMZ';
 
-    // Account servicing bank's reference number
+    /** Account servicing bank's reference number */
     case ANA = 'ANA';
 
-    // Completed units payment request reference
+    /** Completed units payment request reference */
     case ANB = 'ANB';
 
-    // Payment in advance request reference
+    /** Payment in advance request reference */
     case ANC = 'ANC';
 
-    // Parent file
+    /** Parent file */
     case AND = 'AND';
 
-    // Sub file
+    /** Sub file */
     case ANE = 'ANE';
 
-    // CAD file layer convention
+    /** CAD file layer convention */
     case ANF = 'ANF';
 
-    // Technical regulation
+    /** Technical regulation */
     case ANG = 'ANG';
 
-    // Plot file
+    /** Plot file */
     case ANH = 'ANH';
 
-    // File conversion journal
+    /** File conversion journal */
     case ANI = 'ANI';
 
-    // Authorization number
+    /** Authorization number */
     case ANJ = 'ANJ';
 
-    // Reference number assigned by third party
+    /** Reference number assigned by third party */
     case ANK = 'ANK';
 
-    // Deposit reference number
+    /** Deposit reference number */
     case ANL = 'ANL';
 
-    // Named bank's reference
+    /** Named bank's reference */
     case ANM = 'ANM';
 
-    // Drawee's reference
+    /** Drawee's reference */
     case ANN = 'ANN';
 
-    // Case of need party's reference
+    /** Case of need party's reference */
     case ANO = 'ANO';
 
-    // Collecting bank's reference
+    /** Collecting bank's reference */
     case ANP = 'ANP';
 
-    // Remitting bank's reference
+    /** Remitting bank's reference */
     case ANQ = 'ANQ';
 
-    // Principal's bank reference
+    /** Principal's bank reference */
     case ANR = 'ANR';
 
-    // Presenting bank's reference
+    /** Presenting bank's reference */
     case ANS = 'ANS';
 
-    // Consignee's reference
+    /** Consignee's reference */
     case ANT = 'ANT';
 
-    // Financial transaction reference number
+    /** Financial transaction reference number */
     case ANU = 'ANU';
 
-    // Credit reference number
+    /** Credit reference number */
     case ANV = 'ANV';
 
-    // Receiving bank's authorization number
+    /** Receiving bank's authorization number */
     case ANW = 'ANW';
 
-    // Clearing reference
+    /** Clearing reference */
     case ANX = 'ANX';
 
-    // Sending bank's reference number
+    /** Sending bank's reference number */
     case ANY = 'ANY';
 
-    // Documentary payment reference
+    /** Documentary payment reference */
     case AOA = 'AOA';
 
-    // Accounting file reference
+    /** Accounting file reference */
     case AOD = 'AOD';
 
-    // Sender's file reference number
+    /** Sender's file reference number */
     case AOE = 'AOE';
 
-    // Receiver's file reference number
+    /** Receiver's file reference number */
     case AOF = 'AOF';
 
-    // Source document internal reference
+    /** Source document internal reference */
     case AOG = 'AOG';
 
-    // Principal's reference
+    /** Principal's reference */
     case AOH = 'AOH';
 
-    // Debit reference number
+    /** Debit reference number */
     case AOI = 'AOI';
 
-    // Calendar
+    /** Calendar */
     case AOJ = 'AOJ';
 
-    // Work shift
+    /** Work shift */
     case AOK = 'AOK';
 
-    // Work breakdown structure
+    /** Work breakdown structure */
     case AOL = 'AOL';
 
-    // Organisation breakdown structure
+    /** Organisation breakdown structure */
     case AOM = 'AOM';
 
-    // Work task charge number
+    /** Work task charge number */
     case AON = 'AON';
 
-    // Functional work group
+    /** Functional work group */
     case AOO = 'AOO';
 
-    // Work team
+    /** Work team */
     case AOP = 'AOP';
 
-    // Department
+    /** Department */
     case AOQ = 'AOQ';
 
-    // Statement of work
+    /** Statement of work */
     case AOR = 'AOR';
 
-    // Work package
+    /** Work package */
     case AOS = 'AOS';
 
-    // Planning package
+    /** Planning package */
     case AOT = 'AOT';
 
-    // Cost account
+    /** Cost account */
     case AOU = 'AOU';
 
-    // Work order
+    /** Work order */
     case AOV = 'AOV';
 
-    // Transportation Control Number (TCN)
+    /** Transportation Control Number (TCN) */
     case AOW = 'AOW';
 
-    // Constraint notation
+    /** Constraint notation */
     case AOX = 'AOX';
 
-    // ETERMS reference
+    /** ETERMS reference */
     case AOY = 'AOY';
 
-    // Implementation version number
+    /** Implementation version number */
     case AOZ = 'AOZ';
 
-    // Accounts receivable number
+    /** Accounts receivable number */
     case AP = 'AP';
 
-    // Incorporated legal reference
+    /** Incorporated legal reference */
     case APA = 'APA';
 
-    // Payment instalment reference number
+    /** Payment instalment reference number */
     case APB = 'APB';
 
-    // Equipment owner reference number
+    /** Equipment owner reference number */
     case APC = 'APC';
 
-    // Cedent's claim number
+    /** Cedent's claim number */
     case APD = 'APD';
 
-    // Reinsurer's claim number
+    /** Reinsurer's claim number */
     case APE = 'APE';
 
-    // Price/sales catalogue response reference number
+    /** Price/sales catalogue response reference number */
     case APF = 'APF';
 
-    // General purpose message reference number
+    /** General purpose message reference number */
     case APG = 'APG';
 
-    // Invoicing data sheet reference number
+    /** Invoicing data sheet reference number */
     case APH = 'APH';
 
-    // Inventory report reference number
+    /** Inventory report reference number */
     case API = 'API';
 
-    // Ceiling formula reference number
+    /** Ceiling formula reference number */
     case APJ = 'APJ';
 
-    // Price variation formula reference number
+    /** Price variation formula reference number */
     case APK = 'APK';
 
-    // Reference to account servicing bank's message
+    /** Reference to account servicing bank's message */
     case APL = 'APL';
 
-    // Party sequence number
+    /** Party sequence number */
     case APM = 'APM';
 
-    // Purchaser's request reference
+    /** Purchaser's request reference */
     case APN = 'APN';
 
-    // Contractor request reference
+    /** Contractor request reference */
     case APO = 'APO';
 
-    // Accident reference number
+    /** Accident reference number */
     case APP = 'APP';
 
-    // Commercial account summary reference number
+    /** Commercial account summary reference number */
     case APQ = 'APQ';
 
-    // Contract breakdown reference
+    /** Contract breakdown reference */
     case APR = 'APR';
 
-    // Contractor registration number
+    /** Contractor registration number */
     case APS = 'APS';
 
-    // Applicable coefficient identification number
+    /** Applicable coefficient identification number */
     case APT = 'APT';
 
-    // Special budget account number
+    /** Special budget account number */
     case APU = 'APU';
 
-    // Authorisation for repair reference
+    /** Authorisation for repair reference */
     case APV = 'APV';
 
-    // Manufacturer defined repair rates reference
+    /** Manufacturer defined repair rates reference */
     case APW = 'APW';
 
-    // Original submitter log number
+    /** Original submitter log number */
     case APX = 'APX';
 
-    // Original submitter, parent Data Maintenance Request (DMR)
+    /** Original submitter, parent Data Maintenance Request (DMR) */
     case APY = 'APY';
 
-    // Original submitter, child Data Maintenance Request (DMR)
+    /** Original submitter, child Data Maintenance Request (DMR) */
     case APZ = 'APZ';
 
-    // Entry point assessment log number
+    /** Entry point assessment log number */
     case AQA = 'AQA';
 
-    // Entry point assessment log number, parent DMR
+    /** Entry point assessment log number, parent DMR */
     case AQB = 'AQB';
 
-    // Entry point assessment log number, child DMR
+    /** Entry point assessment log number, child DMR */
     case AQC = 'AQC';
 
-    // Data structure tag
+    /** Data structure tag */
     case AQD = 'AQD';
 
-    // Central secretariat log number
+    /** Central secretariat log number */
     case AQE = 'AQE';
 
-    // Central secretariat log number, parent Data Maintenance
+    /** Central secretariat log number, parent Data Maintenance */
     case AQF = 'AQF';
 
-    // Central secretariat log number, child Data Maintenance
+    /** Central secretariat log number, child Data Maintenance */
     case AQG = 'AQG';
 
-    // International assessment log number
+    /** International assessment log number */
     case AQH = 'AQH';
 
-    // International assessment log number, parent Data
+    /** International assessment log number, parent Data */
     case AQI = 'AQI';
 
-    // International assessment log number, child Data Maintenance
+    /** International assessment log number, child Data Maintenance */
     case AQJ = 'AQJ';
 
-    // Status report number
+    /** Status report number */
     case AQK = 'AQK';
 
-    // Message design group number
+    /** Message design group number */
     case AQL = 'AQL';
 
-    // US Customs Service (USCS) entry code
+    /** US Customs Service (USCS) entry code */
     case AQM = 'AQM';
 
-    // Beginning job sequence number
+    /** Beginning job sequence number */
     case AQN = 'AQN';
 
-    // Sender's clause number
+    /** Sender's clause number */
     case AQO = 'AQO';
 
-    // Dun and Bradstreet Canada's 8 digit Standard Industrial
+    /** Dun and Bradstreet Canada's 8 digit Standard Industrial */
     case AQP = 'AQP';
 
-    // Activite Principale Exercee (APE) identifier
+    /** Activite Principale Exercee (APE) identifier */
     case AQQ = 'AQQ';
 
-    // Dun and Bradstreet US 8 digit Standard Industrial
+    /** Dun and Bradstreet US 8 digit Standard Industrial */
     case AQR = 'AQR';
 
-    // Nomenclature Activity Classification Economy (NACE)
+    /** Nomenclature Activity Classification Economy (NACE) */
     case AQS = 'AQS';
 
-    // Norme Activite Francaise (NAF) identifier
+    /** Norme Activite Francaise (NAF) identifier */
     case AQT = 'AQT';
 
-    // Registered contractor activity type
+    /** Registered contractor activity type */
     case AQU = 'AQU';
 
-    // Statistic Bundes Amt (SBA) identifier
+    /** Statistic Bundes Amt (SBA) identifier */
     case AQV = 'AQV';
 
-    // State or province assigned entity identification
+    /** State or province assigned entity identification */
     case AQW = 'AQW';
 
-    // Institute of Security and Future Market Development (ISFMD)
+    /** Institute of Security and Future Market Development (ISFMD) */
     case AQX = 'AQX';
 
-    // File identification number
+    /** File identification number */
     case AQY = 'AQY';
 
-    // Bankruptcy procedure number
+    /** Bankruptcy procedure number */
     case AQZ = 'AQZ';
 
-    // National government business identification number
+    /** National government business identification number */
     case ARA = 'ARA';
 
-    // Prior Data Universal Number System (DUNS) number
+    /** Prior Data Universal Number System (DUNS) number */
     case ARB = 'ARB';
 
-    // Companies Registry Office (CRO) number
+    /** Companies Registry Office (CRO) number */
     case ARC = 'ARC';
 
-    // Costa Rican judicial number
+    /** Costa Rican judicial number */
     case ARD = 'ARD';
 
-    // Numero de Identificacion Tributaria (NIT)
+    /** Numero de Identificacion Tributaria (NIT) */
     case ARE = 'ARE';
 
-    // Patron number
+    /** Patron number */
     case ARF = 'ARF';
 
-    // Registro Informacion Fiscal (RIF) number
+    /** Registro Informacion Fiscal (RIF) number */
     case ARG = 'ARG';
 
-    // Registro Unico de Contribuyente (RUC) number
+    /** Registro Unico de Contribuyente (RUC) number */
     case ARH = 'ARH';
 
-    // Tokyo SHOKO Research (TSR) business identifier
+    /** Tokyo SHOKO Research (TSR) business identifier */
     case ARI = 'ARI';
 
-    // Personal identity card number
+    /** Personal identity card number */
     case ARJ = 'ARJ';
 
-    // Systeme Informatique pour le Repertoire des ENtreprises
+    /** Systeme Informatique pour le Repertoire des ENtreprises */
     case ARK = 'ARK';
 
-    // Systeme Informatique pour le Repertoire des ETablissements
+    /** Systeme Informatique pour le Repertoire des ETablissements */
     case ARL = 'ARL';
 
-    // Publication issue number
+    /** Publication issue number */
     case ARM = 'ARM';
 
-    // Original filing number
+    /** Original filing number */
     case ARN = 'ARN';
 
-    // Document page identifier
+    /** Document page identifier */
     case ARO = 'ARO';
 
-    // Public filing registration number
+    /** Public filing registration number */
     case ARP = 'ARP';
 
-    // Regiristo Federal de Contribuyentes
+    /** Regiristo Federal de Contribuyentes */
     case ARQ = 'ARQ';
 
-    // Social security number
+    /** Social security number */
     case ARR = 'ARR';
 
-    // Document volume number
+    /** Document volume number */
     case ARS = 'ARS';
 
-    // Book number
+    /** Book number */
     case ART = 'ART';
 
-    // Stock exchange company identifier
+    /** Stock exchange company identifier */
     case ARU = 'ARU';
 
-    // Imputation account
+    /** Imputation account */
     case ARV = 'ARV';
 
-    // Financial phase reference
+    /** Financial phase reference */
     case ARW = 'ARW';
 
-    // Technical phase reference
+    /** Technical phase reference */
     case ARX = 'ARX';
 
-    // Prior contractor registration number
+    /** Prior contractor registration number */
     case ARY = 'ARY';
 
-    // Stock adjustment number
+    /** Stock adjustment number */
     case ARZ = 'ARZ';
 
-    // Dispensation reference
+    /** Dispensation reference */
     case ASA = 'ASA';
 
-    // Investment reference number
+    /** Investment reference number */
     case ASB = 'ASB';
 
-    // Assuming company
+    /** Assuming company */
     case ASC = 'ASC';
 
-    // Budget chapter
+    /** Budget chapter */
     case ASD = 'ASD';
 
-    // Duty free products security number
+    /** Duty free products security number */
     case ASE = 'ASE';
 
-    // Duty free products receipt authorisation number
+    /** Duty free products receipt authorisation number */
     case ASF = 'ASF';
 
-    // Party information message reference
+    /** Party information message reference */
     case ASG = 'ASG';
 
-    // Formal statement reference
+    /** Formal statement reference */
     case ASH = 'ASH';
 
-    // Proof of delivery reference number
+    /** Proof of delivery reference number */
     case ASI = 'ASI';
 
-    // Supplier's credit claim reference number
+    /** Supplier's credit claim reference number */
     case ASJ = 'ASJ';
 
-    // Picture of actual product
+    /** Picture of actual product */
     case ASK = 'ASK';
 
-    // Picture of a generic product
+    /** Picture of a generic product */
     case ASL = 'ASL';
 
-    // Trading partner identification number
+    /** Trading partner identification number */
     case ASM = 'ASM';
 
-    // Prior trading partner identification number
+    /** Prior trading partner identification number */
     case ASN = 'ASN';
 
-    // Password
+    /** Password */
     case ASO = 'ASO';
 
-    // Formal report number
+    /** Formal report number */
     case ASP = 'ASP';
 
-    // Fund account number
+    /** Fund account number */
     case ASQ = 'ASQ';
 
-    // Safe custody number
+    /** Safe custody number */
     case ASR = 'ASR';
 
-    // Master account number
+    /** Master account number */
     case ASS = 'ASS';
 
-    // Group reference number
+    /** Group reference number */
     case AST = 'AST';
 
-    // Accounting transmission number
+    /** Accounting transmission number */
     case ASU = 'ASU';
 
-    // Product data file number
+    /** Product data file number */
     case ASV = 'ASV';
 
-    // Cadastro Geral do Contribuinte (CGC)
+    /** Cadastro Geral do Contribuinte (CGC) */
     case ASW = 'ASW';
 
-    // Foreign resident identification number
+    /** Foreign resident identification number */
     case ASX = 'ASX';
 
-    // CD-ROM
+    /** CD-ROM */
     case ASY = 'ASY';
 
-    // Physical medium
+    /** Physical medium */
     case ASZ = 'ASZ';
 
-    // Financial cancellation reference number
+    /** Financial cancellation reference number */
     case ATA = 'ATA';
 
-    // Purchase for export Customs agreement number
+    /** Purchase for export Customs agreement number */
     case ATB = 'ATB';
 
-    // Judgment number
+    /** Judgment number */
     case ATC = 'ATC';
 
-    // Secretariat number
+    /** Secretariat number */
     case ATD = 'ATD';
 
-    // Previous banking status message reference
+    /** Previous banking status message reference */
     case ATE = 'ATE';
 
-    // Last received banking status message reference
+    /** Last received banking status message reference */
     case ATF = 'ATF';
 
-    // Bank's documentary procedure reference
+    /** Bank's documentary procedure reference */
     case ATG = 'ATG';
 
-    // Customer's documentary procedure reference
+    /** Customer's documentary procedure reference */
     case ATH = 'ATH';
 
-    // Safe deposit box number
+    /** Safe deposit box number */
     case ATI = 'ATI';
 
-    // Receiving Bankgiro number
+    /** Receiving Bankgiro number */
     case ATJ = 'ATJ';
 
-    // Sending Bankgiro number
+    /** Sending Bankgiro number */
     case ATK = 'ATK';
 
-    // Bankgiro reference
+    /** Bankgiro reference */
     case ATL = 'ATL';
 
-    // Guarantee number
+    /** Guarantee number */
     case ATM = 'ATM';
 
-    // Collection instrument number
+    /** Collection instrument number */
     case ATN = 'ATN';
 
-    // Converted Postgiro number
+    /** Converted Postgiro number */
     case ATO = 'ATO';
 
-    // Cost centre alignment number
+    /** Cost centre alignment number */
     case ATP = 'ATP';
 
-    // Kamer Van Koophandel (KVK) number
+    /** Kamer Van Koophandel (KVK) number */
     case ATQ = 'ATQ';
 
-    // Institut Belgo-Luxembourgeois de Codification (IBLC) number
+    /** Institut Belgo-Luxembourgeois de Codification (IBLC) number */
     case ATR = 'ATR';
 
-    // External object reference
+    /** External object reference */
     case ATS = 'ATS';
 
-    // Exceptional transport authorisation number
+    /** Exceptional transport authorisation number */
     case ATT = 'ATT';
 
-    // Clave Unica de Identificacion Tributaria (CUIT)
+    /** Clave Unica de Identificacion Tributaria (CUIT) */
     case ATU = 'ATU';
 
-    // Registro Unico Tributario (RUT)
+    /** Registro Unico Tributario (RUT) */
     case ATV = 'ATV';
 
-    // Flat rack container bundle identification number
+    /** Flat rack container bundle identification number */
     case ATW = 'ATW';
 
-    // Transport equipment acceptance order reference
+    /** Transport equipment acceptance order reference */
     case ATX = 'ATX';
 
-    // Transport equipment release order reference
+    /** Transport equipment release order reference */
     case ATY = 'ATY';
 
-    // Ship's stay reference number
+    /** Ship's stay reference number */
     case ATZ = 'ATZ';
 
-    // Authorization to meet competition number
+    /** Authorization to meet competition number */
     case AU = 'AU';
 
-    // Place of positioning reference
+    /** Place of positioning reference */
     case AUA = 'AUA';
 
-    // Party reference
+    /** Party reference */
     case AUB = 'AUB';
 
-    // Issued prescription identification
+    /** Issued prescription identification */
     case AUC = 'AUC';
 
-    // Collection reference
+    /** Collection reference */
     case AUD = 'AUD';
 
-    // Travel service
+    /** Travel service */
     case AUE = 'AUE';
 
-    // Consignment stock contract
+    /** Consignment stock contract */
     case AUF = 'AUF';
 
-    // Importer's letter of credit reference
+    /** Importer's letter of credit reference */
     case AUG = 'AUG';
 
-    // Performed prescription identification
+    /** Performed prescription identification */
     case AUH = 'AUH';
 
-    // Image reference
+    /** Image reference */
     case AUI = 'AUI';
 
-    // Proposed purchase order reference number
+    /** Proposed purchase order reference number */
     case AUJ = 'AUJ';
 
-    // Application for financial support reference number
+    /** Application for financial support reference number */
     case AUK = 'AUK';
 
-    // Manufacturing quality agreement number
+    /** Manufacturing quality agreement number */
     case AUL = 'AUL';
 
-    // Software editor reference
+    /** Software editor reference */
     case AUM = 'AUM';
 
-    // Software reference
+    /** Software reference */
     case AUN = 'AUN';
 
-    // Software quality reference
+    /** Software quality reference */
     case AUO = 'AUO';
 
-    // Consolidated orders' reference
+    /** Consolidated orders' reference */
     case AUP = 'AUP';
 
-    // Customs binding ruling number
+    /** Customs binding ruling number */
     case AUQ = 'AUQ';
 
-    // Customs non-binding ruling number
+    /** Customs non-binding ruling number */
     case AUR = 'AUR';
 
-    // Delivery route reference
+    /** Delivery route reference */
     case AUS = 'AUS';
 
-    // Net area supplier reference
+    /** Net area supplier reference */
     case AUT = 'AUT';
 
-    // Time series reference
+    /** Time series reference */
     case AUU = 'AUU';
 
-    // Connecting point to central grid
+    /** Connecting point to central grid */
     case AUV = 'AUV';
 
-    // Marketing plan identification number (MPIN)
+    /** Marketing plan identification number (MPIN) */
     case AUW = 'AUW';
 
-    // Entity reference number, previous
+    /** Entity reference number, previous */
     case AUX = 'AUX';
 
-    // International Standard Industrial Classification (ISIC)
+    /** International Standard Industrial Classification (ISIC) */
     case AUY = 'AUY';
 
-    // Customs pre-approval ruling number
+    /** Customs pre-approval ruling number */
     case AUZ = 'AUZ';
 
-    // Account payable number
+    /** Account payable number */
     case AV = 'AV';
 
-    // First financial institution's transaction reference
+    /** First financial institution's transaction reference */
     case AVA = 'AVA';
 
-    // Product characteristics directory
+    /** Product characteristics directory */
     case AVB = 'AVB';
 
-    // Supplier's customer reference number
+    /** Supplier's customer reference number */
     case AVC = 'AVC';
 
-    // Inventory report request number
+    /** Inventory report request number */
     case AVD = 'AVD';
 
-    // Metering point
+    /** Metering point */
     case AVE = 'AVE';
 
-    // Passenger reservation number
+    /** Passenger reservation number */
     case AVF = 'AVF';
 
-    // Slaughterhouse approval number
+    /** Slaughterhouse approval number */
     case AVG = 'AVG';
 
-    // Meat cutting plant approval number
+    /** Meat cutting plant approval number */
     case AVH = 'AVH';
 
-    // Customer travel service identifier
+    /** Customer travel service identifier */
     case AVI = 'AVI';
 
-    // Export control classification number
+    /** Export control classification number */
     case AVJ = 'AVJ';
 
-    // Broker reference 3
+    /** Broker reference 3 */
     case AVK = 'AVK';
 
-    // Consignment information
+    /** Consignment information */
     case AVL = 'AVL';
 
-    // Goods item information
+    /** Goods item information */
     case AVM = 'AVM';
 
-    // Dangerous Goods information
+    /** Dangerous Goods information */
     case AVN = 'AVN';
 
-    // Pilotage services exemption number
+    /** Pilotage services exemption number */
     case AVO = 'AVO';
 
-    // Person registration number
+    /** Person registration number */
     case AVP = 'AVP';
 
-    // Place of packing approval number
+    /** Place of packing approval number */
     case AVQ = 'AVQ';
 
-    // Original Mandate Reference
+    /** Original Mandate Reference */
     case AVR = 'AVR';
 
-    // Mandate Reference
+    /** Mandate Reference */
     case AVS = 'AVS';
 
-    // Reservation station indentifier
+    /** Reservation station indentifier */
     case AVT = 'AVT';
 
-    // Unique goods shipment identifier
+    /** Unique goods shipment identifier */
     case AVU = 'AVU';
 
-    // Framework Agreement Number
+    /** Framework Agreement Number */
     case AVV = 'AVV';
 
-    // Hash value
+    /** Hash value */
     case AVW = 'AVW';
 
-    // Movement reference number
+    /** Movement reference number */
     case AVX = 'AVX';
 
-    // Economic Operators Registration and Identification Number
+    /** Economic Operators Registration and Identification Number */
     case AVY = 'AVY';
 
-    // Local Reference Number
+    /** Local Reference Number */
     case AVZ = 'AVZ';
 
-    // Rate code number
+    /** Rate code number */
     case AWA = 'AWA';
 
-    // Air waybill number
+    /** Air waybill number */
     case AWB = 'AWB';
 
-    // Documentary credit amendment number
+    /** Documentary credit amendment number */
     case AWC = 'AWC';
 
-    // Advising bank's reference
+    /** Advising bank's reference */
     case AWD = 'AWD';
 
-    // Cost centre
+    /** Cost centre */
     case AWE = 'AWE';
 
-    // Work item quantity determination
+    /** Work item quantity determination */
     case AWF = 'AWF';
 
-    // Internal data process number
+    /** Internal data process number */
     case AWG = 'AWG';
 
-    // Category of work reference
+    /** Category of work reference */
     case AWH = 'AWH';
 
-    // Policy form number
+    /** Policy form number */
     case AWI = 'AWI';
 
-    // Net area
+    /** Net area */
     case AWJ = 'AWJ';
 
-    // Service provider
+    /** Service provider */
     case AWK = 'AWK';
 
-    // Error position
+    /** Error position */
     case AWL = 'AWL';
 
-    // Service category reference
+    /** Service category reference */
     case AWM = 'AWM';
 
-    // Connected location
+    /** Connected location */
     case AWN = 'AWN';
 
-    // Related party
+    /** Related party */
     case AWO = 'AWO';
 
-    // Latest accounting entry record reference
+    /** Latest accounting entry record reference */
     case AWP = 'AWP';
 
-    // Accounting entry
+    /** Accounting entry */
     case AWQ = 'AWQ';
 
-    // Document reference, original
+    /** Document reference, original */
     case AWR = 'AWR';
 
-    // Hygienic Certificate number, national
+    /** Hygienic Certificate number, national */
     case AWS = 'AWS';
 
-    // Administrative Reference Code
+    /** Administrative Reference Code */
     case AWT = 'AWT';
 
-    // Pick-up sheet number
+    /** Pick-up sheet number */
     case AWU = 'AWU';
 
-    // Phone number
+    /** Phone number */
     case AWV = 'AWV';
 
-    // Buyer's fund number
+    /** Buyer's fund number */
     case AWW = 'AWW';
 
-    // Company trading account number
+    /** Company trading account number */
     case AWX = 'AWX';
 
-    // Reserved goods identifier
+    /** Reserved goods identifier */
     case AWY = 'AWY';
 
-    // Handling and movement reference number
+    /** Handling and movement reference number */
     case AWZ = 'AWZ';
 
-    // Instruction to despatch reference number
+    /** Instruction to despatch reference number */
     case AXA = 'AXA';
 
-    // Instruction for returns number
+    /** Instruction for returns number */
     case AXB = 'AXB';
 
-    // Metered services consumption report number
+    /** Metered services consumption report number */
     case AXC = 'AXC';
 
-    // Order status enquiry number
+    /** Order status enquiry number */
     case AXD = 'AXD';
 
-    // Firm booking reference number
+    /** Firm booking reference number */
     case AXE = 'AXE';
 
-    // Product inquiry number
+    /** Product inquiry number */
     case AXF = 'AXF';
 
-    // Split delivery number
+    /** Split delivery number */
     case AXG = 'AXG';
 
-    // Service relation number
+    /** Service relation number */
     case AXH = 'AXH';
 
-    // Serial shipping container code
+    /** Serial shipping container code */
     case AXI = 'AXI';
 
-    // Test specification number
+    /** Test specification number */
     case AXJ = 'AXJ';
 
-    // Transport status report number
+    /** Transport status report number */
     case AXK = 'AXK';
 
-    // Tooling contract number
+    /** Tooling contract number */
     case AXL = 'AXL';
 
-    // Formula reference number
+    /** Formula reference number */
     case AXM = 'AXM';
 
-    // Pre-agreement number
+    /** Pre-agreement number */
     case AXN = 'AXN';
 
-    // Product certification number
+    /** Product certification number */
     case AXO = 'AXO';
 
-    // Consignment contract number
+    /** Consignment contract number */
     case AXP = 'AXP';
 
-    // Product specification reference number
+    /** Product specification reference number */
     case AXQ = 'AXQ';
 
-    // Payroll deduction advice reference
+    /** Payroll deduction advice reference */
     case AXR = 'AXR';
 
-    // TRACES party identification
+    /** TRACES party identification */
     case AXS = 'AXS';
 
-    // Beginning meter reading actual
+    /** Beginning meter reading actual */
     case BA = 'BA';
 
-    // Buyer's contract number
+    /** Buyer's contract number */
     case BC = 'BC';
 
-    // Bid number
+    /** Bid number */
     case BD = 'BD';
 
-    // Beginning meter reading estimated
+    /** Beginning meter reading estimated */
     case BE = 'BE';
 
-    // House bill of lading number
+    /** House bill of lading number */
     case BH = 'BH';
 
-    // Bill of lading number
+    /** Bill of lading number */
     case BM = 'BM';
 
-    // Consignment identifier, carrier assigned
+    /** Consignment identifier, carrier assigned */
     case BN = 'BN';
 
-    // Blanket order number
+    /** Blanket order number */
     case BO = 'BO';
 
-    // Broker or sales office number
+    /** Broker or sales office number */
     case BR = 'BR';
 
-    // Batch number/lot number
+    /** Batch number/lot number */
     case BT = 'BT';
 
-    // Battery and accumulator producer registration number
+    /** Battery and accumulator producer registration number */
     case BTP = 'BTP';
 
-    // Blended with number
+    /** Blended with number */
     case BW = 'BW';
 
-    // IATA Cargo Agent CASS Address number
+    /** IATA Cargo Agent CASS Address number */
     case CAS = 'CAS';
 
-    // Matching of entries, balanced
+    /** Matching of entries, balanced */
     case CAT = 'CAT';
 
-    // Entry flagging
+    /** Entry flagging */
     case CAU = 'CAU';
 
-    // Matching of entries, unbalanced
+    /** Matching of entries, unbalanced */
     case CAV = 'CAV';
 
-    // Document reference, internal
+    /** Document reference, internal */
     case CAW = 'CAW';
 
-    // European Value Added Tax identification
+    /** European Value Added Tax identification */
     case CAX = 'CAX';
 
-    // Cost accounting document
+    /** Cost accounting document */
     case CAY = 'CAY';
 
-    // Grid operator's customer reference number
+    /** Grid operator's customer reference number */
     case CAZ = 'CAZ';
 
-    // Ticket control number
+    /** Ticket control number */
     case CBA = 'CBA';
 
-    // Order shipment grouping reference
+    /** Order shipment grouping reference */
     case CBB = 'CBB';
 
-    // Credit note number
+    /** Credit note number */
     case CD = 'CD';
 
-    // Ceding company
+    /** Ceding company */
     case CEC = 'CEC';
 
-    // Debit letter number
+    /** Debit letter number */
     case CED = 'CED';
 
-    // Consignee's further order
+    /** Consignee's further order */
     case CFE = 'CFE';
 
-    // Animal farm licence number
+    /** Animal farm licence number */
     case CFF = 'CFF';
 
-    // Consignor's further order
+    /** Consignor's further order */
     case CFO = 'CFO';
 
-    // Consignee's order number
+    /** Consignee's order number */
     case CG = 'CG';
 
-    // Customer catalogue number
+    /** Customer catalogue number */
     case CH = 'CH';
 
-    // Cheque number
+    /** Cheque number */
     case CK = 'CK';
 
-    // Checking number
+    /** Checking number */
     case CKN = 'CKN';
 
-    // Credit memo number
+    /** Credit memo number */
     case CM = 'CM';
 
-    // Road consignment note number
+    /** Road consignment note number */
     case CMR = 'CMR';
 
-    // Carrier's reference number
+    /** Carrier's reference number */
     case CN = 'CN';
 
-    // Charges note document attachment indicator
+    /** Charges note document attachment indicator */
     case CNO = 'CNO';
 
-    // Call off order number
+    /** Call off order number */
     case COF = 'COF';
 
-    // Condition of purchase document number
+    /** Condition of purchase document number */
     case CP = 'CP';
 
-    // Customer reference number
+    /** Customer reference number */
     case CR = 'CR';
 
-    // Transport means journey identifier
+    /** Transport means journey identifier */
     case CRN = 'CRN';
 
-    // Condition of sale document number
+    /** Condition of sale document number */
     case CS = 'CS';
 
-    // Team assignment number
+    /** Team assignment number */
     case CST = 'CST';
 
-    // Contract number
+    /** Contract number */
     case CT = 'CT';
 
-    // Consignment identifier, consignor assigned
+    /** Consignment identifier, consignor assigned */
     case CU = 'CU';
 
-    // Container operators reference number
+    /** Container operators reference number */
     case CV = 'CV';
 
-    // Package number
+    /** Package number */
     case CW = 'CW';
 
-    // Cooperation contract number
+    /** Cooperation contract number */
     case CZ = 'CZ';
 
-    // Deferment approval number
+    /** Deferment approval number */
     case DA = 'DA';
 
-    // Debit account number
+    /** Debit account number */
     case DAN = 'DAN';
 
-    // Buyer's debtor number
+    /** Buyer's debtor number */
     case DB = 'DB';
 
-    // Distributor invoice number
+    /** Distributor invoice number */
     case DI = 'DI';
 
-    // Debit note number
+    /** Debit note number */
     case DL = 'DL';
 
-    // Document identifier
+    /** Document identifier */
     case DM = 'DM';
 
-    // Delivery note number
+    /** Delivery note number */
     case DQ = 'DQ';
 
-    // Dock receipt number
+    /** Dock receipt number */
     case DR = 'DR';
 
-    // Ending meter reading actual
+    /** Ending meter reading actual */
     case EA = 'EA';
 
-    // Embargo permit number
+    /** Embargo permit number */
     case EB = 'EB';
 
-    // Export declaration
+    /** Export declaration */
     case ED = 'ED';
 
-    // Ending meter reading estimated
+    /** Ending meter reading estimated */
     case EE = 'EE';
 
-    // Electrical and electronic equipment producer registration
+    /** Electrical and electronic equipment producer registration */
     case EEP = 'EEP';
 
-    // Employer's identification number
+    /** Employer's identification number */
     case EI = 'EI';
 
-    // Embargo number
+    /** Embargo number */
     case EN = 'EN';
 
-    // Equipment number
+    /** Equipment number */
     case EQ = 'EQ';
 
-    // Container/equipment receipt number
+    /** Container/equipment receipt number */
     case ER = 'ER';
 
-    // Exporter's reference number
+    /** Exporter's reference number */
     case ERN = 'ERN';
 
-    // Excess transportation number
+    /** Excess transportation number */
     case ET = 'ET';
 
-    // Export permit identifier
+    /** Export permit identifier */
     case EX = 'EX';
 
-    // Fiscal number
+    /** Fiscal number */
     case FC = 'FC';
 
-    // Consignment identifier, freight forwarder assigned
+    /** Consignment identifier, freight forwarder assigned */
     case FF = 'FF';
 
-    // File line identifier
+    /** File line identifier */
     case FI = 'FI';
 
-    // Flow reference number
+    /** Flow reference number */
     case FLW = 'FLW';
 
-    // Freight bill number
+    /** Freight bill number */
     case FN = 'FN';
 
-    // Foreign exchange
+    /** Foreign exchange */
     case FO = 'FO';
 
-    // Final sequence number
+    /** Final sequence number */
     case FS = 'FS';
 
-    // Free zone identifier
+    /** Free zone identifier */
     case FT = 'FT';
 
-    // File version number
+    /** File version number */
     case FV = 'FV';
 
-    // Foreign exchange contract number
+    /** Foreign exchange contract number */
     case FX = 'FX';
 
-    // Standard's number
+    /** Standard's number */
     case GA = 'GA';
 
-    // Government contract number
+    /** Government contract number */
     case GC = 'GC';
 
-    // Standard's code number
+    /** Standard's code number */
     case GD = 'GD';
 
-    // General declaration number
+    /** General declaration number */
     case GDN = 'GDN';
 
-    // Government reference number
+    /** Government reference number */
     case GN = 'GN';
 
-    // Harmonised system number
+    /** Harmonised system number */
     case HS = 'HS';
 
-    // House waybill number
+    /** House waybill number */
     case HWB = 'HWB';
 
-    // Internal vendor number
+    /** Internal vendor number */
     case IA = 'IA';
 
-    // In bond number
+    /** In bond number */
     case IB = 'IB';
 
-    // IATA cargo agent code number
+    /** IATA cargo agent code number */
     case ICA = 'ICA';
 
-    // Insurance certificate reference number
+    /** Insurance certificate reference number */
     case ICE = 'ICE';
 
-    // Insurance contract reference number
+    /** Insurance contract reference number */
     case ICO = 'ICO';
 
-    // Initial sample inspection report number
+    /** Initial sample inspection report number */
     case II = 'II';
 
-    // Internal order number
+    /** Internal order number */
     case IL = 'IL';
 
-    // Intermediary broker
+    /** Intermediary broker */
     case INB = 'INB';
 
-    // Interchange number new
+    /** Interchange number new */
     case INN = 'INN';
 
-    // Interchange number old
+    /** Interchange number old */
     case INO = 'INO';
 
-    // Import permit identifier
+    /** Import permit identifier */
     case IP = 'IP';
 
-    // Invoice number suffix
+    /** Invoice number suffix */
     case IS = 'IS';
 
-    // Internal customer number
+    /** Internal customer number */
     case IT = 'IT';
 
-    // Invoice document identifier
+    /** Invoice document identifier */
     case IV = 'IV';
 
-    // Job number
+    /** Job number */
     case JB = 'JB';
 
-    // Ending job sequence number
+    /** Ending job sequence number */
     case JE = 'JE';
 
-    // Shipping label serial number
+    /** Shipping label serial number */
     case LA = 'LA';
 
-    // Loading authorisation identifier
+    /** Loading authorisation identifier */
     case LAN = 'LAN';
 
-    // Lower number in range
+    /** Lower number in range */
     case LAR = 'LAR';
 
-    // Lockbox
+    /** Lockbox */
     case LB = 'LB';
 
-    // Letter of credit number
+    /** Letter of credit number */
     case LC = 'LC';
 
-    // Document line identifier
+    /** Document line identifier */
     case LI = 'LI';
 
-    // Load planning number
+    /** Load planning number */
     case LO = 'LO';
 
-    // Reservation office identifier
+    /** Reservation office identifier */
     case LRC = 'LRC';
 
-    // Bar coded label serial number
+    /** Bar coded label serial number */
     case LS = 'LS';
 
-    // Ship notice/manifest number
+    /** Ship notice/manifest number */
     case MA = 'MA';
 
-    // Master bill of lading number
+    /** Master bill of lading number */
     case MB = 'MB';
 
-    // Manufacturer's part number
+    /** Manufacturer's part number */
     case MF = 'MF';
 
-    // Meter unit number
+    /** Meter unit number */
     case MG = 'MG';
 
-    // Manufacturing order number
+    /** Manufacturing order number */
     case MH = 'MH';
 
-    // Message recipient
+    /** Message recipient */
     case MR = 'MR';
 
-    // Mailing reference number
+    /** Mailing reference number */
     case MRN = 'MRN';
 
-    // Message sender
+    /** Message sender */
     case MS = 'MS';
 
-    // Manufacturer's material safety data sheet number
+    /** Manufacturer's material safety data sheet number */
     case MSS = 'MSS';
 
-    // Master air waybill number
+    /** Master air waybill number */
     case MWB = 'MWB';
 
-    // North American hazardous goods classification number
+    /** North American hazardous goods classification number */
     case NA = 'NA';
 
-    // Nota Fiscal
+    /** Nota Fiscal */
     case NF = 'NF';
 
-    // Current invoice number
+    /** Current invoice number */
     case OH = 'OH';
 
-    // Previous invoice number
+    /** Previous invoice number */
     case OI = 'OI';
 
-    // Order document identifier, buyer assigned
+    /** Order document identifier, buyer assigned */
     case ON = 'ON';
 
-    // Original purchase order
+    /** Original purchase order */
     case OP = 'OP';
 
-    // General order number
+    /** General order number */
     case OR = 'OR';
 
-    // Payer's financial institution account number
+    /** Payer's financial institution account number */
     case PB = 'PB';
 
-    // Production code
+    /** Production code */
     case PC = 'PC';
 
-    // Promotion deal number
+    /** Promotion deal number */
     case PD = 'PD';
 
-    // Plant number
+    /** Plant number */
     case PE = 'PE';
 
-    // Prime contractor contract number
+    /** Prime contractor contract number */
     case PF = 'PF';
 
-    // Price list version number
+    /** Price list version number */
     case PI = 'PI';
 
-    // Packing list number
+    /** Packing list number */
     case PK = 'PK';
 
-    // Price list number
+    /** Price list number */
     case PL = 'PL';
 
-    // Purchase order response number
+    /** Purchase order response number */
     case POR = 'POR';
 
-    // Purchase order change number
+    /** Purchase order change number */
     case PP = 'PP';
 
-    // Payment reference
+    /** Payment reference */
     case PQ = 'PQ';
 
-    // Price quote number
+    /** Price quote number */
     case PR = 'PR';
 
-    // Purchase order number suffix
+    /** Purchase order number suffix */
     case PS = 'PS';
 
-    // Prior purchase order number
+    /** Prior purchase order number */
     case PW = 'PW';
 
-    // Payee's financial institution account number
+    /** Payee's financial institution account number */
     case PY = 'PY';
 
-    // Remittance advice number
+    /** Remittance advice number */
     case RA = 'RA';
 
-    // Rail/road routing code
+    /** Rail/road routing code */
     case RC = 'RC';
 
-    // Railway consignment note number
+    /** Railway consignment note number */
     case RCN = 'RCN';
 
-    // Release number
+    /** Release number */
     case RE = 'RE';
 
-    // Consignment receipt identifier
+    /** Consignment receipt identifier */
     case REN = 'REN';
 
-    // Export reference number
+    /** Export reference number */
     case RF = 'RF';
 
-    // Payer's financial institution transit routing No.(ACH
+    /** Payer's financial institution transit routing No.(ACH */
     case RR = 'RR';
 
-    // Payee's financial institution transit routing No.
+    /** Payee's financial institution transit routing No. */
     case RT = 'RT';
 
-    // Sales person number
+    /** Sales person number */
     case SA = 'SA';
 
-    // Sales region number
+    /** Sales region number */
     case SB = 'SB';
 
-    // Sales department number
+    /** Sales department number */
     case SD = 'SD';
 
-    // Serial number
+    /** Serial number */
     case SE = 'SE';
 
-    // Allocated seat
+    /** Allocated seat */
     case SEA = 'SEA';
 
-    // Ship from
+    /** Ship from */
     case SF = 'SF';
 
-    // Previous highest schedule number
+    /** Previous highest schedule number */
     case SH = 'SH';
 
-    // SID (Shipper's identifying number for shipment)
+    /** SID (Shipper's identifying number for shipment) */
     case SI = 'SI';
 
-    // Sales office number
+    /** Sales office number */
     case SM = 'SM';
 
-    // Transport equipment seal identifier
+    /** Transport equipment seal identifier */
     case SN = 'SN';
 
-    // Scan line
+    /** Scan line */
     case SP = 'SP';
 
-    // Equipment sequence number
+    /** Equipment sequence number */
     case SQ = 'SQ';
 
-    // Shipment reference number
+    /** Shipment reference number */
     case SRN = 'SRN';
 
-    // Sellers reference number
+    /** Sellers reference number */
     case SS = 'SS';
 
-    // Station reference number
+    /** Station reference number */
     case STA = 'STA';
 
-    // Swap order number
+    /** Swap order number */
     case SW = 'SW';
 
-    // Specification number
+    /** Specification number */
     case SZ = 'SZ';
 
-    // Trucker's bill of lading
+    /** Trucker's bill of lading */
     case TB = 'TB';
 
-    // Terminal operator's consignment reference
+    /** Terminal operator's consignment reference */
     case TCR = 'TCR';
 
-    // Telex message number
+    /** Telex message number */
     case TE = 'TE';
 
-    // Transfer number
+    /** Transfer number */
     case TF = 'TF';
 
-    // TIR carnet number
+    /** TIR carnet number */
     case TI = 'TI';
 
-    // Transport instruction number
+    /** Transport instruction number */
     case TIN = 'TIN';
 
-    // Tax exemption licence number
+    /** Tax exemption licence number */
     case TL = 'TL';
 
-    // Transaction reference number
+    /** Transaction reference number */
     case TN = 'TN';
 
-    // Test report number
+    /** Test report number */
     case TP = 'TP';
 
-    // Upper number of range
+    /** Upper number of range */
     case UAR = 'UAR';
 
-    // Ultimate customer's reference number
+    /** Ultimate customer's reference number */
     case UC = 'UC';
 
-    // Unique consignment reference number
+    /** Unique consignment reference number */
     case UCN = 'UCN';
 
-    // United Nations Dangerous Goods identifier
+    /** United Nations Dangerous Goods identifier */
     case UN = 'UN';
 
-    // Ultimate customer's order number
+    /** Ultimate customer's order number */
     case UO = 'UO';
 
-    // Uniform Resource Identifier
+    /** Uniform Resource Identifier */
     case URI = 'URI';
 
-    // VAT registration number
+    /** VAT registration number */
     case VA = 'VA';
 
-    // Vendor contract number
+    /** Vendor contract number */
     case VC = 'VC';
 
-    // Transport equipment gross mass verification reference
+    /** Transport equipment gross mass verification reference */
     case VGR = 'VGR';
 
-    // Vessel identifier
+    /** Vessel identifier */
     case VM = 'VM';
 
-    // Order number (vendor)
+    /** Order number (vendor) */
     case VN = 'VN';
 
-    // Voyage number
+    /** Voyage number */
     case VON = 'VON';
 
-    // Transport equipment gross mass verification order reference
+    /** Transport equipment gross mass verification order reference */
     case VOR = 'VOR';
 
-    // Vendor product number
+    /** Vendor product number */
     case VP = 'VP';
 
-    // Vendor ID number
+    /** Vendor ID number */
     case VR = 'VR';
 
-    // Vendor order number suffix
+    /** Vendor order number suffix */
     case VS = 'VS';
 
-    // Motor vehicle identification number
+    /** Motor vehicle identification number */
     case VT = 'VT';
 
-    // Voucher number
+    /** Voucher number */
     case VV = 'VV';
 
-    // Warehouse entry number
+    /** Warehouse entry number */
     case WE = 'WE';
 
-    // Weight agreement number
+    /** Weight agreement number */
     case WM = 'WM';
 
-    // Well number
+    /** Well number */
     case WN = 'WN';
 
-    // Warehouse receipt number
+    /** Warehouse receipt number */
     case WR = 'WR';
 
-    // Warehouse storage location number
+    /** Warehouse storage location number */
     case WS = 'WS';
 
-    // Rail waybill number
+    /** Rail waybill number */
     case WY = 'WY';
 
-    // Company/place registration number
+    /** Company/place registration number */
     case XA = 'XA';
 
-    // Cargo control number
+    /** Cargo control number */
     case XC = 'XC';
 
-    // Previous cargo control number
+    /** Previous cargo control number */
     case XP = 'XP';
 
-    // Mutually defined reference number
+    /** Mutually defined reference number */
     case ZZZ = 'ZZZ';
 }

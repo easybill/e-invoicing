@@ -3,35 +3,26 @@
 declare(strict_types=1);
 
 use easybill\eInvoicing\Enums\ReferenceQualifier;
+use easybill\eInvoicingTools\CodeList;
+use easybill\eInvoicingTools\EnumFileWriter;
+use easybill\eInvoicingTools\ReleasedCases;
 
-require_once __DIR__ . '/EnumSupport.php';
+require __DIR__ . '/../../vendor/autoload.php';
 
 const ENUM_FILE = __DIR__ . '/../../src/Enums/ReferenceQualifier.php';
 
-/** @param array<string, string> $references description keyed by code */
-function generateEnum(array $references): string
-{
-    $lines = [
-        'declare(strict_types=1);',
-        'namespace easybill\eInvoicing\Enums;',
-        "enum ReferenceQualifier: string\n{\n",
-    ];
+$released = ReleasedCases::load(ENUM_FILE, ReferenceQualifier::class);
+$writer = EnumFileWriter::for(ReferenceQualifier::class, 'string', ENUM_FILE);
+$codes = [];
 
-    $enumCode = implode("\n\n", $lines);
-    $released = releasedCases(ENUM_FILE, ReferenceQualifier::class);
+foreach (CodeList::rows(__DIR__ . '/Input/ReferenceQualifier.csv') as [$code, $name]) {
+    $codes[] = $code;
 
-    foreach ($references as $code => $name) {
-        $code = (string) $code; // numeric codes become int array keys
-
-        $enumCode .= '    // ' . $name . "\n";
-        $enumCode .= '    case ' . ($released[$code]?->name ?? $code) . " = '" . $code . "';\n\n";
-    }
-
-    $enumCode .= retainedCases($released, codesOf($references));
-    $enumCode .= "}\n";
-    return $enumCode;
+    $writer->addCase($released->nameFor($code) ?? $code, $code, $name);
 }
 
-$references = parseCSVFile(__DIR__ . '/input/ReferenceQualifier.csv');
+foreach ($released->retained($codes) as $case) {
+    $writer->addCase($case->name, $case->value);
+}
 
-file_put_contents(ENUM_FILE, "<?php\n\n" . generateEnum($references));
+$writer->write();
