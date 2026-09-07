@@ -32,6 +32,7 @@ WIR Franc;CHW
 Unidad de Fomento;CLF
 Chilean Peso;CLP
 Yuan Renminbi;CNY
+Renminbi (offshore);CNH
 Colombian Peso;COP
 Unidad de Valor Real;COU
 Costa Rican Colon;CRC
@@ -127,6 +128,7 @@ Sudanese Pound;SDG
 Swedish Krona;SEK
 Singapore Dollar;SGD
 Saint Helena Pound;SHP
+Sierra Leone (new valuation 2022);SLE
 Leone;SLL
 Somali Shilling;SOS
 Surinam Dollar;SRD
@@ -152,6 +154,7 @@ Uruguay Peso en Unidades Indexadas (UI);UYI
 Peso Uruguayo;UYU
 Unidad Previsional;UYW
 Uzbekistan Sum;UZS
+Bolívar Soberano, new valuation;VED
 Bolívar Soberano;VES
 Dong;VND
 Vatu;VUV
@@ -164,6 +167,7 @@ Bond Markets Unit European Monetary Unit (E.M.U.-6);XBB
 Bond Markets Unit European Unit of Account 9 (E.U.A.-9);XBC
 Bond Markets Unit European Unit of Account 17 (E.U.A.-17);XBD
 East Caribbean Dollar;XCD
+Caribbean guilder;XCG
 SDR (Special Drawing Right);XDR
 CFA Franc BCEAO;XOF
 Palladium;XPD
@@ -176,4 +180,5 @@ The codes assigned for transactions where no currency is involved;XXX
 Yemeni Rial;YER
 Rand;ZAR
 Zambian Kwacha;ZMW
+Zimbabwe Gold;ZWG
 Zimbabwe Dollar;ZWL

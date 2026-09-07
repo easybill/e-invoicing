@@ -612,6 +612,7 @@ AXP;Consignment contract number
 AXQ;Product specification reference number
 AXR;Payroll deduction advice reference
 AXS;TRACES party identification
+AXU;Block Stowage Reference
 BA; Beginning meter reading actual
 BC; Buyer's contract number
 BD; Bid number

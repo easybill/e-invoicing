@@ -1848,6 +1848,9 @@ enum ReferenceQualifier: string
     /** TRACES party identification */
     case AXS = 'AXS';
 
+    /** Block Stowage Reference */
+    case AXU = 'AXU';
+
     /** Beginning meter reading actual */
     case BA = 'BA';
 

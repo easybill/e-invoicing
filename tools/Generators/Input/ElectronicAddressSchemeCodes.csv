@@ -4,16 +4,22 @@
 0037;LY-tunnus
 0060;Data Universal Numbering System (D-U-N-S Number)
 0088;EAN Location Code
-0096;DANISH CHAMBER OF COMMERCE Scheme (EDIRA compliant)
+0096;The Danish Business Authority - P-number (DK:P)
 0097;FTI - Ediforum Italia, (EDIRA compliant)
 0106;"Vereniging van Kamers van Koophandel en Fabrieken in Nederland (Association of
 Chambers of Commerce and Industry in the Netherlands), Scheme (EDIRA compliant)"
 0130;Directorates of the European Commission
 0135;SIA Object Identifiers
 0142;SECETI Object Identifiers
+0147;Standard Company Code
 0151;Australian Business Number (ABN) Scheme
+0154;Identification number of economic subjects: (ICO)
+0158;Identification number of economic subject (ICO) Act on State Statistics of 29 November 2001, § 27
+0170;Teikoku Company Code
+0177;Odette International Limited
 0183;Numéro d'identification suisse des enterprises (IDE), Swiss Unique Business Identification Number (UIDB)
 0184;DIGSTORG
+0188;Corporate Number of The Social Security and Tax Number System
 0190;Dutch Originator's Identification Number
 0191;Centre of Registers and Information Systems of the Ministry of Justice
 0192;Enhetsregisteret ved Bronnoysundregisterne 
@@ -28,22 +34,37 @@ Chambers of Commerce and Industry in the Netherlands), Scheme (EDIRA compliant)"
 0202;Indirizzo di Posta Elettronica Certificata
 0203;eDelivery Network Participant identifier
 0204;Leitweg-ID
+0205;CODDEST
 0208;Numero d'entreprise / ondernemingsnummer / Unternehmensnummer
 0209;GS1 identification keys
 0210;CODICE FISCALE
 0211;PARTITA IVA
 0212;Finnish Organization Identifier
 0213;Finnish Organization Value Add Tax Identifier
+0215;Net service ID
+0216;OVTcode
+0217;The Netherlands Chamber of Commerce and Industry establishment number
+0218;Unified registration number (Latvia)
+0221;The registered number of the qualified invoice issuer
+0225;FRCTC ELECTRONIC ADDRESS
+0230;National e-Invoicing Framework
+0235;UAE Tax Identification Number (TIN)
+0240;Register of legal persons (in French : Répertoire des personnes morales)
+0242;OpenPeppol Service Provider Identification Scheme (SPIS)
+0244;Tax Identification (Tax ID), Nigeria
+0245;Tax identification number (DIČ, Slovakia)
+0246;German Electronic Business Address
+0248;Oman Value Added Tax Identification Number (VATIN)
 9901;Danish Ministry of the Interior and Health
-9906;Ufficio responsabile gestione partite IVA 
-9907;TAX Authority 
+9906;Ufficio responsabile gestione partite IVA
+9907;TAX Authority
 9910;Hungary VAT number
 9913;Business Registers Network 
 9914;Österreichische Umsatzsteuer-Identifikationsnummer
 9915;Österreichisches Verwaltungs bzw.Organisationskennzeichen
 9918;SOCIETY FOR WORLDWIDE INTERBANK FINANCIAL, TELECOMMUNICATION S.W.I.F.T
 9919;Kennziffer des Unternehmensregisters 
-9920;Agencia Espa�ola de Administraci�n Tributaria 
+9920;Agencia Española de Administración Tributaria
 9922;Andorra VAT number
 9923;Albania VAT number
 9924;Bosnia and Herzegovina VAT number
@@ -78,6 +99,7 @@ Chambers of Commerce and Industry in the Netherlands), Scheme (EDIRA compliant)"
 9953;Holy See (Vatican City State) VAT number
 9955;Swedish VAT number
 9957;French VAT number
+9959;Employer Identification Number (EIN, USA)
 AN;O.F.T.P. (ODETTE File Transfer Protocol)
 AQ;X.400 address for mail text
 AS;AS2 exchange
