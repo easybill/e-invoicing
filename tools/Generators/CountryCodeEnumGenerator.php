@@ -28,8 +28,10 @@ function generateEnum(array $countries): string
 
     $enumCode = implode("\n\n", $lines);
     foreach ($countries as $name => $code) {
+        $caseName = is_numeric(substr($code, 0, 1)) ? '_' . $code : $code;
+
         $enumCode .= '    // ' . $name . "\n";
-        $enumCode .= '    case ' . $code . " = '" . $code . "';\n\n";
+        $enumCode .= '    case ' . $caseName . " = '" . $code . "';\n\n";
     }
     $enumCode .= "}\n";
     return $enumCode;

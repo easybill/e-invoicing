@@ -6,7 +6,7 @@ function generateEnumFromCSV(string $csvContent): string
 {
     $csv = array_map(function ($line) {
         return str_getcsv($line, ';');  // Semikolon als Trennzeichen
-    }, explode("\n", $csvContent));
+    }, array_filter(explode("\n", trim($csvContent))));
 
     $lines = [
         'declare(strict_types=1);',
@@ -28,7 +28,7 @@ function generateEnumFromCSV(string $csvContent): string
         }
 
         $enumCode .= "    /**\n";
-        $enumCode .= "     * Applicable for {$interpretation}\n";
+        $enumCode .= "     * Applicable for {$interpretation}.\n";
         $enumCode .= "     */\n";
         $enumCode .= "    case {$caseName} = {$code};\n\n";
     }

@@ -68,6 +68,7 @@
             "php ./tools/Generators/DocumentTypeEnumGenerator.php",
             "php ./tools/Generators/ReferenceQualifierEnumGenerator.php",
             "php ./tools/Generators/UnitCodeEnumGenerator.php",
+            "php ./tools/Generators/EASEnumGenerator.php",
             "@cs-fix"
         ]
     }

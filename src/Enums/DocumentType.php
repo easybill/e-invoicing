@@ -227,6 +227,21 @@ enum DocumentType: int
     case FREIGHT_INVOICE = 780;
 
     /**
+     * Applicable for Invoice.
+     */
+    case PARTIAL_CONSTRUCTION_INVOICE = 875;
+
+    /**
+     * Applicable for Invoice.
+     */
+    case PARTIAL_FINAL_CONSTRUCTION_INVOICE = 876;
+
+    /**
+     * Applicable for Invoice.
+     */
+    case FINAL_CONSTRUCTION_INVOICE = 877;
+
+    /**
      * Applicable for Additional document.
      */
     case RELATED_DOCUMENT = 916;

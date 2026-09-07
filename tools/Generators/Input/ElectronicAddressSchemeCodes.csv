@@ -83,3 +83,6 @@ AQ;X.400 address for mail text
 AS;AS2 exchange
 AU;File Transfer Protocol
 EM;Electronic mail (SMPT)
+XR01;DiGAVEID
+XR02;Freischaltcode
+XR03;IK
