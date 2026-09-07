@@ -42,8 +42,11 @@
 633;Port charges documents;Invoice
 751;Invoice information for accounting purposes;Invoice
 780;Freight invoice;Invoice
+# Source: UNTDID 1001, urn:xoev-de:kosit:codeliste:untdid.1001 - XRechnung BT-3, added via KoSIT issue 44
 875;Partial construction invoice;Invoice
+# Source: UNTDID 1001, urn:xoev-de:kosit:codeliste:untdid.1001 - XRechnung BT-3, added via KoSIT issue 44
 876;Partial final construction invoice;Invoice
+# Source: UNTDID 1001, urn:xoev-de:kosit:codeliste:untdid.1001 - XRechnung BT-3, added via KoSIT issue 44
 877;Final construction invoice;Invoice
 916;Related document;Additional document
 935;Customs invoice;Invoice

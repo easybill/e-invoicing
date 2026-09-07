@@ -2,23 +2,14 @@
 
 declare(strict_types=1);
 
-/** @return array<string, string> */
-function parseCSVFile(string $filename): array
-{
-    $countries = [];
-    if (($handle = fopen($filename, 'r')) !== false) {
-        while (($data = fgetcsv($handle, 1000, ';', '"', '')) !== false) {
-            if (count($data) >= 2) {
-                $countries[trim($data[0])] = trim($data[1]);
-            }
-        }
-        fclose($handle);
-    }
-    return $countries;
-}
+use easybill\eInvoicing\Enums\CurrencyCode;
 
-/** @param array<string, string> $countries */
-function generateEnum(array $countries): string
+require_once __DIR__ . '/EnumSupport.php';
+
+const ENUM_FILE = __DIR__ . '/../../src/Enums/CurrencyCode.php';
+
+/** @param array<string, string> $currencies code keyed by currency name */
+function generateEnum(array $currencies): string
 {
     $lines = [
         'declare(strict_types=1);',
@@ -27,18 +18,18 @@ function generateEnum(array $countries): string
     ];
 
     $enumCode = implode("\n\n", $lines);
-    foreach ($countries as $name => $code) {
+    $released = releasedCases(ENUM_FILE, CurrencyCode::class);
+
+    foreach ($currencies as $name => $code) {
         $enumCode .= '    // ' . $name . "\n";
-        $enumCode .= '    case ' . $code . " = '" . $code . "';\n\n";
+        $enumCode .= '    case ' . ($released[$code]?->name ?? $code) . " = '" . $code . "';\n\n";
     }
+
+    $enumCode .= retainedCases($released, array_values($currencies));
     $enumCode .= "}\n";
     return $enumCode;
 }
 
-$csvFilePath = __DIR__ . '/input/CurrencyCodes.csv';
+$currencies = parseCSVFile(__DIR__ . '/input/CurrencyCodes.csv');
 
-$countries = parseCSVFile($csvFilePath);
-
-$enumCode = generateEnum($countries);
-
-file_put_contents(__DIR__ . '/../../src/Enums/CurrencyCode.php', "<?php\n\n" . $enumCode);
+file_put_contents(ENUM_FILE, "<?php\n\n" . generateEnum($currencies));
