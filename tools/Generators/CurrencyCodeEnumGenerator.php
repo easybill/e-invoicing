@@ -3,33 +3,26 @@
 declare(strict_types=1);
 
 use easybill\eInvoicing\Enums\CurrencyCode;
+use easybill\eInvoicingTools\CodeList;
+use easybill\eInvoicingTools\EnumFileWriter;
+use easybill\eInvoicingTools\ReleasedCases;
 
-require_once __DIR__ . '/EnumSupport.php';
+require __DIR__ . '/../../vendor/autoload.php';
 
 const ENUM_FILE = __DIR__ . '/../../src/Enums/CurrencyCode.php';
 
-/** @param array<string, string> $currencies code keyed by currency name */
-function generateEnum(array $currencies): string
-{
-    $lines = [
-        'declare(strict_types=1);',
-        'namespace easybill\eInvoicing\Enums;',
-        "enum CurrencyCode: string\n{\n",
-    ];
+$released = ReleasedCases::load(ENUM_FILE, CurrencyCode::class);
+$writer = EnumFileWriter::for(CurrencyCode::class, 'string', ENUM_FILE);
+$codes = [];
 
-    $enumCode = implode("\n\n", $lines);
-    $released = releasedCases(ENUM_FILE, CurrencyCode::class);
+foreach (CodeList::rows(__DIR__ . '/Input/CurrencyCodes.csv') as [$name, $code]) {
+    $codes[] = $code;
 
-    foreach ($currencies as $name => $code) {
-        $enumCode .= '    // ' . $name . "\n";
-        $enumCode .= '    case ' . ($released[$code]?->name ?? $code) . " = '" . $code . "';\n\n";
-    }
-
-    $enumCode .= retainedCases($released, array_values($currencies));
-    $enumCode .= "}\n";
-    return $enumCode;
+    $writer->addCase($released->nameFor($code) ?? $code, $code, $name);
 }
 
-$currencies = parseCSVFile(__DIR__ . '/input/CurrencyCodes.csv');
+foreach ($released->retained($codes) as $case) {
+    $writer->addCase($case->name, $case->value);
+}
 
-file_put_contents(ENUM_FILE, "<?php\n\n" . generateEnum($currencies));
+$writer->write();

@@ -6,540 +6,540 @@ namespace easybill\eInvoicing\Enums;
 
 enum CurrencyCode: string
 {
-    // UAE Dirham
+    /** UAE Dirham */
     case AED = 'AED';
 
-    // Afghani
+    /** Afghani */
     case AFN = 'AFN';
 
-    // Lek
+    /** Lek */
     case ALL = 'ALL';
 
-    // Armenian Dram
+    /** Armenian Dram */
     case AMD = 'AMD';
 
-    // Netherlands Antillean Guilder
+    /** Netherlands Antillean Guilder */
     case ANG = 'ANG';
 
-    // Kwanza
+    /** Kwanza */
     case AOA = 'AOA';
 
-    // Argentine Peso
+    /** Argentine Peso */
     case ARS = 'ARS';
 
-    // Australian Dollar
+    /** Australian Dollar */
     case AUD = 'AUD';
 
-    // Aruban Florin
+    /** Aruban Florin */
     case AWG = 'AWG';
 
-    // Azerbaijan Manat
+    /** Azerbaijan Manat */
     case AZN = 'AZN';
 
-    // Convertible Mark
+    /** Convertible Mark */
     case BAM = 'BAM';
 
-    // Barbados Dollar
+    /** Barbados Dollar */
     case BBD = 'BBD';
 
-    // Taka
+    /** Taka */
     case BDT = 'BDT';
 
-    // Bulgarian Lev
+    /** Bulgarian Lev */
     case BGN = 'BGN';
 
-    // Bahraini Dinar
+    /** Bahraini Dinar */
     case BHD = 'BHD';
 
-    // Burundi Franc
+    /** Burundi Franc */
     case BIF = 'BIF';
 
-    // Bermudian Dollar
+    /** Bermudian Dollar */
     case BMD = 'BMD';
 
-    // Brunei Dollar
+    /** Brunei Dollar */
     case BND = 'BND';
 
-    // Boliviano
+    /** Boliviano */
     case BOB = 'BOB';
 
-    // Mvdol
+    /** Mvdol */
     case BOV = 'BOV';
 
-    // Brazilian Real
+    /** Brazilian Real */
     case BRL = 'BRL';
 
-    // Bahamian Dollar
+    /** Bahamian Dollar */
     case BSD = 'BSD';
 
-    // Ngultrum
+    /** Ngultrum */
     case BTN = 'BTN';
 
-    // Pula
+    /** Pula */
     case BWP = 'BWP';
 
-    // Belarusian Ruble
+    /** Belarusian Ruble */
     case BYN = 'BYN';
 
-    // Belize Dollar
+    /** Belize Dollar */
     case BZD = 'BZD';
 
-    // Canadian Dollar
+    /** Canadian Dollar */
     case CAD = 'CAD';
 
-    // Congolese Franc
+    /** Congolese Franc */
     case CDF = 'CDF';
 
-    // WIR Euro
+    /** WIR Euro */
     case CHE = 'CHE';
 
-    // Swiss Franc
+    /** Swiss Franc */
     case CHF = 'CHF';
 
-    // WIR Franc
+    /** WIR Franc */
     case CHW = 'CHW';
 
-    // Unidad de Fomento
+    /** Unidad de Fomento */
     case CLF = 'CLF';
 
-    // Chilean Peso
+    /** Chilean Peso */
     case CLP = 'CLP';
 
-    // Yuan Renminbi
+    /** Yuan Renminbi */
     case CNY = 'CNY';
 
-    // Colombian Peso
+    /** Colombian Peso */
     case COP = 'COP';
 
-    // Unidad de Valor Real
+    /** Unidad de Valor Real */
     case COU = 'COU';
 
-    // Costa Rican Colon
+    /** Costa Rican Colon */
     case CRC = 'CRC';
 
-    // Peso Convertible
+    /** Peso Convertible */
     case CUC = 'CUC';
 
-    // Cuban Peso
+    /** Cuban Peso */
     case CUP = 'CUP';
 
-    // Cabo Verde Escudo
+    /** Cabo Verde Escudo */
     case CVE = 'CVE';
 
-    // Czech Koruna
+    /** Czech Koruna */
     case CZK = 'CZK';
 
-    // Djibouti Franc
+    /** Djibouti Franc */
     case DJF = 'DJF';
 
-    // Danish Krone
+    /** Danish Krone */
     case DKK = 'DKK';
 
-    // Dominican Peso
+    /** Dominican Peso */
     case DOP = 'DOP';
 
-    // Algerian Dinar
+    /** Algerian Dinar */
     case DZD = 'DZD';
 
-    // Egyptian Pound
+    /** Egyptian Pound */
     case EGP = 'EGP';
 
-    // Nakfa
+    /** Nakfa */
     case ERN = 'ERN';
 
-    // Ethiopian Birr
+    /** Ethiopian Birr */
     case ETB = 'ETB';
 
-    // Euro
+    /** Euro */
     case EUR = 'EUR';
 
-    // Fiji Dollar
+    /** Fiji Dollar */
     case FJD = 'FJD';
 
-    // Falkland Islands Pound
+    /** Falkland Islands Pound */
     case FKP = 'FKP';
 
-    // Pound Sterling
+    /** Pound Sterling */
     case GBP = 'GBP';
 
-    // Lari
+    /** Lari */
     case GEL = 'GEL';
 
-    // Ghana Cedi
+    /** Ghana Cedi */
     case GHS = 'GHS';
 
-    // Gibraltar Pound
+    /** Gibraltar Pound */
     case GIP = 'GIP';
 
-    // Dalasi
+    /** Dalasi */
     case GMD = 'GMD';
 
-    // Guinean Franc
+    /** Guinean Franc */
     case GNF = 'GNF';
 
-    // Quetzal
+    /** Quetzal */
     case GTQ = 'GTQ';
 
-    // Guyana Dollar
+    /** Guyana Dollar */
     case GYD = 'GYD';
 
-    // Hong Kong Dollar
+    /** Hong Kong Dollar */
     case HKD = 'HKD';
 
-    // Lempira
+    /** Lempira */
     case HNL = 'HNL';
 
-    // Kuna
+    /** Kuna */
     case HRK = 'HRK';
 
-    // Gourde
+    /** Gourde */
     case HTG = 'HTG';
 
-    // Forint
+    /** Forint */
     case HUF = 'HUF';
 
-    // Rupiah
+    /** Rupiah */
     case IDR = 'IDR';
 
-    // New Israeli Sheqel
+    /** New Israeli Sheqel */
     case ILS = 'ILS';
 
-    // Indian Rupee
+    /** Indian Rupee */
     case INR = 'INR';
 
-    // Iraqi Dinar
+    /** Iraqi Dinar */
     case IQD = 'IQD';
 
-    // Iranian Rial
+    /** Iranian Rial */
     case IRR = 'IRR';
 
-    // Iceland Krona
+    /** Iceland Krona */
     case ISK = 'ISK';
 
-    // Jamaican Dollar
+    /** Jamaican Dollar */
     case JMD = 'JMD';
 
-    // Jordanian Dinar
+    /** Jordanian Dinar */
     case JOD = 'JOD';
 
-    // Yen
+    /** Yen */
     case JPY = 'JPY';
 
-    // Kenyan Shilling
+    /** Kenyan Shilling */
     case KES = 'KES';
 
-    // Som
+    /** Som */
     case KGS = 'KGS';
 
-    // Riel
+    /** Riel */
     case KHR = 'KHR';
 
-    // Comorian Franc
+    /** Comorian Franc */
     case KMF = 'KMF';
 
-    // North Korean Won
+    /** North Korean Won */
     case KPW = 'KPW';
 
-    // Won
+    /** Won */
     case KRW = 'KRW';
 
-    // Kuwaiti Dinar
+    /** Kuwaiti Dinar */
     case KWD = 'KWD';
 
-    // Cayman Islands Dollar
+    /** Cayman Islands Dollar */
     case KYD = 'KYD';
 
-    // Tenge
+    /** Tenge */
     case KZT = 'KZT';
 
-    // Lao Kip
+    /** Lao Kip */
     case LAK = 'LAK';
 
-    // Lebanese Pound
+    /** Lebanese Pound */
     case LBP = 'LBP';
 
-    // Sri Lanka Rupee
+    /** Sri Lanka Rupee */
     case LKR = 'LKR';
 
-    // Liberian Dollar
+    /** Liberian Dollar */
     case LRD = 'LRD';
 
-    // Loti
+    /** Loti */
     case LSL = 'LSL';
 
-    // Libyan Dinar
+    /** Libyan Dinar */
     case LYD = 'LYD';
 
-    // Moroccan Dirham
+    /** Moroccan Dirham */
     case MAD = 'MAD';
 
-    // Moldovan Leu
+    /** Moldovan Leu */
     case MDL = 'MDL';
 
-    // Malagasy Ariary
+    /** Malagasy Ariary */
     case MGA = 'MGA';
 
-    // Denar
+    /** Denar */
     case MKD = 'MKD';
 
-    // Kyat
+    /** Kyat */
     case MMK = 'MMK';
 
-    // Tugrik
+    /** Tugrik */
     case MNT = 'MNT';
 
-    // Pataca
+    /** Pataca */
     case MOP = 'MOP';
 
-    // Ouguiya
+    /** Ouguiya */
     case MRU = 'MRU';
 
-    // Mauritius Rupee
+    /** Mauritius Rupee */
     case MUR = 'MUR';
 
-    // Rufiyaa
+    /** Rufiyaa */
     case MVR = 'MVR';
 
-    // Malawi Kwacha
+    /** Malawi Kwacha */
     case MWK = 'MWK';
 
-    // Mexican Peso
+    /** Mexican Peso */
     case MXN = 'MXN';
 
-    // Mexican Unidad de Inversion (UDI)
+    /** Mexican Unidad de Inversion (UDI) */
     case MXV = 'MXV';
 
-    // Malaysian Ringgit
+    /** Malaysian Ringgit */
     case MYR = 'MYR';
 
-    // Mozambique Metical
+    /** Mozambique Metical */
     case MZN = 'MZN';
 
-    // Namibia Dollar
+    /** Namibia Dollar */
     case NAD = 'NAD';
 
-    // Naira
+    /** Naira */
     case NGN = 'NGN';
 
-    // Cordoba Oro
+    /** Cordoba Oro */
     case NIO = 'NIO';
 
-    // Norwegian Krone
+    /** Norwegian Krone */
     case NOK = 'NOK';
 
-    // Nepalese Rupee
+    /** Nepalese Rupee */
     case NPR = 'NPR';
 
-    // New Zealand Dollar
+    /** New Zealand Dollar */
     case NZD = 'NZD';
 
-    // Rial Omani
+    /** Rial Omani */
     case OMR = 'OMR';
 
-    // Balboa
+    /** Balboa */
     case PAB = 'PAB';
 
-    // Sol
+    /** Sol */
     case PEN = 'PEN';
 
-    // Kina
+    /** Kina */
     case PGK = 'PGK';
 
-    // Philippine Peso
+    /** Philippine Peso */
     case PHP = 'PHP';
 
-    // Pakistan Rupee
+    /** Pakistan Rupee */
     case PKR = 'PKR';
 
-    // Zloty
+    /** Zloty */
     case PLN = 'PLN';
 
-    // Guarani
+    /** Guarani */
     case PYG = 'PYG';
 
-    // Qatari Rial
+    /** Qatari Rial */
     case QAR = 'QAR';
 
-    // Romanian Leu
+    /** Romanian Leu */
     case RON = 'RON';
 
-    // Serbian Dinar
+    /** Serbian Dinar */
     case RSD = 'RSD';
 
-    // Russian Ruble
+    /** Russian Ruble */
     case RUB = 'RUB';
 
-    // Rwanda Franc
+    /** Rwanda Franc */
     case RWF = 'RWF';
 
-    // Saudi Riyal
+    /** Saudi Riyal */
     case SAR = 'SAR';
 
-    // Solomon Islands Dollar
+    /** Solomon Islands Dollar */
     case SBD = 'SBD';
 
-    // Seychelles Rupee
+    /** Seychelles Rupee */
     case SCR = 'SCR';
 
-    // Sudanese Pound
+    /** Sudanese Pound */
     case SDG = 'SDG';
 
-    // Swedish Krona
+    /** Swedish Krona */
     case SEK = 'SEK';
 
-    // Singapore Dollar
+    /** Singapore Dollar */
     case SGD = 'SGD';
 
-    // Saint Helena Pound
+    /** Saint Helena Pound */
     case SHP = 'SHP';
 
-    // Leone
+    /** Leone */
     case SLL = 'SLL';
 
-    // Somali Shilling
+    /** Somali Shilling */
     case SOS = 'SOS';
 
-    // Surinam Dollar
+    /** Surinam Dollar */
     case SRD = 'SRD';
 
-    // South Sudanese Pound
+    /** South Sudanese Pound */
     case SSP = 'SSP';
 
-    // Dobra
+    /** Dobra */
     case STN = 'STN';
 
-    // El Salvador Colon
+    /** El Salvador Colon */
     case SVC = 'SVC';
 
-    // Syrian Pound
+    /** Syrian Pound */
     case SYP = 'SYP';
 
-    // Lilangeni
+    /** Lilangeni */
     case SZL = 'SZL';
 
-    // Baht
+    /** Baht */
     case THB = 'THB';
 
-    // Somoni
+    /** Somoni */
     case TJS = 'TJS';
 
-    // Turkmenistan New Manat
+    /** Turkmenistan New Manat */
     case TMT = 'TMT';
 
-    // Tunisian Dinar
+    /** Tunisian Dinar */
     case TND = 'TND';
 
-    // Pa’anga
+    /** Pa’anga */
     case TOP = 'TOP';
 
-    // Turkish Lira
+    /** Turkish Lira */
     case TRY = 'TRY';
 
-    // Trinidad and Tobago Dollar
+    /** Trinidad and Tobago Dollar */
     case TTD = 'TTD';
 
-    // New Taiwan Dollar
+    /** New Taiwan Dollar */
     case TWD = 'TWD';
 
-    // Tanzanian Shilling
+    /** Tanzanian Shilling */
     case TZS = 'TZS';
 
-    // Hryvnia
+    /** Hryvnia */
     case UAH = 'UAH';
 
-    // Uganda Shilling
+    /** Uganda Shilling */
     case UGX = 'UGX';
 
-    // US Dollar
+    /** US Dollar */
     case USD = 'USD';
 
-    // US Dollar (Next day)
+    /** US Dollar (Next day) */
     case USN = 'USN';
 
-    // Uruguay Peso en Unidades Indexadas (UI)
+    /** Uruguay Peso en Unidades Indexadas (UI) */
     case UYI = 'UYI';
 
-    // Peso Uruguayo
+    /** Peso Uruguayo */
     case UYU = 'UYU';
 
-    // Unidad Previsional
+    /** Unidad Previsional */
     case UYW = 'UYW';
 
-    // Uzbekistan Sum
+    /** Uzbekistan Sum */
     case UZS = 'UZS';
 
-    // Bolívar Soberano
+    /** Bolívar Soberano */
     case VES = 'VES';
 
-    // Dong
+    /** Dong */
     case VND = 'VND';
 
-    // Vatu
+    /** Vatu */
     case VUV = 'VUV';
 
-    // Tala
+    /** Tala */
     case WST = 'WST';
 
-    // CFA Franc BEAC
+    /** CFA Franc BEAC */
     case XAF = 'XAF';
 
-    // Silver
+    /** Silver */
     case XAG = 'XAG';
 
-    // Gold
+    /** Gold */
     case XAU = 'XAU';
 
-    // Bond Markets Unit European Composite Unit (EURCO)
+    /** Bond Markets Unit European Composite Unit (EURCO) */
     case XBA = 'XBA';
 
-    // Bond Markets Unit European Monetary Unit (E.M.U.-6)
+    /** Bond Markets Unit European Monetary Unit (E.M.U.-6) */
     case XBB = 'XBB';
 
-    // Bond Markets Unit European Unit of Account 9 (E.U.A.-9)
+    /** Bond Markets Unit European Unit of Account 9 (E.U.A.-9) */
     case XBC = 'XBC';
 
-    // Bond Markets Unit European Unit of Account 17 (E.U.A.-17)
+    /** Bond Markets Unit European Unit of Account 17 (E.U.A.-17) */
     case XBD = 'XBD';
 
-    // East Caribbean Dollar
+    /** East Caribbean Dollar */
     case XCD = 'XCD';
 
-    // SDR (Special Drawing Right)
+    /** SDR (Special Drawing Right) */
     case XDR = 'XDR';
 
-    // CFA Franc BCEAO
+    /** CFA Franc BCEAO */
     case XOF = 'XOF';
 
-    // Palladium
+    /** Palladium */
     case XPD = 'XPD';
 
-    // CFP Franc
+    /** CFP Franc */
     case XPF = 'XPF';
 
-    // Platinum
+    /** Platinum */
     case XPT = 'XPT';
 
-    // Sucre
+    /** Sucre */
     case XSU = 'XSU';
 
-    // Codes specifically reserved for testing purposes
+    /** Codes specifically reserved for testing purposes */
     case XTS = 'XTS';
 
-    // ADB Unit of Account
+    /** ADB Unit of Account */
     case XUA = 'XUA';
 
-    // The codes assigned for transactions where no currency is involved
+    /** The codes assigned for transactions where no currency is involved */
     case XXX = 'XXX';
 
-    // Yemeni Rial
+    /** Yemeni Rial */
     case YER = 'YER';
 
-    // Rand
+    /** Rand */
     case ZAR = 'ZAR';
 
-    // Zambian Kwacha
+    /** Zambian Kwacha */
     case ZMW = 'ZMW';
 
-    // Zimbabwe Dollar
+    /** Zimbabwe Dollar */
     case ZWL = 'ZWL';
 }
