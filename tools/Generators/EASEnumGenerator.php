@@ -3,8 +3,11 @@
 declare(strict_types=1);
 
 use easybill\eInvoicing\Enums\ElectronicAddressScheme;
+use easybill\eInvoicingTools\CodeList;
+use easybill\eInvoicingTools\EnumFileWriter;
+use easybill\eInvoicingTools\ReleasedCases;
 
-require_once __DIR__ . '/EnumSupport.php';
+require __DIR__ . '/../../vendor/autoload.php';
 
 const ENUM_FILE = __DIR__ . '/../../src/Enums/ElectronicAddressScheme.php';
 
@@ -15,33 +18,18 @@ function caseName(string $description): string
     return rtrim(substr(trim($case, '_'), 0, 64), '_');
 }
 
-/** @param array<string, string> $values description keyed by code */
-function generateEnum(array $values): string
-{
-    $lines = [
-        'declare(strict_types=1);',
-        'namespace easybill\eInvoicing\Enums;',
-        "enum ElectronicAddressScheme: string\n{\n",
-    ];
+$released = ReleasedCases::load(ENUM_FILE, ElectronicAddressScheme::class);
+$writer = EnumFileWriter::for(ElectronicAddressScheme::class, 'string', ENUM_FILE);
+$codes = [];
 
-    $enumCode = implode("\n\n", $lines);
-    $released = releasedCases(ENUM_FILE, ElectronicAddressScheme::class);
+foreach (CodeList::rows(__DIR__ . '/Input/ElectronicAddressSchemeCodes.csv') as [$code, $description]) {
+    $codes[] = $code;
 
-    foreach ($values as $code => $description) {
-        $code = (string) $code; // numeric codes become int array keys
-
-        // Hand-edited since 0.2.0, so a released name cannot be re-derived from
-        // the code list - only a new code gets a generated one.
-        $name = $released[$code]?->name ?? caseName($description);
-
-        $enumCode .= sprintf("    case %s = '%s';\n", $name, $code);
-    }
-
-    $enumCode .= retainedCases($released, codesOf($values));
-    $enumCode .= "}\n";
-    return $enumCode;
+    $writer->addCase($released->nameFor($code) ?? caseName($description), $code);
 }
 
-$values = parseCSVFile(__DIR__ . '/Input/ElectronicAddressSchemeCodes.csv');
+foreach ($released->retained($codes) as $case) {
+    $writer->addCase($case->name, $case->value);
+}
 
-file_put_contents(ENUM_FILE, "<?php\n\n" . generateEnum($values));
+$writer->write();

@@ -3,36 +3,27 @@
 declare(strict_types=1);
 
 use easybill\eInvoicing\Enums\UnitCode;
+use easybill\eInvoicingTools\CodeList;
+use easybill\eInvoicingTools\EnumFileWriter;
+use easybill\eInvoicingTools\ReleasedCases;
 
-require_once __DIR__ . '/EnumSupport.php';
+require __DIR__ . '/../../vendor/autoload.php';
 
 const ENUM_FILE = __DIR__ . '/../../src/Enums/UnitCode.php';
 
-/** @param array<string, string> $units description keyed by code */
-function generateEnum(array $units): string
-{
-    $lines = [
-        'declare(strict_types=1);',
-        'namespace easybill\eInvoicing\Enums;',
-        "enum UnitCode: string\n{\n",
-    ];
+$released = ReleasedCases::load(ENUM_FILE, UnitCode::class);
+$writer = EnumFileWriter::for(UnitCode::class, 'string', ENUM_FILE);
+$codes = [];
 
-    $enumCode = implode("\n\n", $lines);
-    $released = releasedCases(ENUM_FILE, UnitCode::class);
+foreach (CodeList::rows(__DIR__ . '/Input/UnitCodes.csv') as [$code, $name]) {
+    $codes[] = $code;
+    $caseName = is_numeric(substr($code, 0, 1)) ? '_' . $code : $code;
 
-    foreach ($units as $code => $name) {
-        $code = (string) $code; // numeric codes become int array keys
-        $caseName = is_numeric(substr($code, 0, 1)) ? '_' . $code : $code;
-
-        $enumCode .= '    // ' . $name . "\n";
-        $enumCode .= '    case ' . ($released[$code]?->name ?? $caseName) . " = '" . $code . "';\n\n";
-    }
-
-    $enumCode .= retainedCases($released, codesOf($units));
-    $enumCode .= "}\n";
-    return $enumCode;
+    $writer->addCase($released->nameFor($code) ?? $caseName, $code, $name);
 }
 
-$units = parseCSVFile(__DIR__ . '/input/UnitCodes.csv');
+foreach ($released->retained($codes) as $case) {
+    $writer->addCase($case->name, $case->value);
+}
 
-file_put_contents(ENUM_FILE, "<?php\n\n" . generateEnum($units));
+$writer->write();
