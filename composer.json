@@ -62,12 +62,14 @@
         "lint": "./vendor/bin/phpstan analyse --memory-limit=1G",
         "cs-fix": "./vendor/bin/php-cs-fixer fix",
         "cs-fix:verbose": "./vendor/bin/php-cs-fixer fix -vvv",
+        "test:update-enum-snapshots": "UPDATE_ENUM_SNAPSHOTS=1 ./vendor/bin/phpunit --filter EnumBackwardCompatibilityTest",
         "generate": [
             "php ./tools/Generators/CountryCodeEnumGenerator.php",
             "php ./tools/Generators/CurrencyCodeEnumGenerator.php",
             "php ./tools/Generators/DocumentTypeEnumGenerator.php",
             "php ./tools/Generators/ReferenceQualifierEnumGenerator.php",
             "php ./tools/Generators/UnitCodeEnumGenerator.php",
+            "php ./tools/Generators/EASEnumGenerator.php",
             "@cs-fix"
         ]
     }

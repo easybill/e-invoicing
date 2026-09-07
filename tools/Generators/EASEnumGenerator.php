@@ -2,22 +2,20 @@
 
 declare(strict_types=1);
 
-/** @return array<string, string> */
-function parseCSVFile(string $filename): array
+use easybill\eInvoicing\Enums\ElectronicAddressScheme;
+
+require_once __DIR__ . '/EnumSupport.php';
+
+const ENUM_FILE = __DIR__ . '/../../src/Enums/ElectronicAddressScheme.php';
+
+function caseName(string $description): string
 {
-    $countries = [];
-    if (($handle = fopen($filename, 'r')) !== false) {
-        while (($data = fgetcsv($handle, 1000, ';')) !== false) {
-            if (count($data) >= 2) {
-                $countries[trim($data[0])] = trim($data[1]);
-            }
-        }
-        fclose($handle);
-    }
-    return $countries;
+    $case = strtoupper((string) preg_replace('/[^a-zA-Z0-9]+/', '_', $description));
+
+    return rtrim(substr(trim($case, '_'), 0, 64), '_');
 }
 
-/** @param array<string, string> $values */
+/** @param array<string, string> $values description keyed by code */
 function generateEnum(array $values): string
 {
     $lines = [
@@ -27,30 +25,23 @@ function generateEnum(array $values): string
     ];
 
     $enumCode = implode("\n\n", $lines);
-    foreach ($values as $code => $name) {
-        // Generate a valid PHP identifier for the case
-        $case = preg_replace('/[^a-zA-Z0-9]+/', '_', $name);
-        $case = strtoupper((string)$case);
-        $case = rtrim($case, '_');
+    $released = releasedCases(ENUM_FILE, ElectronicAddressScheme::class);
 
-        // Truncate case name if it's too long
-        if (strlen($case) > 64) {
-            $case = substr($case, 0, 64);
-        }
+    foreach ($values as $code => $description) {
+        $code = (string) $code; // numeric codes become int array keys
 
-        // Remove duplicate underscores
-        $case = preg_replace('/_+/', '_', $case);
+        // Hand-edited since 0.2.0, so a released name cannot be re-derived from
+        // the code list - only a new code gets a generated one.
+        $name = $released[$code]?->name ?? caseName($description);
 
-        $enumCode .= "    case {$case} = '{$code}';\n";
+        $enumCode .= sprintf("    case %s = '%s';\n", $name, $code);
     }
+
+    $enumCode .= retainedCases($released, codesOf($values));
     $enumCode .= "}\n";
     return $enumCode;
 }
 
-$csvFilePath = __DIR__ . '/Input/ElectronicAddressSchemeCodes.csv';
+$values = parseCSVFile(__DIR__ . '/Input/ElectronicAddressSchemeCodes.csv');
 
-$countries = parseCSVFile($csvFilePath);
-
-$enumCode = generateEnum($countries);
-
-file_put_contents(__DIR__ . '/../../src/Enums/ElectronicAddressScheme.php', "<?php\n\n" . $enumCode);
+file_put_contents(ENUM_FILE, "<?php\n\n" . generateEnum($values));

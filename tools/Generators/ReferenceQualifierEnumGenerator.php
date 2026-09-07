@@ -2,22 +2,13 @@
 
 declare(strict_types=1);
 
-/** @return array<string, string> */
-function parseCSVFile(string $filename): array
-{
-    $countries = [];
-    if (($handle = fopen($filename, 'r')) !== false) {
-        while (($data = fgetcsv($handle, 1000, ';')) !== false) {
-            if (count($data) >= 2) {
-                $countries[trim($data[0])] = trim($data[1]);
-            }
-        }
-        fclose($handle);
-    }
-    return $countries;
-}
+use easybill\eInvoicing\Enums\ReferenceQualifier;
 
-/** @param array<string, string> $references */
+require_once __DIR__ . '/EnumSupport.php';
+
+const ENUM_FILE = __DIR__ . '/../../src/Enums/ReferenceQualifier.php';
+
+/** @param array<string, string> $references description keyed by code */
 function generateEnum(array $references): string
 {
     $lines = [
@@ -27,18 +18,20 @@ function generateEnum(array $references): string
     ];
 
     $enumCode = implode("\n\n", $lines);
+    $released = releasedCases(ENUM_FILE, ReferenceQualifier::class);
+
     foreach ($references as $code => $name) {
+        $code = (string) $code; // numeric codes become int array keys
+
         $enumCode .= '    // ' . $name . "\n";
-        $enumCode .= '    case ' . $code . " = '" . $code . "';\n\n";
+        $enumCode .= '    case ' . ($released[$code]?->name ?? $code) . " = '" . $code . "';\n\n";
     }
+
+    $enumCode .= retainedCases($released, codesOf($references));
     $enumCode .= "}\n";
     return $enumCode;
 }
 
-$csvFilePath = __DIR__ . '/input/ReferenceQualifier.csv';
+$references = parseCSVFile(__DIR__ . '/input/ReferenceQualifier.csv');
 
-$countries = parseCSVFile($csvFilePath);
-
-$enumCode = generateEnum($countries);
-
-file_put_contents(__DIR__ . '/../../src/Enums/ReferenceQualifier.php', "<?php\n\n" . $enumCode);
+file_put_contents(ENUM_FILE, "<?php\n\n" . generateEnum($references));

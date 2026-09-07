@@ -2,23 +2,14 @@
 
 declare(strict_types=1);
 
-/** @return array<string, string> */
-function parseCSVFile(string $filename): array
-{
-    $countries = [];
-    if (($handle = fopen($filename, 'r')) !== false) {
-        while (($data = fgetcsv($handle, 1000, ';')) !== false) {
-            if (count($data) >= 2) {
-                $countries[trim($data[0])] = trim($data[1]);
-            }
-        }
-        fclose($handle);
-    }
-    return $countries;
-}
+use easybill\eInvoicing\Enums\UnitCode;
 
-/** @param array<string, string> $references */
-function generateEnum(array $references): string
+require_once __DIR__ . '/EnumSupport.php';
+
+const ENUM_FILE = __DIR__ . '/../../src/Enums/UnitCode.php';
+
+/** @param array<string, string> $units description keyed by code */
+function generateEnum(array $units): string
 {
     $lines = [
         'declare(strict_types=1);',
@@ -27,24 +18,21 @@ function generateEnum(array $references): string
     ];
 
     $enumCode = implode("\n\n", $lines);
-    foreach ($references as $code => $name) {
-        if (is_numeric(substr((string)$code, 0, 1))) {
-            $codeName = '_' . $code;
-        } else {
-            $codeName = $code;
-        }
+    $released = releasedCases(ENUM_FILE, UnitCode::class);
+
+    foreach ($units as $code => $name) {
+        $code = (string) $code; // numeric codes become int array keys
+        $caseName = is_numeric(substr($code, 0, 1)) ? '_' . $code : $code;
 
         $enumCode .= '    // ' . $name . "\n";
-        $enumCode .= '    case ' . $codeName . " = '" . $code . "';\n\n";
+        $enumCode .= '    case ' . ($released[$code]?->name ?? $caseName) . " = '" . $code . "';\n\n";
     }
+
+    $enumCode .= retainedCases($released, codesOf($units));
     $enumCode .= "}\n";
     return $enumCode;
 }
 
-$csvFilePath = __DIR__ . '/input/UnitCodes.csv';
+$units = parseCSVFile(__DIR__ . '/input/UnitCodes.csv');
 
-$countries = parseCSVFile($csvFilePath);
-
-$enumCode = generateEnum($countries);
-
-file_put_contents(__DIR__ . '/../../src/Enums/UnitCode.php', "<?php\n\n" . $enumCode);
+file_put_contents(ENUM_FILE, "<?php\n\n" . generateEnum($units));

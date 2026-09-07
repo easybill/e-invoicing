@@ -83,3 +83,9 @@ AQ;X.400 address for mail text
 AS;AS2 exchange
 AU;File Transfer Protocol
 EM;Electronic mail (SMPT)
+# Source: KoSIT EAS code list v5, urn:xoev-de:kosit:codeliste:eas - XRechnung extension only, SGB V
+XR01;DiGAVEID
+# Source: KoSIT EAS code list v5, urn:xoev-de:kosit:codeliste:eas - XRechnung extension only, SGB V
+XR02;Freischaltcode
+# Source: KoSIT EAS code list v5, urn:xoev-de:kosit:codeliste:eas - XRechnung extension only, SGB V
+XR03;IK

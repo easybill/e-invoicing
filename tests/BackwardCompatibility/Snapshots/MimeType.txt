@@ -1,0 +1,6 @@
+CSV='text/csv'
+JPG='image/jpeg'
+ODS='application/vnd.oasis.opendocument.spreadsheet'
+PDF='application/pdf'
+PNG='image/png'
+XLS='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
